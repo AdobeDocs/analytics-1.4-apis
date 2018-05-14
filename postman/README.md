@@ -53,7 +53,19 @@ postman.setEnvironmentVariable("x-wsse", wsse.getHeader()['X-WSSE'])
 
 7. Under the Headers section add a header with the key=`X-WSSE` and the value=`{{x-wsse}}`
 
-8. Click the `Send` Button
+8. Click the `Gear icon` in the top right of the screen and select `Manage Environments`
+
+9. Click the `Add` Button
+
+10. Give your Postman environment a name
+
+11. Add the key `x-wsse` and leave the value field blank
+
+![postman_prerequest_script](../images/postman_env_manager.png?raw=true)
+
+12. Click the `Add` button
+
+13. Click the `Send` Button
 
 You should get a JSON response object with an attribute called `report_suites` which contains a list of report suites for your Analytics Login Company.
 
