@@ -4,8 +4,7 @@ Documentation and helpful resources for calling the Analytics 1.4 Apis
 
 Swagger Documentation
 ----
-* [Swagger Documentation](https://adobe-experience-cloud.github.io/analytics-1.4-apis/swagger-docs.html)
-* [Reporting API Documentation](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/web-services-reporting-api/index.md)
+* [Swagger](https://adobe-experience-cloud.github.io/analytics-1.4-apis/swagger-docs.html)
 
 API Clients
 ----
@@ -17,3 +16,9 @@ Resources
 
 * [Getting started with POSTMAN](postman)
 * [WSSE Authentication](wsse) : More information/examples for WSSE Authentication
+
+
+Legacy Documentation
+----
+* [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/index.md)
+* [Reporting API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/index.md)
