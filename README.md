@@ -4,7 +4,8 @@ Documentation and helpful resources for calling the Analytics 1.4 Apis
 
 Swagger Documentation
 ----
-Our Swagger documentation can be found [here](https://adobe-experience-cloud.github.io/analytics-1.4-apis/swagger-docs.html)
+* [Swagger Documentation](https://adobe-experience-cloud.github.io/analytics-1.4-apis/swagger-docs.html)
+* [Reporting API Documentation](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/web-services-reporting-api/index.md)
 
 API Clients
 ----
