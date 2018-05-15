@@ -91,8 +91,7 @@ columnNames[2] = "Event 2";
 columnNames[3] = "transactionID"; 
 
 /* The SKU number and the transaction ID are the same that were created in the tagging article. */ 
-String[][] rows = new String[][]{{"1/13/2011","100302","455","003456"}, 
-{"1/14/2011","100303","455","003456"}}; 
+String[][] rows = new String[][]{{"1/13/2011","100302","455","003456"}, {"1/14/2011","100303","455","003456"}}; 
 
 /* Set the endOfBlock to an empty string to signify end of block and set it to false to continue appending data. */ 
 String endOfBlock = "false"; 
@@ -107,8 +106,7 @@ Thread.sleep(3000);
 System.out.println("Returned value of blockID is: "+blockID.value+" and status is: "+status.value); 
 
 /*DataSource.AppendDataBlock - Appends an additional HTTP data block to a Data Sources data submission. */ 
-rows = new String[][]{{"1/11/2011","100300","455","003456"}, 
-{"1/12/2011","100301","455","003456"}}; 
+rows = new String[][]{{"1/11/2011","100300","455","003456"}, {"1/12/2011","100301","455","003456"}}; 
 
 port.dataSourceAppendDataBlock(blockID.value, Integer.toString(responsedataSourceSetupGeneric.getDataSourceID()), endOfBlock, reportSuiteID, rows, fileID, status); 
 
