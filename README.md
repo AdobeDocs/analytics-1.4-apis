@@ -27,3 +27,4 @@ Documentation
 * [Classifications API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/classifications-api/index.md)
 * [Data Warehouse API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-warehouse-api/index.md)
 * [Data Insertion API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
+* [Data Sources API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-sources-api/index.md)
