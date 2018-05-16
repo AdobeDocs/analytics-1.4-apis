@@ -27,6 +27,7 @@ Documentation
 * [Segments API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/segments-api/index.md)
 * [Calculated Metrics API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/calc-metrics-api/index.md)
 * [Classifications API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/classifications-api/index.md)
+* [Saint API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/saint-api/index.md)
 * [Data Warehouse API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-warehouse-api/index.md)
 * [Data Insertion API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 * [Data Sources API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-sources-api/index.md)
