@@ -18,10 +18,11 @@ Resources
 * [WSSE Authentication](wsse) : More information/examples for WSSE Authentication
 
 
-Legacy Documentation
+Documentation
 ----
 * [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/index.md)
 * [Reporting API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/index.md)
 * [Admin API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/index.md)
 * [Authentication](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/authentication/index.md)
 * [Classifications API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/classifications-api/index.md)
+* [Data Warehouse API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-warehouse-api/index.md)
