@@ -22,7 +22,7 @@ Documentation
 ----
 * [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/index.md)
 * [Reporting API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/index.md)
-* [Admin API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/index.md)
+* [Admin API 1.4](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/index.md) 
 * [Authentication](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/authentication/index.md)
 * [Segments API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/segments-api/index.md)
 * [Calculated Metrics API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/calc-metrics-api/index.md)
@@ -35,3 +35,7 @@ Documentation
 * [Live Stream API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/live-stream-api/index.md)
 * [Target API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/target-api/index.md)
 * [Recommendations API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/recommendations-api/index.md)
+
+Deprecated
+----
+* [Admin API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/index.md)
