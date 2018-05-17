@@ -21,7 +21,7 @@ Resources
 Documentation
 ----
 * [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/index.md)
-* [Reporting API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/index.md)
+* [Reporting API 1.4](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/index.md)
 * [Admin API 1.4](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/index.md) 
 * [Authentication](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/authentication/index.md)
 * [Segments API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/segments-api/index.md)
@@ -39,3 +39,4 @@ Documentation
 Deprecated
 ----
 * [Admin API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/index.md)
+* [Reporting API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/index.md)
