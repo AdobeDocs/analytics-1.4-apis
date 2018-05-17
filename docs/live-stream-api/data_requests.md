@@ -4,7 +4,7 @@ You can connect to Analytics Live Stream using an HTTP GET request. After the co
 
 ## Request Authentication
 
-Analytics Live Stream uses [OAuth2 authentication](https://marketing.adobe.com/developer/documentation/authentication-1/auth-overview-1). To authenticate, specify a scope of '`firehose`' when you request an [authentication code](https://marketing.adobe.com/developer/documentation/authentication-1/auth-register-app-1), and then provide the bearer token you receive when you complete the authentication flow in the HTTP Authorization header.
+Analytics Live Stream uses [OAuth2 authentication](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/authentication/index.md). To authenticate, specify a scope of `firehose` when you request an [authentication code](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/authentication/auth_register_app.md), and then provide the bearer token you receive when you complete the authentication flow in the HTTP Authorization header.
 
 ## Request Headers
 
@@ -27,7 +27,7 @@ If multiple connections are enabled, each connection must include this parameter
 ## Example Request
 
 ```
-curl --location --compressed --header “Authorization: Bearer [ACCESS_TOKEN]” [STREAM_URL]
+curl --location --compressed --header Authorization: Bearer [ACCESS_TOKEN][STREAM_URL]
 ```
 
 ## Reconnection Process

@@ -4,7 +4,7 @@ Returns valid sets of data for a given Report Suite and Relation ID.
 
 ## Saint.GetFilters Parameters
 
-The returned data consists of values that can be passed in as parameters of `[ExportCreateJob](r_exportCreateJob.md#)`, including column numbers and names, and valid dates for filtering data rows in a SAINT export.
+The returned data consists of values that can be passed in as parameters of [ExportCreateJob](r_exportCreateJob.md#), including column numbers and names, and valid dates for filtering data rows in a SAINT export.
 
 |Parameter|Type|Description|
 |---------|----|-----------|

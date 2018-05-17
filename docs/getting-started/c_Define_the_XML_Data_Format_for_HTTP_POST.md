@@ -4,7 +4,7 @@
 
 The Data Insertion API processes only supported XML tags with HTTP POST data submissions. All other tags and values are ignored.
 
-**Note:** View a list of all [supported XML tags](https://marketing.adobe.com/developer/documentation/data-insertion/r-supported-tags), along with their JavaScript and HTTP header variable equivalents.
+**Note:** View a list of all [supported XML tags](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_supported_tags.md), along with their JavaScript and HTTP header variable equivalents.
 
 The following code takes an object of name-value pairs and formats it within XML tags. The name of each data pair is the XML tag name and the Analytics property name. The value of each data pair is the Analytics property value.
 

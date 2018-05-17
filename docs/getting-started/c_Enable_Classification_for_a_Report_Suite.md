@@ -10,7 +10,7 @@ If you want to check whether a report is enabled for classification, use the Adm
 
 This method accepts an array of report suite IDs as an argument and returns one or more relation IDs, which is the unique ID associated with a basic report element in your report suite.
 
-For more information about the `Saint.GetCompatibilityMetrics()` method, see the [associated documentation](https://marketing.adobe.com/developer/documentation/saint-api/r-getcompatibilitymetrics).
+For more information about the `Saint.GetCompatibilityMetrics()` method, see the [associated documentation](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/saint-api/methods/r_GetCompatibilityMetrics.md).
 
 **PHP Code** 
 

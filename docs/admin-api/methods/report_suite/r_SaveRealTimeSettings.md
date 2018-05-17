@@ -4,7 +4,7 @@ Selects the metrics and elements \(dimensions\) on which you want real time repo
 
 Realtime configuration changes take 15 minutes to be reflected in reports.
 
-See [Real Time Reports](https://marketing.adobe.com/developer/documentation/analytics-reporting-1-4/real-time).
+See [Real Time Reports](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/real_time.md).
 
 ## ReportSuite.SaveRealTimeConfiguration parameters
 

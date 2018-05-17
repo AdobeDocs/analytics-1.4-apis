@@ -12,7 +12,7 @@ Returns the currently defined Marketing Channel rules for the specified report s
 
 |Type|Description|
 |----|-----------|
-|  ` [rs\_marketing\_channel\_rulesets\_array](../../data_types/r_rs_marketing_channel_rulesets_array.md#) ` - An array of `[rs\_marketing\_channel\_rulesets](../../data_types/r_rs_marketing_channel_rulesets.md#)` 
+|  [rs\_marketing\_channel\_rulesets\_array](../../data_types/r_rs_marketing_channel_rulesets_array.md#) - An array of [rs\_marketing\_channel\_rulesets](../../data_types/r_rs_marketing_channel_rulesets.md#) 
 
  |A list of marketing channel rules for each specified report suite.|
 

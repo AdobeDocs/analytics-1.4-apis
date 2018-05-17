@@ -20,9 +20,5 @@ After you are familiar with the Experience Cloud, the following resources will h
 -   ![](graphics/mc_experiencemanager_16.png) [Adobe Experience Manager](c_Adobe_Experience_Manager_Build.md#) 
 
 
-## Plan an Integration using SDK and API documentation
-
-Detailed information about Experience Cloud APIs is available in the [documentation](/developer/en_US/documentation) section of the Developer Connection.
-
 **Parent topic:** [Partner Overview](c_Marketing_Cloud_Exchange.md)
 

@@ -2,7 +2,7 @@
 
 Data Warehouse enables you to request reports that display advanced data relationships from raw data based on your unique questions.
 
-**Important:** Content on this page is for v1.3, which is deprecated. For the latest, see v1.4 [here](https://marketing.adobe.com/developer/documentation/analytics-reporting-1-4/data-warehouse).
+**Important:** Content on this page is for v1.3, which is deprecated. For the latest, see v1.4 [here](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/data_warehouse.md).
 
 Reports requested using the API can be sent via email, uploaded to an FTP server, or downloaded directly using API calls.
 

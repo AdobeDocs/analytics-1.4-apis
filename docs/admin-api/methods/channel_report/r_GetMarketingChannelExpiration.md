@@ -12,7 +12,7 @@ Returns the currently defined Marketing Channel expiration dates for the specifi
 
 |Type|Description|
 |----|-----------|
-| `[report\_suite\_marketing\_channel\_expiration\_array](../../data_types/r_report_suite_marketing_channel_expiration_array.md#)` - an array of `[report\_suite\_marketing\_channel\_expiration](../../data_types/r_report_suite_marketing_channel_expiration.md#)` 
+| [report\_suite\_marketing\_channel\_expiration\_array](../../data_types/r_report_suite_marketing_channel_expiration_array.md#) - an array of [report\_suite\_marketing\_channel\_expiration](../../data_types/r_report_suite_marketing_channel_expiration.md#) 
 
  |A list of marketing channel expiration dates for the specified report suites.|
 

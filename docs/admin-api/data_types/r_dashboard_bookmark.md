@@ -5,7 +5,7 @@
 |Element|Type|Description|
 |-------|----|-----------|
 |name| `xsd:string` | Bookmark name. |
-|id| `xsd:int` | Bookmark ID. Pass this ID to `[Bookmark.GetReportDescription](../methods/bookmark/r_GetReportDescription.md#)` to retrieve the report associated with this bookmark. |
+|id| `xsd:int` | Bookmark ID. Pass this ID to [Bookmark.GetReportDescription](../methods/bookmark/r_GetReportDescription.md#) to retrieve the report associated with this bookmark. |
 |rsid| `xsd:string` | Report suite. |
 |row| `xsd:int` | Dashboard layout. |
 |col| `xsd:int` | Dashboard layout. |

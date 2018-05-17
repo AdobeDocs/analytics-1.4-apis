@@ -8,7 +8,7 @@ Your data connectors product may have multiple customers and you can access the 
 
 1.  Open the solution file in your IDE and review the code to retrieve all the integrations. The **Partner.GetIntegrations** method returns details about all the active data connectors integrations in an array. You must create a loop over the array to access individual integrations.
 
-In this example, you will only use the Integration ID. To learn more about other available properties of the method, see the [integrationDetail](https://marketing.adobe.com/developer/documentation/genesis/r-datatype-integrationdetail) documentation.
+In this example, you will only use the Integration ID.
 
 ```
 Java Code

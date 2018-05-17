@@ -2,7 +2,7 @@
 
 The Live Stream sample app is a quick way to get started using Analytics Live Stream. The sample app is available to beta customers.
 
-Analytics Live Stream uses [OAuth2 authentication](https://marketing.adobe.com/developer/documentation/authentication-1/auth-overview-1). The sample app can generate an authentication token for you and connect to Analytics Live Stream.
+Analytics Live Stream uses [OAuth2 authentication](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/authentication/index.md). The sample app can generate an authentication token for you and connect to Analytics Live Stream.
 
 You need to following to run the sample app:
 
@@ -16,6 +16,6 @@ You need to following to run the sample app:
 You can also connect using a curl command, similar to the following:
 
 ```
-curl --location --compressed --header “Authorization: Bearer [ACCESS_TOKEN]” [STREAM_URL]
+curl --location --compressed --header Authorization: Bearer [ACCESS_TOKEN][STREAM_URL]
 ```
 

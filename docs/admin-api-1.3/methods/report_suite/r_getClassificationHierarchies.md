@@ -14,7 +14,7 @@ Retrieves a list of classification hierarchies \(associated with the specified m
 
 |Type|Description|
 |----|-----------|
-|([tns:rscollection\_hierarchy](https://developer.omniture.com/documentation/administration/datatypes/datastructures#38) |List that includes each report suite's classification hierarchy for the specified report.|
+|([rscollection_hierarchy](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/data_types/r_rscollection_hierarchy.md) |List that includes each report suite's classification hierarchy for the specified report.|
 
 **Parent topic:** [Report Suite](../../methods/report_suite/c_api_admin_methods_repsuite.md)
 

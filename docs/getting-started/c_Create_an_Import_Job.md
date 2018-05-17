@@ -12,7 +12,7 @@ The code in this section shows you how to create the import job using the Saint.
 | export\_results | Boolean value that specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: Do not export \(default\) `1`: Export when the import job completes. |
 | header | An array of column values for classification. |
 | overwrite\_conflicts | Boolean value that specifies whether to overwrite data when conflicts occur. Supported values include: `0`: Do not rewrite data on conflicts \(default\) `1`: Overwrite data on conflicts |
-| relation\_id | The relation ID. You got this ID as a return value from [Saint.GetCompatibilityMetrics\(\)](https://marketing.adobe.com/developer/documentation/saint-api/r-getcompatibilitymetrics) method. |
+| relation\_id | The relation ID. You got this ID as a return value from [Saint.GetCompatibilityMetrics\(\)](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/saint-api/methods/r_GetCompatibilityMetrics.md) method. |
 | report\_suite\_array | The list of report suites to receive the import job. |
 
 The first header column in the header parameter is always named `Key`, is mandatory, and must be unique across the entire system. For this article’s JJ. Esquire demo application, the `Key` value in each data record is the product SKU collected during Analytics JavaScript tagging.

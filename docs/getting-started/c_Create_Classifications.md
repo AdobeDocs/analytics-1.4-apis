@@ -6,7 +6,7 @@ There are two ways to create a classification in your report suite:
 
 Visually, using the Analytics Report Suite Manager in the Adobe Experience Cloud Programmatically using the Admin API
 
-The Admin API is outside the scope of this article. To learn more about creating classifications using the Admin API see the [classifications documentation](https://marketing.adobe.com/developer/documentation/omniture-administration/r-getclassifications).
+The Admin API is outside the scope of this article. To learn more about creating classifications using the Admin API see the [classifications documentation](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/methods/report_suite/r_GetClassifications.md).
 
 In this JJ. Esquire demo application, you will create brand and category classifications for the Product report element.
 

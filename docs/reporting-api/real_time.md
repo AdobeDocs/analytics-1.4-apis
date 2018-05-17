@@ -6,7 +6,7 @@ Real time reports operate most efficiently with frequent requests. We recommend 
 
 ## Get current real time configuration 
 
-Call [ReportSuite.GetRealTimeSettings](https://marketing.adobe.com/developer/en_US/documentation/analytics-administration-1-4/r-getrealtimesettings) 
+Call [ReportSuite.GetRealTimeSettings](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/methods/report_suite/r_GetRealTimeSettings.md) 
 
  You'll receive a struct with the current configuration, similar to the following:
 
@@ -27,7 +27,7 @@ Call [ReportSuite.GetRealTimeSettings](https://marketing.adobe.com/developer/en_
 
 ## Save a new configuration
 
-Call [ReportSuite.SaveRealTimeSettings](https://marketing.adobe.com/developer/en_US/documentation/analytics-administration-1-4/r-saverealtimesettings)
+Call [ReportSuite.SaveRealTimeSettings](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/methods/report_suite/r_SaveRealTimeSettings.md)
 
 Send in a `real_time_settings` structure with the metrics and elements from the table in the next section that you would like to enable for real time reports.
 

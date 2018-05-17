@@ -13,11 +13,7 @@ Retrieves a list of a company's permission groups.
 
 |Type|Description|
 |----|-----------|
-| `[permission\_group\_summary\_array](../../data_types/r_permission_group_summary_array.md#)` - an array of `[permission\_group\_summary](../../data_types/r_permission_group_summary.md#)` 
-
- `group_id` 
-
- |A list of permission groups that include the specified search value.|
+| [permission\_group\_summary\_array](../../data_types/r_permission_group_summary_array.md#) - an array of [permission\_group\_summary](../../data_types/r_permission_group_summary.md#) `group_id`  |A list of permission groups that include the specified search value.|
 
 **Parent topic:** [Permissions](../../methods/permissions/r_methods_permissions.md)
 

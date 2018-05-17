@@ -42,7 +42,7 @@ You use the Partner.RunScript method in the Data Connectors Partner API to run a
 
 In the code below, you first execute the On Demand script called **followers\_per\_twitter\_handle** that creates a QueueRanked report request.
 
-**Note:** QueueRanked is a type of report that is based on one or more elements and one or more metrics. You can learn more about report types by reading the [QueueRanked](https://marketing.adobe.com/developer/documentation/sitecatalyst-reporting/r-queueranked) documentation.
+**Note:** QueueRanked is a type of report that is based on one or more elements and one or more metrics. You can learn more about report types by reading the [QueueRanked](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/methods/r_queueRanked.md) documentation.
 
 ## Invoke the second On Demand script to check status
 

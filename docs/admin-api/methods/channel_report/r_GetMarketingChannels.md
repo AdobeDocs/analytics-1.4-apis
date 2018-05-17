@@ -12,7 +12,7 @@ Returns the currently defined Marketing Channels for the specified report suites
 
 |Type|Description|
 |----|-----------|
-| ` [report\_suite\_marketing\_channels\_array](../../data_types/r_report_suite_marketing_channels_array.md#)` - An array of `[report\_suite\_marketing\_channels](../../data_types/r_report_suite_marketing_channels.md#)` 
+| [report\_suite\_marketing\_channels\_array](../../data_types/r_report_suite_marketing_channels_array.md#) - An array of [report\_suite\_marketing\_channels](../../data_types/r_report_suite_marketing_channels.md#)
 
  |A list of marketing channels for each specified report suite.|
 

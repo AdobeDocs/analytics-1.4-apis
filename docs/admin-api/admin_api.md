@@ -45,7 +45,7 @@ For additional information:
 **Note:** Important Web Services v 1.2 and 1.3 API End-of-Life Notices:
 
 -   Version 1.2 of the Web Services API was officially deprecated on February 20, 2014. It will reach end-of-life on September 15, 2016. At that time, Adobe will remove the ability of the API servers to respond to version 1.2 API requests. Any API requests made to the https://api.omniture.com/admin/1.2 endpoint will return a 410 error. Customers have until the end-of-life date to upgrade from the version 1.2 API to the version 1.4 API to prevent an outage in their API applications.
--   Version 1.3 will be officially deprecated as of **September 15, 2016**. Customers are encouraged to migrate to the 1.4 API to leverage the improvements described on this page. See [API Support Policy](https://marketing.adobe.com/developer/get-started/api-support-policy) for more information.
+-   Version 1.3 will be officially deprecated as of **September 15, 2016**. Customers are encouraged to migrate to the 1.4 API to leverage the improvements described on this page. See [API Support Policy](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/c_API_Support_Policy.md) for more information.
 
 The Administration API methods are divided into the following categories:
 

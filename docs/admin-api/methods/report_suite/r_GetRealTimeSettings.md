@@ -2,7 +2,7 @@
 
 Returns the metrics that are configured to provide real time data.
 
-See [Real Time Reports](https://marketing.adobe.com/developer/documentation/analytics-reporting-1-4/real-time).
+See [Real Time Reports](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/real_time.md).
 
 ## ReportSuite.GetRealTimeSettings parameters
 

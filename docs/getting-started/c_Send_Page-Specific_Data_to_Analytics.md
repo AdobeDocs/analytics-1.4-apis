@@ -111,7 +111,7 @@ input.close();
 
 When the Data Insertion API receives HTTP POST data, it performs basic XML tag validation. If it finds an error, the API returns a `Failure` response. If it does not find any errors, the API returns a `Success` response and the data is queued for processing.
 
-**Note:** View [HTTP POST response codes](https://marketing.adobe.com/developer/documentation/data-insertion/r-post-response-codes) for details about all of the response codes.
+**Note:** View [HTTP POST response codes](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-insertion-api/reference/r_post_response_codes.md) for details about all of the response codes.
 
 **Parent topic:** [Data Insertion API Tutorial](c_Data_Insertion_Overview.md)
 

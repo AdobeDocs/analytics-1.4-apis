@@ -16,7 +16,7 @@ Creates a new report suite.
 |**rsid** |`xsd:string` |The report suite ID. All report suite IDs must contain your company prefix to be accepted. The company prefix can be seen on the Create Report Suites tool in the Admin Console. The `rsid` can contain only alphanumeric characters and periods \(.\).|
 |**site\_title** |`xsd:string` |\(Optional\) The report suite's friendly name.|
 |**simplified\_menu** |`xsd:boolean` |\(Optional\) Enables the [simplified menu](http://microsite.omniture.com/t2/help/en_US/reference/?f=t_simplified_menu) in reports & analytics.|
-|**time\_zone** |`[tns:timezone\_enum](../../data_types/r_timezone_enum.md#)` |The report suite's time zone. This determines the base time used to time stamp collected data for this report suite.|
+|**time\_zone** |[tns:timezone\_enum](../../data_types/r_timezone_enum.md#) |The report suite's time zone. This determines the base time used to time stamp collected data for this report suite.|
 
 ## ReportSuite.Create response
 

@@ -16,7 +16,7 @@ Use Bookmark.[Bookmark.GetBookmarks](r_GetBookmarks.md#) or [Bookmark.GetDashboa
 |----|----|-----------|
 | **name** |`xsd:string` |Bookmark name.|
 | **type** |`xsd:string` |Type of report in the saved bookmark. Possible values are overtime, ranked, or trended.|
-|**reportDescription** |[Report.reportDescription](https://marketing.adobe.com/developer/en_US/documentation/analytics-reporting-1-4/r-reportdescription-1) |Report description to send to the report API.|
+|**reportDescription** |[Report.reportDescription](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/data_types/r_reportDescription.md) |Report description to send to the report API.|
 
 **Parent topic:** [Bookmark](../../methods/bookmark/c_methods_bookmark.md)
 

@@ -6,15 +6,14 @@ The Data Connectors Integrate module code is a JavaScript code framework which p
 
 In this section, you will:
 
-● Review the code that the Data Connectors product implements for the integration
+- Review the code that the Data Connectors product implements for the integration
 
-● Review the code that you defined to map your variables to the product
+- Review the code that you defined to map your variables to the product
 
-● Review the code that simulates the server-side product data
+- Review the code that simulates the server-side product data
 
-● Customize the code to process the product data only on one web page
+- Customize the code to process the product data only on one web page
 
-**Note:** Refer to the [Integrate Module Developer Reference](https://marketing.adobe.com/developer/documentation/genesis/c-genesis-api-integrate) for details about all of the methods in the Data Connectors Integrate module code.
 
 ## Data Connectors product code
 
@@ -131,8 +130,6 @@ s.Integrate.JJEsquireTwitterPod.setVars=function(s,p)
 ## Code to simulate server-side product data
 
 In this section, you will review the code which simulates retrieving product data from the server. Typically, the Data Connectors Partner will use the **get\(\)** method to import product data from a url. This code would be included in the Data Connectors JavaScript code provided to you.
-
- **Note:** Refer to the [Integrate Module Developer Reference](https://marketing.adobe.com/developer/documentation/genesis/c-genesis-api-integrate) for details about the **get\(\)** method.
 
 To simplify this demo, you will not use server-side technology. Instead, you will call the **getTwitterData\(\)** function within the**twitter\_generator.js** JavaScript file to simulate returning product data from the server. The data is returned as a JSON object, which is then assigned to the product variables.
 

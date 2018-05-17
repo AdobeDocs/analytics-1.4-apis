@@ -9,7 +9,7 @@ Individual data blocks can contain no more than 10,000 data rows \(to keep the H
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
 | **reportSuiteID** | `xsd:string` | Yes | The ID of the report suite where you want to submit the data block. |
-| **dataSourceID** | `xsd:string` | Yes | The ID of the Data Source where you want to submit the data block. You can get this ID by calling [DataSource.GetIDs](https://developer.omniture.com/documentation/datasources/methods#GetIDs). |
+| **dataSourceID** | `xsd:string` | Yes | The ID of the Data Source where you want to submit the data block. You can get this ID by calling [DataSource.GetIDs](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-sources-api/methods/r_getIDs.md). |
 | **blockName** | `xsd:string` | No | The name of the file that appears in the Data Sources log. If not specified, a block name is generated for you. |
 | **columnNames** | [tns:colArray](../data_types/r_col_array.md#) | Yes | The names of the data columns \(the column headings\) submitted via Data Sources. |
 | **rows** | [tns:rowArray](../data_types/r_row_array.md#)\*| Yes | The data to submit to Analytics collection servers. |

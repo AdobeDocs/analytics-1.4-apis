@@ -10,7 +10,7 @@ Saves group settings. If the group does not exist it creates a new group with th
 |**group\_name** |`xsd:string` |A group name.|
 |**group\_type\*** |`xsd:int` | A group type. Supported types include: `0`: Custom group. `1`: Pre-defined group. |
 |**groupid\*** |`xsd:string` |A permission group identifier.|
-|**report\_access\_list** |`[tns:report\_categories](../../data_types/r_report_categories.md#)` | A list of permissions categories for the group's members. Supported categories include: `0`: No access. `1`: Some access. `2`: All access. |
+|**report\_access\_list** |[tns:report\_categories](../../data_types/r_report_categories.md#) | A list of permissions categories for the group's members. Supported categories include: `0`: No access. `1`: Some access. `2`: All access. |
 |**report\_id\_list** |`array(xsd:int)` |List of report IDs if the reports are in a partial group.|
 |**rsid\_list** |`array(xsd:string)` |List of report suite IDs accessible by the group.|
 |**user\_list** |`array(xsd:string)` |List of user accounts to assign to this group.|

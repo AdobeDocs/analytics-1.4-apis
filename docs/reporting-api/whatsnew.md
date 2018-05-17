@@ -8,7 +8,7 @@ Version 1.2 of the Web Services API was officially deprecated on February 20, 20
 
 Version 1.3 will be officially deprecated as of September 15, 2016. Customers are encouraged to migrate to the 1.4 API to leverage the improvements described on this page.
 
-See the [API Support Policy](https://marketing.adobe.com/developer/get-started/api-support-policy) page for more information.
+See the [API Support Policy](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/c_API_Support_Policy.md) page for more information.
 
 ## May 21 2015
 

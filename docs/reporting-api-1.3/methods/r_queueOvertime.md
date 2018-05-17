@@ -21,7 +21,7 @@ Overtime reports have the following characteristics:
 
 |Type|Description|
 |----|-----------|
-|[reportQueueResponse](../data_types/r_reportQueueResponse.md#) |Includes the report status, and the ID used to download the report \(`[Report.GetReport](r_getReport.md#)`\) or request a current report status \(`[Report.GetStatus](r_getStatus.md#)`\).|
+|[reportQueueResponse](../data_types/r_reportQueueResponse.md#) |Includes the report status, and the ID used to download the report \([Report.GetReport](r_getReport.md#)\) or request a current report status \([Report.GetStatus](r_getStatus.md#)\).|
 
 **Parent topic:** [Methods](../methods/c_reporting_methods.md)
 

@@ -2,7 +2,7 @@
 
 Returns the metrics that are configured to provide real time data.
 
-See [Real Time Reports](https://developer.omniture.com/en_US/documentation/Analytics-reporting/c-real-time).
+See [Real Time Reports](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/real_time.md).
 
 ## ReportSuite.GetRealTimeConfiguration parameters
 

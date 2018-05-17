@@ -24,7 +24,7 @@ The `reportSuiteID` parameter references the unique identifier for the report su
 
 The `Report.QueueRanked` method accepts the `reportDescription` object as its one parameter and returns a `reportQueueResponse` object that includes the report status, and the new report ID. You must place the report ID in a variable so that you can reference it later to retrieve the report status and data.
 
-For more information on these classes, see [Analytics Reporting Overview](https://marketing.adobe.com/developer/documentation/sitecatalyst-reporting/c-overview-1).
+For more information on these classes, see [Analytics Reporting Overview](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/overview/c_Overview.md).
 
 **PHP Code** 
 
@@ -86,13 +86,13 @@ reportDescription.setDate("2010-12-15");
 reportDescription.setLocale(ReportDefinitionLocale.en_US);
 reportDefinitionMetric reportDefinitionMetric = new ReportDefinitionMetric();
 
-/* Set the metric to totalRevenue - look at this link for options - https://marketing.adobe.com/developer/documentation/sitecatalyst-reporting/r-metrics-1 */
+/* Set the metric to totalRevenue - look at this link for options - https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/reference/r_metrics.md */
 reportDefinitionMetric.setId("totalRevenue");
 ReportDefinitionMetric[] metrics = { reportDefinitionMetric };
 reportDescription.setMetrics(metrics);
 ReportDefinitionElement reportDefinitionElement = new ReportDefinitionElement();
 
-/* Set the element to product to pull a product report - look at this link for options  - https://marketing.adobe.com/developer/documentation/sitecatalyst-reporting/r-elements-1 */
+/* Set the element to product to pull a product report - look at this link for options  - https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/reference/r_elements.md */
 reportDefinitionElement.setId("product");
 
 /* This sets the classification to Brand to pull a classified report of Brand in Products. */
@@ -120,14 +120,14 @@ int reportID = response.getReportID();
        rd.metrics = new reportDefinitionMetric[1];
        rd.metrics[0] = new reportDefinitionMetric();
  /* Set the metric to totalRevenue - look at this link for options -    
-    https://marketing.adobe.com/developer/documentation/sitecatalyst-reporting/r-metrics-1 */
+    https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/reference/r_metrics.md */
        rd.metrics[0].id = "totalRevenue";
       
        rd.elements = new reportDefinitionElement[1];
        rd.elements[0] = new reportDefinitionElement();
         /* Set the element to product to pull a product report - look at this link for 
          options  - 
-         https://marketing.adobe.com/developer/documentation/sitecatalyst-reporting/r-elements-1 */
+         https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/reference/r_elements.md */
        rd.elements[0].id = "product";
 
 /* This sets the classification to Brand to pull a classified report of Brand in Products. */

@@ -4,7 +4,7 @@ Real Time API reports let you view orders, revenue, units, custom events, instan
 
 Real time reports operate most efficiently with frequent requests. We recommend between 15-30 seconds between updates.
 
-1. \(Optional\) Get current real time configuration [ReportSuite.GetRealTimeConfiguration](https://developer.omniture.com/en_US/documentation/omniture-administration/r-getrealtimeconfiguration) 
+1. \(Optional\) Get current real time configuration [ReportSuite.GetRealTimeConfiguration](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/methods/report_suite/r_GetRealTimeConfiguration.md) 
 
  You'll receive a struct with the current configuration, similar to the following:
 
@@ -23,7 +23,7 @@ Real time reports operate most efficiently with frequent requests. We recommend 
 }
 ```
 
-2. Save a new configuration [ReportSuite.SaveRealTimeConfiguration](https://developer.omniture.com/en_US/documentation/omniture-administration/r-saverealtimeconfiguration) 
+2. Save a new configuration [ReportSuite.SaveRealTimeConfiguration](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/methods/report_suite/r_SaveRealTimeConfiguration.md) 
 
  Send in a correlations struct with the metrics and elements from the table in the next section that you would like to enable for real time reports.
 

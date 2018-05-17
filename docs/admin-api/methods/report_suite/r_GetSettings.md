@@ -18,7 +18,7 @@ The GetSettings method response aggregates information that is available individ
 
 |Name|Type|Description|
 |----|----|-----------|
-| **locale** | `[reportDefinitionLocale](../../data_types/r_ReportDefinitionLocale.md#)` | One of the following locales: en\_US de\_DE es\_ES fr\_FR jp\_JP ko\_KR zh\_CN zh\_TW|
+| **locale** | [reportDefinitionLocale](../../data_types/r_ReportDefinitionLocale.md#) | One of the following locales: en\_US de\_DE es\_ES fr\_FR jp\_JP ko\_KR zh\_CN zh\_TW|
 | **rsid\_list** | `array(xsd:string)` | A list of report suite IDs.|
 
 ## ReportSuite.GetSettings response

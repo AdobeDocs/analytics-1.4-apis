@@ -27,17 +27,9 @@ Work through the following video tutorials and study the *Analytics Implementati
 -   Visit [EnterpriseTV](https://outv.omniture.com/) and watch the videos in the Analytics implementation section.
 -   Review the [Analytics Implementation Guide](http://microsite.omniture.com/t2/help/en_US/sc/implement/). This guide is especially important as it includes detailed information about the functionality of different variable types and events that are critical to master before building the integration.
 
-## Get access to the tutorials, code and samples
-
--   Visit [EnterpriseTV](https://outv.omniture.com/) and watch the videos in the Developer category.
--   Access the public [Adobe Experience Cloud GIT repository](https://github.com/Adobe-Marketing-Cloud) 
--   View the various tutorials and code samples in [Developer Connection Get Started](https://marketing.adobe.com/developer/en_US/get-started/introduction/c-introduction).
-
 ## Build
 
--   Use Dev Center and/or other development environments to start building your integrations.
--   Forums are available for Experience Cloud solutions, the primary forum for Adobe analytics development can be found at [https://marketing.adobe.com/developer/en\_US/forum](https://marketing.adobe.com/developer/en_US/forum) 
--   Support: if your questions cannot be answered in documentation you can use the Experience Cloud Partner Integration email address *mcpi@adobe.com* to get more in depth support.
+-   Forums are available for Experience Cloud solutions, the primary forum for Adobe analytics development can be found [here](https://forums.adobe.com/community/experience-cloud/) 
 
 ## Run and test
 
