@@ -6,17 +6,14 @@ Swagger Documentation
 ----
 * [Swagger](https://adobe-experience-cloud.github.io/analytics-1.4-apis/swagger-docs.html)
 
-API Clients
+Getting Started
 ----
+We recommend using an API Client like [POSTMAN](https://www.getpostman.com/) to get started calling the Analytics APIs.
 
-We recommend using an API Client like [POSTMAN](https://www.getpostman.com/) or [Paw](https://paw.cloud/) to get started calling the Analytics APIs.
-
-Resources
-----
+The following guide to using POSTMAN includes a script for generating valid WSSE Authentication headers:
 
 * [Getting started with POSTMAN](postman)
 * [WSSE Authentication](wsse) : More information/examples for WSSE Authentication
-
 
 Documentation
 ----
