@@ -13,6 +13,7 @@
     -   [Authenticate using an Access Token](auth_tokens.md)
     -   [3-Legged Authentication using Google OAuth Playground](auth_example.md)
     -   [Authentication Scope Reference](auth_scope.md)
+	-   [Revoke Access or Refresh Tokens](auth_revoke_token.md)
     -   [Selecting a Company](auth_company.md)
 -   [WSSE Authentication](wsse_authentication.md)
     -   [WSSE Flow](wsse_flow.md)
