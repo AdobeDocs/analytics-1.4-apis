@@ -30,10 +30,11 @@ Documentation
 * [Data Sources API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-sources-api/index.md)
 * [Data Feeds API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-feeds-api/index.md)
 * [Live Stream API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/live-stream-api/index.md)
-* [Target API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/target-api/index.md)
-* [Recommendations API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/recommendations-api/index.md)
+* [Target and Recommendations](http://developers.adobetarget.com/)
 
 Deprecated
 ----
 * [Admin API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/index.md)
 * [Reporting API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/index.md)
+* [Target API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/target-api/index.md)
+* [Recommendations API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/recommendations-api/index.md)
