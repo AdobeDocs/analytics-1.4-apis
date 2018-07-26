@@ -46,7 +46,7 @@ If the connection is closed, you can reconnect to the same endpoint and continue
 |Multiple connections|If multiple connections are made to the same stream, data is multiplexed across each connection.|
 |Connection limits|8 connections maximum.|
 |Multiple users connecting to the same stream|Connections are based on the stream, not the user. If multiple users connect to the same stream, the connection is multiplexed across each stream with no regard to the user account making the connection.|
-|Hit distribution across streams|An attempt is made to distribute hits across all streams, though hits are not guaranteed to be evenly distributed across streams.|
+|Hit distribution across connections|An attempt is made to distribute hits across all active connections to a stream, though hits are not guaranteed to be evenly distributed across the connections.|
 |Hit grouping by visitor ID|All requests from a single visitor ID are sent to the same connection, however, the order of those events are not guaranteed. You can use the `timestamp` to order the field.|
 |Using the same stream in multiple applications|If you need to consume the full stream in multiple applications, you should copy the data or store it for use by other applications. We recommend sharing streams wherever possible to reduce bandwidth and processing requirements.|
 |Duplicate records|The likelihood of receiving duplicate records increases when reconnecting or opening additional connections. You can key off the `hit_id` if you need to process each hit uniquely.|
