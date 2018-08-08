@@ -20,6 +20,7 @@ Every data insertion must also include one of `<visitorID>`, `<marketingCloudVis
 | `<connectionType>` |`ct` | N/A | N/A | Visitor's connection type \("lan" or "modem"\). |
 | `<contextData>` |`c.\[key\]` | contextData | N/A | Key-values pairs are specified in one of the following formats: `<my.a>red</my.a>`  or: `<my><a>red</a></my>`  Each of these examples result in a context data value of `my.a = red`. Multiple key-value pairs can be specified. In the query string, this context data variable would appear as `c.my.a=red` |
 | `<cookiesEnabled>` |`k` | N/A | N/A | Whether the visitor supports first party session cookies \(Y or N\). |
+|`<customerPerspective>`|`cp`|customerPerspective|N/A| Whether a hit is considered a background or foreground hit. <list><li>0 - Foreground (Default)</li><li>1 - Background </li></list> See [Context Aware Sessions](https://marketing.adobe.com/resources/help/en_US/reference/vrs-mobile-visit-processing.html) for more detail|
 | `<currencyCode>` |`cc` | currencyCode | N/A | Revenue currency code For example, `USD`. |
 | `<eVar*\#*>` For example, `<eVar2>`. |`v*\#*` For example, `v2`. | eVar1 - eVar75 | N/A | Analytics eVar. |
 | `<events>` |`events` | events | N/A | A list of Analytics events. Multiple events are separated by a comma. <events\>event1</events\> <events\>event1,event2</events\> |
