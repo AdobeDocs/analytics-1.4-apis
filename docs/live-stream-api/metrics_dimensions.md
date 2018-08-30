@@ -51,6 +51,7 @@ Periodically, new fields will be introduced to the Live Stream output. Your Live
 |monitorColorDepth| |
 |monitorHeight| |
 |monitorWidth| |
+|mvvars|Mvvars are multi-value fields provided to allow customers to implement custom multi-value projects. Also known as "list variables".  Each variable (mvvar1-3) is indexed by JSON key "1","2" or "3": ```"mvvars": {"2":{"m":{"values":["custom1=A","custom2=Z"],"delim":44}}}```|
 |operatingSystem| |
 |pageName|The name of the page \(if set\).|
 |pageURL|The address of the page in the address bar of the browser.|
@@ -153,7 +154,19 @@ The metrics and dimensions in Live Stream are partially processed according to t
   "languageAbbrev": "en-­US",
   "monitorColorDepth": "16 million colors", 
   "monitorHeight": 1080,
-  "monitorWidth": 1650,  
+  "monitorWidth": 1650,
+  "mvvars": {
+    "1": {
+      "m": {
+        "values": [
+          "event_category:summer sale",
+          "event_type:click",
+          "source_platform:iOS"
+        ],
+        "delim": 44
+      }
+    }
+  },  
   "operatingSystem": "Macintosh", 
   "pageName": "Page #8552",
   "pageURL": "http://example.com/page8552.html", 
