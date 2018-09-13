@@ -4354,39 +4354,6 @@
                 }
             }
         },
-        "/rest/?method=ReportSuite.SaveServerSideForwarding": {
-            "post": {
-                "tags": [
-                    "ReportSuite"
-                ],
-                "operationId": "ReportSuite.SaveServerSideForwarding",
-                "summary": "",
-                "parameters": [
-                    {
-                        "name": "reportSuiteSaveServerSideForwardingRequestData",
-                        "in": "body",
-                        "schema": {
-                            "$ref": "#/definitions/reportSuiteSaveServerSideForwardingRequestData"
-                        },
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "ReportSuite.SaveServerSideForwarding response",
-                        "schema": {
-                            "$ref": "#/definitions/reportSuiteSaveServerSideForwardingResponseData"
-                        }
-                    },
-                    "default": {
-                        "description": "Unexpected error",
-                        "schema": {
-                            "$ref": "#/definitions/Error"
-                        }
-                    }
-                }
-            }
-        },
         "/rest/?method=ReportSuite.SaveSiteTitle": {
             "post": {
                 "tags": [
