@@ -32,9 +32,9 @@ Periodically, new fields will be introduced to the Live Stream output. Your Live
 |isErrorPage|Indicates if the page was flagged as an error page by setting `s.pageType="errorPage"`.|
 |javaEnabled|Flag indicating whether or not java is enabled.|
 |javascriptVersion|Version of JavaScript supported by browser.|
-|language| |
+|language| Language |
 |lat|Latitude of the hit based on the location associated with the IP address.|
-|languageAbbrev| |
+|languageAbbrev| Language abbreviation of the browser |
 |lon|Longitude based on the location associated with the IP address.|
 |mcAudiences| The `mcAudiences` field is a multi-value field / “list-variable”. The multiple values represent the segment IDs from Adobe Audience Manager’s Server Side Forwarding integration and are given in the subdocument’s value array, with the variable's delimiter as an ASCII character code in the `delim` property. `"mcAudiences": {"values":["1111","2222","9999"], "delim":44}` |
 |mcVisIdHigh|Part 1 of the Experience Cloud ID set by the [Visitor ID Service](https://marketing.adobe.com/resources/help/en_US/mcvid/). A 64-bit number in base 10, padded with zeros to 19 digits, and then concatenated.|
