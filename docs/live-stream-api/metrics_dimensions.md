@@ -18,6 +18,7 @@ Periodically, new fields will be introduced to the Live Stream output. Your Live
 |campaign| The campaign value passed in on the hit. If set, campaign is included in the eVars list: ```"evars": {  "evars": {    "campaign": "DFA:172612:21725632:182361",    "eVar1": "Summer Shoe Promo"  }},``` |
 |eVar1-250|Custom commerce variable passed in on hit. If set, eVars are included in the eVars list: ```"evars": {  "evars": {    "eVar1": "Summer Shoe Promo",   "eVar4": "Sandals"  }},``` |
 |event1-1000| ```"event1": [{	"count": 1,	"exponent": 0,	"unique": ""}]``` |
+|exclude| Indicates if this hit is excluded in Analytics reporting. <br> ```"exclude": { "id": "0", "value": "no", "description": "include" }``` |
 |geoCity|Populated based on GeoReporting settings.|
 |geoCountry|Populated based on GeoReporting settings.|
 |geoDMA|Populated based on GeoReporting settings.|
@@ -132,6 +133,11 @@ The metrics and dimensions in Live Stream are partially processed according to t
       "exponent":0,
       "unique":""
     }]
+  },
+  "exclude": { 
+    "id": "0",
+    "value": "no",
+    "description": "include"
   },
   "geoCity": "paris",
   "geoCountry": "fra",
