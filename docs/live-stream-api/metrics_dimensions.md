@@ -8,7 +8,7 @@ Periodically, new fields will be introduced to the Live Stream output. Your Live
 
 |Metric/Dimension|Description|
 |----------------|-----------|
-|bot| |
+|bot| Identifies bot activity. <br /> ``` "bot": "<Not a bot>" ``` <br /> ``` "bot": "<Bot>" ``` |
 |browser|Browser as identified by the user agent string.|
 |browserHeight|Height in pixels of browser window.|
 |browserWidth|Width in pixels of browser window.|
@@ -113,6 +113,7 @@ The metrics and dimensions in Live Stream are partially processed according to t
 
 ```
 {	
+  "bot": "<Not a bot>"
   "browser": "Google Chrome 32.0",	Browser name
   "browserHeight": 1350,	// The height of the browser, in pixels 
   "browserType": "Google",
