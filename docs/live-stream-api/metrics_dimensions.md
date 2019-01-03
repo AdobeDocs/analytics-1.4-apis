@@ -113,6 +113,7 @@ The metrics and dimensions in Live Stream are partially processed according to t
 
 ```
 {	
+  "bot": "<Not a bot>"
   "browser": "Google Chrome 32.0",	Browser name
   "browserHeight": 1350,	// The height of the browser, in pixels 
   "browserType": "Google",
