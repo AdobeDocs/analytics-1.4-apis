@@ -8,7 +8,7 @@ Periodically, new fields will be introduced to the Live Stream output. Your Live
 
 |Metric/Dimension|Description|
 |----------------|-----------|
-|bot| Identifies bot activity. <br /> ``` "bot": "<Not a bot>" ``` <br /> ``` "bot": "<Bot>" ``` |
+|bot| Contains either `<Bot>` or `<Not a bot>` to indicate bot and none bot traffic.|
 |browser|Browser as identified by the user agent string.|
 |browserHeight|Height in pixels of browser window.|
 |browserWidth|Width in pixels of browser window.|
