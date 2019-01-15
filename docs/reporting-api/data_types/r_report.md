@@ -13,6 +13,8 @@ A structure data type that returns data associated with a particular report requ
 | ` data ` | [reportDataList](r_reportDataList.md#) - an array of [reportData](r_reportData.md#) | The data that makes up the bulk of the report. |
 | ` totals ` | `array(double\) ` | A list of metric totals. |
 | ` version ` | ` xsd:string ` |   |
+| ` totalPages ` | `xsd:int` | Number of available pages for [Data Warehouse](../data_warehouse.md) requests. |
+| ` page ` | `xsd:int` | Current returned page (of `totalPages`) for [Data Warehouse](../data_warehouse.md) requests. |
 
 **Parent topic:** [Data Types](../data_types/datatypes.md)
 
