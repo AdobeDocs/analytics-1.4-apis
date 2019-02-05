@@ -1,6 +1,6 @@
-# Data Sources ID
+# Data Source Type ID
 
-The Data Source ID is a numeric value that identifies the type of data source.
+The Data Source Type ID is a numeric value that identifies the type of data source.
 
 Many of the Data Sources methods described in the Data Sources API require and/or return a Data Sources ID. The following table lists the available data sources with the associated Data Sources ID for each.
 
