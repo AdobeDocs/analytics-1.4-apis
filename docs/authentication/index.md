@@ -1,5 +1,7 @@
 # Authentication
 
+These authentication methods are deprecated. Visit the following link for more information about supported authentication types: [Analytics 2.0 Authentication](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/README.md#authentication)
+
 -   [Overview](c_authentication.md)
 -   [OAuth 2 Authentication](auth_overview.md)
     -   [OAuth2 Process](oauth2_process.md)
