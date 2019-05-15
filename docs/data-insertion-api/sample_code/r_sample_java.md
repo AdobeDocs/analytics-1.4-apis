@@ -4,7 +4,7 @@ This Java sample illustrates how to use Java classes to send an XML request.
 
 This example sets the IP address, page name, and custom variables.
 
-```
+```java
 DataSubmission.java
 package com.omniture;
 
