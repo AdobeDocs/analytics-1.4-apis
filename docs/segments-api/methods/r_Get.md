@@ -25,11 +25,11 @@ Gets segments defined for the company of the current user.
 
  optional, one of: "id", "name", "description", "reportSuiteID", "owner", "modified", "favorite". Default is "id".
 
- "name", "owner" and "reportSuiteI" do partial case insensitive matching. For example, if you have several segments named like this: Dan's 1st segment, Dan's 2nd segment, etc., then you could set "name" filter to "dan" to find all of those.
+ "name" and "owner" do partial case insensitive matching. For example, if you have several segments named like this: Dan's 1st segment, Dan's 2nd segment, etc., then you could set "name" filter to "dan" to find all of those.
 
  "approved" and "favorite" match on true / false \(or 1 / 0\). For example, to find all the approved segments, then you would set the "approved" filter to true.
 
- "tags" is a comma delimited list of tags which perform exact matching. For example, if you have a segment with tag "a" and another with tag "b", setting the "tags" filter to "A" will find no matches, setting it to "a" will match the first, and setting it to "a,b" will find both.
+ "tags" and "reportSuiteID" are comma delimited lists that perform exact matching. For example, if you have a segment with tag "a" and another with tag "b", setting the "tags" filter to "A" will find no matches, setting it to "a" will match the first, and setting it to "a,b" will find both.
 
 ## Segments.Get Response
 
