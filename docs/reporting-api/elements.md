@@ -6,13 +6,15 @@ An *element* is a structure that further breaks down \(organizes\) the a report'
 
 ## Permissions
 
-Specific users may not have access to certain elements. The metrics returned by `GetElements` reflect those restrictions. Requesting an element that one doesn't have permission to access will result in a `element_inaccessible` error.
+Specific users may not have access to certain elements. The metrics returned by `GetElements` reflect those restrictions. Requesting an element that one doesn't have permission to access will result in a `element_inaccessible` error. 
+
+In some cases, elements that are returned by `GetElements` may not work with a certain engine, even if access is enabled. For example, the `timevisit` element is not supported in a Data Warehouse request, even if it is returned by `GetElements`. In such a case, you should see an error message when using the element indicating that the element is not supported in that engine.
 
 ## Element Breakdowns
 
 The reporting API has two groups of elements: Traffic and Commerce. Elements may only be broken down by elements in the same group, as listed in the "Breakdown Type" column in the table below. Breakdowns are not supported on fallout and pathing reports.
 
-You can pass any of these elements to [GetElements](methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element.
+You can pass any of these elements to [GetElements](methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element. 
 
 ## Element Descriptions
 
