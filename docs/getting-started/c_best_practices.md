@@ -1,7 +1,5 @@
 # API Best Practices
 
- 
-
 Adobe Analytics Reporting API provides a flexible reporting interface that lets you generate a variety of complex reports. Adobe makes every effort to provide reporting data quickly, however, there are many factors that impact report generation speed. The following sections explain many of these factors and contain tips to help you structure requests to get the business data you need as quickly as possible.
 
 ## Report Queue
@@ -59,3 +57,4 @@ In addition to reducing the time range, number of metrics, and number of breakdo
 -   Use data warehouse to request reports that contain many breakdowns or metrics. Data warehouse is designed to generate these types of reports.
 -   Schedule reports to run during non-peak hours. This increases the likelihood of a report returning because the request queue for a report suite is more likely to be empty during those times.
 
+*Note: The Gateway POST size limit is 2 MB with Analtyics 1.4 APIs.*
