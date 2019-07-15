@@ -36,7 +36,7 @@ Every data insertion must also include one of `<visitorID>`, `<marketingCloudVis
 | `<linkType>` |`pe` | linkType | N/A | Type of link \("d", "e", or "o"\). |
 | `<linkURL>` |`pev1` | linkURL | N/A | The link's HREF. For custom links, page values are ignored. |
 |`<list*n*>` For example, `<list2>`. |`l#` | list1 - list3 | N/A | A delimited list of values that are passed into a variable, then reported as individual line items for reporting. |
-| `marketingcloudorgid` |`mcorgid` | N/A | N/A | The Experience Cloud Organization ID; identifies the organization within the Adobe Experience Cloud. |
+| `marketingcloudorgid` |`mcorgid` | N/A | N/A | The Experience Cloud Organization ID; it identifies the organization within the Adobe Experience Cloud. |
 | `<pageName>` |`pageName` | pageName | N/A | The Web page name. |
 | `<pageType>` |`pageType` | pageType | N/A | The Web page type. This is only used on 404 error pages. Set pageType to "Error Page" for when a 404 error is detected. |
 | `<pageURL>` |`g` | pageURL | N/A | The Web page URL For example, http://www.mysite.com/index.html. |
