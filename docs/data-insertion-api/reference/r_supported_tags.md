@@ -24,6 +24,7 @@ Every data insertion must also include one of `<visitorID>`, `<marketingCloudVis
 | `<currencyCode>` |`cc` | currencyCode | N/A | Revenue currency code For example, `USD`. |
 | `<eVar*\#*>` For example, `<eVar2>`. |`v*\#*` For example, `v2`. | eVar1 - eVar75 | N/A | Analytics eVar. |
 | `<events>` |`events` | events | N/A | A list of Analytics events. Multiple events are separated by a comma. <events\>event1</events\> <events\>event1,event2</events\> |
+| `fallbackVisitorId` |`fid` | N/A | N/A | A fallback cookie `s_fid` is set when the primary cookie (`AMCV_` or `S_vi`) is unavailable. It has a 2 year expiration and is used as the fallback identification method going forward. |
 | `<hier*n*>` For example, `<hier2>`. |`h#` For example, `h2` | hier1 - hier5 | N/A | A hierarchy string. |
 | `<homePage>` |`hp` | N/A | N/A | Whether the current page is the visitor's homepage \(Y or N\). |
 |`<imsregion>` |`aamlh` | N/A | N/A | Use this tag to ensure data is forwarded to the right Audience Manager regional data collection center when using the data insertion API for both collecting Analytics data and forwarding that data to Audience Manager. The Analytics tracking server/API end point must also be set to forward to the correct Audience Manager instance before Analytics data will forward to Audience Manager. Use the [getLocationHint](https://marketing.adobe.com/resources/help/en_US/mcvid/mcvid-getlocationhint.html) function of the VisitorAPI to retrieve the correct `imsregion` value for the user. The `marketingCloudVisitorID` tag is also required when using this tag. |
@@ -35,6 +36,7 @@ Every data insertion must also include one of `<visitorID>`, `<marketingCloudVis
 | `<linkType>` |`pe` | linkType | N/A | Type of link \("d", "e", or "o"\). |
 | `<linkURL>` |`pev1` | linkURL | N/A | The link's HREF. For custom links, page values are ignored. |
 |`<list*n*>` For example, `<list2>`. |`l#` | list1 - list3 | N/A | A delimited list of values that are passed into a variable, then reported as individual line items for reporting. |
+| `marketingcloudorgid` |`mcorgid` | N/A | N/A | The Experience Cloud Organization ID; it identifies the organization within the Adobe Experience Cloud. |
 | `<pageName>` |`pageName` | pageName | N/A | The Web page name. |
 | `<pageType>` |`pageType` | pageType | N/A | The Web page type. This is only used on 404 error pages. Set pageType to "Error Page" for when a 404 error is detected. |
 | `<pageURL>` |`g` | pageURL | N/A | The Web page URL For example, http://www.mysite.com/index.html. |
