@@ -18,6 +18,9 @@ The 1.4 APIs support [JWT](https://github.com/AdobeDocs/analytics-2.0-apis/blob/
 
 **NOTE:** WSSE Authentication has been deprecated
 
+**IMS Auth with Multiple Login Companies:** 
+If you are using IMS Authentication and have access to multiple login companies be sure to read our [Auth Company](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/authentication/auth_company.md) documentation. 
+
 Documentation
 ----
 * [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/index.md)
