@@ -1,13 +1,14 @@
 # Tips for using 1.4 API Required Parameters
 
-Note: It is strongly recommended to use Adobe Analytics 2.0 APIs whenever possible to simplify parameter usage._
+*Note: It is strongly recommended to use Adobe Analytics 2.0 APIs whenever possible to simplify parameter usage.*
 
 When making calls to endpoints of 1.4 Analytics APIs, consider the following tips for determining required parameters:
 
 -   Refer to 1.4 API parameter documentation.
--   Review your data structure.
 -   Refer to error descriptions in responses.
--   Use the Validate method.
+-   Review your data structure.
+-   Use the **Validate** method.
+
 
 ## Refer to 1.4 parameters documentation
 
