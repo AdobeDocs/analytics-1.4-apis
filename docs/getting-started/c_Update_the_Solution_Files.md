@@ -1,5 +1,8 @@
 # Step 4: Update the Solution Files
 
+## Deprecation Notice
+
+This documentation should only be used as a reference for existing integrations. When creating a new integration you should use the 2.0 APIs. [2.0 API documentation](https://github.com/AdobeDocs/analytics-2.0-apis)
  
 
 For each article in this series, you can download the solution files provided in the Download code files for this article section. Solution files are provided for the following:
