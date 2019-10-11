@@ -1,5 +1,10 @@
 # Get Started with Adobe Experience Cloud APIs
 
+## Deprecation Notice
+
+This documentation should only be used as a reference for existing integrations. When creating a new integration you should use the 2.0 APIs. [2.0 API documentation](https://github.com/AdobeDocs/analytics-2.0-apis)
+
+
 -   [Introduction](c_Introduction.md)
 -   [What is the Adobe Experience Cloud?](c_What_is_the_Adobe_Digital_Marketing_Suite.md)
 -   [What is Data Connectors?](c_What_is_Data_Connectors.md)
