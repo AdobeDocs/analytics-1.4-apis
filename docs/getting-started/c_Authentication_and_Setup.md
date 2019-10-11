@@ -1,6 +1,10 @@
 # Authentication and Setup Tutorial
 
- 
+## Deprecation Notice
+
+This documentation should only be used as a reference for existing integrations. When creating a new integration you should use the 2.0 APIs. [2.0 API documentation](https://github.com/AdobeDocs/analytics-2.0-apis)
+
+
 
 In this tutorial, you will learn how to obtain web service access to the Enterprise API and how to download and authenticate against the related WSDL files in Java, PHP and C\#. You will also learn how to create a new report suite in the Analytics UI and to understand how to use the provided solution files for each article in the series.
 
