@@ -1,5 +1,8 @@
 # Step 3: Download the Experience Cloud WSDL
 
+## Deprecation Notice
+
+This documentation should only be used as a reference for existing integrations. When creating a new integration you should use the 2.0 APIs. [2.0 API documentation](https://github.com/AdobeDocs/analytics-2.0-apis)
  
 
 In this section, you will download the Adobe Experience Cloud WSDL and save it to your computer. You will use it in the next sections of this setup guide.
