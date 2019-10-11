@@ -1,5 +1,8 @@
 # Step 2: Get Web Service Access to the Enterprise API
 
+## Deprecation Notice
+
+This documentation should only be used as a reference for existing integrations. When creating a new integration you should use the 2.0 APIs. [2.0 API documentation](https://github.com/AdobeDocs/analytics-2.0-apis)
 
 
 In this section, you will add web service access to your user login for the Enterprise API. You should work with your Adobe Experience Cloud administrator to get access.
