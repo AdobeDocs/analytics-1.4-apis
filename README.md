@@ -23,7 +23,7 @@ If you are using IMS Authentication and have access to multiple login companies 
 
 Documentation
 ----
-* [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/index.md)
+* [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/getting-started-2.md#getting-started)
 * [Reporting API 1.4](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/index.md)
 * [Admin API 1.4](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/index.md) 
 * [Authentication](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/README.md#authentication)
