@@ -3,7 +3,7 @@
 **Note:** If you are creating a new integration you should use the new 2.0 version of the APIs. 
 [2.0 API Documentation](https://github.com/AdobeDocs/analytics-2.0-apis#analytics-20-apis)
 
-If you must use the 1.4 APIs for your integration you should use the 1.4 REST APIs. 
+If you must use the 1.4 APIs for integrations that are not yet supported by the 2.0 APIs you should use follow this guide to call the 1.4 REST APIs. 
 SOAP support will be removed in the near future as well as WSSE and legacy OAuth Authentication. The 1.4 APIs can be called
 with an Access Token created from the 2.0 API Authentication methods. This guide will include an example of how to make an API
 call to the 1.4 REST APIs using a 2.0 API IMS Access Token.
