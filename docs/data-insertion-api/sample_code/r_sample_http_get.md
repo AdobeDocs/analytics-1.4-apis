@@ -11,7 +11,7 @@ The *\[rsid\]* parameter identifies the report suite where you want to submit th
 ```
 GET /b/ss/[rsid]/0?g=apps.sillystring.com%2Fsummary.do&r=http%3A%2F%2Fapps.sillystring.com%
 2Fsummary.do&ip=192.168.10.1&gn= summary&v2=14911&c10=Brazil&vid=1286556420966514130&ts=2009-03-05T01%3A00%3A01-05 HTTP/1.0
-Host: [rsid].112.2o7.net
+Host: [namespace].sc.omtrdc.net
 X-Forwarded-For: 192.168.10.1
 ```
 
@@ -38,7 +38,7 @@ Content-Type: text/html
 ```
 GET /b/ss/[rsid]/0?g=apps.sillystring.com%2Fsummary.do&r=http%3A%2F%2Fapps.sillystring.com%
 2Fsummary.do&ip=192.168.10.1&gn=summary&v2=14911&c10=Brazil&vid=1286556420966514130&ts=2009-03-05T01%3A00%3A01-05 HTTP/1.1
-Host: [rsid].112.2o7.net
+Host: [namespace].sc.omtrdc.net
 Keep-Alive: timeout=15
 Connection: Keep-Alive
 X-Forwarded-For: 192.168.10.1
