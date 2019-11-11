@@ -10,7 +10,7 @@ The *\[rsid\]* parameter identifies the report suite where you want to submit th
 
 ```
 POST /b/ss//6 HTTP/1.0
-Host: [rsid].112.2o7.net
+Host: [namespace].sc.omtrdc.net
 Content-Length: 593
 
 <?xml version=1.0 encoding=UTF-8?>
@@ -53,7 +53,7 @@ Content-Type: text/xml
 
 ```
 POST /b/ss//6 HTTP/1.1
-Host: [rsid].112.2o7.net
+Host: [namespace].sc.omtrdc.net
 Keep-Alive: timeout=15
 Connection: Keep-Alive
 Content-Length: 593

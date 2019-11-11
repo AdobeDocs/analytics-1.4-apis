@@ -101,7 +101,7 @@ public class DataInsertionRequest
              URLConnection urlConn         = null;
              DataOutputStream printout     = null;
              BufferedReader input        = null;
-             String u            = "http://namespace.112.2o7.net/b/ss/ll/6";
+             String u            = "http://namespace.sc.omtrdc.net/b/ss/ll/6";
              String tmp             = null;
        
              url = new URL( u );

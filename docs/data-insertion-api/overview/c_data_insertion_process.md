@@ -8,9 +8,9 @@ The Data Insertion API supports HTTP POST and HTTP GET for submitting data to Ad
 
 Use an HTTP POST to submit properly-formatted Data Insertion XML to the Data Insertion URL. The Data Insertion URL differs from the standard JavaScript data submission URL. Adobe ClientCare can provide the domain name of the Adobe data collection servers where you should send data. For example:
 
-`http://namespace.112.2o7.net/b/ss//6` 
+`http://namespace.sc.omtrdc.net/b/ss//6` 
 
-`http://namespace.122.2o7.net/b/ss//6` 
+`http://namespace.sc.omtrdc.net/b/ss//6` 
 
 **Note:** The "6" code at the end of the URL indicates that the data submission requires XML processing.
 
@@ -33,9 +33,9 @@ HTTP GET reduces bandwidth needs by 30% - 40%, but Adobe data collection servers
 
 The Data Insertion URL differs from the standard JavaScript data submission URL. The *<rsid\>* in the URL is the report suite where you want to submit the data. Adobe ClientCare can provide the domain name of the Adobe data collection servers where you should send data. For example:
 
-`http://namespace.112.2o7.net/b/ss/*<rsid\>*/0` 
+`http://namespace.sc.omtrdc.net/b/ss/*<rsid\>*/0` 
 
-`http://namespace.122.2o7.net/b/ss/*<rsid\>*/0` 
+`http://namespace.sc.omtrdc.net/b/ss/*<rsid\>*/0` 
 
 **Note:** The "0" code at the end of the URL indicates that the data submission requires JavaScript processing.
 

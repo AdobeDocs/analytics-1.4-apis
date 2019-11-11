@@ -15,7 +15,7 @@ This PHP sample illustrates how to connect to Adobe data collection servers and 
 // NOTE: Contact an ClientCare to identify the correct namespace and domain for your company.
 
 $namespace = "namespace";
-$domain    = "112.2o7.net";
+$domain    = "sc.omtrdc.net";
 $host      = $namespace.".".$domain;
 $rsid      = "rsid";
 $vid       = "";

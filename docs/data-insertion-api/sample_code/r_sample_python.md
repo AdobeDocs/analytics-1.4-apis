@@ -10,7 +10,7 @@ xml='<?xml version="1.0" encoding="UTF-8"?>
 <reportSuiteID>Corp1_rs</reportSuiteID>
 <timestamp>2010-03-20T10:33:22-07</timestamp> <visitorID>169</visitorID> <ipAddress>10.0.0.1</ipAddress> <pageName>Test Page</pageName></request>'
 
-conn = httplib.HTTPConnection("namespace.112.2o7.net:80")
+conn = httplib.HTTPConnection("namespace.sc.omtrdc.net:80")
 conn.request("POST", "/b/ss//6",xml )
 response = conn.getresponse()
 print(response.status, response.reason)
