@@ -39,6 +39,7 @@ Documentation
 
 Deprecated
 ----
+* [End Of Life Notice](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/APIEOL.md)
 * [Admin API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/index.md)
 * [Reporting API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/index.md)
 * [Saint API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/saint-api/index.md)
