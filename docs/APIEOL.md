@@ -28,11 +28,11 @@ If you do a lot of non reporting API calls such as managing report suite setting
 
 ### What Are These Services?
 
-The 1.3 and 1.4 APIs have historically supported SOAP. SOAP is not very common now days and the vast majority of our users are using our rest interfaces. Due to the lack of interest in our SOAP interfaces it is being retired at the same time as the 1.3 APIs.
+The 1.3 and 1.4 APIs have historically supported SOAP. SOAP is not very common now days and the vast majority of our users are using our REST interfaces. Due to the lack of interest in our SOAP interfaces it is being retired at the same time as the 1.3 APIs.
 
 ### What do I Need to do to Migrate?
 
-Since SOAP is no longer supported you will need to use the 1.4 API rest interface (https://github.com/AdobeDocs/analytics-1.4-apis). Depending on the language you are using this may necessitate finding a new rest client library.
+Since SOAP is no longer supported you will need to use the 1.4 API REST interface (https://github.com/AdobeDocs/analytics-1.4-apis). Depending on the language you are using this may necessitate finding a new rest client library.
 
 ## Legacy oAuth
 
