@@ -34,7 +34,7 @@ Documentation
 * [Data Insertion API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
 * [Data Sources API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-sources-api/index.md)
 * [Data Feeds API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-feeds-api/index.md)
-* [Live Stream API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/live-stream-api/index.md)
+* [Live Stream API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/live-stream-api/getting_started.md)
 * [Target and Recommendations](http://developers.adobetarget.com/)
 
 Deprecated
