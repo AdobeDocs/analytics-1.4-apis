@@ -1,10 +1,10 @@
 # Metrics and Dimensions
 
-Lists the metrics and dimensions that can be retrieved using Analytics Live Stream.
+Lists the metrics and dimensions that can be retrieved using Analytics Livestream.
 
  
 
-Periodically, new fields will be introduced to the Live Stream output. Your Live Stream client should be configured to handle this scenario and continue to process and translate the known fields.
+Periodically, new fields will be introduced to the Livestream output. Your Livestream client should be configured to handle this scenario and continue to process and translate the known fields.
 
 |Metric/Dimension|Description|
 |----------------|-----------|
@@ -103,17 +103,17 @@ Periodically, new fields will be introduced to the Live Stream output. Your Live
 
 ## Data Processing Order
 
-The metrics and dimensions in Live Stream are partially processed according to the following data processing order list:
+The metrics and dimensions in Livestream are partially processed according to the following data processing order list:
 
 1.  Data collection \(JavaScript, mobile libraries, data insertion, dynamic variables, and so on\)
 2.  Processing Rules
 3.  VISTA
 4.  Geolookup \(by default, can be changed to occur before VISTA\)
-5.  **Analytics Live Stream** 
-6.  Persist Attributes \(not available in Live Stream\)
-7.  Visit Attributes/Metrics \(not available in Live stream\)
+5.  **Analytics Livestream** 
+6.  Persist Attributes \(not available in Livestream\)
+7.  Visit Attributes/Metrics \(not available in Livestream\)
 
-## Live stream sample JSON output
+## Livestream sample JSON output
 
 ```
 {	
