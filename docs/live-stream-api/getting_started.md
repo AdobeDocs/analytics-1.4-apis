@@ -24,16 +24,16 @@ Customer Care will need the following information to provision the stream:
 
 ## Connect to the Stream
 A connection request will look something like the following:
-```curl --location --compressed -H "Authorization: Bearer [JWT_TOKEN]" "[STREAM_URL]"```
+```curl --location-trusted --compressed -H "Authorization: Bearer [JWT_TOKEN]" "[STREAM_URL]"```
 
-* `--location` tells CURL to follow redirect requests.
+* `--location-trusted` tells CURL to follow redirects and send the authorization header again when a redirect happens
 * `--compressed` tells CURL to send the request header `Accept-Encoding: deflate, gzip`. Livestream only supports compressed responses in order to reduce bandwidth and avoid overwhelming clients.
 * `-H "Authorization: Bearer [JWT_TOKEN]` is where the JWT token [that was generated](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md#step-4-try-it) using your service account should go. This authenticates the client with Livestream.
 
 > NOTE: The Adobe.io JWT tool isn't required to generate a JWT token. This can be done from within the client. [Example code can be found here for multiple platforms](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md).
 
 Here is an example of a request (with the JWT token removed):
-```curl --location --compressed -H "Authorization: Bearer eyJ4NXUiO...e1OvbElA" https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name```
+```curl --location-trusted --compressed -H "Authorization: Bearer eyJ4NXUiO...e1OvbElA" https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name```
 
 Once connected to the stream, impression data will be streamed in a line-delimited JSON format and reflects data currently being collected by a report suite. For an example of a record returned in from Livestream, see the 'Livestream Sample JSON output' section of the [Metrics and Dimensions](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/live-stream-api/metrics_dimensions.md) page.
 

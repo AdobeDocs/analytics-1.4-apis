@@ -56,10 +56,10 @@ Clients that do a lot of aggregation, statistical modeling, etc, may struggle to
 It is possible to have multiple clients connect to the same stream. This is done using the `?maxConnections=[1-8]` GET string parameter.
 
 For example - the connection endpoint for client #1 would be:
-```curl --location --compressed -H "Authorization: Bearer eyJ4NXUiO...e1OvbElA" https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name?maxConnections=2```
+```curl --location-trusted --compressed -H "Authorization: Bearer eyJ4NXUiO...e1OvbElA" https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name?maxConnections=2```
 
 The endpoint for client #2 would be the same:
-```curl --location --compressed -H "Authorization: Bearer eyJ4NXUiO...e1OvbElA" https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name?maxConnections=2```
+```curl --location-trusted --compressed -H "Authorization: Bearer eyJ4NXUiO...e1OvbElA" https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name?maxConnections=2```
 
 The maximum number of clients is 8.
 
