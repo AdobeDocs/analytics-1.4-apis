@@ -52,3 +52,6 @@ Most of our documentation is geared towards the 2.0 APIs, but the 1.4 APIs will 
 
 If you have authentication use cases that aren't covered in this section please log a github issue so that we can look into your use case further.
 
+## Questions?
+
+If you have any questions, please reach out to the Adobe team at legacyapideprecation@adobe.com.
