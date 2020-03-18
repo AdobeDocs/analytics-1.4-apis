@@ -12,7 +12,7 @@ If your requests are spending a lot of time in the queue, it is possible that ot
 
 If you find that another user has submitted a lot of requests \(especially complex requests that take a long time to process\), it is usually a good idea to check with the requestor to make sure that the requests are valid. You can cancel waiting requests by using Report.Cancel.
 
-Note that The API system is throttled on a company level, mainly to prevent DDoS type of attacks or buggy scripts from unnecessarily taxing the system. The limit is high enough that 99.9% of the our customers will never hit the limit. If you hit this limit, you will receive a Request.OverLimit error message, and you can contact Adobe to have your throttle level increased.
+Note that The API system is throttled on a company level, mainly to prevent DDoS type of attacks or buggy scripts from unnecessarily taxing the system. The limit is high enough that 99.9% of the our customers will never hit the limit. If you hit this limit, you will receive a Request.OverLimit error message. More information about this message is available [here](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/getting-started/c_Web_Services_Error_Codes.md).
 
 If your reports are taking a long time to generate, the remaining sections in this document discuss some best practices to reduce the time it takes to generate a report.
 
