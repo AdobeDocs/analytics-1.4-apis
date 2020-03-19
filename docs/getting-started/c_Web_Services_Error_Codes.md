@@ -2,6 +2,14 @@
 
 The following errors are returned when you come close to or exceed the usage throttling threshold of the web services endpoint.
 
+A warning response will be returned if a rate of 4 requests / second is detected. An error response will be returned if a rate of 5 requests / second is detected. The error responses are documented below.
+
+In addition to this rate limit, a reporting concurrency limit is also enforced at the report suite level. Only 8 concurrent reporting requests will be processed in parallel. If this limit is reached, new report requests will be added to a queue for the report suite and will be processed in the order they came in.
+
+The queue for a report suite can be managed using the Report.GetQueue and Report.Cancel methods. More information is available here:
+* [Report.GetQueue()](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/reporting-api/methods/r_GetQueue.md)
+* [Report.Cancel()](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/reporting-api/methods/r_Cancel.md)
+
 ## Rate Limit Warning
 
 Your response will receive the header "X-RateLimit: Warning"
