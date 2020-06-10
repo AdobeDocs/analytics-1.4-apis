@@ -12,7 +12,7 @@ Uploads data to a data source.
 		"(string)"
 	],
 	"dataSourceID":(int),
-	"finished":"(boolean),
+	"finished":(boolean),
 	"jobName":"(string)",
 	"reportSuiteID":"(string)",
 	"rows":[
