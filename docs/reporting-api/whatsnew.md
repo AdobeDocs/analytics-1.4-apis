@@ -130,7 +130,7 @@ Certain metrics may only be requested along with certain elements.
 
 Use [GetMetrics](methods/r_GetMetrics.md#) with the existingElements parameter to programmatically get a list of valid metrics for a list of element\(s\).
 
-Every element has either a metric whitelist or a metric blacklist, whichever is shorter, that determines these restrictions. See [Valid Element and Metric Combinations](combinations.md#).
+Every element has either a metric allowlist or a metric denylist, whichever is shorter, that determines these restrictions. See [Valid Element and Metric Combinations](combinations.md#).
 
 ## Overtime-only metrics enforcement
 
