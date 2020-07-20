@@ -2,23 +2,23 @@
 
 Certain metrics may only be requested along with certain elements.
 
-You can pass any element to [GetMetrics](methods/r_GetMetrics.md#) to get a list of valid metrics for a specific element. Every element has either a metric whitelist or a metric blacklist, whichever is shorter, that determines these restrictions. If you request an invalid combination, a `metric_not_supported_for_element` error occurs.
+You can pass any element to [GetMetrics](methods/r_GetMetrics.md#) to get a list of valid metrics for a specific element. Every element has either a metric allowlist or a metric denylist, whichever is shorter, that determines these restrictions. If you request an invalid combination, a `metric_not_supported_for_element` error occurs.
 
-## Elements with Metric Whitelists
+## Elements with Metric Allowlists
 
 The elements in the element column can be requested only with the metrics in the right column.
 
-|Element|Metric Whitelist|
+|Element|Metric Allowlist|
 |-------|----------------|
 |fallout|pageviews|
 |paths|pageviews|
 |videos|cartadditions, cartremovals, carts, cartviews, checkouts, orders, revenue, units, event|
 
-## Elements with Metric Blacklists
+## Elements with Metric Denylists
 
 The elements in the element column can be requested with any metric except for those that appear in the right column.
 
-|Element|Metric Blacklist|
+|Element|Metric Denylist|
 |-------|----------------|
 |browserheight|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
 |browsertype|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
