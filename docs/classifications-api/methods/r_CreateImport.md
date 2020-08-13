@@ -18,7 +18,7 @@ After sending all data, call [CommitImport](r_CommitImport.md#) to finalize the 
 | **description** | `xsd:string` | A description of the import job. |
 | **email\_address** | `xsd:string` | The email address to receive job notifications. |
 | **export\_results** | `xsd:int` | Specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: \(Default\) Do not export. `1`: Export when the job completes. |
-| **header** | `array(xsd:string)` | An array of column values for classification. First column is required to be the key.|
+| **header** | `array(xsd:string)` | An array of column values for classification. First column is required to be the `key`.|
 | **overwrite\_conflicts** | `xsd:int` | Specifies whether to overwrite data when conflicts occur. Supported values include: `0`: \(Default\) Do not overwrite data on a conflict. `1`: Overwrite data on a conflict. |
 
 ## Classifications.CreateImport Response
