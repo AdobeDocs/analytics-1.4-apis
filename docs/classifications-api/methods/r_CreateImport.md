@@ -12,7 +12,7 @@ After sending all data, call [CommitImport](r_CommitImport.md#) to finalize the 
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **rsid\_list** | `array(xsd:string)` | \(Optional\) The list of report suites to receive the import job. |
+| **rsid\_list** | `array(xsd:string)` | The list of report suites to receive the import job. |
 | **element** | `xsd:string` |The report for which you want to perform a classifications import.|
 | **check\_divisions** | `xsd:int` | Specifies whether to check report suites for compatible divisions. Supported values include: `0`: Do not check report suite compatibility. `1`: \(Default\) Check report suite compatibility. |
 | **description** | `xsd:string` | A description of the import job. |
