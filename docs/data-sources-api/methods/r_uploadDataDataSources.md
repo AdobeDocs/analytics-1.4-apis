@@ -31,7 +31,7 @@ Uploads data to a data source.
 
 ## Response
 
-Boolean, true on success, otherwise false if no error occurs.
+Boolean, true on success, otherwise false (one case is if Data Sources is internally not able to write on FTP it will return false ).
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods_1.4.md)
 
