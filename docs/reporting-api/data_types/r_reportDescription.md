@@ -48,7 +48,9 @@ When using the `"source":"warehouse"` parameter in the reportDescription, two qu
 
 The `&format=csv` parameter can be used to retrieve the raw response directly from Data Warehouse. If the default JSON response is having problems with formatting or character sets, CSV is the best way to get the data in the most raw format possible. For this reason, CSV is currently the recommended way of retrieving data warehouse data.
 
-The `page` parameter can only be used when `&format=csv` is specified. It is 1-based - for example, to retrieve page 1, add `&page=1` to your query string. It will return CSV data in 20 MB chunks. If the first page has less than 20 MB of data or `&page=2` doesn't return a page, the entire report has already been returned.
+The `page` parameter can only be used when `&format=csv` is specified. It is 1-based - for example, to retrieve page 1, add `&page=1` to your query string. It will return CSV data in 20 MB chunks.
+
+The last page will return a payload smaller than 20 MB and subsequent calls with incremental page indexes will return the message `"error":"eof_or_invalid_page"`.
 
 **Parent topic:** [Data Types](../data_types/datatypes.md)
 
