@@ -12,14 +12,14 @@ Periodically, new fields will be introduced to the Livestream output. Your Lives
 |browser|Browser as identified by the user agent string.|
 |browserHeight|Height in pixels of browser window.|
 |browserWidth|Width in pixels of browser window.|
-|carrier|The wireless provider for the mobile device. <br> Example: for mobile hits with valid IP, ```"carrier": "AT&T"```; for other hits, ```"carrier": ""```.|
+|carrier|The wireless provider for the mobile device. <br /> Example: for mobile hits with valid IP, ```"carrier": "AT&T"```; for other hits, ```"carrier": ""```.|
 |connectionType|Connection type of the browsers computer.|
 |currency|Type of currency for the transaction.|
 |customVisId|A visitor ID passed in with the hit to be used as the visitor ID for the hit \(instead of using visid\_high and visid\_low\).|
 |campaign| The campaign value passed in on the hit. If set, campaign is included in the eVars list: ```"evars": {  "evars": {    "campaign": "DFA:172612:21725632:182361",    "eVar1": "Summer Shoe Promo"  }},``` |
 |eVar1-250|Custom commerce variable passed in on hit. If set, eVars are included in the eVars list: ```"evars": {  "evars": {    "eVar1": "Summer Shoe Promo",   "eVar4": "Sandals"  }},``` |
 |event1-1000| ```"event1": [{	"count": 1,	"exponent": 0,	"unique": ""}]``` |
-|exclude| Indicates if this hit is excluded in Analytics reporting. <br> ```"exclude": { "id": "0", "value": "no", "description": "include" }``` |
+|exclude| Indicates if this hit is excluded in Analytics reporting. <br /> ```"exclude": { "id": "0", "value": "no", "description": "include" }``` |
 |geoCity|Populated based on GeoReporting settings.|
 |geoCountry|Populated based on GeoReporting settings.|
 |geoDMA|Populated based on GeoReporting settings.|
@@ -70,8 +70,8 @@ Periodically, new fields will be introduced to the Livestream output. Your Lives
 |site section| The custom traffic variable for channel. If set, site\_section is included in the props list: ```"props": {	"site_section": "home"}``` |
 |state|Geographical region \(i.e. Arizona, Utah, Saxony \[German Region\]\) passed in on JavaScript.|
 |timeGMT|Time data was collected in GMT. Uses the Unix timestamp \(epoch time from 1/1/1970\). For non-timestamped data it will be set by Adobe servers.|
-|tnt|The test-and-target field used in Target. The `actionId` and `actionName` never have values. <br><br>This field is populated when two conditions are present:<br> - The `TNT` and `ECOMMERCE` options are both enabled for the Report Suite. <br> - A hit (browser action) includes a non-empty `tnt` or `tntAction` field. <br><br>When the `tntAction` is not empty, this field contains all unique entries from `tntAction`, except for `actionId` and `actionName`. <br><br>Example:<br>```"tnt":[{"campaignId":"46352","recipeId":"123","trafficType":"1","actionId":"","actionName":""},{"campaignId":"13234","recipeId":"23","trafficType":"0","actionId":"","actionName":""}]```|
-|tntAction|The enhanced test-and-target field used in Target. Unlike the `tnt` field, the `actionId` and `actionName` have values set. <br><br> This field is populated when two conditions are present: <br>- The `TNT` is enabled for the Report Suite <br>- A hit (browser action) includes a non-empty `tntAction` <br><br>Example: <br>```"tntAction":[{"campaignId":"52060","recipeId":"81","trafficType":"1","actionId":"0","actionName":"Experience Entrance"},{"campaignId":"13234","recipeId":"23","trafficType":"0","actionId":"1","actionName":"Experience Visit"}]```|
+|tnt|The test-and-target field used in Target. The `actionId` and `actionName` never have values. <br /><br />This field is populated when two conditions are present:<br /> - The `TNT` and `ECOMMERCE` options are both enabled for the Report Suite. <br /> - A hit (browser action) includes a non-empty `tnt` or `tntAction` field. <br /><br />When the `tntAction` is not empty, this field contains all unique entries from `tntAction`, except for `actionId` and `actionName`. <br /><br />Example:<br />```"tnt":[{"campaignId":"46352","recipeId":"123","trafficType":"1","actionId":"","actionName":""},{"campaignId":"13234","recipeId":"23","trafficType":"0","actionId":"","actionName":""}]```|
+|tntAction|The enhanced test-and-target field used in Target. Unlike the `tnt` field, the `actionId` and `actionName` have values set. <br /><br /> This field is populated when two conditions are present: <br />- The `TNT` is enabled for the Report Suite <br />- A hit (browser action) includes a non-empty `tntAction` <br /><br />Example: <br />```"tntAction":[{"campaignId":"52060","recipeId":"81","trafficType":"1","actionId":"0","actionName":"Experience Entrance"},{"campaignId":"13234","recipeId":"23","trafficType":"0","actionId":"1","actionName":"Experience Visit"}]```|
 |topLevelDomain|Domain of users ISP.|
 |transactionId|A unique identifier where various data points can be uploaded later via Data Sources.|
 |truncated|A \(Y/N\) field that determines if the query string of the hit was truncated or not|
