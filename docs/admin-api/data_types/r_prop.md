@@ -4,7 +4,7 @@ Data structure that contains information about a report suite's props \(traffic 
 
 |Element|Type|Description|
 |-------|----|-----------|
-|**id** |`xsd:int` | \(Required\) The traffic variable number. |
+|**id** |`xsd:string` | \(Required\) The traffic variable number. For example: prop17 |
 |**name** |`xsd:string` | \(Optional\) The traffic variable name. |
 |**enabled** |`xsd:boolean` | \(Optional\) Indicates if this traffic variable is enabled. |
 |**pathing\_enabled** |`xsd:boolean` | \(Optional\) Indicates if pathing is enabled for this traffic variable. |
