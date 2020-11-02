@@ -54,4 +54,8 @@ If you have authentication use cases that aren't covered in this section please 
 
 ## Questions?
 
-If you have any questions, please reach out to the Adobe team at legacyapideprecation@adobe.com.
+### Does This Affect WSSE Authentication?
+WSSE authentication is deprecated and users are encouraged to use [adobe.io authentication](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/getting-started/getting-started-2.md#create-the-integration) instead. There are plans to make it so that no new WSSE credentials can be created, but there is no date for when WSSE authentication support will be ended for existing clients.
+
+### Additional Questions
+If you have questions not covered in this document then please reach out to the Adobe team at legacyapideprecation@adobe.com.
