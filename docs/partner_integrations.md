@@ -37,8 +37,8 @@ Authorization: Basic dGVzdF9jbGllbnRfaWQ6dGVzdF9jbGllbnRfc2VjcmV0
 Where the value is `test_client_id:test_client_secret` after it has been base64 encoded.
 
 
-The response from this request will contain an access and refresh token that can be used to make requests against the 1.4 and 2.0 APIs.
+The response from this request will contain an access and refresh token that can be used to make requests against the 1.4 API.
 
-> Note: When making requests against the 1.4 APIs, an X-ADOBE-DMA-COMPANY header _must be sent in_ to indicate login company that the API call is intended for. More information is available [here](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/authentication/auth_company.md). The `discovery/me` endpoint can be used to get a list of login companies associated with a user. More information is available [here](https://www.adobe.io/apis/experiencecloud/analytics/docs.html#!AdobeDocs/analytics-2.0-apis/master/discovery.md).
+> Note: When making requests, an X-ADOBE-DMA-COMPANY header _must be sent in_ to indicate login company that the API call is intended for. More information is available [here](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/authentication/auth_company.md). The `discovery/me` endpoint can be used to get a list of login companies associated with a user. More information is available [here](https://www.adobe.io/apis/experiencecloud/analytics/docs.html#!AdobeDocs/analytics-2.0-apis/master/discovery.md).
 
 More information about Adobe OAuth is available [here](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#authorization). More information about available Adobe scopes is available [here](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/Scopes.md#experience-cloud).
