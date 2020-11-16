@@ -17,6 +17,6 @@ The following table displays API version support and status.
 |**API Version** |**Current State** |**Release Date** |**Deprecation Date** |**End of Life Date** |
 |-------|-------|-------|-------|-------|
 |1.2|End of life|March 20, 2008|February 20, 2014|September 15, 2016|
-|1.3|Deprecated|April 21, 2011|September 15, 2016|TBD|
+|1.3|Deprecated|April 21, 2011|September 15, 2016|April 30, 2021|
 |1.4|Supported|February 20, 2014|TBD|TBD|
 
