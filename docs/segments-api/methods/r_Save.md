@@ -31,7 +31,7 @@ To save a new segment, you must provide a name, reportSuiteID, and a definition.
     "name":"New Segment",
     "description":"This is a new segment",
     "owner":"bob",
-    "reportSuiteID":"myreportsuite"
+    "reportSuiteID":"myreportsuite",
     "definition":{
          "container":{
             "type":"hits",
