@@ -57,5 +57,14 @@ If you have authentication use cases that aren't covered in this section please 
 ### Does This Affect WSSE Authentication?
 WSSE authentication is deprecated and users are encouraged to use [adobe.io authentication](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/getting-started/getting-started-2.md#create-the-integration) instead. There are plans to make it so that no new WSSE credentials can be created, but there is no date for when WSSE authentication support will be ended for existing clients.
 
+### Does this impact Adobe Analytics Livestream?
+If you have an integration with Livestream you may be impacted and need to migrate your Client application to an Adobe IO JWT integration.  Please refer to [Getting 
+Started with Adobe Analytics Livestream](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/live-stream-api/getting_started.md#) for more infomation on how to proceed.
+
+### Does this impact Adobe Analytics Report Builder?
+Yes, you will need to upgrade to the latest version of Report Builder prior to the EOL deadline to avoid being impacted.  
+
 ### Additional Questions
 If you have questions not covered in this document then please reach out to the Adobe team at legacyapideprecation@adobe.com.
+
+
