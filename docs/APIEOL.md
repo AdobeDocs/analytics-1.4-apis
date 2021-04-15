@@ -62,7 +62,7 @@ If you have an integration with Livestream you may be impacted and need to migra
 Started with Adobe Analytics Livestream](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/live-stream-api/getting_started.md#) for more infomation on how to proceed.
 
 ### Does this impact Adobe Analytics Report Builder?
-Yes, you will need to upgrade to the latest version of Report Builder prior to the EOL deadline to avoid being impacted.  
+Yes, you will need to upgrade to the latest version of Report Builder (version 5.6.48 or higher) prior to the EOL deadline to avoid being impacted.  Customers can login to Analtyics and go to Tools->Report Builder to download the binary.  After April 22, 2021 customers can update directly from the application.
 
 ### Additional Questions
 If you have questions not covered in this document then please reach out to the Adobe team at legacyapideprecation@adobe.com.
