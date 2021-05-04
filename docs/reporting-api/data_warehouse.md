@@ -8,10 +8,13 @@ When using [Report.Get](methods/r_Get.md#), the returned [Report](data_types/r_r
 
 The API stores data warehouse data in zip format. When using [Report.Get](methods/r_Get.md#), it tries to unzip this data and transform it to JSON (or CSV) when returning it. The `format` query string parameter can be used to control how data is returned.
 
+
 |Possible Values|Description|
+|---------------|-----------|
 |raw|Returns the raw zip file returned by the data warehouse engine. Note: Pagination is disabled for `format=raw` requests|
 |json (default)|Returns results in a JSON data structure|
 |csv|Returns results in CSV format|
+
 
 ## Data Warehouse API Best Practices
 The Data Warehouse API is intended to be used to query large resultsets from the Analytics product. It should be used instead of the normal reporting api reports require _more than 5 hours to return_.
