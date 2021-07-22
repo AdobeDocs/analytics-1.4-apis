@@ -6,6 +6,8 @@ Appends row data to a previously created SAINT Import Job.
 
 You can separate data into pages, but the pages must be sent sequentially \(either ascending or descending\) to avoid errors when SAINT processes the job.
 
+When importing hundreds or more rows of data, the recommendation is to maximize the number of rows in each job to achieve maximum throughput.
+
 **Note:** Individual SAINT jobs cannot exceed 25,000 rows.
 
 |Parameter|Type|Description|
