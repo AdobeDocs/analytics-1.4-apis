@@ -25,7 +25,6 @@ The Data Sources API organizes data sources based on grouping rather than catego
 |Site-Level Traffic Data Source \(Traffic\) |14|Imports Traffic data for your entire Web site. For example, Page Views.|
 |Breakdown Traffic Data Source \(Traffic\) |15|Imports Traffic data broken down by another Web site variable. For example, Page Views by Product.|
 |SearchCenter Bulk Upload \(Standard\) |17|Provides manual and excel-automated bulk uploads within SearchCenter.|
-|Generic Data Source \(Full Processing\) |20|The generic full data source allows you to import log file data into Analytics. This data will be processed as if it were received by Experience Cloud servers at the time specified \(each hit receives a timestamp\).|
 |Product Returns|26|Lets you Import product return data and associate it with a purchase ID. Use this data source to identify search engines, keywords, campaigns and other attributes that are more likely to generate returns.|
 |Product Cost|27|Lets you provide the actual cost of products purchased and shipped from your site. Once cost or profit is associated with products, you can accurately report on the most profitable campaigns, keywords and internal promotions for your site.|
 |Order Status|28|Lets you use metrics to identify the status of every order made - including orders canceled, shipped, completed, or deemed fraudulent. Order status reporting can identify which acquisition methods generate the highest order completion rate.|

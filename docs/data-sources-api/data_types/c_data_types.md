@@ -9,13 +9,9 @@ An array of `xsd:string`.
 -   **[dataSourceFileStatus](../data_types/r_data_source_file_status.md)**  
  Data structure that contains status information about a file submitted to a data source.
 -   **[dataSourceInfo](../data_types/r_data_source_info.md)**  
- Data structure that contains configuration settings for a full-processing data source.
+ Data structure that contains configuration settings for a data source.
 -   **[dsFileStruct](../data_types/r_ds_file_struct.md)**  
  Data structure that contains information about the submitted files associated with a data source.
--   **[ds\_full\_injection\_type](../data_types/r_ds_full_injection_type.md)**  
- An enumerated list of Full data source injection types.
--   **[ds\_full\_settings](../data_types/r_ds_full_settings.md)**  
- Data structure that contains configuration settings for a full-processing data source.
 -   **[ds\_generic\_settings](../data_types/r_ds_generic_settings.md)**  
  Data structure that contains configuration settings for a Generic data source.
 -   **[ds\_setup\_result](../data_types/r_ds_setup_result.md)**  
@@ -25,9 +21,9 @@ An array of `xsd:string`.
 -   **[ds\_traffic\_settings](../data_types/r_ds_traffic_settings.md)**  
  Data structure that contains configuration settings for a Traffic data source.
 -   **[ds\_weblog\_formats](../data_types/r_ds_weblog_formats.md)**  
- An enumerated list of Full data source injection types.
+ An enumerated list of Weblog data source injection types.
 -   **[ds\_weblog\_settings](../data_types/r_ds_weblog_settings.md)**  
- Data structure that contains configuration settings for a Traffic data source.
+ Data structure that contains configuration settings for a Weblog data source.
 -   **[errorList](../data_types/r_error_list.md)**  
 An array of `xsd:string`.
 -   **[fileIDResult](../data_types/r_file_id_result.md)**  

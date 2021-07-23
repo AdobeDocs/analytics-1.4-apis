@@ -2,8 +2,6 @@
 
 Methods for Data Sources 1.3.
 
--   **[SetupFull](../methods/r_setupFull.md)**  
-Creates a new full processing data source.
 -   **[SetupTraffic](../methods/r_setupTraffic.md)**  
 Creates a new Traffic Data Source.
 -   **[SetupWebLog](../methods/r_setupWebLog.md)**  
@@ -26,8 +24,6 @@ Instructs Data Sources to process data related to site visits that did not end i
  Returns information about the files submitted to the specified data source.
 -   **[GetFileStatus](../methods/r_getFileStatus.md)**  
  Returns status information about the files submitted to the specified data source.
--   **[Restart](../methods/r_restart.md)**  
- Restarts processing of the specified Full Processing data source.
 -   **[Deactivate](../methods/r_deactivate.md)**  
  Deactivates the specified data source.
 

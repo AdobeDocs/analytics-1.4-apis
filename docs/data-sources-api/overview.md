@@ -16,12 +16,12 @@ Contrast this with an FTP data submission, where data validation doesn't occur u
 
 The general process for creating a Data Source with the Data Sources API is as follows:
 
-1.  Call one of the Data Source setup methods \(`DataSource.SetupFull`, `DataSource.SetupTraffic`, `DataSource.SetupWebLog`, `DataSource.SetupGeneric`\) to create the type of data source you need.
+1.  Call one of the Data Source setup methods \(`DataSource.SetupTraffic`, `DataSource.SetupWebLog`, `DataSource.SetupGeneric`\) to create the type of data source you need.
 2.  Call `DataSource.GetIDs` or `DataSource.GetInfo` to get the Data Source ID of the new Data Source.
-3.  Call `DataSource.BeginDataBlock` and, if necessary, `DataSource.AppendDataBlock` to add data to the new data source and submit the data source to the Processing Queue. If necessary, call `DataSource.ProcessIncompleteVisits` to close out Web site visits that span data blocks for Full Processing Data Sources.
+3.  Call `DataSource.BeginDataBlock` and, if necessary, `DataSource.AppendDataBlock` to add data to the new data source and submit the data source to the Processing Queue.
 4.  Call `DataSource.GetFileIDs` or `DataSource.GetFileInfo` to get the File ID of the Data Source file in the Processing Queue.
 5.  Call `DataSource.GetFileStatus` to monitor the status of the data source file. When data source processing completes, the data sent through the data source is available in Analytics.
-6.  Call `DataSource.Restart` or `DataSource.Deactivate` to manage the data source as needed.
+6.  Call `DataSource.Deactivate` to manage the data source as needed.
 
 **Note:** Many Data Sources methods require and/or return a Data Sources ID, which is a numeric value that identifies the type of data source associated with this method call. For more information, see [Data Sources ID](c_data_sources_id.md#).
 
