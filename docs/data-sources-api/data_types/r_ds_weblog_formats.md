@@ -1,6 +1,6 @@
 # ds\_weblog\_formats
 
-An enumerated list of Full data source injection types.
+An enumerated list of Weblog data source injection types.
 
 The enumerated type includes the following elements of type `xsd:string`.
 

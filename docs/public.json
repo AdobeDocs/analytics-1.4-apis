@@ -919,72 +919,6 @@
                 }
             }
         },
-        "/rest/?method=DataSources.ProcessIncompleteVisits": {
-            "post": {
-                "tags": [
-                    "DataSources"
-                ],
-                "operationId": "DataSources.ProcessIncompleteVisits",
-                "summary": "Processes incomplete visits for a full processing DataSource",
-                "parameters": [
-                    {
-                        "name": "dataSourcesProcessIncompleteVisitsRequestData",
-                        "in": "body",
-                        "schema": {
-                            "$ref": "#/definitions/dataSourcesProcessIncompleteVisitsRequestData"
-                        },
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "DataSources.ProcessIncompleteVisits response",
-                        "schema": {
-                            "$ref": "#/definitions/dataSourcesProcessIncompleteVisitsResponseData"
-                        }
-                    },
-                    "default": {
-                        "description": "Unexpected error",
-                        "schema": {
-                            "$ref": "#/definitions/Error"
-                        }
-                    }
-                }
-            }
-        },
-        "/rest/?method=DataSources.Restart": {
-            "post": {
-                "tags": [
-                    "DataSources"
-                ],
-                "operationId": "DataSources.Restart",
-                "summary": "Restart processing for a DataSource",
-                "parameters": [
-                    {
-                        "name": "dataSourcesRestartRequestData",
-                        "in": "body",
-                        "schema": {
-                            "$ref": "#/definitions/dataSourcesRestartRequestData"
-                        },
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "DataSources.Restart response",
-                        "schema": {
-                            "$ref": "#/definitions/dataSourcesRestartResponseData"
-                        }
-                    },
-                    "default": {
-                        "description": "Unexpected error",
-                        "schema": {
-                            "$ref": "#/definitions/Error"
-                        }
-                    }
-                }
-            }
-        },
         "/rest/?method=DataSources.Save": {
             "post": {
                 "tags": [
@@ -6763,7 +6697,6 @@
         "data_source_processing_types": {
             "type": "string",
             "enum": [
-                "full",
                 "generic",
                 "traffic",
                 "weblog"

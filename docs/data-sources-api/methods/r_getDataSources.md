@@ -17,7 +17,7 @@ Array of data sources, with the following structure:
 ```
 {
 		"id":"(int)",
-		"processing_type":"(string)", // generic, full, web, traffic
+		"processing_type":"(string)", // generic, web, traffic
 		"name":"(string)",
 		"email":"(string)",
 		"activatedDate":"(date)",

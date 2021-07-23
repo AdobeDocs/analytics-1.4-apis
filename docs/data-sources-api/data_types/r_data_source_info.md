@@ -1,6 +1,6 @@
 # dataSourceInfo
 
-Data structure that contains configuration settings for a full-processing data source.
+Data structure that contains configuration settings for a data source.
 
 |Element|Type|Description|
 |-------|----|-----------|
