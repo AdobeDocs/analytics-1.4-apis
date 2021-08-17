@@ -1,51 +1,42 @@
-Analytics 1.4 Apis
-=====
-Documentation and helpful resources for calling the Analytics 1.4 Apis
+# Adobe I/O Documentation Template
 
-Swagger Documentation
-----
-* [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html)
+This is a site template built with the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
 
-Getting Started
-----
-If you are creating a new integration you should use the new 2.0 version of the APIs. [2.0 API documentation](https://github.com/AdobeDocs/analytics-2.0-apis)
+View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) running on Github Pages.  
 
-We recommend using an API Client like [POSTMAN](https://www.getpostman.com/) to get started calling the Analytics APIs.
+## Where to ask for help
 
-Authentication
------
-The 1.4 APIs support [JWT](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/jwt.md) and OAuth authentication. You can follow the authentication documentation from the [2.0 Analytics APIs](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/README.md#authentication) and use the access tokens to call either the 1.4 or 2.0 versions of the APIs.
+The slack channel #adobeio-onsite-onboarding is our main point of contact for help. Feel free to join the channel and ask any questions. 
 
-> Note: WSSE Authentication has been deprecated
+## How to develop
 
-Specific information about web grant OAuth is available [here](docs/partner_integrations.md).
+For local development, simply use :
+```
+$ npm install
+$ npm run dev
+```
 
-**IMS Auth with Multiple Login Companies:** 
-If you are using IMS Authentication and have access to multiple login companies be sure to read our [Auth Company](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/authentication/auth_company.md) documentation. 
+For the documentation developer, please read these sections on how to:
+- [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)
+- [Linking to pages](https://github.com/adobe/aio-theme#links)
+- [Using assets](https://github.com/adobe/aio-theme-aio#assets)
+- [Setting Global Navigation](https://github.com/adobe/aio-theme#global-navigation)
+- [Setting Side Navigation](https://github.com/adobe/aio-theme#side-navigation)
+- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
+- [Notes on using Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
 
+For more in-depth [instructions](https://github.com/adobe/aio-theme#getting-started).
 
-Documentation
-----
-* [Getting Started](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/getting-started/getting-started-2.md#getting-started)
-* [Reporting API 1.4](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api/index.md)
-* [Admin API 1.4](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api/index.md) 
-* [Authentication](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/README.md#authentication)
-* [Segments API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/segments-api/index.md)
-* [Calculated Metrics API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/calc-metrics-api/index.md)
-* [Classifications API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/classifications-api/index.md)
-* [Data Warehouse API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-warehouse-api/index.md)
-* [Data Insertion API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md)
-* [Data Sources API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-sources-api/index.md)
-* [Data Feeds API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/data-feeds-api/index.md)
-* [Live Stream API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/live-stream-api/getting_started.md)
-* [Target and Recommendations](http://developers.adobetarget.com/)
+## How to deploy
 
-Deprecated
-----
-* [End Of Life Notice](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/APIEOL.md)
-* [Admin API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/admin-api-1.3/index.md)
-* [Reporting API 1.3](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/reporting-api-1.3/index.md)
-* [Saint API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/saint-api/index.md)
-* [Target API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/target-api/index.md)
-* [Recommendations API](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/recommendations-api/index.md)
-* [Legacy Authentication](https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/docs/authentication/index.md)
+For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
+```
+adobe.io/{product}/docs
+adobe.io/{product}/community
+adobe.io/{product}/community/code_of_conduct
+adobe.io/{product}/community/contribute
+```
+
+### Launching a deploy
+
+You can deploy using the GitHub actions deploy workflow see [deploy instructions](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites).
