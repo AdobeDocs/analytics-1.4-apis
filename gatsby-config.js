@@ -12,6 +12,10 @@
 
 module.exports = {
   siteMetadata: {
+    home: {
+      title: 'Adobe Analytics',
+      path: '/analytics-apis/'
+    },
     versions: [
       {
         title: 'v1.4',
