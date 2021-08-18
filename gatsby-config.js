@@ -19,7 +19,7 @@ module.exports = {
       },
       {
         title: 'v2.0',
-        path: ''
+        path: '/analytics-apis/docs/2.0/'
       }
     ],
     pages: [
