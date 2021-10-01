@@ -8,7 +8,7 @@
 
 ## When is it being shutdown?
 
-These services are being retired in August 18, 2021.
+These services are being retired in October 20, 2021.
 
 ## 1.3 APIs
 
