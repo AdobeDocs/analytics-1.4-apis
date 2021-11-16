@@ -42,4 +42,17 @@
 * persistent cookie
 * paid search
 
+## How to get a list of dimension items
+
+* Log into https://experience.adobe.com 
+* Launch Analytics
+* Open or create a new Analysis Workspace project
+* Search for the desired dimension using the Search components field in the top left corner
+* Click the arrow on the right side of the desired dimension
+
+Here is an example showing the dimension items for Mobile Device Type:
+
+![mobile_device_type_dimension_items](dimension_items.png)
+
+
 For more information about Mobile Dimensions see the [Analytics Mobile Dimensions Documentation](https://experienceleague.adobe.com/docs/analytics/components/dimensions/mobile-dimensions.html?lang=en)
