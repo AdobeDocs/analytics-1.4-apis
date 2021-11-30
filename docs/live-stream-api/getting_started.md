@@ -9,7 +9,7 @@ This feature can be useful to those building:
 The following table outlines the tasks required to get started using Adobe Analytics Livestream.
 
 ## Create a Client
-An [Adobe.io Service Account](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) needs to be created. This will be used by the client to authenticate and connect to the stream. After creating this account, make a note of the _technical account email address_. This will be used later to link the the service account to a Livestream endpoint.
+An [Adobe.io Service Account](https://www.adobe.io/developer-console/docs/guides/authentication/ServiceAccountIntegration/) needs to be created. This will be used by the client to authenticate and connect to the stream. After creating this account, make a note of the _technical account email address_. This will be used later to link the the service account to a Livestream endpoint.
 
 ## Identify What Should Be in the Stream
 Review the list of [Metrics and Dimensions](metrics_dimensions.md#) and identify what should appear in your stream. For report suites with very high volume, it is important to only include metrics and dimensions that are going to be used.
