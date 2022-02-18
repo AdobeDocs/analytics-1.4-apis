@@ -1,5 +1,5 @@
 ---
-title: Reports & Analytics API v1.4
-description: API Spec for the Adobe Marketing Cloud - Reports and Analytics API
-openAPISpec: /swagger_2.0.json  
+title: Adobe Analytics 1.4 API Reference
+description: All API calls that you can make using the Analytics 1.4 API.
+openAPISpec: /swagger.json
 --- 

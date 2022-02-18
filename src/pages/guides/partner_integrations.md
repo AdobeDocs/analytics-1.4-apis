@@ -20,12 +20,14 @@ To request an authorization code, build the following URL and present it to the 
 The user will login using their Adobe credentials and will have the opportunity to authorize the client. Once complete, the browser will be redirected to the provided `{REDIRECT_URI}` with a `code` GET string parameter. This `code` parameter will be used in the next request and is called an _authorization code_.
 
 The _authorization code_ can be exchanged for an access and refresh token by making a server-side request:
-```
+
+```sh
 curl -u '{CLIENT_ID}:{CLIENT_SECRET}' -X POST \
      https://ims-na1.adobelogin.com/ims/token/v3 \
      -H 'Content-Type: application/x-www-form-urlencoded' \
      -d 'code={AUTHORIZATION_CODE}&grant_type=authorization_code'
 ```
+
 `CLIENT_ID` and `CLIENT_SECRET` are the credentials provided in the adobe.io console for your application. The `{AUTHORIZATION_CODE}` parameter is the value of the `code` parameter in the previous response.
 
 The `-u '{CLIENT_ID}:{CLIENT_SECRET}'` parameter instructs curl to send an `Authorization: Basic` header. For example, if your `client_id` was `test_client_id` and `client_secret` was `test_client_secret` the authorization header would look like this:
@@ -41,4 +43,4 @@ The response from this request will contain an access and refresh token that can
 
 > Note: When making requests, an X-ADOBE-DMA-COMPANY header _must be sent in_ to indicate login company that the API call is intended for. More information is available [here](authentication/auth_company.md). The `discovery/me` endpoint can be used to get a list of login companies associated with a user. More information is available [here](https://www.adobe.io/apis/experiencecloud/analytics/docs.html#!AdobeDocs/analytics-2.0-apis/master/discovery.md).
 
-More information about Adobe OAuth is available [here](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md#authorization). More information about available Adobe scopes is available [here](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/Scopes.md#experience-cloud).
+More information about Adobe OAuth is available [here](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/OAuth.md). More information about available Adobe scopes is available [here](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/OAuth/Scopes.md).

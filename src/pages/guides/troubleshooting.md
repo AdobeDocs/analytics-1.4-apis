@@ -20,16 +20,16 @@ When making calls to endpoints of 1.4 Analytics APIs, consider the following tip
 
 If a required parameter is missing, an error message appears in the response. For example, the following request results in an error message indicating a missing parameter:
 
-```
-    curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Company.GetTrackingServer" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"rsid\": \"string\"}"
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Company.GetTrackingServer" -H "accept: application/json" -H "Content-Type: application/json" -d "{ \"rsid\": \"string\"}"
 ```
 
-```
-    {
-        "error": "Bad Request",
-        "error_description": "Report suite is a required parameter",
-        "error_uri": null
-    }
+```json
+{
+    "error": "Bad Request",
+    "error_description": "Report suite is a required parameter",
+    "error_uri": null
+}
 ```
 
 You can also refer to [Analytics Report Error Codes](reporting-api/errors.md) to help troubleshoot parameter error messages.

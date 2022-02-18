@@ -35,7 +35,7 @@ For each operation add the parameters and values you need as a filter. For examp
 T&T generates the audit report in CSV format, which you can import into any spreadsheet program, such as Microsoft\* Excel\*. For example:
 
 ```
- "Campaign: landing campaign RFM"
+"Campaign: landing campaign RFM"
 "Downloaded at: 2007-08-24. Time zone: EST5EDT"
 "Step: Conversion"
 "Campaign Id","Recipe","Order Date","Order Time","Order   Id","Amount","Order Flag","Product Ids"
@@ -56,4 +56,3 @@ T&T generates the audit report in CSV format, which you can import into any spre
 Optionally, you can use a scripting language, such as Perl, Python, and Ruby, to programmatically manipulate the audit report contents to create custom reports.
 
 **Parent topic:** [Methods](../campaign_state/r_Test_and_Target_API_Sample_Code.md)
-

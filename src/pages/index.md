@@ -1,56 +1,35 @@
-<Hero slots="heading, text"/>
+---
+title: Adobe Analytics 1.4 APIs
+description: The Analytics 1.4 API overview page.
+---
 
-Analytics 1.4 Apis
-=====
+<Hero slots="image, heading, text" background="rgb(88, 34, 138)"/>
 
-Documentation and helpful resources for calling the Analytics 1.4 Apis
+![Hero image](./images/hero-illustration.png)
 
-Swagger Documentation
-----
-* [Swagger](api.md)
+# Adobe Analytics 1.4 APIs
 
-Getting Started
-----
-If you are creating a new integration you should use the new [2.0 version of the APIs](../2.0/).
+The Adobe Analytics 1.4 APIs are the predecessor to the Analytics 2.0 APIs. They allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
 
-We recommend using an API Client like [POSTMAN](https://www.getpostman.com/) to get started calling the Analytics APIs.
+<Resources slots="heading, links"/>
 
-Authentication
------
-The 1.4 APIs support [JWT](../2.0/guides/jwt/) and OAuth authentication. You can follow the authentication documentation from the [2.0 Analytics APIs](../2.0/) and use the access tokens to call either the 1.4 or 2.0 versions of the APIs.
+#### Resources
 
-<InlineAlert slots="text"/>
+* [Quick start guide](guides/index.md)
+* [Endpoint guides](guides/endpoints/index.md)
+* [API reference](apis/index.md)
+* [Github repository](https://github.com/AdobeDocs/analytics-1.4-apis)
 
-WSSE Authentication has been deprecated
+## Overview
 
-Specific information about web grant OAuth is available [here](guides/partner_integrations.md).
+If you are creating a new integration, Adobe strongly recommends using the [2.0 APIs](https://developer.adobe.com/analytics-apis/docs/2.0/).
 
-**IMS Auth with Multiple Login Companies:** 
-If you are using IMS Authentication and have access to multiple login companies be sure to read our [Auth Company](guides/authentication/auth_company.md) documentation. 
+The Adobe Analytics 1.4 APIs allow you to directly call Adobe's servers to perform almost any action that you can perform in the user interface. You can create reports to explore, get insights, or answer important questions about your data. You can also manage components of Adobe Analytics, such as Data Warehouse requests or Report Suite settings. This documentation provides instructions on how to call Adobe's endpoints to return the desired data.
 
+This user guide assumes that you have an intermediate understanding of Adobe Analytics. See the documentation for [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/landing/home.html).
 
-Documentation
-----
-* [Getting Started](guides/getting-started/index.md#getting-started)
-* [Reporting API 1.4](guides/reporting-api/index.md)
-* [Admin API 1.4](guides/admin-api/index.md) 
-* [Authentication](#authentication)
-* [Segments API](guides/segments-api/index.md)
-* [Calculated Metrics API](guides/calc-metrics-api/index.md)
-* [Classifications API](guides/classifications-api/index.md)
-* [Data Warehouse API](guides/data-warehouse-api/index.md)
-* [Data Insertion API](guides/data-insertion-api/index.md)
-* [Data Sources API](guides/data-sources-api/index.md)
-* [Data Feeds API](guides/data-feeds-api/index.md)
-* [Live Stream API](guides/live-stream-api/getting_started.md)
-* [Target and Recommendations](https://developers.adobetarget.com/)
+This user guide adheres to Adobe's Code of Conduct. Contributions are encouraged and appreciated. See Adobe's [Code of Conduct](https://github.com/AdobeDocs/analytics-1.4-apis/blob/main/CODE_OF_CONDUCT.md) and [Contribution guidelines](https://github.com/AdobeDocs/analytics-1.4-apis/blob/main/.github/CONTRIBUTING.md) on GitHub for more information.
 
-Deprecated
-----
-* [End Of Life Notice](guides/APIEOL.md)
-* [Admin API 1.3](guides/admin-api-1.3/index.md)
-* [Reporting API 1.3](guides/reporting-api-1.3/index.md)
-* [Saint API](guides/saint-api/index.md)
-* [Target API](guides/target-api/index.md)
-* [Recommendations API](guides/recommendations-api/index.md)
-* [Legacy Authentication](guides/authentication/index.md)
+## 1.3 API End-of-Life
+
+The 1.3 APIs are deprecated since 2016 and sunset as of August 2021. Users can no longer authenticate or make calls using this version of the API. Please use the 1.4 or 2.0 APIs instead.
