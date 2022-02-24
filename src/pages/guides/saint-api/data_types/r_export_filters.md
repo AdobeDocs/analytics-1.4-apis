@@ -1,4 +1,4 @@
-# export\_filters
+# export_filters
 
 An array of `export_filter`.
 

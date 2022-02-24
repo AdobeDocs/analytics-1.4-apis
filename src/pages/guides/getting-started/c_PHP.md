@@ -12,8 +12,8 @@ Each of the solution files provided in the articles contains a WSDL file. Howeve
 
 The SOAPRequest.php file contains the following functions:
 
--   `getSecurityHeader()` function: Creates the SOAP security header to access the Analytics APIs.
--   The sendRequest\(\) function: Sends the SOAP request with the security header to **Analytics**.
+- `getSecurityHeader()` function: Creates the SOAP security header to access the Analytics APIs.
+- The sendRequest() function: Sends the SOAP request with the security header to **Analytics**.
 
 You will need to replace the `auth_login` and `auth_password` values with your own authentication information.
 

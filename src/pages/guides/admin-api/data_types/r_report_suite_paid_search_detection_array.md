@@ -1,6 +1,6 @@
-# report\_suite\_paid\_search\_detection\_array
+# report_suite_paid_search_detection_array
 
-An array of [report\_suite\_paid\_search\_detection](r_report_suite_paid_search_detection.md#).
+An array of [report_suite_paid_search_detection](r_report_suite_paid_search_detection.md#).
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

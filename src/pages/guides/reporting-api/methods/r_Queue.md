@@ -41,7 +41,7 @@ If the list of elements is left empty, the default element of "page" is used.
 
 **date/dateFrom/dateTo** 
 
-If the date parameter\(s\) are omitted, the current day is used.
+If the date parameter(s) are omitted, the current day is used.
 
 **Parent topic:** [Methods](../methods/methods.md)
 

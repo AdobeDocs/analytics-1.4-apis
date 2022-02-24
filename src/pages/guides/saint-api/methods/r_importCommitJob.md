@@ -6,7 +6,7 @@ Submits a SAINT import file for processing.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**job\_id** |`xsd:int` | The job ID to commit for processing. |
+|**job_id** |`xsd:int` | The job ID to commit for processing. |
 
 ## Saint.ImportCommitJob Response
 

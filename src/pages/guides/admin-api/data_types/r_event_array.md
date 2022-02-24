@@ -1,4 +1,4 @@
-# event\_array
+# event_array
 
 An array of [event](r_event.md#).
 

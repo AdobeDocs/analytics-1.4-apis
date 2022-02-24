@@ -1,13 +1,13 @@
 # SaveEvars
 
-Updates the commerce variables \(eVars\) for the requested report suites.
+Updates the commerce variables (eVars) for the requested report suites.
 
 ## ReportSuite.SaveEvars parameters
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**evars** | [evar\_array](../../data_types/r_evar_array.md#) - An array of [evar](../../data_types/r_evar.md#) |List of eVars for the specified report suites, including the settings for each eVar.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**evars** | [evar_array](../../data_types/r_evar_array.md#) - An array of [evar](../../data_types/r_evar.md#) |List of eVars for the specified report suites, including the settings for each eVar.|
 
 ## ReportSuite.SaveEvars response
 

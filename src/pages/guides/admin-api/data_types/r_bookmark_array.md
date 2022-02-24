@@ -1,4 +1,4 @@
-# bookmark\_array
+# bookmark_array
 
 An array of [bookmark](r_bookmark.md#).
 

@@ -1,6 +1,6 @@
-# report\_suite\_discover\_array
+# report_suite_discover_array
 
-An array of [report\_suite\_discover](r_report_suite_discover.md#).
+An array of [report_suite_discover](r_report_suite_discover.md#).
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

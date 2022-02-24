@@ -17,82 +17,82 @@ Numeric error codes have been abandoned in favor of textual, descriptive error m
 
 |Code|Message|
 |----|-------|
-| algorithm\_argument\_invalid | algorithmArgument must be "linear" or "count" |
-| calculated\_metric\_invalid | Formula "%s" not found |
-| calculated\_metric\_invalid | Invalid formula ID "%s" |
-| calculated\_metric\_invalid | Invalid metric "%s" |
-| calculated\_metric\_invalid | Metric "%s" in formula "%s" is not found |
-| calculated\_metric\_unsupported | Metric "%s" in formula "%s" is not supported |
-| date\_granularity\_missing | anomalyDetection requires dateGranularity |
-| date\_invalid | "%s" is not a valid date |
-| delivery\_complete | The warehouse report was delivered to external FTP. |
-| element\_classification\_invalid | Invalid classification "%s" for element "%s" |
-| element\_combination\_unsupported | This combination of elements is not supported |
-| element\_id\_invalid | Element "%s" not found |
-| element\_id\_missing | Element id must be specified |
-| element\_inaccessible | You do not have permission to access element "%s" |
-| element\_top\_invalid | The maximum number of top element values supported is %d |
-| element\_search\_unsupported | Element search is only supported on the first element for Real Time reports |
-| element\_selected\_unsupported | Element selected is only supported on the first element for Real Time reports |
-| element\_top\_unsupported | "top" is only supported on the primary \(last\) element for Real Time reports |
-| element\_top\_invalid | The maximum number of top element values supported is 100 |
-| element\_top\_unsupported\_warehouse | Element top is unsupported in warehouse reports |
-| element\_start\_unsupported\_warehouse | Element start is unsupported in warehouse reports |
-| element\_selected\_unsupported\_warehouse | Element selected is unsupported in warehouse reports |
-| lement\_search\_unsupported\_warehouse | eElement search is unsupported in warehouse reports |
-| elements\_invalid | The maximum number of elements supported is %d |
-| expedite\_inaccessible | You do not have permission to expedite this request |
-| fallout\_checkpoint\_required | Fallout selected checkpoint cannot be empty |
-| fallout\_invalid | Fallout requires selected items |
-| fallout\_invalid | Fallout selected cannot have more than %s checkpoints |
-| fallout\_invalid | Fallout selected must have at least %s checkpoints |
-| first\_rank\_period\_invalid | firstRankPeriod must be an integer between 0 and 60 |
-| floor\_sensitivity\_invalid | floorSensitivity must be a valid float between zero and 1 |
-| ftp\_directory\_missing | FTP directory must be specified for external FTP warehouse requests |
-| ftp\_filename\_missing | FTP filename must be specified for external FTP warehouse requests |
-| ftp\_host\_missing | FTP host must be specified for external FTP warehouse requests |
-| ftp\_password\_missing | FTP password must be specified for external FTP warehouse requests |
-| ftp\_port\_missing | FTP port must be specified for external FTP warehouse requests |
-| ftp\_username\_missing | FTP username must be specified for external FTP warehouse requests |
-| hierarchy\_level\_invalid | Hierarchy level "%s" is invalid for "%s" |
-| hierarchy\_parent\_id\_missing | Hierarchy parentID is missing for "%s" |
-| max\_runtime\_exceeded | Report exceeded maximum runtime of %d hours |
-| metric\_id\_invalid | Metric "%s" not found |
-| metric\_id\_missing | Metric id must be specified |
-| metric\_inaccessible | You do not have permission to access metric "%s" |
-| metric\_not\_supported\_for\_element | The element "%s" does not support the metric "%s" |
-| metric\_unsupported\_in\_overtime | Metric "%s" not supported in overtime reports |
-| metric\_unsupported\_in\_ranked | Metric "%s" not supported in ranked reports |
-| metric\_unsupported\_in\_trended | Metric "%s" not supported in trended reports |
-| multiple\_metrics\_unsupported | Only one metric is supported for realtime reports |
-| multiple\_elements\_unsupported | Only two elements are supported for realtime reports |
-| pathing\_filter\_invalid | Items must be specified after ::not:: |
-| pathing\_filter\_required | Pathing pattern filter cannot be empty |
-| pathing\_invalid | Pathing requires selected pattern |
-| period\_invalid | Both date and dateFrom or dateTo cannot be specified |
-| period\_invalid | dateTo must be after dateFrom |
-| period\_invalid | Invalid dateGranularity |
-| period\_invalid | Year must be between %s and %s |
-| period\_missing | dateFrom and dateTo must both be specified |
-| realtime\_report\_invalid | This report is not configured for realtime |
-| report\_not\_ready | Report not ready |
-| report\_suite\_invalid | Invalid report suite "%s" |
-| report\_suite\_invalid | Report suite "%s" not found |
-| report\_suite\_missing | reportSuiteID is missing |
-| search\_invalid | Search arguments missing |
-| search\_operator\_invalid | Invalid search operator "%s" |
-| segment\_element\_invalid | Element "%s" not valid for inline segment |
-| segment\_element\_invalid | Segment element "%s" not found |
-| segment\_inaccessible | You do not have permission to access this segment |
-| segment\_invalid | Segment definition missing |
-| segment\_missing | You must specify a segment |
-| segment\_unsupported | Segment element "%s" not supported |
-| segment\_unsupported | Segment search keywords are only supported on classifications |
-| segment\_unsupported | Segment search not supported |
-| soap\_not\_supported | SOAP protocol not supported for the request |
-| sort\_method\_invalid| "sortMethod" must be gainers, losers, or mostpopular |
-| sort\_metric\_unsupported\_warehouse | Sort metric is unsupported in warehouse reports |
-| system\_failure | A system failure has occurred |
-| unsupported\_format | An invalid response format was specified |
-| warehouse\_request\_failed | The warehouse request failed |
-| waiting\_limit\_reached | You have reached the maximum number of waiting reports for this report suite |
+| algorithm_argument_invalid | algorithmArgument must be "linear" or "count" |
+| calculated_metric_invalid | Formula "%s" not found |
+| calculated_metric_invalid | Invalid formula ID "%s" |
+| calculated_metric_invalid | Invalid metric "%s" |
+| calculated_metric_invalid | Metric "%s" in formula "%s" is not found |
+| calculated_metric_unsupported | Metric "%s" in formula "%s" is not supported |
+| date_granularity_missing | anomalyDetection requires dateGranularity |
+| date_invalid | "%s" is not a valid date |
+| delivery_complete | The warehouse report was delivered to external FTP. |
+| element_classification_invalid | Invalid classification "%s" for element "%s" |
+| element_combination_unsupported | This combination of elements is not supported |
+| element_id_invalid | Element "%s" not found |
+| element_id_missing | Element id must be specified |
+| element_inaccessible | You do not have permission to access element "%s" |
+| element_top_invalid | The maximum number of top element values supported is %d |
+| element_search_unsupported | Element search is only supported on the first element for Real Time reports |
+| element_selected_unsupported | Element selected is only supported on the first element for Real Time reports |
+| element_top_unsupported | "top" is only supported on the primary (last) element for Real Time reports |
+| element_top_invalid | The maximum number of top element values supported is 100 |
+| element_top_unsupported_warehouse | Element top is unsupported in warehouse reports |
+| element_start_unsupported_warehouse | Element start is unsupported in warehouse reports |
+| element_selected_unsupported_warehouse | Element selected is unsupported in warehouse reports |
+| lement_search_unsupported_warehouse | eElement search is unsupported in warehouse reports |
+| elements_invalid | The maximum number of elements supported is %d |
+| expedite_inaccessible | You do not have permission to expedite this request |
+| fallout_checkpoint_required | Fallout selected checkpoint cannot be empty |
+| fallout_invalid | Fallout requires selected items |
+| fallout_invalid | Fallout selected cannot have more than %s checkpoints |
+| fallout_invalid | Fallout selected must have at least %s checkpoints |
+| first_rank_period_invalid | firstRankPeriod must be an integer between 0 and 60 |
+| floor_sensitivity_invalid | floorSensitivity must be a valid float between zero and 1 |
+| ftp_directory_missing | FTP directory must be specified for external FTP warehouse requests |
+| ftp_filename_missing | FTP filename must be specified for external FTP warehouse requests |
+| ftp_host_missing | FTP host must be specified for external FTP warehouse requests |
+| ftp_password_missing | FTP password must be specified for external FTP warehouse requests |
+| ftp_port_missing | FTP port must be specified for external FTP warehouse requests |
+| ftp_username_missing | FTP username must be specified for external FTP warehouse requests |
+| hierarchy_level_invalid | Hierarchy level "%s" is invalid for "%s" |
+| hierarchy_parent_id_missing | Hierarchy parentID is missing for "%s" |
+| max_runtime_exceeded | Report exceeded maximum runtime of %d hours |
+| metric_id_invalid | Metric "%s" not found |
+| metric_id_missing | Metric id must be specified |
+| metric_inaccessible | You do not have permission to access metric "%s" |
+| metric_not_supported_for_element | The element "%s" does not support the metric "%s" |
+| metric_unsupported_in_overtime | Metric "%s" not supported in overtime reports |
+| metric_unsupported_in_ranked | Metric "%s" not supported in ranked reports |
+| metric_unsupported_in_trended | Metric "%s" not supported in trended reports |
+| multiple_metrics_unsupported | Only one metric is supported for realtime reports |
+| multiple_elements_unsupported | Only two elements are supported for realtime reports |
+| pathing_filter_invalid | Items must be specified after ::not:: |
+| pathing_filter_required | Pathing pattern filter cannot be empty |
+| pathing_invalid | Pathing requires selected pattern |
+| period_invalid | Both date and dateFrom or dateTo cannot be specified |
+| period_invalid | dateTo must be after dateFrom |
+| period_invalid | Invalid dateGranularity |
+| period_invalid | Year must be between %s and %s |
+| period_missing | dateFrom and dateTo must both be specified |
+| realtime_report_invalid | This report is not configured for realtime |
+| report_not_ready | Report not ready |
+| report_suite_invalid | Invalid report suite "%s" |
+| report_suite_invalid | Report suite "%s" not found |
+| report_suite_missing | reportSuiteID is missing |
+| search_invalid | Search arguments missing |
+| search_operator_invalid | Invalid search operator "%s" |
+| segment_element_invalid | Element "%s" not valid for inline segment |
+| segment_element_invalid | Segment element "%s" not found |
+| segment_inaccessible | You do not have permission to access this segment |
+| segment_invalid | Segment definition missing |
+| segment_missing | You must specify a segment |
+| segment_unsupported | Segment element "%s" not supported |
+| segment_unsupported | Segment search keywords are only supported on classifications |
+| segment_unsupported | Segment search not supported |
+| soap_not_supported | SOAP protocol not supported for the request |
+| sort_method_invalid| "sortMethod" must be gainers, losers, or mostpopular |
+| sort_metric_unsupported_warehouse | Sort metric is unsupported in warehouse reports |
+| system_failure | A system failure has occurred |
+| unsupported_format | An invalid response format was specified |
+| warehouse_request_failed | The warehouse request failed |
+| waiting_limit_reached | You have reached the maximum number of waiting reports for this report suite |

@@ -6,8 +6,8 @@ Updates the time zone setting for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**time\_zone** |[time\_zone\_enum](../../data_types/r_timezone_enum.md#) |The time zone to assign with the report suites.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**time_zone** |[time_zone_enum](../../data_types/r_timezone_enum.md#) |The time zone to assign with the report suites.|
 
 ## ReportSuite.SaveTimeZone response
 

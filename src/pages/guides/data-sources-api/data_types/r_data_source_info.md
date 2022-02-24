@@ -9,7 +9,7 @@ Data structure that contains configuration settings for a data source.
 |**name** |`xsd:string` | The data source name. |
 |**email** |`xsd:string` | The admin email associated with the data source. |
 |**activateDate** |`xsd:string` | The date and time the data source was activated. |
-|**ftpPath** |`xsd:string` | The data source's FTP host \(for receiving data\). |
+|**ftpPath** |`xsd:string` | The data source's FTP host (for receiving data). |
 |**ftpLoginID** |`xsd:string` | The data source's FTP login name. |
 |**ftpPassword** |`xsd:string` | The data source's FTP login password. |
 |**haltOnWarning** |`xsd:int` | Indicates if data source processing is halted due to a non-fatal error. Supported values include: `0`: Not halted. `1`: Halted. |

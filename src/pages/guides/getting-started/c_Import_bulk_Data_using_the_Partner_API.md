@@ -6,26 +6,26 @@ In the first four tutorials of the series, Partners learned how to package On De
 
 In this article, you will learn how to import this external data by:
 
--   Creating a new data source using the Product Builder Create script.
--   Packaging the Product Builder script into the Integration Wizard.
--   Assuming the role of the Customer, in this case, JJ. Esquire, to execute the Integration Wizard. This will run the Product Builder script and generate the new data source.
--   Writing Java, C\# or PHP code to import the off-line sales data from the campaign into JJ. Esquire's report suite using the Partner API.
--   Lastly, you will also learn how to run a report using the same On Demand scripts you created in the first tutorial of the series, **Create On Demand scripts to generate reports**. The On Demand scripts will allow you to create a report to verify that the bulk data was imported.
+- Creating a new data source using the Product Builder Create script.
+- Packaging the Product Builder script into the Integration Wizard.
+- Assuming the role of the Customer, in this case, JJ. Esquire, to execute the Integration Wizard. This will run the Product Builder script and generate the new data source.
+- Writing Java, C# or PHP code to import the off-line sales data from the campaign into JJ. Esquire's report suite using the Partner API.
+- Lastly, you will also learn how to run a report using the same On Demand scripts you created in the first tutorial of the series, **Create On Demand scripts to generate reports**. The On Demand scripts will allow you to create a report to verify that the bulk data was imported.
 
 ![](graphics/import006.jpg)
 
 ## Prerequisite knowledge, system permissions and environment setup
 
--   This article is for PHP, Java or C\# developers with web and XML experience.
--   Partners must have a Developer Connection account to be able to create scripts. Follow the directions in the Setup your environment and authenticated access to the Partner API.
+- This article is for PHP, Java or C# developers with web and XML experience.
+- Partners must have a Developer Connection account to be able to create scripts. Follow the directions in the Setup your environment and authenticated access to the Partner API.
 
 ## Download code files for this tutorial
 
-This article displays code inline to the discussion but you can also download the code for PHP, Java or C\# to explore on your own.
+This article displays code inline to the discussion but you can also download the code for PHP, Java or C# to explore on your own.
 
--   [Partner\_API\_importing\_PHP.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_importing_PHP.zip) 
--   [Partner\_API\_importing\_Java.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_importing_Java.zip) 
--   [Partner\_API\_importing\_C\#.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_importing_C_sharp.zip) 
+- [Partner_API_importing_PHP.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_importing_PHP.zip) 
+- [Partner_API_importing_Java.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_importing_Java.zip) 
+- [Partner_API_importing_C#.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_importing_C_sharp.zip) 
 
 Follow the directions in the Setup your environment and authenticated access to the Partner API and then unzip these files to your project folder.
 
@@ -58,24 +58,24 @@ Product Builder scripts automate processes that you want to initialize during da
 
 ## An overview of importing bulk data into the report suite
 
-As you learned in earlier tutorials and articles of this series, a Customer will execute the Integration Wizard. Since the Product Builder script is part of the wizard, it will run, which will create the new data source \(see Step 2 in the following figure\).
+As you learned in earlier tutorials and articles of this series, a Customer will execute the Integration Wizard. Since the Product Builder script is part of the wizard, it will run, which will create the new data source (see Step 2 in the following figure).
 
-Now you, as the Partner, can upload new data into the data source by writing Java, PHP or .NET code that accesses the Partner API \(Step 3 in the following figure\).
+Now you, as the Partner, can upload new data into the data source by writing Java, PHP or .NET code that accesses the Partner API (Step 3 in the following figure).
 
-Once the Product Builder script has been run in the Customer's environment, Partners can generate reports on the imported data using On Demand scripts \(Step 4 in the following figure\).
+Once the Product Builder script has been run in the Customer's environment, Partners can generate reports on the imported data using On Demand scripts (Step 4 in the following figure).
 
 **Note:** To learn more about using On Demand scripts to create reports, work through the first four tutorials of this series.
 
 ![](graphics/import004.png)
 
--   **[Step 1: Generate Product Builder Script using API Explorer](c_Generate_Product_Builder_Script_using_API_Explorer.md)**  
+- **[Step 1: Generate Product Builder Script using API Explorer](c_Generate_Product_Builder_Script_using_API_Explorer.md)**  
  
--   **[Step 2: Upload the data source Product Builder Script to the Integration Wizard](c_Upload_the_data_source_Product_Builder_Script_to_the_Integration_Wizard.md)**  
+- **[Step 2: Upload the data source Product Builder Script to the Integration Wizard](c_Upload_the_data_source_Product_Builder_Script_to_the_Integration_Wizard.md)**  
  
--   **[Step 3: Customer Execution of the Integration Wizard](c_Customer_Execution_Import.md)**  
+- **[Step 3: Customer Execution of the Integration Wizard](c_Customer_Execution_Import.md)**  
  
--   **[Step 4: Import Bulk Data](c_Import_Bulk_Data.md)**  
+- **[Step 4: Import Bulk Data](c_Import_Bulk_Data.md)**  
  
--   **[Step 5: Verify Imported Data by Creating a Report](c_Verify_Imported_Data_by_Creating_a_Report.md)**  
+- **[Step 5: Verify Imported Data by Creating a Report](c_Verify_Imported_Data_by_Creating_a_Report.md)**  
  
 

@@ -8,5 +8,5 @@ XML data sent to the data insertion API must be in UTF-8 and the special XML cha
 |---------|----------|
 |&|&amp;|
 |<|&lt;|
-|\>|&gt;|
+|>|&gt;|
 

@@ -23,7 +23,7 @@ A structure that contains report data.
 | ` lowerBounds ` | `double[]` | Lower level of the prediction interval. Values below this level are considered anomalous. Represents a 95% confidence that values will be above this level. |
 | ` forecasts ` | `double[]` | The predicted value based on the data analysis. This value is also the middle point between the upper and lower bounds. |
 | ` breakdownTotal ` | `double[]` | The total metrics values for the breakdown. |
-| ` breakdown ` | [reportDataList](r_reportDataList.md#) - an array of `reportData` \(recursive\)| This item's data, organized according to the next element. For example, a report of Browsers, broken down by page views, returns a report containing a listing of page views for each Browser type. This is only used in Ranked or Trended reports when multiple elements \(Breakdowns\) are specified. \(recursive\) |
+| ` breakdown ` | [reportDataList](r_reportDataList.md#) - an array of `reportData` (recursive)| This item's data, organized according to the next element. For example, a report of Browsers, broken down by page views, returns a report containing a listing of page views for each Browser type. This is only used in Ranked or Trended reports when multiple elements (Breakdowns) are specified. (recursive) |
 
 **Parent topic:** [Data Types](../data_types/datatypes.md)
 

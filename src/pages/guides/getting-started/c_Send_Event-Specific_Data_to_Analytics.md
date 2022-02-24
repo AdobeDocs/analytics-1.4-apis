@@ -6,11 +6,11 @@ In this section, you will learn how to collect analytics data when a visitor cli
 
 | Property | Description |
 |------------|---------------|
-| reportSuiteID \(required\) | The report suite where you are collecting data. |
-| visitorID \(visitorID or ipAddress required\) | A visitor’s unique identifying cookie. |
-| IPaddress \(visitorID or ipAddress required\) | The visitor’s IP address. |
+| reportSuiteID (Required) | The report suite where you are collecting data. |
+| visitorID (visitorID or ipAddress required) | A visitor’s unique identifying cookie. |
+| IPaddress (visitorID or ipAddress required) | The visitor’s IP address. |
 | userAgent | The visitor’s browser type and OS. 
-| pageName \(pageName or pageURL required\) | The name of the web page. |
+| pageName (pageName or pageURL required) | The name of the web page. |
 | events | A list of Analytics events being used. |
 | transactionID | A unique value used to tie multi-channel user activity. |
 | linkName | The name of the link. It is used in Analytics reports. |
@@ -21,7 +21,7 @@ In the related article, [Data Sources API Tutorial](c_Data_Sources_Overview.md#)
 
 Analytics provides an `s.transactionID` variable to identify all clicks to this link. Remember that the popup that appears offers the visitor a 5% discount when they use this `transactionID` in their Call Center order.
 
-**Note:** You may need to ask your Adobe representative to enable the transactionID for recording. You can check whether the variable is enabled in Admin \> Data Sources \> Manage.
+**Note:** You may need to ask your Adobe representative to enable the transactionID for recording. You can check whether the variable is enabled in Admin > Data Sources > Manage.
 
 In this JJ. Esquire demo application, you send a custom event, `event1`, and the `transactionID` to Analytics. `event1` tracks the number of visitors who click the Purchase By Phone link in the Product Detail page.
 

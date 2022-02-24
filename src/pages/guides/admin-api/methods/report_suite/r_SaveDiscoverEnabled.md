@@ -1,13 +1,13 @@
 # SaveDiscoverEnabled
 
-Saves ad hoc analysis \(formerly Discover\) access for the requested report suites.
+Saves ad hoc analysis (formerly Discover) access for the requested report suites.
 
 ## ReportSuite.SaveDiscoverEnabled parameters
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**discover\_enabled** |`xsd:boolean` |Enables or disables ad hoc analysis.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**discover_enabled** |`xsd:boolean` |Enables or disables ad hoc analysis.|
 
 ## ReportSuite.SaveDiscoverEnabled response
 

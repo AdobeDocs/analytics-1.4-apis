@@ -4,8 +4,8 @@
 
 You can monitor the status of the data upload in two steps:
 
--   Get the unique identifier for the data being uploaded
--   Retrieve the upload status using that identifier
+- Get the unique identifier for the data being uploaded
+- Retrieve the upload status using that identifier
 
 The data upload is actually an FTP file transfer so the unique identifier is the File ID.
 

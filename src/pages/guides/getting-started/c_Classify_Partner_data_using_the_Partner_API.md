@@ -10,16 +10,16 @@ In this fifth article of the series, you will learn how to create a second type 
 
 ## Prerequisite knowledge, system permissions and environment setup
 
--   This article is for PHP, Java or C\# developers with web and XML experience.
--   Partners must have a Developer Connection account to be able to create scripts. Follow the directions in the Setup your environment and authenticated access to the Partner API article.
+- This article is for PHP, Java or C# developers with web and XML experience.
+- Partners must have a Developer Connection account to be able to create scripts. Follow the directions in the Setup your environment and authenticated access to the Partner API article.
 
 ## Download code files for this tutorial
 
-This article displays code inline to the discussion but you can also download the code for PHP, Java or C\# to explore on your own.
+This article displays code inline to the discussion but you can also download the code for PHP, Java or C# to explore on your own.
 
--   [Partner\_API\_classify\_PHP.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_classify_PHP.zip) 
--   [Partner\_API\_classify\_Java.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_classify_Java.zip) 
--   [Partner\_API\_classify\_C\#.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_classify_C_sharp.zip) 
+- [Partner_API_classify_PHP.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_classify_PHP.zip) 
+- [Partner_API_classify_Java.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_classify_Java.zip) 
+- [Partner_API_classify_C#.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_classify_C_sharp.zip) 
 
 Follow the directions in the [Authentication and Setup Tutorial](c_Authentication_and_Setup.md#) 
 
@@ -27,7 +27,7 @@ Follow the directions in the [Authentication and Setup Tutorial](c_Authenticatio
 
 The data that Analytics Customers collect in their reporting suite may include one or more fields that can be used as a unique, identifying column, called a *key*, for a category of data. For example, you might track the SKU number for a product as a key in your e-commerce store.
 
-Developers can create new columns in the report suite and import data related to a key using a process called *classification*. For a product SKU number, this may include details like the product name, color, size or brand \(see Figure 2\).
+Developers can create new columns in the report suite and import data related to a key using a process called *classification*. For a product SKU number, this may include details like the product name, color, size or brand (see Figure 2).
 
 ![](graphics/classification002.png)
 
@@ -54,20 +54,20 @@ The Product Builder Create and Edit scripts automate processes that you want to 
 
 As you learned in earlier tutorials and articles of this series, a Customer will execute the Integration Wizard. Since the Product Builder scripts are part of the wizard, they will run, which will create the new classifications in the Customer's report suite.
 
-Now you, as the Partner, can upload new data into the classification by writing Java, PHP or .NET code that accesses the Partner API \(Step 3\).
+Now you, as the Partner, can upload new data into the classification by writing Java, PHP or .NET code that accesses the Partner API (Step 3).
 
 ![](graphics/classification004.png)
 
--   **[Step 1: Create a Product Builder Script to classify Data](c_Create_a_Product_Builder_Script_to_classify_Data.md)**  
+- **[Step 1: Create a Product Builder Script to classify Data](c_Create_a_Product_Builder_Script_to_classify_Data.md)**  
  
--   **[Step 2: Create an Edit Product Builder Script](c_Create_an_Edit_Product_Builder_Script.md)**  
+- **[Step 2: Create an Edit Product Builder Script](c_Create_an_Edit_Product_Builder_Script.md)**  
  
--   **[Step 3: Upload the Classification Product Builder Script to the Integration Wizard](c_Upload_the_Classification_Product_Builder_Script_to_the_Integration_Wizard.md)**  
+- **[Step 3: Upload the Classification Product Builder Script to the Integration Wizard](c_Upload_the_Classification_Product_Builder_Script_to_the_Integration_Wizard.md)**  
  
--   **[Step 4: Customer Execution of the Integration Wizard](c_Customer_Execution_Classifications.md)**  
+- **[Step 4: Customer Execution of the Integration Wizard](c_Customer_Execution_Classifications.md)**  
  
--   **[Step 5: Upload Classification Data using the Partner API](c_Upload_Classification_Data_using_the_Partner_API.md)**  
+- **[Step 5: Upload Classification Data using the Partner API](c_Upload_Classification_Data_using_the_Partner_API.md)**  
  
--   **[Step 6: Check the Classified Data in the Analytics UI](c_Check_the_Classified_Data_in_the_Analytics_UI.md)**  
+- **[Step 6: Check the Classified Data in the Analytics UI](c_Check_the_Classified_Data_in_the_Analytics_UI.md)**  
  
 

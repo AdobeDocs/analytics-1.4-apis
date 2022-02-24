@@ -8,14 +8,14 @@ You can download the solution files provided in the Download code files for this
 
 ## Replace the WSDL file in the provided solution code
 
-Each of the solution files provided in the articles contains a WSDL file. However, since this file does occasionally change, you should replace the adobe\_analytics\_service-1.4.wsdl in the **wsdl** folder with the one you downloaded.
+Each of the solution files provided in the articles contains a WSDL file. However, since this file does occasionally change, you should replace the adobe_analytics_service-1.4.wsdl in the **wsdl** folder with the one you downloaded.
 
 ## Set WSDL authentication
 
 The following files are part of solution files that you can download in each article and contain the authentication information that you need to replace:
 
--   **omtr\_api\_config.wsdd** - This is the XML-based deployment descriptor file in which you set your user for authentication.
--   **PWCallback.java** - You use this class file, and the `setPassword()` convenience method within it, to set your shared
+- **omtr_api_config.wsdd** - This is the XML-based deployment descriptor file in which you set your user for authentication.
+- **PWCallback.java** - You use this class file, and the `setPassword()` convenience method within it, to set your shared
 
     ```
     secret
@@ -24,13 +24,13 @@ The following files are part of solution files that you can download in each art
     .
 
 
-**omtr\_api\_config.wsdd user parameter** 
+**omtr_api_config.wsdd user parameter** 
 
 ```
 <parameter name="user" value="<your Web Services User Name>" />
 ```
 
-**PWCallback.java setPassword\(\) method** 
+**PWCallback.java setPassword() method** 
 
 ```
 pc.setPassword("<your Web Services Shared Secret>");

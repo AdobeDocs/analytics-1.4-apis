@@ -10,7 +10,7 @@ Adobe Analytics lets you build, manage, share, and apply powerful, focused audie
 
 ![](graphics/get-started-data-warehouse-api-figure-3.png)
 
-You can create and run segments using the Data Warehouse API, the Adobe Analytics UI in the Segment Builder \(shown\), and in Ad Hoc Analysis.
+You can create and run segments using the Data Warehouse API, the Adobe Analytics UI in the Segment Builder (shown), and in Ad Hoc Analysis.
 
 ![](graphics/get-started-data-warehouse-api-figure-4.png)
 
@@ -26,7 +26,7 @@ You can define multiple metrics while creating a segment and they are represente
 
 ## Breakdowns
 
-Use [breakdowns](https://marketing.adobe.com/resources/help/en_US/sc/user/breakdowns.html) when you want to know more about how a report item or segment relates to other reports. This is often called "breaking down" a report by another report. A breakdown is the action of integrating two or more correlated items \(traffic reports\) or two sub-related items \(conversion reports\).
+Use [breakdowns](https://marketing.adobe.com/resources/help/en_US/sc/user/breakdowns.html) when you want to know more about how a report item or segment relates to other reports. This is often called "breaking down" a report by another report. A breakdown is the action of integrating two or more correlated items (traffic reports) or two sub-related items (conversion reports).
 
 ![](graphics/get-started-data-warehouse-api-figure-6.png)
 

@@ -8,7 +8,7 @@ This figure shows the two sides of the Partner integration:
 
 ![](graphics/get-started-concepts-and-terms-figure-3.png)
 
-Partners use the Partner API and Developer Connection web site to \(1\) Configure the product, thus creating the Integration Wizard and to \(2\) process the integration by managing data and running reports.
+Partners use the Partner API and Developer Connection web site to (1) Configure the product, thus creating the Integration Wizard and to (2) process the integration by managing data and running reports.
 
 Experience Cloud Customers use the Integration Wizard to map the partner data to their own Adobe Experience Cloud data collection.
 
@@ -32,7 +32,7 @@ The central tasks that define the integration are in the Partner Application Con
 |  [6. Import Bulk Data Tutorial](c_Import_bulk_Data_using_the_Partner_API.md#) | Partner | In this article, Partners learn how to create Product Builder scripts to import bulk data and then how to run reports with this new data using On Demand scripts. |
 |  [7. Data Warehouse Tutorial](c_Create_a_Data_Warehouse_Report_using_the_Partner_API.md#) | Partner | In this article, Partners learn how to create Product Builder scripts to define segment definitions and then use the Partner API to generate Data Warehouse reports. |
 
--   **[Demo Application Overview](c_demo_overview.md)**  
+- **[Demo Application Overview](c_demo_overview.md)**  
  
--   **[Report Builder](c_ReportBuilder.md)** 
+- **[Report Builder](c_ReportBuilder.md)** 
 

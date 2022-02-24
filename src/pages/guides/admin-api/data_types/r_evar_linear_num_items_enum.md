@@ -1,4 +1,4 @@
-# evar\_linear\_num\_items\_enum
+# evar_linear_num_items_enum
 
 An enumerated list of supported values for linear allocation of success events.
 

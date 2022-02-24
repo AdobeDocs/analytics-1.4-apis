@@ -16,10 +16,10 @@ As with client-side tagging, the data is now available for access through the Ad
 
 Your decision to use either client- or server-side data collection is based on the same concerns that you might have for any client- or server-side processing needs. These include, but are not limited to:
 
--   Disabled JavaScript in a browser that might prevent data processing
--   Protecting sensitive information that you do not want viewable in the browser
--   Limitations of mobile devices or TV boxes that cannot run JavaScript code
--   Bandwidth considerations of making extra communications from your web servers
+- Disabled JavaScript in a browser that might prevent data processing
+- Protecting sensitive information that you do not want viewable in the browser
+- Limitations of mobile devices or TV boxes that cannot run JavaScript code
+- Bandwidth considerations of making extra communications from your web servers
 
 The rest of this article focuses on server-side data collection using the Data Insertion API.
 

@@ -6,7 +6,7 @@ If a deprecated API is scheduled to be unsupported, notice will be given at leas
 
 **Service Shuttering Policy** 
 
-While Adobe strives to follow the API Support Policy listed above, in rare instances it might be necessary to shutter a service \(this is generally due to poor adoption or regulatory concerns\). If shuttering a service becomes necessary, notice will be given at least 30 days in advance, and Adobe will contact users of the shuttered service with the expected shutter date and recommended migrations steps and alternative services.
+While Adobe strives to follow the API Support Policy listed above, in rare instances it might be necessary to shutter a service (this is generally due to poor adoption or regulatory concerns). If shuttering a service becomes necessary, notice will be given at least 30 days in advance, and Adobe will contact users of the shuttered service with the expected shutter date and recommended migrations steps and alternative services.
 
 API Version Support and Status
 

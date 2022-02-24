@@ -4,7 +4,7 @@
 
 To learn more, see [Data Sources Help](https://marketing.adobe.com/resources/help/en_US/sc/datasources/).
 
-**Note:** Once submitted via the Data Sources API, imported data is indistinguishable from Analytics data gathered using other methods \(such as JavaScript, AppMeasurement, and the Data Insertion API\). You cannot back the data out after importing it.
+**Note:** Once submitted via the Data Sources API, imported data is indistinguishable from Analytics data gathered using other methods (such as JavaScript, AppMeasurement, and the Data Insertion API). You cannot back the data out after importing it.
 
 Instead of using the standard FTP file submission process to get data to Adobe data collection servers, use the Data Sources API to submit HTTP data blocks using a SOAP or REST interface. This is particularly useful for uploading historical data for use in Analytics reports.
 
@@ -16,7 +16,7 @@ Contrast this with an FTP data submission, where data validation doesn't occur u
 
 The general process for creating a Data Source with the Data Sources API is as follows:
 
-1.  Call one of the Data Source setup methods \(`DataSource.SetupTraffic`, `DataSource.SetupWebLog`, `DataSource.SetupGeneric`\) to create the type of data source you need.
+1.  Call one of the Data Source setup methods (`DataSource.SetupTraffic`, `DataSource.SetupWebLog`, `DataSource.SetupGeneric`) to create the type of data source you need.
 2.  Call `DataSource.GetIDs` or `DataSource.GetInfo` to get the Data Source ID of the new Data Source.
 3.  Call `DataSource.BeginDataBlock` and, if necessary, `DataSource.AppendDataBlock` to add data to the new data source and submit the data source to the Processing Queue.
 4.  Call `DataSource.GetFileIDs` or `DataSource.GetFileInfo` to get the File ID of the Data Source file in the Processing Queue.

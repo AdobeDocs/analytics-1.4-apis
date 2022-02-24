@@ -1,4 +1,4 @@
-# date\_received
+# date_received
 
 Data structure that contains information about a single date when a report suite received data.
 

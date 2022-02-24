@@ -9,8 +9,8 @@ Since Partners have to use this code for multiple different Customers, report su
 In each of the variable definitions, you will use the **replaceWith** attribute with a value of **param** or **mapping** to define a Partner.Runscript call at runtime or a variable mapping within the Integration wizard.
 
 1.  Set the **dateFrom** and **dateTo** XML elements to the variables **myDateFrom** and **myDateTo**, respectively. Use the **replaceWith** attribute with a value of **param**.
-2.  Replace **eVar44** with the reference to **twitter\_handle** and use the **replaceWith** attribute with a value of **mapping**.
-3.  Replace the **event3** with the reference to **twitter\_followers** and use the **replaceWith** attribute with a value of **mapping**.
+2.  Replace **eVar44** with the reference to **twitter_handle** and use the **replaceWith** attribute with a value of **mapping**.
+3.  Replace the **event3** with the reference to **twitter_followers** and use the **replaceWith** attribute with a value of **mapping**.
 
 ```
 Wizard script name: followers_per_twitter_handle

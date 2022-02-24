@@ -1,4 +1,4 @@
-# data\_warehouse\_segment\_group\_list
+# data_warehouse_segment_group_list
 
-An array of [data\_warehouse\_segment\_group](r_data_warehouse_segment_group.md#).
+An array of [data_warehouse_segment_group](r_data_warehouse_segment_group.md#).
 

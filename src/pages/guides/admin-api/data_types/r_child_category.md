@@ -1,6 +1,6 @@
-# child\_category
+# child_category
 
-Data structure that contains basic information about a single child \(subordinate\) permissions category.
+Data structure that contains basic information about a single child (subordinate) permissions category.
 
 |Element|Type|Description|
 |-------|----|-----------|

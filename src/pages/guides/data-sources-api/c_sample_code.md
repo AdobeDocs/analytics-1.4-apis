@@ -17,9 +17,9 @@ define( 'WSDL_DOCUMENT', 'omnitureAPI.wsdl' );
 // In a typical situation this data would be read from some other location, like a database or file.
 $columnNames = array( 'date', 'evar 1', 'event 2' );
 $rows = array (
-    array ( '1/1/2009', 'product1', '2.50' ),
-    array ( '1/2/2009', 'product2', '4.25' ),
-    array ( '1/3/2009', 'product3', '3.75' )
+    array ( '1/1/YYYY', 'product1', '2.50' ),
+    array ( '1/2/YYYY', 'product2', '4.25' ),
+    array ( '1/3/YYYY', 'product3', '3.75' )
 );
 
 // Seed the number generator

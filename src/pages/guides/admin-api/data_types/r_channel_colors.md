@@ -1,4 +1,4 @@
-# channel\_colors
+# channel_colors
 
 An enumerated list of supported hexadecimal color codes for configuring marketing channels.
 

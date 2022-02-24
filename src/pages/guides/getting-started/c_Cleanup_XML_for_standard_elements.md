@@ -5,8 +5,8 @@
 The code you generated in the previous sections is syntactically valid, but needs to be modified for use in the Integration Wizard that you will create in the next tutorial, [2. Partner Application Configuration Tutorial](c_Partner_Application_Configuration_for_Data_Connectors_Tutorial.md#). In this section, you will focus on converting the XML code and removing extraneous elements, including parameters with no values.
 
 1.  Copy the code in API Explorer and paste it to a text file on your computer.
-2.  Name the file **followers\_per\_twitter\_handle**. After you are done with the modifications, you will copy the final code into the Integration Wizard.
-3.  Delete everything outside of \(and including\) the soap **Body** element and surround the XML with **<genesis\>** tags.
+2.  Name the file **followers_per_twitter_handle**. After you are done with the modifications, you will copy the final code into the Integration Wizard.
+3.  Delete everything outside of (and including) the soap **Body** element and surround the XML with **<genesis>** tags.
 
     ```
     <?xml version="1.0" encoding="UTF-8"?>
@@ -24,10 +24,10 @@ The code you generated in the previous sections is syntactically valid, but need
           </reportSuiteID>
           <date xsi:nil="true" />
                 <dateFrom xsi:type="xsd:string">
-                      2011-01-23
+                      YYYY-01-23
                 </dateFrom>
                 <dateTo xsi:type="xsd:string">
-                      2011-01-23
+                      YYYY-01-23
                 </dateTo>
           <dateGranularity xsi:nil="true" />
           <metrics href="#id2" />
@@ -94,10 +94,10 @@ The code you generated in the previous sections is syntactically valid, but need
           </reportSuiteID>
           <date/>
                 <dateFrom>
-                      2011-01-23
+                      YYYY-01-23
                 </dateFrom>
                 <dateTo>
-                      2011-01-23
+                      YYYY-01-23
                 </dateTo>
           <dateGranularity />
           <metrics href="#id2" />
@@ -152,11 +152,11 @@ The code you generated in the previous sections is syntactically valid, but need
           </reportSuiteID>
          
           <dateFrom>
-              2010-12-20
+              YYYY-12-20
           </dateFrom>
          
           <dateTo>
-              2010-12-20
+              YYYY-12-20
           </dateTo>
          
          <metrics>

@@ -8,8 +8,8 @@ Data is returned in the following format for trended reports:
 
 ```
 {
-  "name": "Tue. 31 Jul. 2012",
-  "year": 2012,
+  "name": "Tue. 31 Jul. YYYY",
+  "year": YYYY,
   "month": 7,
   "day": 31,
   "counts": [
@@ -34,8 +34,8 @@ data is returned in the following format for overtime reports:
 
 ```
 {
-  "name": "Mon. 30 Jul. 2012",
-  "year": 2012,
+  "name": "Mon. 30 Jul. YYYY",
+  "year": YYYY,
   "month": 7,
   "day": 30,
   "counts": [

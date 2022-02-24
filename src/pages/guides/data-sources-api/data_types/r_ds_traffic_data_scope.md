@@ -1,4 +1,4 @@
-# ds\_traffic\_data\_scope
+# ds_traffic_data_scope
 
 An enumerated list of scopes for Traffic data source data.
 

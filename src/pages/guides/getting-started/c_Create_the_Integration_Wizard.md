@@ -10,8 +10,8 @@ In this section, you will access the Dev Center and create a new Integration Wiz
 4.  Click the **Add Product** link.
 5.  Fill out the form that appears as shown in Figure 4.
 
-    -   Use your own email address for the **Technical Contact Email Address** field.
-    -   Upload the logo from the ZIP file in the **Downloads** section of this tutorial.
+    - Use your own email address for the **Technical Contact Email Address** field.
+    - Upload the logo from the ZIP file in the **Downloads** section of this tutorial.
     ![](graphics/configuration004.jpg)
 
 6.  Click the **Save** button. You will see your product integration defined.

@@ -1,4 +1,4 @@
-# login\_array
+# login_array
 
 An array of [login](r_login.md#).
 

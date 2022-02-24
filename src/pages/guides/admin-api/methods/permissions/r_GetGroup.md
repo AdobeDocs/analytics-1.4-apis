@@ -6,13 +6,13 @@ Retrieves information about the specified permission group.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**group\_name** |`xsd:string` | The name of the group that you want to retrieve. |
+|**group_name** |`xsd:string` | The name of the group that you want to retrieve. |
 
 ## Permissions.GetGroup response
 
 |Type|Description|
 |----|-----------|
-|[permission\_group](../../data_types/r_permission_group.md#) |Information about the specified permission group.|
+|[permission_group](../../data_types/r_permission_group.md#) |Information about the specified permission group.|
 
 **Parent topic:** [Permissions](../../methods/permissions/r_methods_permissions.md)
 

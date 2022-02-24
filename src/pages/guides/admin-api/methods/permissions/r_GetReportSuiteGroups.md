@@ -12,7 +12,7 @@ Retrieves a list of permission groups assigned to the specified report suite.
 
 |Type|Description|
 |----|-----------|
-| [report\_suite\_groups](../../data_types/r_report_suite_groups.md#) |A list of groups assigned to the specified report suite.|
+| [report_suite_groups](../../data_types/r_report_suite_groups.md#) |A list of groups assigned to the specified report suite.|
 
 **Parent topic:** [Permissions](../../methods/permissions/r_methods_permissions.md)
 

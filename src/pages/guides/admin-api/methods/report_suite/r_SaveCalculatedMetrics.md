@@ -6,8 +6,8 @@ Saves a list of calculated metrics to each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid\_list** | `array(xsd:string)` |A list of report suite IDs.|
-| **calculated\_metrics** | [calculated\_metrics](../../data_types/r_calculated_metrics.md#) - An array of [calculated\_metric](../../data_types/r_calculated_metric.md#) | A list of calculated metrics.|
+| **rsid_list** | `array(xsd:string)` |A list of report suite IDs.|
+| **calculated_metrics** | [calculated_metrics](../../data_types/r_calculated_metrics.md#) - An array of [calculated_metric](../../data_types/r_calculated_metric.md#) | A list of calculated metrics.|
 
 ## ReportSuite.SaveCalculatedMetrics response
 

@@ -14,13 +14,13 @@ The rows parameter is an array of the data you want to import. The code followin
 
 For this JJ. Esquire demo application, the Product column contains the product SKU number and the `transactionID` column contains the transaction ID.
 
-**Note:** You may need to ask your Adobe representative to enable the `transactionID` for recording. You can check whether the variable is enabled in Admin \> Data Sources \> Manage.
+**Note:** You may need to ask your Adobe representative to enable the `transactionID` for recording. You can check whether the variable is enabled in Admin > Data Sources > Manage.
 
 ## Delay the Data Processing
 
 When the Adobe Experience Cloud creates a new data source, it reserves space on an FTP server for the data upload. Since this can take a few minutes to create, you must create a delay after calling the `DataSource.SetupGeneric()` method and before calling the `DataSource.BeginDataBlock()` or `DataSource.AppendDataBlock()` methods.
 
-The following PHP code defines a 180 seconds \(3 minutes\) delay while the associated Java code defines a 180000 millisecond \(3 minutes\) delay while the FTP space is being provisioned.
+The following PHP code defines a 180 seconds (3 minutes) delay while the associated Java code defines a 180000 millisecond (3 minutes) delay while the FTP space is being provisioned.
 
 **PHP Code** 
 
@@ -32,8 +32,8 @@ sleep(180);
 $blockName = 'OfflineRevenueBlock1'; 
 $colNameArray = array('Date','Product','Event 2', 'transactionID'); 
 $rowData = array( 
-array('1/13/2011','100302','455','003456'), 
-array('1/14/2011','100303','455','003456') 
+array('1/13/YYYY','100302','455','003456'), 
+array('1/14/YYYY','100303','455','003456') 
 ); 
 
 /* Set the endOfBlock to 0 to continue appending data. */ 
@@ -56,8 +56,8 @@ sleep(3);
 
 /* DataSource.AppendDataBlock - sends data (continued) to Analytics using a DataSource */ 
 $rowData = array( 
-array('1/11/2011','100300','455','003456'), 
-array('1/12/2011','100301','455','003456') 
+array('1/11/YYYY','100300','455','003456'), 
+array('1/12/YYYY','100301','455','003456') 
 ); 
 
 /* Set the endOfBlock to '' to stop appending data. */ 
@@ -92,7 +92,7 @@ columnNames[3] = "transactionID";
 
 /* The SKU number and the transaction ID are the same that were created in the tagging article. */ 
 String[][] rows = new String[][]{
-{"1/13/2011","100302","455","003456"}, {"1/14/2011","100303","455","003456"}
+{"1/13/YYYY","100302","455","003456"}, {"1/14/YYYY","100303","455","003456"}
 }; 
 
 /* Set the endOfBlock to an empty string to signify end of block and set it to false to continue appending data. */ 
@@ -109,7 +109,7 @@ System.out.println("Returned value of blockID is: "+blockID.value+" and status i
 
 /*DataSource.AppendDataBlock - Appends an additional HTTP data block to a Data Sources data submission. */ 
 rows = new String[][]{
-{"1/11/2011","100300","455","003456"}, {"1/12/2011","100301","455","003456"}
+{"1/11/YYYY","100300","455","003456"}, {"1/12/YYYY","100301","455","003456"}
 }; 
 
 port.dataSourceAppendDataBlock(blockID.value, Integer.toString(responsedataSourceSetupGeneric.getDataSourceID()), endOfBlock, reportSuiteID, rows, fileID, status); 

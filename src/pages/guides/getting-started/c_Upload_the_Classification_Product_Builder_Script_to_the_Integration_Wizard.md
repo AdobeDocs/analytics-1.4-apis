@@ -4,7 +4,7 @@
 
 In this section, you will upload the Product Builder scripts you created in previous sections to the Integration Wizard.
 
-**Note:** You have created an Integration Wizard in tutorial 2 \(**Configure the Partner application for Data Connectors integration**\) of this series. For that tutorial, you defined On Demand scripts for reporting. In this section, you will follow almost exactly the same steps except this time you will use Product Builder scripts to create the classifications.
+**Note:** You have created an Integration Wizard in tutorial 2 (**Configure the Partner application for Data Connectors integration**) of this series. For that tutorial, you defined On Demand scripts for reporting. In this section, you will follow almost exactly the same steps except this time you will use Product Builder scripts to create the classifications.
 
 1.  In the top menu of the **Developer Connection**, click the **Dev Center** link.
 2.  Click the **My Products** button in the **Define My Products** section.

@@ -8,11 +8,11 @@ If you plan to explore only the Collect visitor analytics using Analytics JavaSc
 
 If you plan on executing the provided code in the other articles, you will need to finish the steps in this tutorial to setup authenticated access to the APIs. You will also need to follow the steps in the Collect visitor analytics using Analytics JavaScript Tagging tutorial so that you will have data in your report suite for the other articles.
 
-1.  In the Experience Cloud, select **Analytics** \> **Admin** \> **Report Suites**.
+1.  In the Experience Cloud, select **Analytics** > **Admin** > **Report Suites**.
 
     ![](graphics/get-started-enterprise-api-auth-figure-1.png)
 
-2.  Select **Create New** \> **Report Suite** in the Report Suite Manager.
+2.  Select **Create New** > **Report Suite** in the Report Suite Manager.
 
     ![](graphics/get-started-enterprise-api-auth-figure-2.png)
 

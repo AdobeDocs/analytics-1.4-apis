@@ -8,13 +8,13 @@ The second way of importing and classifying data uses the SAINT Classification A
 
 In the following sections of this article you will learn how to:
 
--   Determine whether a report suite is enabled for classification.
--   Create new classification fields.
--   Create an import job.
--   Populate the import job with new data.
--   Commit the import job for processing.
--   Verify that the data is imported and classified.
--   Create an export job.
+- Determine whether a report suite is enabled for classification.
+- Create new classification fields.
+- Create an import job.
+- Populate the import job with new data.
+- Commit the import job for processing.
+- Verify that the data is imported and classified.
+- Create an export job.
 
 Creating export jobs supports a workflow for you to export some or all the classified records for updating and later import.
 

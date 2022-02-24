@@ -8,10 +8,10 @@ https://recommendations.omniture.com/rest?action=entity.delete&client=CLIENT_COD
 
 |Parameter|Description|
 |---------|-----------|
-|**action** | \(Required\) Identifies the type of Recommendations action to execute. To delete an entity, this value is always `entity.delete`. |
-| **client** | \(Required\) The client code, which is displayed on the Recommendations' Settings page. |
-| **clientToken** | \(Required\) the client token, which is visible on Recommendations' Settings page. |
-| **entityIds** | \(Required\) A comma-separated list of entity IDs that you want to delete from the entity catalog. |
+|**action** | (Required) Identifies the type of Recommendations action to execute. To delete an entity, this value is always `entity.delete`. |
+| **client** | (Required) The client code, which is displayed on the Recommendations' Settings page. |
+| **clientToken** | (Required) the client token, which is visible on Recommendations' Settings page. |
+| **entityIds** | (Required) A comma-separated list of entity IDs that you want to delete from the entity catalog. |
 
 **Note:** Parameters and values are case sensitive.
 

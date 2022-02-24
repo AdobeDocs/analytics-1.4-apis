@@ -1,6 +1,6 @@
-# report\_suite\_marketing\_channels\_array
+# report_suite_marketing_channels_array
 
-An array of [report\_suite\_marketing\_channels](r_report_suite_marketing_channels.md#).
+An array of [report_suite_marketing_channels](r_report_suite_marketing_channels.md#).
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

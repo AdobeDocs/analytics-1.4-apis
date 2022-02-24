@@ -1,4 +1,4 @@
-# channel\_type
+# channel_type
 
 An enumerated list of supported values for setting the marketing channel type.
 

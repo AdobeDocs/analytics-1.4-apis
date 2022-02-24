@@ -17,28 +17,28 @@ To get started, review the [changes in 1.4](whatsnew.md#), update your endpoint,
 1.  Open the API Explorer in Developer Connection.
 2.  Send a request using Report API and the method Report.Queue. The Report API will return a report ID.
 3.  Change the method to Report.Get using the report ID. There will be one of 2 responses:
-    -   A "report not ready" response:
+    - A "report not ready" response:
 
         ```
         {
         
-        	"error":"report_not_ready",
+            "error":"report_not_ready",
         
-        	"error_description":"Report not ready",
+            "error_description":"Report not ready",
         
-        	"error_uri":null
+            "error_uri":null
         
         }
         
         ```
 
-    -   Or a return of the whole report.
+    - Or a return of the whole report.
 
 Here are some best practices:
 
--   Check for a report every few seconds. Do not check more than once a second.
--   You can queue up multiple reports to be run concurrently.
--   The response from Report.Queue is exactly the same as the request for Report.Get.
+- Check for a report every few seconds. Do not check more than once a second.
+- You can queue up multiple reports to be run concurrently.
+- The response from Report.Queue is exactly the same as the request for Report.Get.
 
 ## Endpoint
 
@@ -50,11 +50,11 @@ https://api.omniture.com/admin/1.4/
 
 You might need to replace api.omniture.com with the URL that corresponds to your data center, as listed in the following table. In your production apps, we recommend calling Company.GetEndpoint to periodically refresh the endpoint programmatically, in case the URL changes.
 
--   api.omniture.com - San Jose
--   api2.omniture.com - Dallas
--   api3.omniture.com - London
--   api4.omniture.com - Singapore
--   api5.omniture.com - Pacific Northwest
+- api.omniture.com - San Jose
+- api2.omniture.com - Dallas
+- api3.omniture.com - London
+- api4.omniture.com - Singapore
+- api5.omniture.com - Pacific Northwest
 
 ## Removal of separate methods to generate different report types
 
@@ -76,8 +76,8 @@ The type derived is then returned in the result data as: ranked, trended, overti
 
 The API supports CORS and can be used in most modern browsers in a cross-domain way. This library provides a way to do [authentication with WSSE in Javascript](https://github.com/Adobe-Marketing-Cloud/analytics-realtime-dashboard-example/tree/master/js/marketing-cloud-javascript-sdk). If you decide to use the browser, keep the following in mind:
 
--   If you have a lot of users using the application, you will need to cache the results on a server. Do not publish a script on your public web site that pulls directly from the API.
--   Some older browsers do not support CORS. Make sure your users are using a newer browser when trying to access the API.
+- If you have a lot of users using the application, you will need to cache the results on a server. Do not publish a script on your public web site that pulls directly from the API.
+- Some older browsers do not support CORS. Make sure your users are using a newer browser when trying to access the API.
 
 ## Adobe Analytics Real-Time Dashboard Example
 
@@ -224,7 +224,7 @@ https://api.omniture.com/admin/1.4/rest/?method=Report.Run
 https://api.omniture.com/admin/1.4/rest/?method=Report.Queue
 {
     "reportDescription":{
-        "date":"2014",
+        "date":"YYYY",
         "metrics":[
             {
                 "id":"pageviews",

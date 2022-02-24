@@ -1,4 +1,4 @@
-# classifications\_ftp
+# classifications_ftp
 
 Complete details for a classifications FTP account.
 

@@ -1,4 +1,4 @@
-# dashboard\_array
+# dashboard_array
 
 An array of [dashboard](r_dashboard.md#).
 

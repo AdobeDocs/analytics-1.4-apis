@@ -6,7 +6,7 @@ Retrieves the segments that are available in one or more report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid\_list** | `array(xsd:string)` | \(required\) The list of report suite IDs for which you want to retrieve segments.
+| **rsid_list** | `array(xsd:string)` | (Required) The list of report suite IDs for which you want to retrieve segments.
 
  |
 
@@ -14,7 +14,7 @@ Retrieves the segments that are available in one or more report suites.
 
 |Type|Description|
 |----|-----------|
-|[report\_suite\_segments\_array](../../data_types/r_report_suite_segments_array.md#) - An array of [report\_suite\_segments](../../data_types/r_report_suite_segments.md#) |List that includes each report suite's segments.|
+|[report_suite_segments_array](../../data_types/r_report_suite_segments_array.md#) - An array of [report_suite_segments](../../data_types/r_report_suite_segments.md#) |List that includes each report suite's segments.|
 
 **Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
 

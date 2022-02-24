@@ -21,28 +21,28 @@ $check_wait_seconds=2;
 $reportDone = false;
 while( $nextSleepSeconds = nextSleep( $attempts, $max_checks, $check_wait_seconds) )
 {
-    if($debug) echo("sleeping for... $nextSleepSeconds seconds.\n");
-    sleep($nextSleepSeconds);   	 
+    if($debug) echo("sleeping for... $nextSleepSeconds seconds.n");
+    sleep($nextSleepSeconds);        
 
-    if($debug) echo("Checking on queue: $queue (" . date("H:i:s") . ")\n");
+    if($debug) echo("Checking on queue: $queue (" . date("H:i:s") . ")n");
 
     /* Check the status */
     $status = rp_getStatus($queue);
     
     /* Check if the report is ready */
-    if($debug) echo("Request Status: ". $status ."\n");
+    if($debug) echo("Request Status: ". $status ."n");
     if($status == $REPORT_STATUS_DONE)
     {
  /* Report is ready */
-   	 $reportDone = true;
-   	 break;   		 
+        $reportDone = true;
+        break;            
   
     } else if( strstr($status, 'fail') || strstr($status, 'error') ){
-       /* Report failed, exit out */	 
-throw new Exception("rp_queueAndGetReport(): " . $status );//. " - ". $response['error_msg'], 0);   				 
+       /* Report failed, exit out */     
+throw new Exception("rp_queueAndGetReport(): " . $status );//. " - ". $response['error_msg'], 0);                    
     } else {
  /* Report not ready yet */
-   	 if($debug) echo $status . "\n";
+        if($debug) echo $status . "n";
     }
     $attempts++;
 }
@@ -69,19 +69,19 @@ function rp_getStatus($reportID){
 function nextSleep( $attempts, $max_checks, $check_wait_seconds ){
     global $max_report_checks;
     if( $max_checks <= 0){
-   	 if($attempts >= $max_report_checks)
-   		 return -1;	 
-   	 if($attempts <= 4 ){
-   		 return 3;
-   	 }else{
-   		 return min( ($attempts - 4) * 3, 30);   		 
-   	 }
+        if($attempts >= $max_report_checks)
+            return -1;     
+        if($attempts <= 4 ){
+            return 3;
+        }else{
+            return min( ($attempts - 4) * 3, 30);            
+        }
     }else{
-   	 if($attempts < $max_checks)
-   		 return $check_wait_seconds;
+        if($attempts < $max_checks)
+            return $check_wait_seconds;
     }
     return FALSE;
-}	
+}    
 
 ```
 
@@ -103,20 +103,20 @@ while (!status.getStatus().equals("done"))
 System.out.println("status: " + status.getStatus());
 if(! status.getStatus().equals("done") && ! 
 status.getStatus().equals("ready"))
-throw new Exception("Unexpected status: " + status.getStatus() + 	", " + status.getError_msg());
+throw new Exception("Unexpected status: " + status.getStatus() +     ", " + status.getError_msg());
 
 checkCount++;
-	if(checkCount >= maxChecks)
-	throw new Exception("Report timeout: report hasn't returned after " + maxChecks + "checks");
+    if(checkCount >= maxChecks)
+    throw new Exception("Report timeout: report hasn't returned after " + maxChecks + "checks");
 
 status = port.reportGetStatus(reportID);
-	if(!status.getStatus().equals("done"))
-	Thread.sleep(2000);
+    if(!status.getStatus().equals("done"))
+    Thread.sleep(2000);
 }
 
 ```
 
-**C\# Code** 
+**C# Code** 
 
 ```
 Thread.Sleep(5000);
@@ -133,15 +133,15 @@ while (status.status != "done")
 {
     Console.WriteLine("status: " + status.status);
     if(status.status != "done" && status.status != "ready")
-throw new Exception("Unexpected status: " + status.status + 	", " + status.error_msg);
+throw new Exception("Unexpected status: " + status.status +     ", " + status.error_msg);
 
       checkCount++;
-	if(checkCount >= maxChecks)
-	throw new Exception("Report timeout: report hasn't returned after " + maxChecks + "checks");
+    if(checkCount >= maxChecks)
+    throw new Exception("Report timeout: report hasn't returned after " + maxChecks + "checks");
 
       status = client.ReportGetStatus(reportID);
-	if(status.status != "done")
-	Thread.Sleep(2000);
+    if(status.status != "done")
+    Thread.Sleep(2000);
 }
 
 ```

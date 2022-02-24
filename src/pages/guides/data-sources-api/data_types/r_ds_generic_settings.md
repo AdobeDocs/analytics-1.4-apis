@@ -1,4 +1,4 @@
-# ds\_generic\_settings
+# ds_generic_settings
 
 Data structure that contains configuration settings for a Generic data source.
 

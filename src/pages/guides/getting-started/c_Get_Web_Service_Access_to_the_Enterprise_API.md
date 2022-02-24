@@ -7,7 +7,7 @@ This documentation should only be used as a reference for existing integrations.
 
 In this section, you will add web service access to your user login for the Enterprise API. You should work with your Adobe Experience Cloud administrator to get access.
 
-1.  In the Adobe Marketing Cloud, navigate to **Analytics** \> **Admin** \> **User Management**.
+1.  In the Adobe Marketing Cloud, navigate to **Analytics** > **Admin** > **User Management**.
 2.  Select **Edit Users**.
 3.  Locate your Login name in the Users table, and click the **Edit** link in the **Manage** column.
 4.  In the **Access** section, add **Web Service Access**.

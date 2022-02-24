@@ -6,7 +6,7 @@ Retrieves a page of data, known as a file segment, from a completed classificati
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **file\_id** | `xsd:int` | The ID of the export file you want to view. You can get this value from [GetStatus](r_GetStatus.md#). |
+| **file_id** | `xsd:int` | The ID of the export file you want to view. You can get this value from [GetStatus](r_GetStatus.md#). |
 | **page** | `xsd:int` | The number of the data page you want to view from the export job. Default is 1. The `viewable_pages` value in [GetStatus](r_GetStatus.md#) indicates the number of data pages in the job. Valid values for `page` are between 1 and the value of `viewable_pages`. |
 
 ## Classifications.GetExport Response

@@ -14,23 +14,23 @@ The code follows the section explanations.
 
 ## Create the function
 
-The custom function that you will later place in the loop you created in Step 1 is getTwitterFollowersDataForDateRange\(\) and it accepts the following two parameters:
+The custom function that you will later place in the loop you created in Step 1 is getTwitterFollowersDataForDateRange() and it accepts the following two parameters:
 
--   The integration ID instance
--   The web service port type class instance
+- The integration ID instance
+- The web service port type class instance
 
 ## Set the parameters for the On Demand scripts
 
 In the function you will invoke three On Demand scripts. When you invoke an On Demand script, you will always provide the script name and the script parameters:
 
--   **Integration ID** - The ID for the particular integration instance.
-    -   For PHP, you access the Integration ID directly from the integration instance.
-    -   For Java, you use the method getIntegrationCode\(\).
-    -   For C\#, you use the method integrationCode
--   **Script name** - The name of the On Demand script to execute, set as a string value.
--   **Script parameters** - An array holding the parameters required by each specific script.
+- **Integration ID** - The ID for the particular integration instance.
+    - For PHP, you access the Integration ID directly from the integration instance.
+    - For Java, you use the method getIntegrationCode().
+    - For C#, you use the method integrationCode
+- **Script name** - The name of the On Demand script to execute, set as a string value.
+- **Script parameters** - An array holding the parameters required by each specific script.
 
-In this JJ. Esquire Twitter demo application, the first script \(create report request\) requires the date range for the report so you will define myDateTo and myDateFrom parameters. The second \(check status\) and third \(retrieve report data\) scripts only require the Report ID, which is populated by the response of the first script.
+In this JJ. Esquire Twitter demo application, the first script (create report request) requires the date range for the report so you will define myDateTo and myDateFrom parameters. The second (check status) and third (retrieve report data) scripts only require the Report ID, which is populated by the response of the first script.
 
 **Note:** In **Create On Demand scripts to generate reports** tutorial you defined parameters for these three scripts. You also defined replaceWith attributes, which are used to dynamcally reference parameter values. The script parameters you define in this function must include all of the replaceWith parameters.
 
@@ -40,7 +40,7 @@ The function code block shows the script name string and the script parameters a
 
 You use the Partner.RunScript method in the Data Connectors Partner API to run a On Demand script against a specific Customer integration.
 
-In the code below, you first execute the On Demand script called **followers\_per\_twitter\_handle** that creates a QueueRanked report request.
+In the code below, you first execute the On Demand script called **followers_per_twitter_handle** that creates a QueueRanked report request.
 
 **Note:** QueueRanked is a type of report that is based on one or more elements and one or more metrics. You can learn more about report types by reading the [QueueRanked](../reporting-api-1.3/methods/r_queueRanked.md) documentation.
 
@@ -70,8 +70,8 @@ function getTwitterFollowersDataForDateRange($integrationId , $soapApp){
             'scriptName' => "followers_per_twitter_handle", // the script name for the On Demand script
             /* define the scriptParameters defined in the On Demand script */
             'scriptParameters' => array(
-                         array('name' => 'myDateFrom', 'value' => '2010-01-11'),
-                         array('name' => 'myDateTo', 'value' => '2011-01-17')      
+                         array('name' => 'myDateFrom', 'value' => 'YYYY-01-11'),
+                         array('name' => 'myDateTo', 'value' => 'YYYY-01-17')      
                   )
     );
     $debug = 0;
@@ -214,13 +214,13 @@ private Report getTwitterFollowersDataForDateRange(IntegrationDetail integration
         scriptParameters[0].setName("myDateFrom");
       /* Set the value for the myDateFrom parameter to be
          passed to the script */
-        scriptParameters[0].setValue("2010-1-11");
+        scriptParameters[0].setValue("YYYY-1-11");
       /* myDateTo is the parameter you defined in the On
          Demand script */
         scriptParameters[1].setName("myDateTo");
       /* Set the value for the myDateTo parameter to be
          passed to the script */
-        scriptParameters[1].setValue("2011-1-17");
+        scriptParameters[1].setValue("YYYY-1-17");
  
         /* Validate the script parameters */
         ScriptParameter[] scriptParametersValidate = new
@@ -291,11 +291,11 @@ C# Code
        /* myDateFrom is the parameter you defined in the On Demand script */
         scriptParameters[0].name = "myDateFrom";
        /* Set the value for the myDateFrom parameter to be passed to the script */
-        scriptParameters[0].value = "2010-1-11";
+        scriptParameters[0].value = "YYYY-1-11";
       /* myDateTo is the parameter you defined in the On Demand script */
         scriptParameters[1].name = "myDateTo";
      /* Set the value for the myDateTo parameter to be passed to the script */
-        scriptParameters[1].value = "2011-1-17";
+        scriptParameters[1].value = "YYYY-1-17";
  
         /* Validate the script parameters */
         scriptParameter[] scriptParametersValidate = new scriptParameter[1];
@@ -337,7 +337,7 @@ scriptResult[0].result[0]).status.Equals("done"))
     }
 ```
 
-The queue ranked report request, from the first On Demand script execution, returns a report ID in the response. Once the report has been queued, you then use the report ID to invoke the second On Demand script \( **getReportStatusOD** \) for checking the status of the report.
+The queue ranked report request, from the first On Demand script execution, returns a report ID in the response. Once the report has been queued, you then use the report ID to invoke the second On Demand script ( **getReportStatusOD** ) for checking the status of the report.
 
 **Parent topic:** [4. Partner Reports Tutorial](c_Create_Data_Connectors_Partner_Reports_using_the_Partner_API.md)
 

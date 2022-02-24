@@ -14,8 +14,8 @@ Next you will create an **On Demand** script to check the status of your report 
     ```
 
 3.  Paste it into a new text file on your computer and name it **getReportStatusOD**.
-4.  Clean up the XML code by removing the namespace tag \(**ns1**\) and the **xsi** parameter.
-5.  Wrap the XML within **genesis** tags and add the **REPORT\_ID** variable to reference the Partner integration.
+4.  Clean up the XML code by removing the namespace tag (**ns1**) and the **xsi** parameter.
+5.  Wrap the XML within **genesis** tags and add the **REPORT_ID** variable to reference the Partner integration.
 
 ```
 

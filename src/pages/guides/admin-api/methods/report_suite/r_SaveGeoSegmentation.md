@@ -1,14 +1,14 @@
 # SaveGeoSegmentation
 
-Saves ad hoc analysis \(formerly Discover\) access for the requested report suites.
+Saves ad hoc analysis (formerly Discover) access for the requested report suites.
 
 ## ReportSuite.SaveDiscoverEnabled parameters
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**geo\_segmentation** |`xsd:boolean` |Enables or disables geoSegmentation reports.|
-|**vista\_enabled** |`xsd:boolean` |Enables or disables VISTA geoSegmentation reports.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**geo_segmentation** |`xsd:boolean` |Enables or disables geoSegmentation reports.|
+|**vista_enabled** |`xsd:boolean` |Enables or disables VISTA geoSegmentation reports.|
 
 ## ReportSuite.SaveDiscoverEnabled response
 

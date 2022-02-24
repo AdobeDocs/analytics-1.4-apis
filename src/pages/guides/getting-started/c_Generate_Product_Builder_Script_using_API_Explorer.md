@@ -6,13 +6,13 @@ For this demo application, you will use the API Explorer to create a data source
 
 The first API method call you must make is to create a data source.
 
-1.  In the Adobe Developer Connection, select **Get Started \> API Explorer** to access API Explorer.
+1.  In the Adobe Developer Connection, select **Get Started > API Explorer** to access API Explorer.
 2.  In the API Explorer tool, enter the **Username** and **Secret** for your account.
 
     **Note:** You can get your username and secret from logging into the Adobe Experience Cloud and clicking on your user name link to the left of the **Sign Out** link. The Account Information screen will display your Username and Secret.
 
 3.  From the **Environment** drop down list, choose **Sandbox**.
-4.  Select the method **DataSource\_SetupGeneric** from the drop down list.
+4.  Select the method **DataSource_SetupGeneric** from the drop down list.
 5.  Modify the XML generated in the **Request** box to define a data source name and your email address as shown in the following code.
 
     ```

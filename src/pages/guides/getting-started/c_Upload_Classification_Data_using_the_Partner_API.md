@@ -2,7 +2,7 @@
 
  
 
-When a Customer executes the Integration Wizard, it runs the Product Builder scripts and creates the classification columns in the report suite. In this section you will learn how to write PHP, Java and C\# code to access the Partner API and upload data to the classifications.
+When a Customer executes the Integration Wizard, it runs the Product Builder scripts and creates the classification columns in the report suite. In this section you will learn how to write PHP, Java and C# code to access the Partner API and upload data to the classifications.
 
 ## Retrieve all the available integrations for the partner
 
@@ -100,7 +100,7 @@ public static String[][] getClassificationRowsFromFile()
   
         try
         {
-            String classificationFile = Path.Combine(Environment.CurrentDirectory, "resources\\classifications.txt");
+            String classificationFile = Path.Combine(Environment.CurrentDirectory, "resources\classifications.txt");
             FileStream fileStream = File.OpenRead(classificationFile);
             StreamReader streamReader = new StreamReader(classificationFile);
             string line;
@@ -142,10 +142,10 @@ The Partner API uses the **Import.UploadClassifications** method to upload data 
 
 You must first define values for the following method arguments:
 
--   **metricName** - The name of the metric where you want to import classification data.
--   **columnNames** - The names of the classification columns \(the column headings\).
--   **rows** - The classification data to import
--   **endOfBlock** - The value of 1 indicates that this is the last block in the data submission
+- **metricName** - The name of the metric where you want to import classification data.
+- **columnNames** - The names of the classification columns (the column headings).
+- **rows** - The classification data to import
+- **endOfBlock** - The value of 1 indicates that this is the last block in the data submission
 
 **Note:** A metric is a number that represents a count or a ratio for something you want to measure. Examples of metrics are: revenue of a product, number of visits and number of page views.
 

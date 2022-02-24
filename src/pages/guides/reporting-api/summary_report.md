@@ -12,7 +12,7 @@ Summary reports do not contain the `"reportSuiteID"` parameter, instead the repo
 
 {
     "reportDescription":{
-        "date":"2014",
+        "date":"YYYY",
         "metrics":[
             {
                 "id":"pageviews",
@@ -51,7 +51,7 @@ Summary reports do not contain the `"reportSuiteID"` parameter, instead the repo
             "id":"rsid1",
             "name":"Report Suite 1"
         },
-        "period":"2014",
+        "period":"YYYY",
         "metrics":[
             {
                 "id":"pageviews",

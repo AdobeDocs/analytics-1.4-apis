@@ -12,7 +12,7 @@ To create a segment definition of first time visitors for the JJ. Esquire web si
 3.   Click **Manage Segments** under **Build Report/Available Segments**. 
 4.   Click **Add**. 
 5.   Set the **Title** value to **FirstTimeVisitors with Call Center Click**. This defines the name of the segment. 
-6.   In the **Definitions** panel, select **Show \> Visit**. This adds Visit as a container. 
+6.   In the **Definitions** panel, select **Show > Visit**. This adds Visit as a container. 
 7.   Click **Show Events** and drag **Visits** to the Definitions panel. 
 8.   Select **equals** and enter 1 in the **Enter Value** field. 
 9.   Drag **Clicks** from the **Events** panel on the left to the **Definitions** canvas and click **Save**. This adds event 1 as a metric. Now you can reference this segment when running a Data Warehouse or a Reports & Analytics or Ad Hoc Analysis report.

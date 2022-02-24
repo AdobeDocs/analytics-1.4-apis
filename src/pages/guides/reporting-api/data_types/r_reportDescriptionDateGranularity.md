@@ -6,7 +6,7 @@ If you do not specify a dateGranularity parameter for an overtime report, the da
 
 |Value|Description|
 |-----|-----------|
-|**seconds** |Displays report data for the current minute \(Real-Time reports only\).|
+|**seconds** |Displays report data for the current minute (Real-Time reports only).|
 |**hour** |Displays report data for the current hour.|
 |**day** |Displays report data for the current day.|
 |**week** |Displays report data for the current week.|

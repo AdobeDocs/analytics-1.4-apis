@@ -6,7 +6,7 @@ Returns the available `relation_id` values for a given report suite, and compati
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**report\_suite\_array** |`array(xsd:string)` | A list of report suites where you want to get valid relation\_id values. |
+|**report_suite_array** |`array(xsd:string)` | A list of report suites where you want to get valid relation_id values. |
 
 ## Saint.GetCompatibilityMetrics Response
 

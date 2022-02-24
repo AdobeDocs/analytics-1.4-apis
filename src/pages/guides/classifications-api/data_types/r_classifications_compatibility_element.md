@@ -1,4 +1,4 @@
-# classifications\_compatibility\_element
+# classifications_compatibility_element
 
 Data structure that contains information about valid data filters for a classifications export job.
 

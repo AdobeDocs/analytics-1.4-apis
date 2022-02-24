@@ -8,18 +8,18 @@ Uploads data to a data source.
 
 ```
 {
-	"columns":[
-		"(string)"
-	],
-	"dataSourceID":(int),
-	"finished":(boolean),
-	"jobName":"(string)",
-	"reportSuiteID":"(string)",
-	"rows":[
-		[
-			"(string)"
-		]
-	]
+    "columns":[
+        "(string)"
+    ],
+    "dataSourceID":(int),
+    "finished":(boolean),
+    "jobName":"(string)",
+    "reportSuiteID":"(string)",
+    "rows":[
+        [
+            "(string)"
+        ]
+    ]
 }
 ```
 |Parameter|Description|

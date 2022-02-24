@@ -1,4 +1,4 @@
-# evar\_type\_enum
+# evar_type_enum
 
 An enumerated list of supported values for specifying the type of eVar value.
 

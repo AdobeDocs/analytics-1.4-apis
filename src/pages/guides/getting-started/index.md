@@ -31,9 +31,9 @@ After you have generated an Access Token you can use it in the `Authorization` h
 The following is an example cURL request to get the report suites for your Analytics Company:
 
 ```bash
-curl -X POST \
-  'https://api.omniture.com/admin/1.4/rest/?method=Company.GetReportSuites' \
-  -H 'Accept: */*' \
+curl -X POST 
+  'https://api.omniture.com/admin/1.4/rest/?method=Company.GetReportSuites' 
+  -H 'Accept: */*' 
   -H 'Authorization: Bearer ACCESS_TOKEN_GOES_HERE'
 ```
 
@@ -41,10 +41,10 @@ If you have more than one Analytics Company you can specify which company to use
 the `X-ADOBE-DMA-COMPANY` header. See the following example:
 
 ```bash
-curl -X POST \
-  'https://api.omniture.com/admin/1.4/rest/?method=Company.GetReportSuites' \
-  -H 'Accept: */*' \
-  -H 'Authorization: Bearer ACCESS_TOKEN_GOES_HERE' \
+curl -X POST 
+  'https://api.omniture.com/admin/1.4/rest/?method=Company.GetReportSuites' 
+  -H 'Accept: */*' 
+  -H 'Authorization: Bearer ACCESS_TOKEN_GOES_HERE' 
   -H 'X-ADOBE-DMA-COMPANY: Analytics Company Name'
 ```
 

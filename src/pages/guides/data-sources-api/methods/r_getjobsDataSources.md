@@ -6,8 +6,8 @@ Returns all current jobs for a data source.
 
 ```
 {
-	"dataSourceID":"(int)",
-	"reportSuiteID":"(string)"
+    "dataSourceID":"(int)",
+    "reportSuiteID":"(string)"
 }
 ```
 
@@ -17,20 +17,20 @@ Array of jobs, with the following structure:
 
 ```
 {
-	"id":"(int)",
-	"fileName":"(string)",
-	"startDate":"(date)",
-	"finishDate":"(date)",
-	"size":"(int)",
-	"rows":"(int)",
-	"errors":[
-		"(string)"
-	],
-	"warnings":[
-		"(string")
-	],
-	"receivedDate":"(date)",
-	"status":"(string)"
+    "id":"(int)",
+    "fileName":"(string)",
+    "startDate":"(date)",
+    "finishDate":"(date)",
+    "size":"(int)",
+    "rows":"(int)",
+    "errors":[
+        "(string)"
+    ],
+    "warnings":[
+        "(string")
+    ],
+    "receivedDate":"(date)",
+    "status":"(string)"
 }
 ```
 

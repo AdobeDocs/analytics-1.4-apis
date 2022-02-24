@@ -1,6 +1,6 @@
-# report\_suite\_template\_array
+# report_suite_template_array
 
-An array of [report\_suite\_template](r_report_suite_template.md#).
+An array of [report_suite_template](r_report_suite_template.md#).
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

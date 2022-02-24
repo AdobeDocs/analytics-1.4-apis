@@ -6,8 +6,8 @@ Updates the traffic variables for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid\_list** | array(xsd:string) |A list of report suite IDs.|
-| **props** | [prop\_array](../../data_types/r_prop_array.md#) - An array of [prop](../../data_types/r_prop.md#) |A list of traffic variable objects to assign to the report suites.|
+| **rsid_list** | array(xsd:string) |A list of report suite IDs.|
+| **props** | [prop_array](../../data_types/r_prop_array.md#) - An array of [prop](../../data_types/r_prop.md#) |A list of traffic variable objects to assign to the report suites.|
 
 ## ReportSuite.SaveProps response
 

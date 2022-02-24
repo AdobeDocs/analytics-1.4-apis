@@ -6,13 +6,13 @@ Returns the currently defined Marketing Channel rules for the specified report s
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid\_list** | `array(xsd:string)` |A list of report suites.|
+| **rsid_list** | `array(xsd:string)` |A list of report suites.|
 
 ## ReportSuite.GetMarketingChannelRules response
 
 |Type|Description|
 |----|-----------|
-|  [rs\_marketing\_channel\_rulesets\_array](../../data_types/r_rs_marketing_channel_rulesets_array.md#) - An array of [rs\_marketing\_channel\_rulesets](../../data_types/r_rs_marketing_channel_rulesets.md#) 
+|  [rs_marketing_channel_rulesets_array](../../data_types/r_rs_marketing_channel_rulesets_array.md#) - An array of [rs_marketing_channel_rulesets](../../data_types/r_rs_marketing_channel_rulesets.md#) 
 
  |A list of marketing channel rules for each specified report suite.|
 

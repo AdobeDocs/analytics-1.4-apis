@@ -1,4 +1,4 @@
-# search\_engine\_enum
+# search_engine_enum
 
 An enumerated list of known search engines.
 

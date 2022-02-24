@@ -4,7 +4,7 @@
 
 The import job can take several hours to complete once it has been submitted. Once the import job finishes processing, you can check if the data was properly classified in the Adobe Experience Cloud by running a report on Brands or Categories.
 
-In Analytics UI, navigate to **Products** \> **Products** \> **Brand**.
+In Analytics UI, navigate to **Products** > **Products** > **Brand**.
 
 Notice that the report data that comes back shows the brand classification data that you added.
 
@@ -20,18 +20,18 @@ After you retrieve the data, you can update it and then import using the informa
 
 ## Creating an export job
 
-Create the export job using the Saint.ExportCreateJob\(\) method and the parameters in the following table.
+Create the export job using the Saint.ExportCreateJob() method and the parameters in the following table.
 
 | Parameters | Description |
 |--------------|---------------|
-| report\_suite\_array | The list of report suites from which to export data. |
-| campaign\_filter\_option |  The filter option based on campaign activity or date. Supported values include: `0`: All Campaigns \(No filter\) \(default\) `1`: Active campaigns `2`: Campaign by begin and end date |
-| campaign\_filter\_begin\_range | The campaign start date to filter the data. |
-| campaign\_filter\_end\_range | The campaign end date to filter the data. |
-| date\_filter\_row\_start\_date | The start date for including rows in the export. |
-| date\_filter\_row\_end\_date | The end date for including rows in the export. |
-| email\_address | The email address to receive SAINT export job notifications. |
-| relation\_id | The unique ID for the basic report element data you are exporting. This ID is returned from the `Saint.GetCompatibilityMetrics()` method. |
+| report_suite_array | The list of report suites from which to export data. |
+| campaign_filter_option |  The filter option based on campaign activity or date. Supported values include: `0`: All Campaigns (No filter) (default) `1`: Active campaigns `2`: Campaign by begin and end date |
+| campaign_filter_begin_range | The campaign start date to filter the data. |
+| campaign_filter_end_range | The campaign end date to filter the data. |
+| date_filter_row_start_date | The start date for including rows in the export. |
+| date_filter_row_end_date | The end date for including rows in the export. |
+| email_address | The email address to receive SAINT export job notifications. |
+| relation_id | The unique ID for the basic report element data you are exporting. This ID is returned from the `Saint.GetCompatibilityMetrics()` method. |
 
 The following code shows you how to export filtered classification records.
 
@@ -94,7 +94,7 @@ $file_id = 0;
 $check_count = 0; 
 while (!$done && $check_count < $max_checks) { 
 sleep($check_rate_seconds); 
-if ($debug) echo("st_exportCheckAndRetrieve(): checking job_id = $job_id\n"); 
+if ($debug) echo("st_exportCheckAndRetrieve(): checking job_id = $job_idn"); 
 /* Saint.CheckJobStatus */ 
 $response = sendRequest('Saint.CheckJobStatus', array('job_id'=>$job_id ) ); 
 if (is_array($response)) { 
@@ -112,7 +112,7 @@ var_dump($response);
 } 
 } 
 $check_count++; 
-if ($debug) echo("st_exportCheckAndRetrieve(): looping again... $check_count\n"); 
+if ($debug) echo("st_exportCheckAndRetrieve(): looping again... $check_countn"); 
 }//end: while 
 
 if ($check_count >= $max_checks && ! $done) throw new Exception('st_exportCheckAndRetrieve(): timed out while pinging CheckJobStatus'); 
@@ -163,7 +163,7 @@ $data_set['data'] = array();
 for ($i=1; $i <= $viewable_pages; $i++) { 
 /* Saint.GetFileSegment */ 
 $response = sendRequest('Saint.ExportGetFileSegment', array('file_id'=>$file_id, 'segment_id'=>$i ) ); 
-echo "received chunk of " . count($response[0]['data']) . " rows.\n"; 
+echo "received chunk of " . count($response[0]['data']) . " rows.n"; 
 if (is_array($response) && is_array($response[0])) { 
 if (!$data_set['header']) 
 $data_set['header'] = $response[0]['header']; 

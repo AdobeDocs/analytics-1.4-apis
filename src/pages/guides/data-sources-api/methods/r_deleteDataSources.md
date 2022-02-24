@@ -6,8 +6,8 @@ Deletes a data source.
 
 ```
 {
-	"dataSourceID":"(int)",
-	"reportSuiteID":"(string)"
+    "dataSourceID":"(int)",
+    "reportSuiteID":"(string)"
 }
 ```
 

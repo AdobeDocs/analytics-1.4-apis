@@ -10,7 +10,7 @@ none.
 
 | Type | Description |
 |--------|---------------|
-|[saint\_ftp](../data_types/r_saint_ftp.md#) | Struct containing details for an FTP account. |
+|[saint_ftp](../data_types/r_saint_ftp.md#) | Struct containing details for an FTP account. |
 
 **Parent topic:** [Methods](../methods/c_saint_methods.md)
 

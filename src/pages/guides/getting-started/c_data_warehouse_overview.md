@@ -8,7 +8,7 @@ The following figure shows a high-level relationship between the Analytics and D
 
 When you have Data Warehouse enabled, the same raw, unprocessed analytics data is copied into a single table allowing more robust reporting options.
 
-You can access your data for both Analytics and Data Warehouse from the Adobe Experience Cloud or through the respective APIs. As mentioned earlier, you can access thousands of standard reports in Analytics but will need Data Warehouse to create complex, filtered \(segmented\) reports.
+You can access your data for both Analytics and Data Warehouse from the Adobe Experience Cloud or through the respective APIs. As mentioned earlier, you can access thousands of standard reports in Analytics but will need Data Warehouse to create complex, filtered (segmented) reports.
 
 **Note:** Because of to the complexity of Data Warehouse reports, they are not immediately available, can take up to 72 hours to generate, and are accessible via email, FTP or API delivery mechanisms.
 

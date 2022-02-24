@@ -18,7 +18,7 @@ The code you generated in the last step for the Report.QueueRanked API method ca
             <wsse:Username><your user name></wsse:Username>
             <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordDigest"><your password></wsse:Password>
             <wsse:Nonce>OTgwNGQxZTQwMjc5YjkwYjhjNDNlNWE1</wsse:Nonce>
-            <wsse:Created>2011-01-27T18:58:24Z</wsse:Created>
+            <wsse:Created>YYYY-01-27T18:58:24Z</wsse:Created>
           </wsse:UsernameToken>
         </wsse:Security>
       </SOAP-ENV:Header>

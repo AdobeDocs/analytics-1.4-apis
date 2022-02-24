@@ -8,13 +8,13 @@ See [List Variable](https://microsite.omniture.com/t2/help/en_US/sc/implement/in
 
 |Name|Type|Description|
 |----|----|-----------|
-| `rsid\_list` | `array(xsd:string)` | A list of report suite IDs.|
+| `rsid_list` | `array(xsd:string)` | A list of report suite IDs.|
 
 ## ReportSuite.GetListVariables Response
 
 | Type | Description |
 |--------|---------------|
-| [rscollection\_list\_variable](../../data_types/r_rscollection_list_variable.md#) - An array of [report\_suite\_list\_variable](../../data_types/r_report_suite_list_variable.md#). | Data structure that describes the list variables that are configured for a report suite. |
+| [rscollection_list_variable](../../data_types/r_rscollection_list_variable.md#) - An array of [report_suite_list_variable](../../data_types/r_report_suite_list_variable.md#). | Data structure that describes the list variables that are configured for a report suite. |
 
 **Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
 

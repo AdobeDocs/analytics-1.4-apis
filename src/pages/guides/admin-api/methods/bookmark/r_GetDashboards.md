@@ -8,14 +8,14 @@ Parameters `dashboard_limit` and `dashboard_offset` are optional, and only neces
 
 |Name|Type|Description|
 |----|----|-----------|
-|**dashboard\_limit** |`xsd:int` |\(optional\) Limit the retrieval to the specified number of dashboards.|
-|**dashboard\_offset** |`xsd:int` |\(optional\) Start the dashboard retrieval at the specified offset.|
+|**dashboard_limit** |`xsd:int` |(Optional) Limit the retrieval to the specified number of dashboards.|
+|**dashboard_offset** |`xsd:int` |(Optional) Start the dashboard retrieval at the specified offset.|
 
 ## Bookmark.GetDashboards response
 
 |Type|Description|
 |----|-----------|
-| [dashboard\_array](../../data_types/r_dashboard_array.md#) - an array of [dashboard](../../data_types/r_dashboard.md#)|Contents of the dashboard.|
+| [dashboard_array](../../data_types/r_dashboard_array.md#) - an array of [dashboard](../../data_types/r_dashboard.md#)|Contents of the dashboard.|
 
 **Parent topic:** [Bookmark](../../methods/bookmark/c_methods_bookmark.md)
 

@@ -18,7 +18,7 @@ If you want to verify that the bulk data was imported successfully, you can run 
 
 4.  Execute the On Demand script using the Partner.RunScript API call.
 
-    See Steps 2 \([Step 2: Execute the On Demand Scripts using the Partner.RunScript API Call](c_Execute_the_On_Demand_scripts.md#)\) and 3 \([Step 3: Print the Report Data on the Console](c_Print_the_Report_Data_on_the_Console.md#)\) in the fourth tutorial of the series, [4. Partner Reports Tutorial](c_Create_Data_Connectors_Partner_Reports_using_the_Partner_API.md#).
+    See Steps 2 ([Step 2: Execute the On Demand Scripts using the Partner.RunScript API Call](c_Execute_the_On_Demand_scripts.md#)) and 3 ([Step 3: Print the Report Data on the Console](c_Print_the_Report_Data_on_the_Console.md#)) in the fourth tutorial of the series, [4. Partner Reports Tutorial](c_Create_Data_Connectors_Partner_Reports_using_the_Partner_API.md#).
 
 
 **Parent topic:** [6. Import Bulk Data Tutorial](c_Import_bulk_Data_using_the_Partner_API.md)

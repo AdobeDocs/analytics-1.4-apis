@@ -8,14 +8,14 @@ The returned data consists of values that can be passed in as parameters of [Exp
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**relation\_id** |`xsd:int` | The ID of the Data Source for which you want to get file information. |
-|**report\_suite\_array** |`array(xsd:string)` | A list of report suites that contains the specified data source. |
+|**relation_id** |`xsd:int` | The ID of the Data Source for which you want to get file information. |
+|**report_suite_array** |`array(xsd:string)` | A list of report suites that contains the specified data source. |
 
 ## Saint.GetFilters Response
 
 |Type|Description|
 |----|-----------|
-|[export\_filters](../data_types/r_export_filters.md#) | Information about valid filters for the specified data segment. |
+|[export_filters](../data_types/r_export_filters.md#) | Information about valid filters for the specified data segment. |
 
 For more information, see [GetFilters Request](../sample_code/r_GetFilters_sample.md#).
 

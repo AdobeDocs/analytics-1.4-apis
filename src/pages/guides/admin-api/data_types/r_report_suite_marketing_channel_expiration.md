@@ -1,4 +1,4 @@
-# report\_suite\_marketing\_channel\_expiration
+# report_suite_marketing_channel_expiration
 
 |Name|Type|Description|
 |----|----|-----------|

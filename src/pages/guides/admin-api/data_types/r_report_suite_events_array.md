@@ -1,6 +1,6 @@
-# report\_suite\_events\_array
+# report_suite_events_array
 
-An array of [report\_suite\_events](r_report_suite_events.md#).
+An array of [report_suite_events](r_report_suite_events.md#).
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

@@ -8,7 +8,7 @@ Use Bookmark.[Bookmark.GetBookmarks](r_GetBookmarks.md#) or [Bookmark.GetDashboa
 
 |Name|Type|Description|
 |----|----|-----------|
-| **bookmark\_id** |`xsd:int` |\(required\) The ID of the bookmark for which you want to retrieve the report description.|
+| **bookmark_id** |`xsd:int` |(Required) The ID of the bookmark for which you want to retrieve the report description.|
 
 ## Bookmark.GetReportDescription response
 

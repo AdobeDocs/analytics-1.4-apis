@@ -4,7 +4,7 @@
 
 Customers will integrate your data connectors product data into their web site or other applications. This requires them to map their variables to your product variables. In this section, you define your project variables. In tutorial 3, [3. Integrate Partner Data Tutorial](c_Integrate_Data_Connectors_Partner_Data_into_Customer_Application.md#), Customers will map their variables to this definition.
 
-For this demo application, you will define a custom conversion variable, or eVar, named **twitter\_handle**, with a friendly name of **Twitter handle**.
+For this demo application, you will define a custom conversion variable, or eVar, named **twitter_handle**, with a friendly name of **Twitter handle**.
 
 **Note:** To learn more about custom conversion variables and custom events, see the [What are the available Analytics variables and events?](c_What_are_the_available_Analytics_variables_and_events.md#)
 

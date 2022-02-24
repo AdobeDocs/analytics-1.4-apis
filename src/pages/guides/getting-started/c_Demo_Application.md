@@ -10,7 +10,7 @@ In this article, you will create a segment rule in the Segment Definition Builde
 
  
 
-Next you will define the report criteria like contact information \(name and phone number of the requester of the report\), report name and description, the name of the file to be delivered, the time frame to be considered for the report and the time granularity \(the unit of time to break down the report, such as hour, day, week\).
+Next you will define the report criteria like contact information (name and phone number of the requester of the report), report name and description, the name of the file to be delivered, the time frame to be considered for the report and the time granularity (the unit of time to break down the report, such as hour, day, week).
 
 Lastly, you will learn two ways to execute the report: using the Data Warehouse UI in the Adobe Experience Cloud and using the Data Warehouse API.
 

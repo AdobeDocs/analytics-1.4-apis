@@ -8,20 +8,20 @@ The following table lists the XML tags for page specific data in the JJ. Esquire
 
 | Property | Description |
 |------------|---------------|
-| reportSuiteID \(required\) | The report suite where you are collecting data. |
-| visitorID \(visitorID or ipAddress required\) | A visitor’s unique identifying cookie. |
-| IPaddress \(visitorID or ipAddress required\) | The visitor’s IP address. |
+| reportSuiteID (Required) | The report suite where you are collecting data. |
+| visitorID (visitorID or ipAddress required) | A visitor’s unique identifying cookie. |
+| IPaddress (visitorID or ipAddress required) | The visitor’s IP address. |
 | userAgent | The visitor’s browser type and OS. |
-| pageName \(pageName or pageURL required\) | The name of the web page. |
+| pageName (pageName or pageURL required) | The name of the web page. |
 | channel | A section, or category, within your site. |
 | prop1 | A custom traffic variable to track a metric you define. |
 | events | A list of one or more Analytics events to track. |
-| products | A list of products on the web page. The format is “category;product name \[,category; product name\]” |
+| products | A list of products on the web page. The format is “category;product name [,category; product name]” |
 
 
 The following code sets the analytics data for the `pageName`, `channel`, `prop1`, `event` and `products` variables.
 
-**Note:** The SKU number for this article is different than the SKU number you set in the Collect visitor analytics using Analytics JavaScript Tagging tutorial so that you can more easily distinguish the data collected from the client- and server-side methods. You may also notice that the variable data in this article appends two asterisks \(\*\*\) to the data, again to help you more easily verify the data collected with the Data Insertion API.
+**Note:** The SKU number for this article is different than the SKU number you set in the Collect visitor analytics using Analytics JavaScript Tagging tutorial so that you can more easily distinguish the data collected from the client- and server-side methods. You may also notice that the variable data in this article appends two asterisks (**) to the data, again to help you more easily verify the data collected with the Data Insertion API.
 
 **PHP Code** 
 

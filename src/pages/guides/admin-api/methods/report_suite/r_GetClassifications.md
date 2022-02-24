@@ -1,29 +1,29 @@
 # GetClassifications
 
-Retrieves a list of classifications \(associated with the specified element\) for each of the specified report suites.
+Retrieves a list of classifications (associated with the specified element) for each of the specified report suites.
 
 ## ReportSuite.GetClassifications parameters
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid\_list** | `array(xsd:string)` | \(required\) The list of report suite IDs for which you want to retrieve classifications. |
-| **element\_list** |`array(xsd:string)` | \(required\) The list of elements for which you want to retrieve classifications. See [values for element\_list](r_GetClassifications.md#). |
+| **rsid_list** | `array(xsd:string)` | (Required) The list of report suite IDs for which you want to retrieve classifications. |
+| **element_list** |`array(xsd:string)` | (Required) The list of elements for which you want to retrieve classifications. See [values for element_list](r_GetClassifications.md#). |
 
 ## ReportSuite.GetClassifications response
 
 |Type|Description|
 |----|-----------|
-| [report\_suite\_element\_classifications\_array](../../data_types/r_report_suite_classifications_array.md#) - An array of [report\_suite\_element\_classifications](../../data_types/r_report_suite_classifications.md#) |List that includes each report suite's classifications hierarchy for the specified element\(s\).|
+| [report_suite_element_classifications_array](../../data_types/r_report_suite_classifications_array.md#) - An array of [report_suite_element_classifications](../../data_types/r_report_suite_classifications.md#) |List that includes each report suite's classifications hierarchy for the specified element(s).|
 
-## Values for element\_list
+## Values for element_list
 
-Element\_list can be one or more of the following values:
+Element_list can be one or more of the following values:
 
 trackingcode
 
-days\_between\_buys
+days_between_buys
 
-days\_till\_purchase
+days_till_purchase
 
 domain
 

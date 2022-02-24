@@ -10,12 +10,12 @@ Retrieves all report suites associated with the requesting company.
 Example:
 ```
 {
-	"types": [
-		"standard",
-		"rollup",
-		"virtual"
-	],
-	"search": "searchforme"
+    "types": [
+        "standard",
+        "rollup",
+        "virtual"
+    ],
+    "search": "searchforme"
 }
 ```
 
@@ -26,20 +26,20 @@ Example:
 
 |Type|Description|
 |----|-----------|
-|[company\_report\_suites](../../data_types/r_company_report_suites.md#) |A list of report suites that match the specified request parameters.|
+|[company_report_suites](../../data_types/r_company_report_suites.md#) |A list of report suites that match the specified request parameters.|
 
 Example:
 ```
 {
-	"report_suites": [{
-		"rsid": "vrs_dehans0_testvrs_1",
-		"site_title": "test VRS",
-		"virtual": true
-	}, {
-		"rsid": "vrs_dehans0_newvrs_1",
-		"site_title": "new vrs",
-		"virtual": true
-	}]
+    "report_suites": [{
+        "rsid": "vrs_dehans0_testvrs_1",
+        "site_title": "test VRS",
+        "virtual": true
+    }, {
+        "rsid": "vrs_dehans0_newvrs_1",
+        "site_title": "new vrs",
+        "virtual": true
+    }]
 }
 ```
 

@@ -1,4 +1,4 @@
-# permissions\_save\_group
+# permissions_save_group
 
 Data structure that provides basic information about a permissions group.
 

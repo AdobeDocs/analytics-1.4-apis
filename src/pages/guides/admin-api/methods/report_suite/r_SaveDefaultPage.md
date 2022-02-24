@@ -6,8 +6,8 @@ Updates the a default page setting for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**default\_page** |`xsd:string` |The default Web page. For example, `index.html`.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**default_page** |`xsd:string` |The default Web page. For example, `index.html`.|
 
 ## ReportSuite.SaveDefaultPage response
 

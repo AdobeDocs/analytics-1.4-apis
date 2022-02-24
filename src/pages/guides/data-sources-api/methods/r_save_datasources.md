@@ -6,42 +6,42 @@ Creates or updates a data source.
 
 ```
 {
-	"email":"(string)",
-	"id":"(int)",
-	"name":"(string)",
-	"processing_type":"(string)",
-	"reportSuiteID":"(string)",
-	"settings":{
-		"injectionType":"(string)",
-		"allowOutOfOrderHits":"(boolean)",
-		"stopOnWarning":"(boolean)",
-		"metricNames":[
-			"(string)"
-		],
-		"metricEvents":[
-			"(string)"
-		],
-		"dimensionNames":[
-			"(string)"
-		],
-		"dimensionVariables":[
-			"(string)"
-		],
-		"dataScope":"(string)",
-		"standardBreakdowns":[
-			"(string)"
-		],
-		"metricList":[
-			"(string)"
-		],
-		"customBreakdownNames":[
-			"(string)"
-		],
-		"customBreakdownValues":[
-			"(string)"
-		],
-		"logFormat":"(string)"
-	}
+    "email":"(string)",
+    "id":"(int)",
+    "name":"(string)",
+    "processing_type":"(string)",
+    "reportSuiteID":"(string)",
+    "settings":{
+        "injectionType":"(string)",
+        "allowOutOfOrderHits":"(boolean)",
+        "stopOnWarning":"(boolean)",
+        "metricNames":[
+            "(string)"
+        ],
+        "metricEvents":[
+            "(string)"
+        ],
+        "dimensionNames":[
+            "(string)"
+        ],
+        "dimensionVariables":[
+            "(string)"
+        ],
+        "dataScope":"(string)",
+        "standardBreakdowns":[
+            "(string)"
+        ],
+        "metricList":[
+            "(string)"
+        ],
+        "customBreakdownNames":[
+            "(string)"
+        ],
+        "customBreakdownValues":[
+            "(string)"
+        ],
+        "logFormat":"(string)"
+    }
 }
 ```
 
@@ -57,7 +57,7 @@ All parameters are required. Required settings depend on the `"processing_type"`
 
 ```
 {
-	"dataSourceID":"(int)"
+    "dataSourceID":"(int)"
 }
 ```
 

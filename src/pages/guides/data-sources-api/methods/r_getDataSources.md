@@ -6,7 +6,7 @@ Returns a list of Data Sources for a report suite.
 
 ```
 {
-	"reportSuiteID":"(string)"
+    "reportSuiteID":"(string)"
 }
 ```
 
@@ -16,20 +16,20 @@ Array of data sources, with the following structure:
 
 ```
 {
-		"id":"(int)",
-		"processing_type":"(string)", // generic, web, traffic
-		"name":"(string)",
-		"email":"(string)",
-		"activatedDate":"(date)",
-		"ftp":{
-			"path":"(string)",
-			"loginID":"(string)",
-			"password":"(string)"
-		},
-		"haltOnWarning":(boolean),
-		"haltOnError":(boolean),
-		"lockedByError":(boolean)
-	}
+        "id":"(int)",
+        "processing_type":"(string)", // generic, web, traffic
+        "name":"(string)",
+        "email":"(string)",
+        "activatedDate":"(date)",
+        "ftp":{
+            "path":"(string)",
+            "loginID":"(string)",
+            "password":"(string)"
+        },
+        "haltOnWarning":(boolean),
+        "haltOnError":(boolean),
+        "lockedByError":(boolean)
+    }
 ```
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods_1.4.md)

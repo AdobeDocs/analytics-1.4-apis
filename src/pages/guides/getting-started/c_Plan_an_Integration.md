@@ -8,16 +8,16 @@ After you are familiar with the Experience Cloud, the following resources will h
 
 ## Plan an Integration using an existing use case
 
--   [Third Party Data Providers](c_Adobe_Audience_Manager_Build.md#) 
+- [Third Party Data Providers](c_Adobe_Audience_Manager_Build.md#) 
 
--   [Audience Targeting](c_Audience_Targeting.md#) 
+- [Audience Targeting](c_Audience_Targeting.md#) 
 
 
 ## Plan an Integration using a Solution integration overview
 
--   ![](graphics/mc_analytics_16.png) [Adobe Analytics](c_Adobe_Analytics_Build.md#) 
+- ![](graphics/mc_analytics_16.png) [Adobe Analytics](c_Adobe_Analytics_Build.md#) 
 
--   ![](graphics/mc_experiencemanager_16.png) [Adobe Experience Manager](c_Adobe_Experience_Manager_Build.md#) 
+- ![](graphics/mc_experiencemanager_16.png) [Adobe Experience Manager](c_Adobe_Experience_Manager_Build.md#) 
 
 
 **Parent topic:** [Partner Overview](c_Marketing_Cloud_Exchange.md)

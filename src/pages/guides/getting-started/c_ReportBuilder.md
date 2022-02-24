@@ -8,11 +8,11 @@ In this tutorial, you will use Report Builder for the specific purpose of genera
 
 ![](graphics/scripting0004.jpg)
 
-To learn more about this tool, log in to Adobe Experience Cloud and select **Analytics \> Report Builder**.
+To learn more about this tool, log in to Adobe Experience Cloud and select **Analytics > Report Builder**.
 
 In the following steps, you will download, install and authenticate yourself to use Report Builder.
 
-1.  Log into the Adobe Online Experience Cloud and select **Analytics \> Report Builder**.
+1.  Log into the Adobe Online Experience Cloud and select **Analytics > Report Builder**.
 
     ![](graphics/scripting0005.jpg)
 

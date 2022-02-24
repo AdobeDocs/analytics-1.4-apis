@@ -6,17 +6,17 @@ After you create the import job, you can populate it with data using the `Saint.
 
 | Parameter | Description |
 |-------------|---------------|
-| job\_id | The SAINT import job ID to append the row data. Use the returned job ID from the `Saint.ImportCreateJob()` method. |
+| job_id | The SAINT import job ID to append the row data. Use the returned job ID from the `Saint.ImportCreateJob()` method. |
 | page | The page number, or sequential batch number, for the import. |
 | row | An array of row data formatted to match the header columns of the import job. |
 
  
 
-If you upload a large amount of data, you can upload it in batches, often referred to as segments, or pages. You must number the pages sequentially \(either ascending or descending\) to avoid errors when SAINT processes the job. Remember to start the page numbering from 1, and not 0.
+If you upload a large amount of data, you can upload it in batches, often referred to as segments, or pages. You must number the pages sequentially (either ascending or descending) to avoid errors when SAINT processes the job. Remember to start the page numbering from 1, and not 0.
 
 The `Saint.ImportPopulateJob()` method returns a status string that indicates if the job successfully processed. Valid return values include `Success` or `Failed`.
 
-In this JJ. Esquire demo application for this article, the following code shows you how to add one record, but two classifications \(Winter Ski Jacket category and Northface brand\), for a single product SKU \(100241\).
+In this JJ. Esquire demo application for this article, the following code shows you how to add one record, but two classifications (Winter Ski Jacket category and Northface brand), for a single product SKU (100241).
 
 **PHP Code** 
 

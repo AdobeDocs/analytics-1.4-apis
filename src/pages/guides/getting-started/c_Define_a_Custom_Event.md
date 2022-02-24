@@ -2,7 +2,7 @@
 
  
 
-In this section, you will define a custom event that stores the Twitter follower count for the Twitter handle. For this demo application, you will define a custom event named **twitter\_followers**, with a friendly name of **Twitter followers**.
+In this section, you will define a custom event that stores the Twitter follower count for the Twitter handle. For this demo application, you will define a custom event named **twitter_followers**, with a friendly name of **Twitter followers**.
 
 **Note:** To learn more about custom conversion variables and custom events, see the [What are the available Analytics variables and events?](c_What_are_the_available_Analytics_variables_and_events.md#) 
 

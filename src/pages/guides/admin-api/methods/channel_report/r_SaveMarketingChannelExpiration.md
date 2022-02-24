@@ -7,7 +7,7 @@ Updates the marketing channel expiration date for the specified report suites.
 |Name|Type|Description|
 |----|----|-----------|
 |**days** |`xsd:int` |The number of days you want to extend the marketing channel expiration date.|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
 
 ## ReportSuite.SaveMarketingChannelExpiration response
 

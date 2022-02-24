@@ -6,7 +6,7 @@ Updates the commerce level for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` | A list of report suite IDs.|
+|**rsid_list** |`array(xsd:string)` | A list of report suite IDs.|
 |**ecommerce** |`xsd:boolean` | Enables or disables eCommerce.|
 
 ## ReportSuite.SaveEcommerce response

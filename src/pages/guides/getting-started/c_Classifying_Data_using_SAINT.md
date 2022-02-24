@@ -12,8 +12,8 @@ All the variables tagged in JavaScript for Analytics collection are passed in a 
 
 There are two options to import/export data and associate, or classify, them with the key value using SAINT:
 
--   [Using the SAINT Classifications UI](c_Using_the_SAINT_Classifications_UI.md#) 
--   [Using the SAINT Classifications API](c_Using_the_SAINT_Classifications_API.md#) 
+- [Using the SAINT Classifications UI](c_Using_the_SAINT_Classifications_UI.md#) 
+- [Using the SAINT Classifications API](c_Using_the_SAINT_Classifications_API.md#) 
 
 **Parent topic:** [SAINT API Tutorial](c_SAINT_API_Overview.md)
 

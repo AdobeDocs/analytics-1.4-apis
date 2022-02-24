@@ -8,14 +8,14 @@ The returned data consists of values that can be passed in as parameters of [Cre
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **rsid\_list** | `array(xsd:string)` | A list of report suites that contains the specified data source. |
+| **rsid_list** | `array(xsd:string)` | A list of report suites that contains the specified data source. |
 | **element** | `xsd:string` | The element for which you want to get file information. |
 
 ## Classifications.GetFilters Response
 
 |Type|Description|
 |----|-----------|
-| [classifications\_filters](../data_types/r_classifications_filters.md#) | Information about valid filters for the specified data segment. |
+| [classifications_filters](../data_types/r_classifications_filters.md#) | Information about valid filters for the specified data segment. |
 
 **Parent topic:** [Methods](../methods/classifications_methods.md)
 

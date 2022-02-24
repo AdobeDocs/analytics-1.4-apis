@@ -1,4 +1,4 @@
-# ds\_setup\_result
+# ds_setup_result
 
 Data structure that contains information about a new data source.
 

@@ -67,7 +67,7 @@ In this section, you will upload the bulk data to the Adobe Online Experience Cl
 
 **Review the sample data for upload** 
 
-The solution file that you downloaded earlier in the article includes a sample data file called **data\_upload.txt** in the **resources**directory. Open this file and notice the bulk data rows.
+The solution file that you downloaded earlier in the article includes a sample data file called **data_upload.txt** in the **resources**directory. Open this file and notice the bulk data rows.
 
 **Import data from local file** 
 
@@ -100,7 +100,7 @@ Java Code
                 while ((line = input.readLine()) != null)
                 {
                     String[] dataSourceLine = new String[line.split("\t").length + 1];
-                    dataSourceLine[0] = "1/1/2011";
+                    dataSourceLine[0] = "1/1/YYYY";
                     dataSourceLine[1] = line.split("\t")[0];
                     dataSourceLine[2] = line.split("\t")[1];
                     dataSourceData.add(dataSourceLine);
@@ -129,7 +129,7 @@ public static String[][] getDataSourcesRowsFromReportData()
   
         try
         {
-            String importFile = Path.Combine(Environment.CurrentDirectory, "resources\\data_upload.txt");
+            String importFile = Path.Combine(Environment.CurrentDirectory, "resources\data_upload.txt");
             FileStream fileStream = File.OpenRead(importFile);
             StreamReader streamReader = new StreamReader(importFile);
             string line;
@@ -139,7 +139,7 @@ public static String[][] getDataSourcesRowsFromReportData()
              {
               
                     String[] dataSourceLine = new String[line.Split('\t').Length + 1];
-                    dataSourceLine[0] = "1/1/2011";
+                    dataSourceLine[0] = "1/1/YYYY";
                     dataSourceLine[1] = line.Split('\t')[0];
                     dataSourceLine[2] = line.Split('\t')[1];
                     dataSourceData.AddRange(dataSourceLine);
@@ -175,11 +175,11 @@ The Partner API uses the **Import.UploadMetrics** method to import bulk data. Th
 
 You must first define values for the following method arguments:
 
--   **integrationCode**: The integration identifier. This is the value returned by the **Partner.GetIntegrations** method.
--   **columnNames**: The names of the data columns \(the column headings\) in the report suite.
--   **rows**: The data to import into the report suite.
--   **dataSourceId**: The data source where you want to import the metrics.
--   **endOfBlock**: Indicates that this is the last block in the data submission.
+- **integrationCode**: The integration identifier. This is the value returned by the **Partner.GetIntegrations** method.
+- **columnNames**: The names of the data columns (the column headings) in the report suite.
+- **rows**: The data to import into the report suite.
+- **dataSourceId**: The data source where you want to import the metrics.
+- **endOfBlock**: Indicates that this is the last block in the data submission.
 
 ```
 PHP Code

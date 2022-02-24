@@ -6,8 +6,8 @@ Saves internal URL filters for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**internal\_url\_filters** |`array(xsd:string)` |A list of internal URLs that you want to exclude from web site tracking.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**internal_url_filters** |`array(xsd:string)` |A list of internal URLs that you want to exclude from web site tracking.|
 
 ## ReportSuite.AddInternalURLFilters response
 

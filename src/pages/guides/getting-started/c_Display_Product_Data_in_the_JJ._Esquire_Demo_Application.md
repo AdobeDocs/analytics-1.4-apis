@@ -2,13 +2,13 @@
 
  
 
-In the last section you learned that each page of the JJ. Esquire demo application is viewed, it calls the JavaScript library file \(**s\_code.js**\) with the data connectors JavaScript code. This code retrieves the Partner data which can be used in the Customer application.
+In the last section you learned that each page of the JJ. Esquire demo application is viewed, it calls the JavaScript library file (**s_code.js**) with the data connectors JavaScript code. This code retrieves the Partner data which can be used in the Customer application.
 
 Now, you will take the Twitter handle from the data connectors product data and display it on the JJ. Esquire Product List page.
 
-1.  Return to the **s\_code.js** file.
-2.  Before the Integrate module **setVars\(\)** method, define a new variable named **s\_author** and assign a value of " ". This variable will be used to display the Twitter handle on the JJ. Esquire demo application Product List page.
-3.  At the end of the code In the Integrate module **setVars\(\)** function, assign the **s\_author** variable a value of **p.twitter\_handle**. You are assigning the **s\_author** variable to the Twitter handle retrieved from the data connectors product data.
+1.  Return to the **s_code.js** file.
+2.  Before the Integrate module **setVars()** method, define a new variable named **s_author** and assign a value of " ". This variable will be used to display the Twitter handle on the JJ. Esquire demo application Product List page.
+3.  At the end of the code In the Integrate module **setVars()** function, assign the **s_author** variable a value of **p.twitter_handle**. You are assigning the **s_author** variable to the Twitter handle retrieved from the data connectors product data.
 
 ```
 s_author variable
@@ -28,7 +28,7 @@ s_author = p.twitter_handle;
 }
 ```
 
-1.  Open the **list.html** file and locate the comment which states, "**Add the JavaScript code to display the s\_author variable here**".
+1.  Open the **list.html** file and locate the comment which states, "**Add the JavaScript code to display the s_author variable here**".
 2.  Copy the JavaScript code below and paste it in the **list.html** file after the comment mentioned above.
 
 ```

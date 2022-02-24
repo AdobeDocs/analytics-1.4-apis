@@ -1,4 +1,4 @@
-# Data Insertion Sample \(Java\)
+# Data Insertion Sample (Java)
 
 This Java sample illustrates how to use Java classes to send an XML request.
 

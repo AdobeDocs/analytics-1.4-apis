@@ -1,4 +1,4 @@
-# group\_report\_list
+# group_report_list
 
 Data structure that contains a list of reports accessible by a permission group.
 

@@ -24,12 +24,12 @@ Adobe Analytics is an advanced web analytics solution. Before starting integrati
 
 Work through the following video tutorials and study the *Analytics Implementation Guide* carefully:
 
--   Visit [EnterpriseTV](https://outv.omniture.com/) and watch the videos in the Analytics implementation section.
--   Review the [Analytics Implementation Guide](http://microsite.omniture.com/t2/help/en_US/sc/implement/). This guide is especially important as it includes detailed information about the functionality of different variable types and events that are critical to master before building the integration.
+- Visit [EnterpriseTV](https://outv.omniture.com/) and watch the videos in the Analytics implementation section.
+- Review the [Analytics Implementation Guide](http://microsite.omniture.com/t2/help/en_US/sc/implement/). This guide is especially important as it includes detailed information about the functionality of different variable types and events that are critical to master before building the integration.
 
 ## Build
 
--   Forums are available for Experience Cloud solutions, the primary forum for Adobe analytics development can be found [here](https://forums.adobe.com/community/experience-cloud/) 
+- Forums are available for Experience Cloud solutions, the primary forum for Adobe analytics development can be found [here](https://forums.adobe.com/community/experience-cloud/) 
 
 ## Run and test
 

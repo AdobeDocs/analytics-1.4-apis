@@ -1,4 +1,4 @@
-# data\_warehouse\_report\_row
+# data_warehouse_report_row
 
 An array of `xsd:string`.
 

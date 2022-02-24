@@ -10,14 +10,14 @@ This tutorial walks you through the steps of creating the Integration Wizard tha
 
 ## Prerequisite knowledge, system permissions and environment setup
 
--   This tutorial is for web developers with XML experience.
--   Partners must have a Developer Connection account to create scripts. Follow the directions in the Setup and Security article.
+- This tutorial is for web developers with XML experience.
+- Partners must have a Developer Connection account to create scripts. Follow the directions in the Setup and Security article.
 
 ## Download code files for this tutorial
 
 You can download the following solution files to compare against your finished code.
 
--    [Data Connectors\_configure\_starter.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Data_connectors_configure_starter.zip) 
+-  [Data Connectors_configure_starter.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Data_connectors_configure_starter.zip) 
 
 ## An overview of product configuration
 
@@ -27,14 +27,14 @@ Data connectors product configuration requires that a Partner creates an Integra
 
 As Partners configure their products for data connectors, they will define variables and upload specialized XML scripts, like the On Demand scripts you created in tutorial 1, for reporting purposes.
 
--   **[Step 1: Create the Integration Wizard](c_Create_the_Integration_Wizard.md)**  
+- **[Step 1: Create the Integration Wizard](c_Create_the_Integration_Wizard.md)**  
  
--   **[Step 2: Define the Product Variable](c_Define_the_Product_Variable.md)**  
+- **[Step 2: Define the Product Variable](c_Define_the_Product_Variable.md)**  
  
--   **[Step 3: Define a Custom Event](c_Define_a_Custom_Event.md)**  
+- **[Step 3: Define a Custom Event](c_Define_a_Custom_Event.md)**  
  
--   **[Step 4: Upload On Demand Scripts for Reporting](c_Upload_On_Demand_Scripts_for_Reporting.md)**  
+- **[Step 4: Upload On Demand Scripts for Reporting](c_Upload_On_Demand_Scripts_for_Reporting.md)**  
  
--   **[Step 5: Customer Execution of the Integration Wizard](c_Customer_Execution_Partner.md)**  
+- **[Step 5: Customer Execution of the Integration Wizard](c_Customer_Execution_Partner.md)**  
  
 

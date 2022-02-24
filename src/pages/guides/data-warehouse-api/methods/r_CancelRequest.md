@@ -6,7 +6,7 @@ Cancels a previously requested Data Warehouse segment.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**Request\_Id** |`xsd:int` | The Data Warehouse Request ID to cancel. |
+|**Request_Id** |`xsd:int` | The Data Warehouse Request ID to cancel. |
 
 ## DataWarehouse.CancelRequest Response
 

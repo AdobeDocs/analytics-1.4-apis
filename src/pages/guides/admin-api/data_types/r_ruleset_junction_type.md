@@ -1,4 +1,4 @@
-# ruleset\_junction\_type
+# ruleset_junction_type
 
 |Name|Description|
 |----|-----------|

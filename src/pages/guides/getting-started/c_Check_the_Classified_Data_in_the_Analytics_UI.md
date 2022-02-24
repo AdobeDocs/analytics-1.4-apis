@@ -4,8 +4,8 @@
 
 Adobe Data Connector Partners do not have access to the Analytics UI to run reports. In this section, you will learn how to run a report using the Partner API to verify that the classification creation and import were successful.
 
-1.  In the Analytics UI, use the top menu to navigate to **Adobe Experience Cloud \> Analytics \> Reports & Analytics \> View All Reports**.
-2.  Next, navigate to **Custom Conversion \> Custom Conversion 1-10 \> Twitter handle Reports \> Gender** to see the classified data for gender.
+1.  In the Analytics UI, use the top menu to navigate to **Adobe Experience Cloud > Analytics > Reports & Analytics > View All Reports**.
+2.  Next, navigate to **Custom Conversion > Custom Conversion 1-10 > Twitter handle Reports > Gender** to see the classified data for gender.
 
     You should see the **Gender Report**. If you do not see all the metric data for **Twitter followers**, do the following:
 

@@ -6,8 +6,8 @@ Changes the specified base URL to each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**base\_url** |`xsd:string` |The base URL that you want to assign to the report suites.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**base_url** |`xsd:string` |The base URL that you want to assign to the report suites.|
 
 ## ReportSuite.SaveBaseURL response
 

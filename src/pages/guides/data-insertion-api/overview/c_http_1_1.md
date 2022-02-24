@@ -4,10 +4,10 @@ Adobe data collection servers support HTTP 1.1.
 
 Using HTTP 1.1, you can send multiple POST requests in a single session. However, when using HTTP 1.1, be aware of the following:
 
--   While a report suite is collecting time-stamped data, it cannot collect data through the standard JavaScript beacon method.
--   Adobe data collection servers limit the number of HTTP requests per HTTP session. To account for this, make sure your application can detect closed sessions and respond appropriately.
--   Adobe data collection servers observe HTTP 1.1 rules when chunking content. Make sure your application properly interprets the chunking numbers provided in the Online Marketing Suite server response to your data insertion. For example, in the following HTTP 1.1 response, the numbers `68` and `0` are chunking numbers, which represent the number of bytes to read before the next chunk.
--   The data insertion load balancers are optimized for small packets. As a result, the load balancer will frequently break a persistent HTTP connection and cause the server to appear unresponsive. Your insertion process should check for a failed connection before upload and re-establish the connection as necessary.
+- While a report suite is collecting time-stamped data, it cannot collect data through the standard JavaScript beacon method.
+- Adobe data collection servers limit the number of HTTP requests per HTTP session. To account for this, make sure your application can detect closed sessions and respond appropriately.
+- Adobe data collection servers observe HTTP 1.1 rules when chunking content. Make sure your application properly interprets the chunking numbers provided in the Online Marketing Suite server response to your data insertion. For example, in the following HTTP 1.1 response, the numbers `68` and `0` are chunking numbers, which represent the number of bytes to read before the next chunk.
+- The data insertion load balancers are optimized for small packets. As a result, the load balancer will frequently break a persistent HTTP connection and cause the server to appear unresponsive. Your insertion process should check for a failed connection before upload and re-establish the connection as necessary.
 
 
 ```

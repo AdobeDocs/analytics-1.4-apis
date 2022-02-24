@@ -19,10 +19,10 @@ View the following sections to get started creating an integration for the Exper
 
  ![](graphics/flow-1-plan.png)![](graphics/flow-2-build.png)![](graphics/flow-3-publish.png) 
 
--   **[Plan an Integration](c_Plan_an_Integration.md)**  
+- **[Plan an Integration](c_Plan_an_Integration.md)**  
  
--   **[Build an Integration](c_Build_an_Integration.md)**  
+- **[Build an Integration](c_Build_an_Integration.md)**  
  
--   **[Publish to Exchange](c_Publish_to_the_Exchange.md)**  
+- **[Publish to Exchange](c_Publish_to_the_Exchange.md)**  
 When you are ready, gather the information you need and submit the request form.
 

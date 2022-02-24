@@ -2,7 +2,7 @@
 
  
 
-Before you, as a Partner, can create a Data Warehouse report, you first need to create a segment definition using the Adobe Experience Cloud and then integrate it into a Product Builder script \(see Step 1 in the following figure\).
+Before you, as a Partner, can create a Data Warehouse report, you first need to create a segment definition using the Adobe Experience Cloud and then integrate it into a Product Builder script (see Step 1 in the following figure).
 
 ![](graphics/dw006.png)
 
@@ -14,7 +14,7 @@ There are two types of Product Builder scripts, *create* and *edit*. Some tasks 
 
 Product Builder scripts automate processes that you want to initialize during product integration. Therefore, you will package them in the Integration Wizard that the Customer will execute.
 
-As you learned in earlier tutorials and articles of this series, a Customer will execute the Integration Wizard. Since the Product Builder script is part of the wizard, it will run, which will create the new segment definition \(see Step 2 of Figure 6\).
+As you learned in earlier tutorials and articles of this series, a Customer will execute the Integration Wizard. Since the Product Builder script is part of the wizard, it will run, which will create the new segment definition (see Step 2 of Figure 6).
 
 Now you, as the Partner, can run the Data Warehouse report by writing Java, PHP or .NET code that accesses the Partner API.
 
@@ -22,16 +22,16 @@ For the demo application, you are creating a segment definition which will retur
 
 ## Prerequisite knowledge, system permissions and environment setup
 
--   This article is for PHP, Java or C\# developers with web and XML experience.
--   Partners must have a Developer Connection account to be able to create scripts. Follow the directions in the Setup your environment and authenticated access to the Partner API.
+- This article is for PHP, Java or C# developers with web and XML experience.
+- Partners must have a Developer Connection account to be able to create scripts. Follow the directions in the Setup your environment and authenticated access to the Partner API.
 
 ## Download code files for this tutorial
 
-This article displays code inline to the discussion but you can also download the code for PHP, Java or C\# to explore on your own.
+This article displays code inline to the discussion but you can also download the code for PHP, Java or C# to explore on your own.
 
--   [Partner\_API\_datawarehouse\_PHP.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_datawarehouse_PHP.zip) 
--   [Partner\_API\_datawarehouse\_Java.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_datawarehouse_Java.zip) 
--   [Partner\_API\_datawarehouse\_C\#.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_datawarehouse_C_sharp.zip) 
+- [Partner_API_datawarehouse_PHP.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_datawarehouse_PHP.zip) 
+- [Partner_API_datawarehouse_Java.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_datawarehouse_Java.zip) 
+- [Partner_API_datawarehouse_C#.zip](http://microsite.omniture.com/t2/api-xml/en_US/get_started/zips/Partner_API_datawarehouse_C_sharp.zip) 
 
 Follow the directions in the [Authentication and Setup Tutorial](c_Authentication_and_Setup.md#) and then unzip these files to your project folder.
 
@@ -71,16 +71,16 @@ You can further refine reports by using *breakdowns*, also known as *dimensions*
 
 Data Warehouse provides predefined breakdown variables or you can define your own variables from custom eVars or props variables.
 
--   **[Step 1: Creating a Segment](c_Creating_a_Segment_Definition.md)**  
+- **[Step 1: Creating a Segment](c_Creating_a_Segment_Definition.md)**  
  
--   **[Step 2: Create a Product Builder Script to Define a Data Warehouse Segment](c_Create_a_Product_Builder_Script_to_Define_a_Data_Warehouse_Segment.md)**  
+- **[Step 2: Create a Product Builder Script to Define a Data Warehouse Segment](c_Create_a_Product_Builder_Script_to_Define_a_Data_Warehouse_Segment.md)**  
  
--   **[Step 3: Upload the Data Warehouse Product Builder Script to the Integration Wizard](c_Upload_the_Data_Warehouse_Product_Builder_Script_to_the_Integration_Wizard.md)**  
+- **[Step 3: Upload the Data Warehouse Product Builder Script to the Integration Wizard](c_Upload_the_Data_Warehouse_Product_Builder_Script_to_the_Integration_Wizard.md)**  
  
--   **[Step 4: Customer Execution of the Integration Wizard](c_Customer_Execution_of_the_Integration_Wizard.md)**  
+- **[Step 4: Customer Execution of the Integration Wizard](c_Customer_Execution_of_the_Integration_Wizard.md)**  
  
--   **[Step 5: Create a Request for Segmented Data using the Partner API](c_Create_a_Request_for_Segmented_Data_using_the_Partner_API.md)**  
+- **[Step 5: Create a Request for Segmented Data using the Partner API](c_Create_a_Request_for_Segmented_Data_using_the_Partner_API.md)**  
  
--   **[Step 6: Print the Data Warehouse Report on the Console](c_Print_the_Data_Warehouse_Report_on_the_Console.md)**  
+- **[Step 6: Print the Data Warehouse Report on the Console](c_Print_the_Data_Warehouse_Report_on_the_Console.md)**  
  
 

@@ -8,7 +8,7 @@ For this JJ. Esquire demo application, you will upload three On Demand scripts: 
 
 1.  Select the **Product Scripts** link in the summary box to upload the script.
 2.  Select **Add Script** to launch the **Script Manager**.
-3.  Fill out the form as shown, based on the **followers\_per\_twitter\_handle** script you created in the previous tutorial.
+3.  Fill out the form as shown, based on the **followers_per_twitter_handle** script you created in the previous tutorial.
 
     **Note:** A copy of each script is available in the ZIP from the **Downloads** section of this tutorial.
 

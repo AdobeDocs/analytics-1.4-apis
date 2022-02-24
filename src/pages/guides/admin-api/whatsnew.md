@@ -6,30 +6,30 @@ This section describes the changes in version 1.4:
 
 ## Removed Methods
 
--   Company.CancelQueueItem
--   Company.GetTokenCount
--   Company.GetTokenUsage
--   Permissions.GetCategories
--   Permissions.GetReportSuiteGroupCount
--   ReportSuite.AddCorrelations
--   ReportSuite. DeleteBaseURL
--   ReportSuite. DeleteCorrelations
--   ReportSuite. DeletePages
--   ReportSuite.DeleteSavedFilters
--   ReportSuite.GetClassificationHierarchies
--   ReportSuite.GetCorrelations
--   ReportSuite. GetMarketingChannelsCustomSubRelations
--   ReportSuite. GetSavedFilters
--   ReportSuite.GetPages
--   ReportSuite.GetUIVisibility
--   ReportSuite.SavePages
--   ReportSuite. SaveSavedFilters
--   ReportSuite. SaveUIVisibility
--   Report.Profile
+- Company.CancelQueueItem
+- Company.GetTokenCount
+- Company.GetTokenUsage
+- Permissions.GetCategories
+- Permissions.GetReportSuiteGroupCount
+- ReportSuite.AddCorrelations
+- ReportSuite. DeleteBaseURL
+- ReportSuite. DeleteCorrelations
+- ReportSuite. DeletePages
+- ReportSuite.DeleteSavedFilters
+- ReportSuite.GetClassificationHierarchies
+- ReportSuite.GetCorrelations
+- ReportSuite. GetMarketingChannelsCustomSubRelations
+- ReportSuite. GetSavedFilters
+- ReportSuite.GetPages
+- ReportSuite.GetUIVisibility
+- ReportSuite.SavePages
+- ReportSuite. SaveSavedFilters
+- ReportSuite. SaveUIVisibility
+- Report.Profile
 
 ## Renamed Methods
 
-|**Previous Name \(1.3\)** |**New Name \(1.4\)** |
+|**Previous Name (1.3)** |**New Name (1.4)** |
 |-----|-----|
 |Permissions.GetReportBuilderLogin|ReportBuilder.GetLogin|
 |ReportSuite.GetRealTimeConfiguration|ReportSuite.GetRealTimeSettings|

@@ -6,8 +6,8 @@ Finishes incomplete jobs.
 
 ```
 {
-	"dataSourceID":"(int)",
-	"reportSuiteID":"(string)"
+    "dataSourceID":"(int)",
+    "reportSuiteID":"(string)"
 }
 ```
 

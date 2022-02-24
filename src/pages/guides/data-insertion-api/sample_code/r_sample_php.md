@@ -1,4 +1,4 @@
-# Data Insertion Sample \(PHP\)
+# Data Insertion Sample (PHP)
 
 This PHP sample illustrates how to connect to Adobe data collection servers and record a page view.
 
@@ -22,7 +22,7 @@ $vid       = "";
 $ip        = "10.0.0.1";
 $page_url  = "";
 $pageName  = "Test Page"; 
-$timestamp = "2008-10-21T17:33:22-07";
+$timestamp = "YYYY-10-21T17:33:22-07";
 
 // create opening XML tags
 $xml  = "<?xml version=1.0 encoding=UTF-8?>\n";
@@ -66,7 +66,7 @@ fwrite($fp,$request);
 // get response
 $response="";
 while( !feof($fp) ){
-	$response .= fgets($fp,1028);
+    $response .= fgets($fp,1028);
 }
 fclose($fp); 
 
@@ -77,25 +77,25 @@ echo "\n";
 
 // check for errors
 if( preg_match("/status\>FAILURE\<\/status/im",$response) ){
-	/*
-	* TODO:
-	* write $request and $response to log file for investigation
-	* and retries
-	*/
-	echo "<h1>Failure</h1>\n";
-	echo "<p>Note the reason tag in the response, fix and try again.</h1>\n";
+    /*
+    * TODO:
+    * write $request and $response to log file for investigation
+    * and retries
+    */
+    echo "<h1>Failure</h1>\n";
+    echo "<p>Note the reason tag in the response, fix and try again.</h1>\n";
 }
 } else {
-echo "<H1>Couldn't open port to Analytics servers</H1>\n"; 
+echo "<H1>Couldn't open port to Analytics servers</H1>n"; 
 if(!$rsid){
-	echo "<H4>No report suite specified</H4>\n";
+    echo "<H4>No report suite specified</H4>\n";
 } else {
-	echo "<p>$errstr ($errno)</p>\n";
-	/*
-	* TODO:
-	* write $request and $errstr to log file for investigation
-	* and retries
-	*/
+    echo "<p>$errstr ($errno)</p>\n";
+    /*
+    * TODO:
+    * write $request and $errstr to log file for investigation
+    * and retries
+    */
 }
 }
 ?>

@@ -6,7 +6,7 @@
 |-------|----|-----------|
 |`id` |`string` | The id of the metric. |
 |`name` |`string` | The friendly name of the metric. |
-|`type` |`string` | The type of the metric \(number, percent, currency, time\). |
+|`type` |`string` | The type of the metric (number, percent, currency, time). |
 |`decimals` |`integer` | The number of decimal places in the metric values. |
 |`formula` |`string` | The formula if the metric is a calculated metric. |
 

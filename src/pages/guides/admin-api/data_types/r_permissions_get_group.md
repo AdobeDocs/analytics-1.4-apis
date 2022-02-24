@@ -1,4 +1,4 @@
-# permissions\_get\_group
+# permissions_get_group
 
 Data structure that contains basic information about a permissions group.
 

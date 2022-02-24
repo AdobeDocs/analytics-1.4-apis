@@ -1,4 +1,4 @@
-# ds\_weblog\_formats
+# ds_weblog_formats
 
 An enumerated list of Weblog data source injection types.
 

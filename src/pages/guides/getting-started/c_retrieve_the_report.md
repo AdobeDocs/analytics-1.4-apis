@@ -6,11 +6,11 @@ As mentioned earlier, this JJ. Esquire demo application uses the REST interface 
 
 The following code creates a connection to the URL where the data is available and prints out the report data to the console.
 
-**Note:** In the Java code block, the `getSecurityHeader()` method constructs the security header for the REST requests. This method is pure Java code that you can review in the solution file provided in the [data\_warehouse\_API\_tutorial](c_data_warehouse_API_tutorial.md#) section.
+**Note:** In the Java code block, the `getSecurityHeader()` method constructs the security header for the REST requests. This method is pure Java code that you can review in the solution file provided in the [data_warehouse_API_tutorial](c_data_warehouse_API_tutorial.md#) section.
 
 **PHP Code** 
 
-```
+```php
 $auth_login = '<your user name>';
 $auth_password = '<your shared secret>'; 
 if($reportDone)
@@ -52,49 +52,49 @@ function getSecurityHeaderREST(){
     $sha1_string = sha1($combo_string);
     $pwDigest = base64_encode($sha1_string);
 
-    return "X-WSSE: UsernameToken Username=\"{$auth_login}\", PasswordDigest=\"$pwDigest\", Nonce=\"$nonce\", Created=\"$created\"";
+    return "X-WSSE: UsernameToken Username="{$auth_login}", PasswordDigest="$pwDigest", Nonce="$nonce", Created="$created"";
 }
 
 ```
 
 **Java Code** 
 
-```
+```java
 if(request.getMessage().equalsIgnoreCase("completed"))
-	{
+    {
 try {
 /* Connect to the URL */
-		URL url = new URL( request.getData_url() );
-		URLConnection connection = url.openConnection();
-		/* Attach the Security Header (X-WSSE) */
-		connection.addRequestProperty("X-WSSE",  getSecurityHeader( "<your user name>","<your shared secret>" ));
-		connection.setDoOutput(false);
-		 
-		/* Establish an InputStream/BufferedReader to read the report */
-		InputStream in = connection.getInputStream();
-		BufferedReader res = new BufferedReader(new InputStreamReader(in, "UTF-8"));
-		 
-		          /* Print each line of the report */
-		      String inputLine;
-		      while ((inputLine = res.readLine()) != null){
-		      System.out.println(inputLine);
-		      }
-		      res.close();
-		 
-		} catch (Exception e) {
-		e.printStackTrace();
-		}
-	}
-	else
+        URL url = new URL( request.getData_url() );
+        URLConnection connection = url.openConnection();
+        /* Attach the Security Header (X-WSSE) */
+        connection.addRequestProperty("X-WSSE",  getSecurityHeader( "<your user name>","<your shared secret>" ));
+        connection.setDoOutput(false);
+         
+        /* Establish an InputStream/BufferedReader to read the report */
+        InputStream in = connection.getInputStream();
+        BufferedReader res = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+         
+                  /* Print each line of the report */
+              String inputLine;
+              while ((inputLine = res.readLine()) != null){
+              System.out.println(inputLine);
+              }
+              res.close();
+         
+        } catch (Exception e) {
+        e.printStackTrace();
+        }
+    }
+    else
 {
-	System.out.println("DW Check, message = " + request.getMessage());
-	}
+    System.out.println("DW Check, message = " + request.getMessage());
+    }
 
 ```
 
-**C\# Code** 
+**C# Code** 
 
-```
+```csharp
 if (request.message.Equals("Completed"))
             {
                 try
@@ -117,7 +117,7 @@ if (request.message.Equals("Completed"))
                     nonce = base64Encode(nonce);
 
 /* Create the security header for the REST call */
-                    omniRequest.Headers.Add("X-WSSE: UsernameToken Username=\"" + "<your user name>" + "\", PasswordDigest=\"" + digest + "\", Nonce=\"" + nonce + "\", Created=\"" + timecreated + "\"");
+                    omniRequest.Headers.Add("X-WSSE: UsernameToken Username="" + "<your user name>" + "", PasswordDigest="" + digest + "", Nonce="" + nonce + "", Created="" + timecreated + """);
                     omniRequest.Method = "POST"; omniRequest.ContentType = "application/x-www-form-urlencoded";
                     
                     try

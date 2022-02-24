@@ -7,7 +7,7 @@ Assigns permission groups to the specified report suite.
 |Name|Type|Description|
 |----|----|-----------|
 | **rsid** | `xsd:string` |A report suite ID.|
-| **groups** | [permission\_group\_summary\_array](../../data_types/r_permission_group_summary_array.md#) - An array of [permission\_group\_summary](../../data_types/r_permission_group_summary.md#).|Details on the permission groups associated with the specified rsid.|
+| **groups** | [permission_group_summary_array](../../data_types/r_permission_group_summary_array.md#) - An array of [permission_group_summary](../../data_types/r_permission_group_summary.md#).|Details on the permission groups associated with the specified rsid.|
 
 ## Permissions.SaveReportSuiteGroups response
 

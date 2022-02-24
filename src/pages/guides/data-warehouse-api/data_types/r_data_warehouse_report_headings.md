@@ -1,4 +1,4 @@
-# data\_warehouse\_report\_headings
+# data_warehouse_report_headings
 
 An array of `xsd:string`.
 

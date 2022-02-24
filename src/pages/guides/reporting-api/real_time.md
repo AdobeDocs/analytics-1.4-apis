@@ -12,16 +12,16 @@ Call [ReportSuite.GetRealTimeSettings](../admin-api/methods/report_suite/r_GetRe
 
 ```
 {
-	"real_time_settings":[
-		{
-			"min_granularity":1,
-			"metric":"instances",
-			"elements":[
-				"prop2",
-				"searchenginekeyword"
-			]
-		}
-	]
+    "real_time_settings":[
+        {
+            "min_granularity":1,
+            "metric":"instances",
+            "elements":[
+                "prop2",
+                "searchenginekeyword"
+            ]
+        }
+    ]
 }
 ```
 
@@ -33,7 +33,7 @@ Send in a `real_time_settings` structure with the metrics and elements from the 
 
 You can provide a single metric with up to three correlated elements. Note that you do not need to include each correlated element for every report. For example, based on the struct in step one, you can report searchenginekeyword instances without reporting prop2 instances. Realtime configuration changes take 15 minutes to be reflected in reports.
 
-**Note:** If the ui\_report parameter is set to false, you must save at least one element and one metric or the configuration will be invalid, even though an error does not occur. If the ui\_report parameter is set to true, you must save three elements and one metric or you will receive an error.
+**Note:** If the ui_report parameter is set to false, you must save at least one element and one metric or the configuration will be invalid, even though an error does not occur. If the ui_report parameter is set to true, you must save three elements and one metric or you will receive an error.
 
 ## Run a real time report
 
@@ -91,7 +91,7 @@ Real-Time reports provide a number of sort options that are described in [SortMe
 }
 ```
 
-## Totals for Items not Displayed \(Everything Else\)
+## Totals for Items not Displayed (Everything Else)
 
 You can include an optional "everythingElse" element to return metric totals for elements that are not included in the report. For example, if most popular is selected, this returns totals for values that are not in the most popular list.
 
@@ -106,9 +106,9 @@ You can include an optional "everythingElse" element to return metric totals for
         ],
         "elements":[
             {
-			    "id":"product",
+                "id":"product",
                 "everythingElse": true 
-			}
+            }
         ]
     }
 }

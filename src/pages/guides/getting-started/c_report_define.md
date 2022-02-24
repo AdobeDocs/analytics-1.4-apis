@@ -2,13 +2,13 @@
 
 The first step in creating a report is to determine the report type. The Reporting API provides three report types:
 
--   `Report.QueueTrended` for reports based on a single element and one or more metrics that are broken down by time.
--    `Report.QueueRanked` for reports based on one or more elements and one or more metrics.
--    `Report.QueueOvertime` for one or more metrics that are broken down by time.
+- `Report.QueueTrended` for reports based on a single element and one or more metrics that are broken down by time.
+-  `Report.QueueRanked` for reports based on one or more elements and one or more metrics.
+-  `Report.QueueOvertime` for one or more metrics that are broken down by time.
 
  **Note:** A report that is broken down by time signifies that you must specify the date granularity parameter. As a result, a ranked report will give you all the metrics for the complete date range whereas the trended report will give you metrics for time slices throughout the date range.
 
-The JJ. Esquire demo application needs a report based on an element \(brand\) and a single metric \(revenue\). The brand is a classification of the base element \(product\) and you must specify both for the report to run correctly.
+The JJ. Esquire demo application needs a report based on an element (brand) and a single metric (revenue). The brand is a classification of the base element (product) and you must specify both for the report to run correctly.
 
 For the demo application, you will use the `Report.QueueRanked` as the report type since you do not need the report to be broken down by time.
 
@@ -39,21 +39,21 @@ $max_report_checks = 500; // ULTIMATE SYSTEM MAXIMUM CHECKS ON THE REPORT QUEUE
 $rsId = 'your report suite id',
 
 /* Set the params array */
-$params = array(	'reportDescription' => array(
-   	'reportSuiteID' => $rsId, // the report suite id
-   	'date' => '2010-12-15', // the date of the report, format YYYY-MM-DD or YYYY-MM or YYYY
-   	'dateFrom' => '', // the start date of the report range, format YYYY-MM-DD
-   	'dateTo' => '', //  the end date of the report range, format YYYY-MM-DD
-   	'dateGranularity' => '', // granularity, this only applies to Overtime and Trended reports  (day, hour, etc.)
-   	'metrics' => array( array('id'=>'totalRevenue') ), // metrics
-   	'elements' => array( array(
-  			 'id'=>'product',
-   			 'classification'=>'brand',
-   			 'top' => '10'
-   	 ) ), // elements, elements don't apply to Overtime reports
-   	'sortBy'=> '', // sortBy
-   	'locale' => 'en_US'
-    	)
+$params = array(    'reportDescription' => array(
+       'reportSuiteID' => $rsId, // the report suite id
+       'date' => 'YYYY-12-15', // the date of the report, format YYYY-MM-DD or YYYY-MM or YYYY
+       'dateFrom' => '', // the start date of the report range, format YYYY-MM-DD
+       'dateTo' => '', //  the end date of the report range, format YYYY-MM-DD
+       'dateGranularity' => '', // granularity, this only applies to Overtime and Trended reports  (day, hour, etc.)
+       'metrics' => array( array('id'=>'totalRevenue') ), // metrics
+       'elements' => array( array(
+               'id'=>'product',
+                'classification'=>'brand',
+                'top' => '10'
+        ) ), // elements, elements don't apply to Overtime reports
+       'sortBy'=> '', // sortBy
+       'locale' => 'en_US'
+        )
 );
 /* The API method determining which type of report to queue. */
 /* There are 3 types of reports (Report.QueueOvertime, Report.QueueTrended, Report.QueueRanked)) */
@@ -82,7 +82,7 @@ if($response['status'] === $REPORT_STATUS_QUEUED)
 ReportDescription reportDescription = new ReportDescription();
 reportDescription.setReportSuiteID("<Your report suit ID>");
 /* The date for which you want to run the report. */
-reportDescription.setDate("2010-12-15");
+reportDescription.setDate("YYYY-12-15");
 reportDescription.setLocale(ReportDefinitionLocale.en_US);
 reportDefinitionMetric reportDefinitionMetric = new ReportDefinitionMetric();
 
@@ -109,17 +109,17 @@ int reportID = response.getReportID();
 
 ```
 
-**C\# Code** 
+**C# Code** 
 
 ```
 /* Create a reportDescription object to set all properties on */
  reportDescription rd = new reportDescription();
        rd.reportSuiteID = "<Your report suit ID>";
-       rd.date = "2011-1-18";
+       rd.date = "YYYY-1-18";
      
        rd.metrics = new reportDefinitionMetric[1];
        rd.metrics[0] = new reportDefinitionMetric();
- /* Set the metric to totalRevenue - look at this link for options -    
+ /* Set the metric to totalRevenue - look at this link for options -  
     https://github.com/Adobe-Experience-Cloud/analytics-1.4-apis/blob/master/src/pages/guides/reporting-api-1.3/reference/r_metrics.md */
        rd.metrics[0].id = "totalRevenue";
       

@@ -1,4 +1,4 @@
-# prop\_array
+# prop_array
 
 An array of [prop](r_prop.md#).
 

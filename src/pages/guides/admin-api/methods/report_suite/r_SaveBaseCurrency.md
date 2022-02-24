@@ -6,8 +6,8 @@ Changes the base currency for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**base\_currency** |`xsd:string` |The three-letter currency code to assign to the specified report suites. For example, USD = US Dollar.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**base_currency** |`xsd:string` |The three-letter currency code to assign to the specified report suites. For example, USD = US Dollar.|
 
 ## ReportSuite.SaveBaseCurrency response
 

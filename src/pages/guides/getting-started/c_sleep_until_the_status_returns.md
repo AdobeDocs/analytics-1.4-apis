@@ -20,8 +20,8 @@ $max_report_checks = 500; /* Ultimate system maximum checks on the report queue 
 $reportDone = false;
 while( $nextSleepSeconds = nextSleep( $attempts, $max_checks, $check_wait_seconds) )
 {
-    if($debug) echo("sleeping for... $nextSleepSeconds seconds.\n");
-    sleep($nextSleepSeconds);   	 
+    if($debug) echo("sleeping for... $nextSleepSeconds seconds.n");
+    sleep($nextSleepSeconds);        
 
     /* Check on the DW request */
     $result = sendRequest('DataWarehouse.CheckRequest', 
@@ -35,16 +35,16 @@ array('Request_Id'=>$request_id) );
     if($status == $REPORT_STATUS_COMPLETED)
     {
  /* Report Completed */
-   	 $reportDone = true;
-   	 break;   		 
+        $reportDone = true;
+        break;            
   
     } else if( strstr($status, 'fail') || strstr($status, 'error') ){
  /* Report failed, exit out */
-   	 throw new Exception("dataWarehouse checkRequest(): " . $status );//. " - ". $response['error_msg'], 0);   				 
+        throw new Exception("dataWarehouse checkRequest(): " . $status );//. " - ". $response['error_msg'], 0);                    
     
     } else {
  /* Report is not ready yet */
-   	 if($debug) echo $status . "\n";
+        if($debug) echo $status . "\n";
     }
     $attempts++;
 }
@@ -73,20 +73,20 @@ if($reportDone)
 function nextSleep( $attempts, $max_checks, $check_wait_seconds ){
     global $max_report_checks;
     if( $max_checks <= 0){
-   	 if($attempts >= $max_report_checks)
-   		 return -1;
-   		 
-   	 if($attempts <= 4 ){
-   		 return 3;
-   	 }else{
-   		 return min( ($attempts - 4) * 3, 30);   		 
-   	 } 
+        if($attempts >= $max_report_checks)
+            return -1;
+            
+        if($attempts <= 4 ){
+            return 3;
+        }else{
+            return min( ($attempts - 4) * 3, 30);            
+        } 
     }else{
-   	 if($attempts < $max_checks)
-   		 return $check_wait_seconds;
+        if($attempts < $max_checks)
+            return $check_wait_seconds;
     }
     return FALSE;
-}		
+}        
 
 ```
 
@@ -95,17 +95,17 @@ function nextSleep( $attempts, $max_checks, $check_wait_seconds ){
 ```
 /* Sleep till the dataWarehouseCheckRequest method returns Waiting to Start or In Progress messages */
 while(request.getMessage().equalsIgnoreCase("Waiting to Start") || request.getMessage().equalsIgnoreCase("In Progress")) 
-		    {
-				Thread.sleep(10000);
-				System.out.println("Waiting for completed status..."+request.getMessage());
+            {
+                Thread.sleep(10000);
+                System.out.println("Waiting for completed status..."+request.getMessage());
 
 /* Store the status of the Data Warehouse request */
-				request = port.dataWarehouseCheckRequest(reportID);
-		    }
+                request = port.dataWarehouseCheckRequest(reportID);
+            }
 
 ```
 
-**C\# Code** 
+**C# Code** 
 
 ```
 /* Sleep till the dataWarehouseCheckRequest method returns Waiting to Start or In Progress messages */

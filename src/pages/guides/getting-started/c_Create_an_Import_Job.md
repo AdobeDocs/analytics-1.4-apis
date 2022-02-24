@@ -2,18 +2,18 @@
 
  
 
-The code in this section shows you how to create the import job using the Saint.ImportCreateJob\(\) method with the parameters specified in Table 1.
+The code in this section shows you how to create the import job using the Saint.ImportCreateJob() method with the parameters specified in Table 1.
 
 | Parameter | Description |
 |-------------|---------------|
-| check\_divisions | Boolean value that specifies whether to check report suites for compatible divisions. Supported values are: `0`: Do not check report suite compatibility `1`: Check report suite compatibility \(default\) |
+| check_divisions | Boolean value that specifies whether to check report suites for compatible divisions. Supported values are: `0`: Do not check report suite compatibility `1`: Check report suite compatibility (default) |
 | description | A description of the import job. |
-| email\_address | The email address to receive the report. |
-| export\_results | Boolean value that specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: Do not export \(default\) `1`: Export when the import job completes. |
+| email_address | The email address to receive the report. |
+| export_results | Boolean value that specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: Do not export (default) `1`: Export when the import job completes. |
 | header | An array of column values for classification. |
-| overwrite\_conflicts | Boolean value that specifies whether to overwrite data when conflicts occur. Supported values include: `0`: Do not rewrite data on conflicts \(default\) `1`: Overwrite data on conflicts |
-| relation\_id | The relation ID. You got this ID as a return value from [Saint.GetCompatibilityMetrics\(\)](../saint-api/methods/r_GetCompatibilityMetrics.md) method. |
-| report\_suite\_array | The list of report suites to receive the import job. |
+| overwrite_conflicts | Boolean value that specifies whether to overwrite data when conflicts occur. Supported values include: `0`: Do not rewrite data on conflicts (default) `1`: Overwrite data on conflicts |
+| relation_id | The relation ID. You got this ID as a return value from [Saint.GetCompatibilityMetrics()](../saint-api/methods/r_GetCompatibilityMetrics.md) method. |
+| report_suite_array | The list of report suites to receive the import job. |
 
 The first header column in the header parameter is always named `Key`, is mandatory, and must be unique across the entire system. For this article’s JJ. Esquire demo application, the `Key` value in each data record is the product SKU collected during Analytics JavaScript tagging.
 

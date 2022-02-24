@@ -2,7 +2,7 @@
 
 This sample displays the structure of an HTTP GET request and response using the Data Insertion API.
 
-The *\[rsid\]* parameter identifies the report suite where you want to submit the data. Other values, such as `PageURL`, are sample values only.
+The *[rsid]* parameter identifies the report suite where you want to submit the data. Other values, such as `PageURL`, are sample values only.
 
 **Note:** Do not copy-and-paste these code samples. They use generic values that you must replace with valid data appropriate to your application.
 
@@ -10,7 +10,7 @@ The *\[rsid\]* parameter identifies the report suite where you want to submit th
 
 ```
 GET /b/ss/[rsid]/0?g=apps.sillystring.com%2Fsummary.do&r=http%3A%2F%2Fapps.sillystring.com%
-2Fsummary.do&ip=192.168.10.1&gn= summary&v2=14911&c10=Brazil&vid=1286556420966514130&ts=2009-03-05T01%3A00%3A01-05 HTTP/1.0
+2Fsummary.do&ip=192.168.10.1&gn= summary&v2=14911&c10=Brazil&vid=1286556420966514130&ts=YYYY-03-05T01%3A00%3A01-05 HTTP/1.0
 Host: [namespace].sc.omtrdc.net
 X-Forwarded-For: 192.168.10.1
 ```
@@ -19,10 +19,10 @@ X-Forwarded-For: 192.168.10.1
 
 ```
 HTTP/1.0 200 OK
-Date: Wed, 13 May 2009 16:26:47 GMT
+Date: Wed, 13 May YYYY 16:26:47 GMT
 X-C: ms-3.7.2
-Expires: Tue, 12 May 2009 16:26:47 GMT
-Last-Modified: Thu, 14 May 2009 16:26:47 GMT
+Expires: Tue, 12 May YYYY 16:26:47 GMT
+Last-Modified: Thu, 14 May YYYY 16:26:47 GMT
 Cache-Control: no-cache, no-store, must-revalidate, max-age=0, proxy-revalidate, no-transform, private
 Pragma: no-cache
 ETag: "49F5FD79-3E44-38021808"
@@ -37,7 +37,7 @@ Content-Type: text/html
 
 ```
 GET /b/ss/[rsid]/0?g=apps.sillystring.com%2Fsummary.do&r=http%3A%2F%2Fapps.sillystring.com%
-2Fsummary.do&ip=192.168.10.1&gn=summary&v2=14911&c10=Brazil&vid=1286556420966514130&ts=2009-03-05T01%3A00%3A01-05 HTTP/1.1
+2Fsummary.do&ip=192.168.10.1&gn=summary&v2=14911&c10=Brazil&vid=1286556420966514130&ts=YYYY-03-05T01%3A00%3A01-05 HTTP/1.1
 Host: [namespace].sc.omtrdc.net
 Keep-Alive: timeout=15
 Connection: Keep-Alive
@@ -48,7 +48,7 @@ X-Forwarded-For: 192.168.10.1
 
 ```
 HTTP/1.1 200 OK
-Date: Mon, 19 Oct 2009 17:26:24 GMT
+Date: Mon, 19 Oct YYYY 17:26:24 GMT
 Server: Omniture DC/2.0.0
 X-C: ms-4.1.3
 Expires: Thu, 01 Jan 1970 00:20:55 GMT

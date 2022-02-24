@@ -8,13 +8,13 @@ See [Real Time Reports](../../../reporting-api/real_time.md).
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
 
 ## ReportSuite.GetRealTimeSettings response
 
 |Type|Description|
 |----|-----------|
-| [report\_suite\_real\_time\_settings\_array](../../data_types/r_report_suite_real_time_settings_array.md#)- An array of [report\_suite\_real\_time\_settings](../../data_types/r_report_suite_real_time_settings.md#) | Returns an array that contains the metrics with corresponding elements \(dimensions\) and classifications for which real time reports are enabled. |
+| [report_suite_real_time_settings_array](../../data_types/r_report_suite_real_time_settings_array.md#)- An array of [report_suite_real_time_settings](../../data_types/r_report_suite_real_time_settings.md#) | Returns an array that contains the metrics with corresponding elements (dimensions) and classifications for which real time reports are enabled. |
 
 **Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
 

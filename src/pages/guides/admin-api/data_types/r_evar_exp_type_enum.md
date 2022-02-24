@@ -1,4 +1,4 @@
-# evar\_exp\_type\_enum
+# evar_exp_type_enum
 
 An enumerated list of supported eVar expiration values.
 

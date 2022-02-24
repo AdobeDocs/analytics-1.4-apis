@@ -12,15 +12,15 @@ After sending all data, call [ImportCommitJob](r_importCommitJob.md#) to finaliz
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**c\_view** |`xsd:string` |The report for which you want to perform a SAINT import.|
-|**check\_divisions** |`xsd:int` | Specifies whether to check report suites for compatible divisions. Supported values include: `0`: Do not check report suite compatibility. `1`: \(Default\) Check report suite compatibility. |
+|**c_view** |`xsd:string` |The report for which you want to perform a SAINT import.|
+|**check_divisions** |`xsd:int` | Specifies whether to check report suites for compatible divisions. Supported values include: `0`: Do not check report suite compatibility. `1`: (Default) Check report suite compatibility. |
 |**description** |`xsd:string` | A description of the import job. |
-|**email\_address** |`xsd:string` | The email address to receive job notifications. |
-|**export\_results** |`xsd:int` | Specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: \(Default\) Do not export. `1`: Export when the job completes. |
+|**email_address** |`xsd:string` | The email address to receive job notifications. |
+|**export_results** |`xsd:int` | Specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: (Default) Do not export. `1`: Export when the job completes. |
 |**header** |`array(xsd:string)` | An array of column values for classification. |
-|**overwrite\_conflicts** |`xsd:int` | Specifies whether to overwrite data when conflicts occur. Supported values include: `0`: \(Default\) Do not overwrite data on a conflict. `1`: Overwrite data on a conflict. |
-|**relation\_id** |`xsd:int` | \(deprecated\) |
-|**report\_suite\_array** |`array(xsd:string)` | \(Optional\) The list of report suites to receive the import job. |
+|**overwrite_conflicts** |`xsd:int` | Specifies whether to overwrite data when conflicts occur. Supported values include: `0`: (Default) Do not overwrite data on a conflict. `1`: Overwrite data on a conflict. |
+|**relation_id** |`xsd:int` | (deprecated) |
+|**report_suite_array** |`array(xsd:string)` | (Optional) The list of report suites to receive the import job. |
 
 ## Saint.ImportCreateJob Response
 

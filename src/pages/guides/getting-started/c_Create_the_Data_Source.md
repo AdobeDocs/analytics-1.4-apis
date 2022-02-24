@@ -10,7 +10,7 @@ The code at the end of this section uses the `DataSource.SetupGeneric()` method 
 |-------------|---------------|
 | dataSourceID | Set the value to 0 for a new data source |
 | dataSourceType | Set the value to 32 for a generic data source - Transaction ID |
-| dataSourceSettings | Includes the key/value pairs for:  `dataSourceName` \(string\): Name of data source  `dataSourceEmail` \(string\): Email address for notifications and alerts  `metricNames` \(string\_array\): Metric\(s\) to include in data source `metricEvents` \(string\_array\): Event\(s\) to associate with each metric `dimensionNames` \(string\_array\): Dimensions to include in data source  `dimensionVariables` \(string\_array\): Dimension variables such as eVars and campaigns, to associated with each dimension |
+| dataSourceSettings | Includes the key/value pairs for:  `dataSourceName` (string): Name of data source  `dataSourceEmail` (string): Email address for notifications and alerts  `metricNames` (string_array): Metric(s) to include in data source `metricEvents` (string_array): Event(s) to associate with each metric `dimensionNames` (string_array): Dimensions to include in data source  `dimensionVariables` (string_array): Dimension variables such as eVars and campaigns, to associated with each dimension |
 
 Dimensions and metrics are related values that define the actual data that you will import into the data source.
 
@@ -24,7 +24,7 @@ A metric is simply the data points that you are tracking in the dimension. In th
 
 Every metric is associated with an event. For instance, a product view on a page is associated with a product view event. In this JJ. Esquire demo application, the offline revenue metric is associated with an event. You will see this event referenced in the code as “event 2”, which is a Analytics custom event.
 
-**Note:** If you want a friendly name to represent your custom events, you can create the friendly name and type in the Admin Console within Analytics UI. A friendly name is easier to read in reports. Navigate to Admin Console \> Report Suite \> Edit Settings \> Conversion \> Success Events. Select event2 and give it a name of Offline Revenue. Change the type to Currency and save the information.
+**Note:** If you want a friendly name to represent your custom events, you can create the friendly name and type in the Admin Console within Analytics UI. A friendly name is easier to read in reports. Navigate to Admin Console > Report Suite > Edit Settings > Conversion > Success Events. Select event2 and give it a name of Offline Revenue. Change the type to Currency and save the information.
 
 In the following code, you can see that the `dimensionName` value is Products and the `dimensionVariables` value is Product.
 

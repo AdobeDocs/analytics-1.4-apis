@@ -1,14 +1,14 @@
-# marketing\_channel\_cost
+# marketing_channel_cost
 
 |Name|Type|Description|
 |----|----|-----------|
-|**cost\_id** |`xsd:int` | |
-|**cost\_group** |`xsd:string` | |
-|**channel\_type** |`xsd:string` | |
+|**cost_id** |`xsd:int` | |
+|**cost_group** |`xsd:string` | |
+|**channel_type** |`xsd:string` | |
 |**name** |`xsd:string` | |
-|**channel\_id** |`xsd:int` | |
-|**start\_date** |`xsd:dateTime` | |
-|**end\_date** |`xsd:dateTime` | |
+|**channel_id** |`xsd:int` | |
+|**start_date** |`xsd:dateTime` | |
+|**end_date** |`xsd:dateTime` | |
 |**type** |`xsd:string` | |
 |**amount** |`xsd:double` | |
 |**metric** |`xsd:string` | |

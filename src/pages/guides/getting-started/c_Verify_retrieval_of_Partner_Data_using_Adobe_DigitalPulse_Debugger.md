@@ -14,10 +14,10 @@ In this section you will add the Digital Pulse Debugger if you don't already hav
 **Digital Pulse Debugger code** 
 
 ```
- javascript:void(window.open(%22%22,%22dp_debugger%22,%22width=600,height=600,location=0,menubar=0,status=1,toolbar=0,resizable=1,scrollbars=1%22).document.write(%22%3Cscript%20language=\%22JavaScript\%22%20id=dbg%20src=\%22http://www.digitalpulse.omniture.com/dp/debugger.js\%22%3E%3C/%22+%22script%3E%22));
+ javascript:void(window.open(%22%22,%22dp_debugger%22,%22width=600,height=600,location=0,menubar=0,status=1,toolbar=0,resizable=1,scrollbars=1%22).document.write(%22%3Cscript%20language=%22JavaScript%22%20id=dbg%20src=%22http://www.digitalpulse.omniture.com/dp/debugger.js%22%3E%3C/%22+%22script%3E%22));
 ```
 
-1.  Open the demo**referring\_page.html** page in your browser.
+1.  Open the demo**referring_page.html** page in your browser.
 2.  Click the link on the page. It will take you to the **JJ.Esquire Product List** page.
 3.  Click the **Digital Pulse Debugger** bookmark.
 

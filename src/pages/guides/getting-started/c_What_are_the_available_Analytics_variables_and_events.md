@@ -4,8 +4,8 @@
 
 Analytics provides two types of variables:
 
--   Traffic variables
--   Conversion variables
+- Traffic variables
+- Conversion variables
 
 Analytics also provides events to track visitor actions.
 
@@ -13,7 +13,7 @@ Analytics also provides events to track visitor actions.
 
 Traffic variables are non-persistent variables which count the number of times each value is sent to Analytics. Analytics provides some built-in, pre-defined traffic variables like pageName, channel, and server. These variables are counters. For instance, pageName counts the number of times a user has visited the page with this name.
 
-You can also define up to 75 of your own custom traffic variables, called property or prop variables. Examples of prop variables are Page Type \("article", "category", etc.\), Site Section \("sports", "business", etc.\) and Geo Country \("Spain", "Singapore", etc.\).
+You can also define up to 75 of your own custom traffic variables, called property or prop variables. Examples of prop variables are Page Type ("article", "category", etc.), Site Section ("sports", "business", etc.) and Geo Country ("Spain", "Singapore", etc.).
 
 Measurements associated with a traffic variable, called traffic metrics, include page views, visits, and visitors.
 

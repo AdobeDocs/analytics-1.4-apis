@@ -6,10 +6,10 @@ Deletes a cost item for the selected report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid\_list** |`array (xsd:string)` |A list of report suite IDs.|
-|**channel\_type** |`xsd:string` | |
-|**cost\_group** |`xsd:string` | |
-|**cost\_id** |`xsd:string` | |
+|**rsid_list** |`array (xsd:string)` |A list of report suite IDs.|
+|**channel_type** |`xsd:string` | |
+|**cost_group** |`xsd:string` | |
+|**cost_id** |`xsd:string` | |
 
 ## ReportSuite.DeleteMarketingChannelCost response
 

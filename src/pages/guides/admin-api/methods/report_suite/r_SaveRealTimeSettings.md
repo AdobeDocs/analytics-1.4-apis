@@ -1,6 +1,6 @@
 # SaveRealTimeSettings
 
-Selects the metrics and elements \(dimensions\) on which you want real time reports enabled.
+Selects the metrics and elements (dimensions) on which you want real time reports enabled.
 
 Realtime configuration changes take 15 minutes to be reflected in reports.
 
@@ -11,7 +11,7 @@ See [Real Time Reports](../../../reporting-api/real_time.md).
 |Name|Type|Description|
 |----|----|-----------|
 | **rsid** | `xsd:string` | The report suite for which you want to configure real time reports. |
-| **real\_time\_settings** | [real\_time\_settings\_array](../../data_types/r_real_time_settings_array.md#) - An array of [real\_time\_settings](../../data_types/r_real_time_settings.md#) | Provide up to three metrics with corresponding elements \(dimensions\) for which you want to enable real time reporting. |
+| **real_time_settings** | [real_time_settings_array](../../data_types/r_real_time_settings_array.md#) - An array of [real_time_settings](../../data_types/r_real_time_settings.md#) | Provide up to three metrics with corresponding elements (dimensions) for which you want to enable real time reporting. |
 
 ## ReportSuite.SaveRealTimeConfiguration response
 
