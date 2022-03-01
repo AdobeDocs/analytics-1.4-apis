@@ -50,11 +50,11 @@ https://api.omniture.com/admin/1.4/
 
 You might need to replace api.omniture.com with the URL that corresponds to your data center, as listed in the following table. In your production apps, we recommend calling Company.GetEndpoint to periodically refresh the endpoint programmatically, in case the URL changes.
 
-- api.omniture.com - San Jose
-- api2.omniture.com - Dallas
-- api3.omniture.com - London
-- api4.omniture.com - Singapore
-- api5.omniture.com - Pacific Northwest
+- `api.omniture.com` - San Jose
+- `api2.omniture.com` - Dallas
+- `api3.omniture.com` - London
+- `api4.omniture.com` - Singapore
+- `api5.omniture.com` - Pacific Northwest
 
 ## Removal of separate methods to generate different report types
 
