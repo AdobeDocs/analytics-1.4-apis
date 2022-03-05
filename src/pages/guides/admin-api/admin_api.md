@@ -1,6 +1,5 @@
 # Analytics Administration API 1.4
 
-The Administration API lets you programmatically administer the Adobe Experience Cloud. You can manage company settings, retrieve report suite details, and control user permissions. Many of the operations that are available in the Admin Console are available using the Administration API.
 
 ## Analytics User ID Migration to Admin Console - APIs
 

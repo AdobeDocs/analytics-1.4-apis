@@ -1,8 +1,11 @@
 # Admin API 1.4
 
-- [Analytics Administration API 1.4](admin_api.md)
-- [Authentication](admin_authentication.md)
-- [Changes in 1.4](whatsnew.md)
+The 1.4 Admin API lets you programmatically make administrative changes in Adobe Analytics, such as company or report suite settings. Many of the operations that are available in the legacy Admin Console are available using the Admin API.
+
+
+
+
+
 - [Methods](methods/c_methods.md)
     - [Bookmark](methods/bookmark/c_methods_bookmark.md)
         - [GetBookmarks](methods/bookmark/r_GetBookmarks.md)
