@@ -24,7 +24,7 @@ Create the export job using the Saint.ExportCreateJob() method and the parameter
 
 | Parameters | Description |
 |--------------|---------------|
-| report_suite_array | The list of report suites from which to export data. |
+| report_suite[] | The list of report suites from which to export data. |
 | campaign_filter_option |  The filter option based on campaign activity or date. Supported values include: `0`: All Campaigns (No filter) (default) `1`: Active campaigns `2`: Campaign by begin and end date |
 | campaign_filter_begin_range | The campaign start date to filter the data. |
 | campaign_filter_end_range | The campaign end date to filter the data. |

@@ -56,7 +56,7 @@ Creates a classifications Import FTP account.
 |Parameter|Type|Description|
 |----|----|-----------|
 | **`element`** | `int` |  `relation_id` that you want to import or export (e.g. 101=evar1, 51=product, etc) |
-| **`rsid_list`** | `tns:string_array` | report suites to which data is imported. |
+| **`rsid_list`** | `string[]` | report suites to which data is imported. |
 | **`description`** | `string` | a textual description for the FTP account. |
 | **`email_address`** | `string` | the email account to notify when imports are finished. |
 | **`overwrite`** | `boolean` | if `true`, keys that already exists will always be overwritten by new keys. |
@@ -105,7 +105,7 @@ Returns the available `elements` for a given report suite, and compatibility acr
 
 |Response Type|Description|
 |----|-----------|
-| `classifications_report_suite_compatibility_elements_array` |Compatible elements.|
+| `classifications_report_suite_compatibility_elements[]` |Compatible elements.|
 
 ## Classifications.GetExport
 
@@ -147,11 +147,11 @@ Returns a list of the classifications FTP accounts that are configured for a com
 
 |Response|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`tns:string_array` | report suites for which you want to retrieve FTP information. |
+|**rsid_list** |`string[]` | report suites for which you want to retrieve FTP information. |
 
 | Response Type | Description |
 |--------|---------------|
-| `classifications_report_suite_ftp_array` | Struct containing details with the FTP accounts for a report suite. |
+| `classifications_report_suite_ftp[]` | Struct containing details with the FTP accounts for a report suite. |
 
 ## Classifications.GetStatus
 
@@ -165,7 +165,7 @@ Returns the status of the specified classification request.
 
 |Response Type|Description|
 |----|-----------|
-| `classifications_job_status_array` | The status of the specified classifications job. Possible values include:<br/>`Waiting for user data`<br/>`In progress`<br/>`In progress - % Complete`<br/>`Completed`<br/>`Completed - With Errors : <message>`|
+| `classifications_job_status[]` | The status of the specified classifications job. Possible values include:<br/>`Waiting for user data`<br/>`In progress`<br/>`In progress - % Complete`<br/>`Completed`<br/>`Completed - With Errors : <message>`|
 
 ## Classifications.GetTemplate
 
@@ -182,7 +182,7 @@ Similar to the Template tab in the Classifications tool in the Admin Console UI,
 
 | Response Type | Description |
 |--------|---------------|
-| `classifications_report_suite_template_array` | The template, or headers in the classifications export file |
+| `classifications_report_suite_template[]` | The template, or headers in the classifications export file |
 
 ## Classifications.PopulateImport
 

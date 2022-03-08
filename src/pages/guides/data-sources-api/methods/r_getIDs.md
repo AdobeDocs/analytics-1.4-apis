@@ -14,7 +14,7 @@ For more information about Data Source types, see "Accessing Data Sources" in th
 
 |Type|Description|
 |----|-----------|
-|[tns:simpleDataSourceArray](../data_types/r_simple_data_source_array.md#) | A list of data source IDs. |
+|`simpleDataSourceArray` | A list of data source IDs. |
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods.md)
 

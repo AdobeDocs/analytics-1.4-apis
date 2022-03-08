@@ -79,9 +79,7 @@ Gets segments defined for the company of the current user.
 ]
 ```
 
-### Get Parameters
-
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
 |`accessLevel` |`string` | optional, one of: "owned", "shared", "all". Defaults to "owned". Will return an error if "all' is used by a non-admin |
 |`fields` |`string[]` | optional, one or more of: "tags", "shares", "description", "owner", "modified", "compatibility", "favorite", "reportSuiteID", "definition". The response will always include "id" and "name". |
@@ -103,9 +101,7 @@ Deletes a segment.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Segments.Delete`
 
-### Delete Parameters
-
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
 |`segmentID` |`string` | ID of the segment you want to delete. The ID can be found by calling `Get`. |
 
@@ -159,9 +155,7 @@ Save a new segment or update an existing segment using the segment ID.
 
 To save a new segment, you must provide a name, reportSuiteID, and a definition. To update an existing segment, you must provide the segmentID you want to update and at least one updated field. If you update the segment definition, you must also include the reportSuiteID since the definition is validated against the provided report suite.
 
-### Save Parameters
-
-|Name|Type|Description|
+|Parameters|Type|Description|
 |----|----|-----------|
 |`definition` |`segment_definition` | (Required) Definition of the segment you want to save. |
 |`name` |`string` | (Required) Segment name. |
@@ -170,11 +164,9 @@ To save a new segment, you must provide a name, reportSuiteID, and a definition.
 |`description` |`string` | (Optional) Description of the segment to help other users understand the segment. |
 |`favorite` |`boolean` | (Optional) Add this segment to the favorite segments list. |
 |`owner` |`string` | (Optional) Login of the user who will be the owner, if this parameter is not specified, ownership defaults to the current user. |
-|`shares` |`segment_share_array` - an array of `segment_share` | (Optional) Groups and users with which this segment is shared. If this parameter is not specified, the segment is not shared. |
+|`shares` |`segment_share[]` | (Optional) Groups and users with which this segment is shared. If this parameter is not specified, the segment is not shared. |
 |`tags` |`string[]` | (Optional) Keywords to group segments for filtering. |
 
-### Save Response
-
-| Type | Description |
+| Response Type | Description |
 |--------|---------------|
 |`string` | segment ID of the new or updated segment, a 24 digit hexadecimal string. |

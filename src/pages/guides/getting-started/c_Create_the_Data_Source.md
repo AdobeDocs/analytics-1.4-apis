@@ -10,7 +10,7 @@ The code at the end of this section uses the `DataSource.SetupGeneric()` method 
 |-------------|---------------|
 | dataSourceID | Set the value to 0 for a new data source |
 | dataSourceType | Set the value to 32 for a generic data source - Transaction ID |
-| dataSourceSettings | Includes the key/value pairs for:  `dataSourceName` (string): Name of data source  `dataSourceEmail` (string): Email address for notifications and alerts  `metricNames` (string_array): Metric(s) to include in data source `metricEvents` (string_array): Event(s) to associate with each metric `dimensionNames` (string_array): Dimensions to include in data source  `dimensionVariables` (string_array): Dimension variables such as eVars and campaigns, to associated with each dimension |
+| dataSourceSettings | Includes the key/value pairs for:  `dataSourceName` (string): Name of data source  `dataSourceEmail` (string): Email address for notifications and alerts  `metricNames` (string[]): Metric(s) to include in data source `metricEvents` (string[]): Event(s) to associate with each metric `dimensionNames` (string[]): Dimensions to include in data source  `dimensionVariables` (string[]): Dimension variables such as eVars and campaigns, to associated with each dimension |
 
 Dimensions and metrics are related values that define the actual data that you will import into the data source.
 

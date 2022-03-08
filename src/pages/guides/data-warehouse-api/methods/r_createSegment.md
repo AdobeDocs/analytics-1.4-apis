@@ -13,7 +13,7 @@ This method is unable to create segments based on solution variables (used by mo
 |Parameter|Type|Description|
 |---------|----|-----------|
 |**rsid** |`int` | The report suite used to generate the segment. |
-|**segment** |[tns:data_warehouse_segment](../data_types/r_data_warehouse_segment.md#) | The segment definition used to define the new segment. |
+|**segment** |`data_warehouse_segment` | The segment definition used to define the new segment. |
 |**report_suite_wide** |`boolean` | When set to "true", the segment is created at the report-suite level instead of at the level of the currently authenticated user. This enables the segment for any user in the report suite. |
 
 ## DataWarehouse.CreateSegment Response

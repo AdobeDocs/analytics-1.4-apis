@@ -14,7 +14,7 @@ Returns information about the files submitted to the specified data source.
 
 |Type|Description|
 |----|-----------|
-|[tns:fileInfoResult](../data_types/r_file_info_result.md#) | A list of files submitted for the specified data source. |
+|`fileInfoResult` | A list of files submitted for the specified data source. |
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods.md)
 

@@ -11,29 +11,8 @@ Individual data blocks can contain no more than 10,000 data rows (to keep the HT
 | **reportSuiteID** | `string` | Yes | The ID of the report suite where you want to submit the data block. |
 | **dataSourceID** | `string` | Yes | The ID of the Data Source where you want to submit the data block. You can get this ID by calling [DataSource.GetIDs](r_getIDs.md#). |
 | **blockID** | `int` | No | The ID of the first block sent for this data submission. [BeginDataBlock](r_beginDataBlock.md#) returns `blockID` in its response, as long as `endOfBlock` is not included in the `BeginDataBlock` call. |
-| **rows** | [tns:rowArray](../data_types/r_row_array.md#)*| Yes | The data to submit to Analytics collection servers. |
+| **rows** | `rowArray` | Yes | The data to submit to Analytics collection servers. |
 | **endOfBlock** | `string` | No | Indicates if this is the last block in the data submission. You can use the `endOfBlock` parameter in the following ways. **Self-terminating:** Include `<endOfBlock/>` to indicate that this is the last block in the data source. Data Sources then queues the Data Source for processing. **With Parameter:** Include either false or 0 as an `endOfBlock` parameter to indicate this block is NOT the last in the data source. **Note:** If supported by your SOAP client, you can also exclude the `endOfBlock` parameter to indicate that this block is not the last in the data source. |
-
-*The XML for the row parameter in the `AppendDataBlock` call is similar to the following. This XML sample includes the `<endOfBlock/>` parameter, indicating that no additional data is forthcoming and the Data Sources API can queue the data for processing.
-
-```
-<reportSuiteID xsi:type="xsd:string">myReportSuite</reportSuiteID>
-<dataSourceID xsi:type="xsd:string">12345</dataSourceID>
-<blockID xsi:type="xsd:string">54321</blockName>
-<rows xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="tns:colArray[2]">
-  <item xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string[3]">
-    <item xsi:type="xsd:string">1/3/YYYY</item>
-    <item xsi:type="xsd:string">product3</item>
-    <item xsi:type="xsd:string">1.75</item>
-  </item>
-  <item xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string[3]">
-    <item xsi:type="xsd:string">1/4/YYYY</item>
-    <item xsi:type="xsd:string">product4</item>
-    <item xsi:type="xsd:string">3.25</item>
-  </item>
-</rows>
-<endOfBlock/>
-```
 
 ## DataSource.AppendDataBlock Response
 

@@ -15,7 +15,7 @@ The status information tells you if the file is queued for processing, processin
 
 |Type|Description|
 |----|-----------|
-|[tns:fileStatusResult](../data_types/r_file_status_result.md#) | The current status of files processing for the specified data source. |
+|`fileStatusResult` | The current status of files processing for the specified data source. |
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods.md)
 

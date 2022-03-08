@@ -13,7 +13,7 @@ Deactivates the specified data source.
 
 |Type|Description|
 |----|-----------|
-|[tns:status](../data_types/r_status.md#) | Indicates if the call was successful. |
+|`status` | Indicates if the call was successful. |
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods.md)
 

@@ -12,7 +12,7 @@ Returns information about the data sources associated with the specified report 
 
 |Type|Description|
 |----|-----------|
-|[tns:infoResult](../data_types/r_info_result.md#) | A list of data source and information about each. |
+|`infoResult` | A list of data source and information about each. |
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods.md)
 

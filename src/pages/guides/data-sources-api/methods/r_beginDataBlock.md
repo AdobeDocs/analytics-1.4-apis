@@ -11,34 +11,9 @@ Individual data blocks can contain no more than 10,000 data rows (to keep the HT
 | **reportSuiteID** | `string` | Yes | The ID of the report suite where you want to submit the data block. |
 | **dataSourceID** | `string` | Yes | The ID of the Data Source where you want to submit the data block. You can get this ID by calling [DataSource.GetIDs](../../data-sources-api/methods/r_getIDs.md). |
 | **blockName** | `string` | No | The name of the file that appears in the Data Sources log. If not specified, a block name is generated for you. |
-| **columnNames** | [tns:colArray](../data_types/r_col_array.md#) | Yes | The names of the data columns (the column headings) submitted via Data Sources. |
-| **rows** | [tns:rowArray](../data_types/r_row_array.md#)*| Yes | The data to submit to Analytics collection servers. |
+| **columnNames** | `colArray` | Yes | The names of the data columns (the column headings) submitted via Data Sources. |
+| **rows** | `rowArray` | Yes | The data to submit to Analytics collection servers. |
 | **endOfBlock** | `string` | No | Indicates if this is the last block in the data submission. You can use the `endOfBlock` parameter in the following ways. **Self-terminating:** Include `<endOfBlock/>` to indicate that this is the last block in the data source. Data Sources then queues the Data Source for processing. **With Parameter:** Include either false or 0 as an `endOfBlock` parameter to indicate this block is NOT the last in the data source. **Note:** If supported by your SOAP client, you can also exclude the `endOfBlock` parameter to indicate that this block is not the last in the data source. |
-
-*The XML for the row parameter in the BeginDataBlock call is similar to the following. This XML sample does not include the `<endOfBlock/>` parameter, indicating that additional data is forthcoming through a [DataSource.AppendDataBlock](r_appendDataBlock.md#) call.
-
-```
-<reportSuiteID xsi:type="xsd:string">myReportSuite</reportSuiteID>
-<dataSourceID xsi:type="xsd:string">12345</dataSourceID>
-<blockName xsi:type="xsd:string">myTestFile</blockName>
-<columnNames xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string[3]">
-  <item xsi:type="xsd:string">date</item>
-  <item xsi:type="xsd:string">evar 1</item>
-  <item xsi:type="xsd:string">event 2</item>
-</columnNames>
-<rows xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="tns:colArray[2]">
-  <item xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string[3]">
-    <item xsi:type="xsd:string">1/1/YYYY</item>
-    <item xsi:type="xsd:string">product1</item>
-    <item xsi:type="xsd:string">2.50</item>
-  </item>
-  <item xsi:type="SOAP-ENC:Array" SOAP-ENC:arrayType="xsd:string[3]">
-    <item xsi:type="xsd:string">1/2/YYYY</item>
-    <item xsi:type="xsd:string">product2</item>
-    <item xsi:type="xsd:string">4.25</item>
-  </item>
-</rows>
-```
 
 ## DataSource.BeginDataBlock Response
 

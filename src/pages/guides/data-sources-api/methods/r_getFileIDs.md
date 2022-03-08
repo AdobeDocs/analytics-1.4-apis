@@ -16,7 +16,7 @@ This method returns the file IDs assigned to the data blocks when they enter the
 
 |Type|Description|
 |----|-----------|
-|[tns:fileIDResult](../data_types/r_file_id_result.md#) | Indicates if the call was successful. |
+|`fileIDResult` | Indicates if the call was successful. |
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods.md)
 
