@@ -6,7 +6,7 @@ Retrieves information about the specified user account.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **login** | `xsd:string` |The login name of the user account.|
+| **login** | `string` |The login name of the user account.|
 
 ## Permissions.GetLogin response
 

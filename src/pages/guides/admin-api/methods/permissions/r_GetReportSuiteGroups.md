@@ -6,7 +6,7 @@ Retrieves a list of permission groups assigned to the specified report suite.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid** | `xsd:string` |A report suite ID.|
+| **rsid** | `string` |A report suite ID.|
 
 ## Permissions.GetReportSuiteGroups response
 

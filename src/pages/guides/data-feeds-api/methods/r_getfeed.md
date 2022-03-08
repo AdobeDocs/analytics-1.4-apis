@@ -6,7 +6,7 @@ Gets configuration details for a specific feed, including feed status, FTP deliv
 
 |Name|Type|Description|
 |----|----|-----------|
-|`feed_id` |``xsd:int`` | ID of the feed, retrieve the ID using DataFeed.[GetFeeds](r_getfeeds.md#). |
+|`feed_id` |``int`` | ID of the feed, retrieve the ID using DataFeed.[GetFeeds](r_getfeeds.md#). |
 
 ## DataFeed.GetFeed Response
 

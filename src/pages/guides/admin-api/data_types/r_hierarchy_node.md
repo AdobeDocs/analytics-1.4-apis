@@ -4,10 +4,10 @@ Data structure that contains basic information about a single node in a classifi
 
 |Element|Type|Description|
 |-------|----|-----------|
-|**node_id** |`xsd:int` | A unique identifier for the hierarchy node. |
-|**group_num** |`xsd:int` | The group associated with this hierarchy node. |
-|**name** |`xsd:string` | The hierarchy node name. |
-|**div_num** |`xsd:int` |   |
+|**node_id** |`int` | A unique identifier for the hierarchy node. |
+|**group_num** |`int` | The group associated with this hierarchy node. |
+|**name** |`string` | The hierarchy node name. |
+|**div_num** |`int` |   |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

@@ -8,9 +8,9 @@ For more information about Data Source types, see "Accessing Data Sources" in th
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
-|**reportSuiteID** |`xsd:string` |Yes| The ID of the report suite where you want to create this data source. |
-|**dataSourceID** |`xsd:int` |Yes| The ID of the new Data Source. |
-|**dataSourceType** |`xsd:int` |No| Specifies the type of data source to create. For information about data source types, see "Accessing Data Sources" in the *Data Sources User Guide*. |
+|**reportSuiteID** |`string` |Yes| The ID of the report suite where you want to create this data source. |
+|**dataSourceID** |`int` |Yes| The ID of the new Data Source. |
+|**dataSourceType** |`int` |No| Specifies the type of data source to create. For information about data source types, see "Accessing Data Sources" in the *Data Sources User Guide*. |
 |**dataSourceSettings** |[tns:ds_generic_settings](../data_types/r_ds_generic_settings.md#) |No| The new data source settings. |
 
 ## DataSource.SetupGeneric Response

@@ -6,7 +6,7 @@ Returns the currently defined Marketing Channel rules for the specified report s
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array(xsd:string)` |A list of report suites.|
+| **rsid_list** | `array[string]` |A list of report suites.|
 
 ## ReportSuite.GetMarketingChannelRules response
 

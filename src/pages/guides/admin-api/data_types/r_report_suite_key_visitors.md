@@ -4,9 +4,9 @@ Data structure that contains information about a report suite's key visitor sett
 
 |Element|Type|Description|
 |-------|----|-----------|
-|**rsid** |`xsd:string` | The report suite ID. |
-|**site_title** |`xsd:string` | The report suite friendly name. |
-|**key_visitors** |`array(xsd:string)` | The key visitors, identified by either a domain or IP address. |
+|**rsid** |`string` | The report suite ID. |
+|**site_title** |`string` | The report suite friendly name. |
+|**key_visitors** |`array[string]` | The key visitors, identified by either a domain or IP address. |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

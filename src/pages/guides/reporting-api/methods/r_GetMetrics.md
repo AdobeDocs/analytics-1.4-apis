@@ -12,10 +12,10 @@ Specific users may not have access to certain metrics. The metrics returned by `
 
 |Name|Type|Description|
 |----|----|-----------|
-| `reportSuiteID` | `xsd:string` |The Analytics report suite you want to use to generate the report. For example: `reportSuiteID = "corp1"` |
-| `existingElements` | `array(xsd:string)` |(Optional) Include a list of elements already present in the reportDescription to get compatible metrics.|
-| `existingMetrics` | `array(xsd:string)` |(Optional) Include a list of metrics already present in the reportDescription to get compatible metrics.|
-| `reportType` | `xsd:string` |(Optional) Include the report type (any, ranked, trended, pathing, fallout, realtime) to get compatible metrics.|
+| `reportSuiteID` | `string` |The Analytics report suite you want to use to generate the report. For example: `reportSuiteID = "corp1"` |
+| `existingElements` | `array[string]` |(Optional) Include a list of elements already present in the reportDescription to get compatible metrics.|
+| `existingMetrics` | `array[string]` |(Optional) Include a list of metrics already present in the reportDescription to get compatible metrics.|
+| `reportType` | `string` |(Optional) Include the report type (any, ranked, trended, pathing, fallout, realtime) to get compatible metrics.|
 
 ## Report.GetMetrics response
 

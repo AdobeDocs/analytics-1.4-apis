@@ -6,7 +6,7 @@ Retrieves the internal URL filters for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array(xsd:string)` |A list of report suite IDs.|
+| **rsid_list** | `array[string]` |A list of report suite IDs.|
 
 ## ReportSuite.GetInternalURLFilters response
 

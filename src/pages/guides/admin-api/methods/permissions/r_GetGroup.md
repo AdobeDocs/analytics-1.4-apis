@@ -6,7 +6,7 @@ Retrieves information about the specified permission group.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**group_name** |`xsd:string` | The name of the group that you want to retrieve. |
+|**group_name** |`string` | The name of the group that you want to retrieve. |
 
 ## Permissions.GetGroup response
 

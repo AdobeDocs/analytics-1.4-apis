@@ -6,7 +6,7 @@ Saves ad hoc analysis (formerly Discover) access for the requested report suites
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
 |**discover_enabled** |`xsd:boolean` |Enables or disables ad hoc analysis.|
 
 ## ReportSuite.SaveDiscoverEnabled response

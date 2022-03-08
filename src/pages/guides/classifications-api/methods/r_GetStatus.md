@@ -6,7 +6,7 @@ Returns the status of the specified classification request.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **job_id** | `xsd:int` | The classifications job ID. |
+| **job_id** | `int` | The classifications job ID. |
 
 ## Classifications.GetStatus Response
 

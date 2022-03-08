@@ -5,9 +5,9 @@
 - **[data_warehouse_report](../data_types/r_data_warehouse_report.md)**  
  Data structure that contains information about information about a Data Warehouse report.
 - **[data_warehouse_report_headings](../data_types/r_data_warehouse_report_headings.md)**  
-An array of `xsd:string`.
+An array of `string`.
 - **[data_warehouse_report_row](../data_types/r_data_warehouse_report_row.md)**  
-An array of `xsd:string`.
+An array of `string`.
 - **[data_warehouse_report_row_list](../data_types/r_data_warehouse_report_row_list.md)**  
 An array of [data_warehouse_report_row](r_data_warehouse_report_row.md#).
 - **[data_warehouse_request](../data_types/r_data_warehouse_request.md)**  

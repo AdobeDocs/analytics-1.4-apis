@@ -8,8 +8,8 @@ The returned data consists of values that can be passed in as parameters of [Cre
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **rsid_list** | `array(xsd:string)` | A list of report suites that contains the specified data source. |
-| **element** | `xsd:string` | The element for which you want to get file information. |
+| **rsid_list** | `array[string]` | A list of report suites that contains the specified data source. |
+| **element** | `string` | The element for which you want to get file information. |
 
 ## Classifications.GetFilters Response
 

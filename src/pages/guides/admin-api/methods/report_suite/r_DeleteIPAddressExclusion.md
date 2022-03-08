@@ -6,8 +6,8 @@ Delete an IP exclusion entry for a given report suite.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**ip_address** |`xsd:string` |The IP address to remove from the IP address exclusions list.|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
+|**ip_address** |`string` |The IP address to remove from the IP address exclusions list.|
 
 ## ReportSuite.DeleteIPAddressExclusion response
 

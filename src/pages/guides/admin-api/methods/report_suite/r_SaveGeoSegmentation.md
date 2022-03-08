@@ -6,7 +6,7 @@ Saves ad hoc analysis (formerly Discover) access for the requested report suites
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
 |**geo_segmentation** |`xsd:boolean` |Enables or disables geoSegmentation reports.|
 |**vista_enabled** |`xsd:boolean` |Enables or disables VISTA geoSegmentation reports.|
 

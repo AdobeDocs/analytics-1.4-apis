@@ -8,15 +8,15 @@ A structure that contains report data.
 
 |Element|Type|Description|
 |-------|----|-----------|
-| ` name ` | `xsd:string` | This data item name. |
-| ` url ` | `xsd:string` | The data item URL, if applicable to the selected element. For example, pages and links have a URL, but products do not. |
+| ` name ` | `string` | This data item name. |
+| ` url ` | `string` | The data item URL, if applicable to the selected element. For example, pages and links have a URL, but products do not. |
 |`path` |[reportDataPathList](r_reportDataPathList.md#) - an array of [reportDataPath](r_reportDataPath.md#) | The path for pathing reports. |
-| ` parentID ` | `xsd:string` | Unique identifier for the element in a hierarchy report. Use in reportDescription to request the next level of the hierarch. |
-| ` year ` | `xsd:int` | The four-digit year for the item if the element is a date range for an Overtime or Trended report. |
-| ` month ` | `xsd:int` | The two-digit month for the item if the element is a date range for an Overtime or Trended report. |
-| ` day ` | `xsd:int` | The two-digit numeric day for the item if the element is a date range for an Overtime or Trended report. |
-| ` hour ` | `xsd:int` | The two-digit numeric hour for the item if the element is a date range for an Overtime or Trended report. |
-| ` minute ` | `xsd:int` | The two-digit numeric minute for the item if the element is a date range for a Real-Time report. |
+| ` parentID ` | `string` | Unique identifier for the element in a hierarchy report. Use in reportDescription to request the next level of the hierarch. |
+| ` year ` | `int` | The four-digit year for the item if the element is a date range for an Overtime or Trended report. |
+| ` month ` | `int` | The two-digit month for the item if the element is a date range for an Overtime or Trended report. |
+| ` day ` | `int` | The two-digit numeric day for the item if the element is a date range for an Overtime or Trended report. |
+| ` hour ` | `int` | The two-digit numeric hour for the item if the element is a date range for an Overtime or Trended report. |
+| ` minute ` | `int` | The two-digit numeric minute for the item if the element is a date range for a Real-Time report. |
 |`trend` |`double` | The slope of the trend line so you can determine the relative change between report intervals. |
 | ` counts ` | `double[]` | A count of the number of occurrences of each metric in the report. |
 | ` upperBounds ` | `double[]` | Upper level of the prediction interval. Values above this level are considered anomalous. Represents a 95% confidence that values will be below this level. |

@@ -8,7 +8,7 @@ For more information about Data Source types, see "Accessing Data Sources" in th
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
-|**reportSuiteID** |`xsd:string` |Yes| The ID of the report suite where you want to create this data source. |
+|**reportSuiteID** |`string` |Yes| The ID of the report suite where you want to create this data source. |
 
 ## DataSource.GetIDs Response
 

@@ -12,7 +12,7 @@ This method is unable to create segments based on solution variables (used by mo
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**rsid** |`xsd:int` | The report suite used to generate the segment. |
+|**rsid** |`int` | The report suite used to generate the segment. |
 |**segment** |[tns:data_warehouse_segment](../data_types/r_data_warehouse_segment.md#) | The segment definition used to define the new segment. |
 |**report_suite_wide** |`xsd:boolean` | When set to "true", the segment is created at the report-suite level instead of at the level of the currently authenticated user. This enables the segment for any user in the report suite. |
 
@@ -20,7 +20,7 @@ This method is unable to create segments based on solution variables (used by mo
 
 |Type|Description|
 |----|-----------|
-| `xsd:int` | A unique segment ID for the new segment. If the segment creation fails, the SOAP framework returns an environment fault that describes the error. |
+| `int` | A unique segment ID for the new segment. If the segment creation fails, the SOAP framework returns an environment fault that describes the error. |
 
 **Parent topic:** [Methods](../methods/c_data_warehouse_methods.md)
 

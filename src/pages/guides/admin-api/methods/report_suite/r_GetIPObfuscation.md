@@ -6,7 +6,7 @@ Retrieves the IP Address Obfuscation setting for each of the specified report su
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array(xsd:string)` |A list of report suite IDs.|
+| **rsid_list** | `array[string]` |A list of report suite IDs.|
 
 ## ReportSuite.GetIPObfuscation response
 

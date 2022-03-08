@@ -2,16 +2,16 @@
 
 |Name|Type|Description|
 |----|----|-----------|
-|**cost_id** |`xsd:int` | |
-|**cost_group** |`xsd:string` | |
-|**channel_type** |`xsd:string` | |
-|**name** |`xsd:string` | |
-|**channel_id** |`xsd:int` | |
+|**cost_id** |`int` | |
+|**cost_group** |`string` | |
+|**channel_type** |`string` | |
+|**name** |`string` | |
+|**channel_id** |`int` | |
 |**start_date** |`xsd:dateTime` | |
 |**end_date** |`xsd:dateTime` | |
-|**type** |`xsd:string` | |
+|**type** |`string` | |
 |**amount** |`xsd:double` | |
-|**metric** |`xsd:string` | |
+|**metric** |`string` | |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

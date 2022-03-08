@@ -2,7 +2,7 @@
 
 An enumerated list of allocation types.
 
-One of the following values of type `xsd:string`:
+One of the following values of type `string`:
 
 - full
 - linear

@@ -6,8 +6,8 @@ Retrieves information about all company user accounts that include the specified
 
 |Name|Type|Description|
 |----|----|-----------|
-|**login_search_field** |`xsd:string` | The field in the user account that you want to search, one of the following values: `login` `first_name` `last_name` `title` |
-|**login_search_value** |`xsd:string` |The value to search for in the specified field.|
+|**login_search_field** |`string` | The field in the user account that you want to search, one of the following values: `login` `first_name` `last_name` `title` |
+|**login_search_value** |`string` |The value to search for in the specified field.|
 
 ## Permissions.GetLogins response
 

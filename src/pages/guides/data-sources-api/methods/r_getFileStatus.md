@@ -8,8 +8,8 @@ The status information tells you if the file is queued for processing, processin
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
-|**reportSuiteID** |`xsd:string` |Yes| The ID of the report suite where you want to create this data source. |
-|**dataSourceID** |`xsd:string` |Yes| The Data Source ID. You can get this ID by calling [DataSource.GetIDs](r_getIDs.md#). |
+|**reportSuiteID** |`string` |Yes| The ID of the report suite where you want to create this data source. |
+|**dataSourceID** |`string` |Yes| The Data Source ID. You can get this ID by calling [DataSource.GetIDs](r_getIDs.md#). |
 
 ## DataSource.GetFileStatus Response
 

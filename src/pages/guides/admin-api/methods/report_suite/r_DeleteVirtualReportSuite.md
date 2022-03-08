@@ -6,7 +6,7 @@
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid** | `xsd:string` | Report suite ID of virtual report suite. |
+| **rsid** | `string` | Report suite ID of virtual report suite. |
 
  Example:
 

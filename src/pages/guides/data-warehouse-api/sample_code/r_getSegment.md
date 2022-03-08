@@ -6,8 +6,8 @@ Create a segment filter that determines the report suite data that Data Warehous
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**rsid** |`xsd:int` | The report suite used to generate the segment. |
-|**segment** |`xsd:int` | The segment ID. Data Warehouse generates this value after creating a new segment. |
+|**rsid** |`int` | The report suite used to generate the segment. |
+|**segment** |`int` | The segment ID. Data Warehouse generates this value after creating a new segment. |
 
 ## DataWarehouse.GetSegment Response
 

@@ -2,7 +2,7 @@
 
 An enumerated list of Weblog data source injection types.
 
-The enumerated type includes the following elements of type `xsd:string`.
+The enumerated type includes the following elements of type `string`.
 
 |Element|Description|
 |-------|-----------|

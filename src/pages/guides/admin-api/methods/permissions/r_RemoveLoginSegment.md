@@ -6,7 +6,7 @@ Removes a segment restriction from a user login.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**login** |`xsd:string` | Account name. |
+|**login** |`string` | Account name. |
 
 ## Permissions.RemoveLoginSegment response
 

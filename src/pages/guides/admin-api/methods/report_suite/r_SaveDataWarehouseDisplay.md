@@ -6,8 +6,8 @@ Saves the data warehouse display for the requested report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**data_warehouse_display** |[data_warehouse_display_type_enum](../../data_types/r_data_warehouse_display_type_enum.md#) | Data warehouse display setting, one of the following values of `xsd:string`: `none` `all-logins-have-access` `grayed-out-tab` `admins-only` `disabled` |
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
+|**data_warehouse_display** |[data_warehouse_display_type_enum](../../data_types/r_data_warehouse_display_type_enum.md#) | Data warehouse display setting, one of the following values of `string`: `none` `all-logins-have-access` `grayed-out-tab` `admins-only` `disabled` |
 
 ## ReportSuite.SaveDataWarehouseDisplay response
 

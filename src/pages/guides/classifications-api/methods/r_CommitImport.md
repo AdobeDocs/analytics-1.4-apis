@@ -6,7 +6,7 @@ Submits a classifications import file for processing.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**job_id** |`xsd:int` | The job ID to commit for processing.|
+|**job_id** |`int` | The job ID to commit for processing.|
 
 ## Classifications.CommitImport Response
 

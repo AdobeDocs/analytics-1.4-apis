@@ -7,9 +7,9 @@ Deletes a cost item for the selected report suites.
 |Name|Type|Description|
 |----|----|-----------|
 |**rsid_list** |`array (xsd:string)` |A list of report suite IDs.|
-|**channel_type** |`xsd:string` | |
-|**cost_group** |`xsd:string` | |
-|**cost_id** |`xsd:string` | |
+|**channel_type** |`string` | |
+|**cost_group** |`string` | |
+|**cost_id** |`string` | |
 
 ## ReportSuite.DeleteMarketingChannelCost response
 

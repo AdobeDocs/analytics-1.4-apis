@@ -8,7 +8,7 @@ See [Real Time Reports](../../../reporting-api/real_time.md).
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
 
 ## ReportSuite.GetRealTimeSettings response
 

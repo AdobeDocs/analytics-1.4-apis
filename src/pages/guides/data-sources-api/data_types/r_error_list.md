@@ -1,6 +1,6 @@
 # errorList
 
-An array of `xsd:string`.
+An array of `string`.
 
 **Parent topic:** [Data Types](../data_types/c_data_types.md)
 

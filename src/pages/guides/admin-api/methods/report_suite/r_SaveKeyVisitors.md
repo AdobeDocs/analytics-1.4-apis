@@ -6,8 +6,8 @@ Saves key visitors.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**key_visitors** |`array(xsd:string)` |A list of key visitors, identified by either domain name (`example.com`) or IP address (`192.168.10.128`).|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
+|**key_visitors** |`array[string]` |A list of key visitors, identified by either domain name (`example.com`) or IP address (`192.168.10.128`).|
 
 ## ReportSuite.SaveKeyVisitors response
 

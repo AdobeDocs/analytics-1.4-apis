@@ -8,7 +8,7 @@ Method parameters are required unless noted otherwise.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **reportID** | `xsd:int` | Report ID returned by [Report.Queue](r_Queue.md#). |
+| **reportID** | `int` | Report ID returned by [Report.Queue](r_Queue.md#). |
 
 ## Report.Cancel response
 

@@ -6,7 +6,7 @@ Deletes the specified user account.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**login** |`xsd:string` |The login name of the user account to delete.|
+|**login** |`string` |The login name of the user account to delete.|
 
 ## Permissions.DeleteLogin response
 

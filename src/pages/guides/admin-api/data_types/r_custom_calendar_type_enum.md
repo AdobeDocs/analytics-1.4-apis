@@ -2,7 +2,7 @@
 
 An enumerated list of custom calendar types.
 
-The enumerated type includes the following elements of type `xsd:string`.
+The enumerated type includes the following elements of type `string`.
 
 - gregorian
 - 4-5-4-retail

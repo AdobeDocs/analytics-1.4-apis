@@ -4,9 +4,9 @@ Data structure that contains information about a single element in a report suit
 
 |Element|Type|Description|
 |-------|----|-----------|
-|**id** |`xsd:string` | The unique element name. |
-|**name** |`xsd:string` | The element's friendly name. |
-|**classification** |`xsd:string` | |
+|**id** |`string` | The unique element name. |
+|**name** |`string` | The element's friendly name. |
+|**classification** |`string` | |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

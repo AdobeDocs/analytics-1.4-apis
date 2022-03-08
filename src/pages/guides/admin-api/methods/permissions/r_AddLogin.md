@@ -9,24 +9,24 @@ Creates a new user account in the requesting company.
 |**is_admin** |`xsd:boolean` |Enables the user as an admin when set to `true`.|
 |**must_change_password** |`xsd:boolean` |Forces the user to change their password on their first login when set to `true`.|
 |**create_dashboards** |`xsd:boolean` |Creates default dashboards for the user when set to `true`.|
-|**rsid** |`xsd:string` |The report suite ID used to create the user's default dashboards.|
-|**email** |`xsd:string` |The user's email address.|
-|**first_name** |`xsd:string` |The user's first name.|
-|**last_name** |`xsd:string` |The user's last name.|
-|**login** |`xsd:string` |The user's login name.|
-|**password** |`xsd:string` |The user's initial password.|
-|**phone_number** |`xsd:string` |The user's contact phone number.|
-|**group_names** |`array(xsd:string)` |A list of group memberships for the user.|
+|**rsid** |`string` |The report suite ID used to create the user's default dashboards.|
+|**email** |`string` |The user's email address.|
+|**first_name** |`string` |The user's first name.|
+|**last_name** |`string` |The user's last name.|
+|**login** |`string` |The user's login name.|
+|**password** |`string` |The user's initial password.|
+|**phone_number** |`string` |The user's contact phone number.|
+|**group_names** |`array[string]` |A list of group memberships for the user.|
 |**is_temp** |`xsd:boolean` |Indicates this is a temporary user account when set to `true`.|
 |**temp_end_date** |`xsd:date` |The date that the temporary account expires.|
 |**temp_start_date** |`xsd:date` |The date to activate the temporary account.|
-|**title** |`xsd:string` |The user's business title.|
+|**title** |`string` |The user's business title.|
 
 ## Permissions.AddLogin response
 
 |Type|Description|
 |----|-----------|
-|`xsd:int` |Returns `1` if the add user operation is successful. Otherwise, returns `0`.|
+|`int` |Returns `1` if the add user operation is successful. Otherwise, returns `0`.|
 
 **Parent topic:** [Permissions](../../methods/permissions/r_methods_permissions.md)
 

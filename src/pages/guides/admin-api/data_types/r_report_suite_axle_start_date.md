@@ -4,9 +4,9 @@ Data structure that contains information about when a report suite was migrated 
 
 |Element|Type|Description|
 |-------|----|-----------|
-|**rsid** |`xsd:string` | The report suite ID. |
-|**site_title** |`xsd:string` | The report suite friendly name. |
-|**axle_start_date** |`xsd:string` | Axle start date. |
+|**rsid** |`string` | The report suite ID. |
+|**site_title** |`string` | The report suite friendly name. |
+|**axle_start_date** |`string` | Axle start date. |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

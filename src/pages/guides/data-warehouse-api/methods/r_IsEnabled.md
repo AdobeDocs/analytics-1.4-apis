@@ -6,7 +6,7 @@ Check if a given report suite has data warehouse enabled.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**rsid** |`xsd:string` | ID of the report suite to check. |
+|**rsid** |`string` | ID of the report suite to check. |
 
 ## DataWarehouse.IsEnabled Response
 

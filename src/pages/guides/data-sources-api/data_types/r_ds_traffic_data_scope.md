@@ -2,7 +2,7 @@
 
 An enumerated list of scopes for Traffic data source data.
 
-The enumerated type includes the following elements of type `xsd:string`.
+The enumerated type includes the following elements of type `string`.
 
 |Element|Description|
 |-------|-----------|

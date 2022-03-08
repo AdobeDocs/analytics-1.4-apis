@@ -6,9 +6,9 @@ Creating or Updating a VRS will be its own method since the current ReportSuite.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid** | `xsd:string` | (Optional) Requested virtual report suite ID for update. |
-|**parent_rsid** |`xsd:string` | Parent report suite ID for virtual report suite. |
-|**name** |`xsd:string` | The name for the virtual report suite. |
+| **rsid** | `string` | (Optional) Requested virtual report suite ID for update. |
+|**parent_rsid** |`string` | Parent report suite ID for virtual report suite. |
+|**name** |`string` | The name for the virtual report suite. |
 |**segment_list** |`segment_list_array` | List of segments to be applied to the virtual report suite. |
 
 Example:
@@ -29,7 +29,7 @@ Example:
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid** | `xsd:string` | Report suite ID for the created or updated virtual report suite. |
+| **rsid** | `string` | Report suite ID for the created or updated virtual report suite. |
 
 Example:
 

@@ -6,7 +6,7 @@ Deletes the specified permission group.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**group_name** |`xsd:string` |The name of the group to delete.|
+|**group_name** |`string` |The name of the group to delete.|
 |**group_id** |`xsd:integer` |Neither `group_id` nor `group_name` is required as long as one is present in the request.|
 
 ## Permissions.DeleteGroup response

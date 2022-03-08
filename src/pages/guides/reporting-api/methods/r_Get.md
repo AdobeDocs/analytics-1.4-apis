@@ -8,8 +8,8 @@ Retrieves a report queued using Report.Queue
 
 |Name|Type|Description|
 |----|----|-----------|
-| ` reportID ` | `xsd:int` | Report ID returned by [Report.Queue](r_Queue.md#). |
-| ` page ` | `xsd:int` | (Optional) Desired page number (out of `totalPages`) for larger [Data Warehouse](../data_warehouse.md#) requests. |
+| ` reportID ` | `int` | Report ID returned by [Report.Queue](r_Queue.md#). |
+| ` page ` | `int` | (Optional) Desired page number (out of `totalPages`) for larger [Data Warehouse](../data_warehouse.md#) requests. |
 
 ## Report.Get response
 

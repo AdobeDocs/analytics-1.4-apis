@@ -4,9 +4,9 @@ A structure that defines a single segment rule.
 
 | Name | Type | Description |
 |--------|--------|---------------|
-| **operator** | `xsd:string` | The boolean operator used for this rule. Supported values include the following. You can also leave `operator` blank. |
-| **type** | `xsd:string` | Property to use for the rule comparison. For example, `column`. The type cannot exceed 100 characters. |
-| **value** | `xsd:string` | Value to use in the rule comparison. The value cannot exceed 255 characters. |
+| **operator** | `string` | The boolean operator used for this rule. Supported values include the following. You can also leave `operator` blank. |
+| **type** | `string` | Property to use for the rule comparison. For example, `column`. The type cannot exceed 100 characters. |
+| **value** | `string` | Value to use in the rule comparison. The value cannot exceed 255 characters. |
 | **event** | xsd:int | The ID of the Event you want to listen for. When creating an Event rule, you must follow the following conventions: When specifying event, all other values (operator, type, and value) must be blank (a string of 0 characters or a NULL value). - When not specifying an event, the event value must be blank (a string of 0 characters or a NULL value). - Event rules must be contained in a rule_list of a segment group of type EVENT. | 
 
 ### Operators Values

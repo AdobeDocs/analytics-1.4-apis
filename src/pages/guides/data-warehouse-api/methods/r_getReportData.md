@@ -6,9 +6,9 @@ Instructs Data Warehouse to retrieve a segment file previously created by a [Dat
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**Request_Id** |`xsd:int` | The request identifier returned by the [DataWarehouse.Request](r_request.md#) call. |
-|**rsid** |`xsd:string` | The report suite associated with the Data Warehouse request. |
-|**start_row** |`xsd:int` | This parameter is currently unused. Specify a value of either `0` or `1`. |
+|**Request_Id** |`int` | The request identifier returned by the [DataWarehouse.Request](r_request.md#) call. |
+|**rsid** |`string` | The report suite associated with the Data Warehouse request. |
+|**start_row** |`int` | This parameter is currently unused. Specify a value of either `0` or `1`. |
 
 ## DataWarehouse.GetReportData Response
 

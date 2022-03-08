@@ -2,7 +2,7 @@
 
 An enumerated list of data warehouse display settings.
 
-One of the following values of type `xsd:string`:
+One of the following values of type `string`:
 
 - none
 - all-logins-have-access

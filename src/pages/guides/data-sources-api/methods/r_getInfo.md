@@ -6,7 +6,7 @@ Returns information about the data sources associated with the specified report 
 
 |Parameter|Type|Required|Description|
 |---------|----|--------|-----------|
-|**reportSuiteID** |`xsd:string` |Yes| The ID of the report suite where you want to create this data source. |
+|**reportSuiteID** |`string` |Yes| The ID of the report suite where you want to create this data source. |
 
 ## DataSource.GetInfo Response
 

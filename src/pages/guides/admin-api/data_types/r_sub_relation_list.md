@@ -2,7 +2,7 @@
 
 |Name|Type|Description|
 |----|----|-----------|
-|**sub_relation_list** |`array(xsd:string)` |An array of sub-relations.|
+|**sub_relation_list** |`array[string]` |An array of sub-relations.|
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

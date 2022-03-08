@@ -10,15 +10,15 @@ On May 22, 2014, Adobe Analytics released unified segment management. After this
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**id** |`xsd:int` | The ID of the segment to delete. Data Warehouse provides this value in the response to a create segment operation. |
-|**rsid** |`xsd:int` | The report suite used to create the new segment. |
+|**id** |`int` | The ID of the segment to delete. Data Warehouse provides this value in the response to a create segment operation. |
+|**rsid** |`int` | The report suite used to create the new segment. |
 |**segment** |[Data Warehouse Segment](../data_types/r_data_warehouse_segment.md#) | The segment definition used to define the data set in the new segment. |
 
 ## DataWarehouse.ReplaceSegment Response
 
 |Type|Description|
 |----|-----------|
-| `xsd:int` | A unique segment identifier for the new segment. If the segment creation fails, the SOAP framework returns an environment fault that describes the error. |
+| `int` | A unique segment identifier for the new segment. If the segment creation fails, the SOAP framework returns an environment fault that describes the error. |
 
 **Parent topic:** [Methods](../methods/c_data_warehouse_methods.md)
 

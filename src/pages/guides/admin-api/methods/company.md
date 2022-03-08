@@ -8,11 +8,11 @@ Retrieves the endpoint for the specified company where API calls should be made.
 
 |Parameter|Type|Description|
 |----|----|-----------|
-|**`company`** |`xsd:string` |The company name, can also be passed in query string or WSSE header.|
+|**`company`** |`string` |The company name, can also be passed in query string or WSSE header.|
 
 |Response|Description|
 |----|-----------|
-|`xsd:string` |The company endpoint.|
+|`string` |The company endpoint.|
 
 ## Company.GetLoginKey
 
@@ -20,13 +20,13 @@ Returns the api key when called with the correct username and password.
 
 |Parameter|Type|Description|
 |----|----|-----------|
-|**`company`** |`xsd:string` |Login company.|
-|**`login`** |`xsd:string` |Account name.|
-|**`password`** |`xsd:string` |Account password.|
+|**`company`** |`string` |Login company.|
+|**`login`** |`string` |Account name.|
+|**`password`** |`string` |Account password.|
 
 |Type|Description|
 |----|-----------|
-|``xsd:string`` |API key.|
+|``string`` |API key.|
 
 ## Company.GetReportSuites
 
@@ -34,8 +34,8 @@ Retrieves all report suites associated with the requesting company.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**`types`** |`array(xsd:string)` |A list of report suite types that you want to include in the report suite list. Supported types include: `standard`, `rollup`, `virtual`.|
-|**`search`** |`xsd:string` |A search filter to apply in retrieving report suites.|
+|**`types`** |`array[string]` |A list of report suite types that you want to include in the report suite list. Supported types include: `standard`, `rollup`, `virtual`.|
+|**`search`** |`string` |A search filter to apply in retrieving report suites.|
 
 Example:
 
@@ -76,7 +76,7 @@ Returns the tracking server and namespace for the specified report suite.
 
 |Parameter|Type|Description|
 |----|----|-----------|
-|**`rsid`** |`xsd:string` |A report suite ID.|
+|**`rsid`** |`string` |A report suite ID.|
 
 |Response|Description|
 |----|-----------|
@@ -88,4 +88,4 @@ Retrieves version access for the company of the authenticated user. Does not hav
 
 |Response|Description|
 |----|-----------|
-|``array(xsd:string)`` |A list of Analytics interfaces to which the company has access.|
+|``array[string]`` |A list of Analytics interfaces to which the company has access.|

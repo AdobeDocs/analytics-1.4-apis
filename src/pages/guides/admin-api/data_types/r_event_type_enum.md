@@ -2,7 +2,7 @@
 
 An enumerated list of supported values for setting Event type.
 
-The enumerated type includes the following elements of type `xsd:string`.
+The enumerated type includes the following elements of type `string`.
 
 - disabled
 - counter_no_subrelations

@@ -4,10 +4,10 @@ Data structure that contains configuration settings for a full-processing data s
 
 |Name|Type|Description|
 |----|----|-----------|
-| **message** | `xsd:string`  | A brief description of the status parameter. The message string is listed above next to the status code. |
-| **filesize** | `xsd:string`  | Populated only when `status = 2`. The size of the requested data segment, in MB. |
-| **data_url***| `xsd:string` | Populated only when `status = 2`. Contains the URL where you can download the completed data segment. |
-| **status** | `xsd:int`  | A code representing the status of the data segment. See supported status values in table below: | 
+| **message** | `string`  | A brief description of the status parameter. The message string is listed above next to the status code. |
+| **filesize** | `string`  | Populated only when `status = 2`. The size of the requested data segment, in MB. |
+| **data_url***| `string` | Populated only when `status = 2`. Contains the URL where you can download the completed data segment. |
+| **status** | `int`  | A code representing the status of the data segment. See supported status values in table below: | 
 
 |Code|Message|
 |----|-------|

@@ -6,7 +6,7 @@ Updates the commerce variables (eVars) for the requested report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
 |**evars** | [evar_array](../../data_types/r_evar_array.md#) - An array of [evar](../../data_types/r_evar.md#) |List of eVars for the specified report suites, including the settings for each eVar.|
 
 ## ReportSuite.SaveEvars response

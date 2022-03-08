@@ -2,7 +2,7 @@
 
 An enumerated list of supported event serialization values.
 
-The enumerated type includes the following elements of type `xsd:string`.
+The enumerated type includes the following elements of type `string`.
 
 - unavailable
 - always_record

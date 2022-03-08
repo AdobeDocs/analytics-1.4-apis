@@ -6,7 +6,7 @@ Updates custom events to each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array(xsd:string)` |A list of report suite IDs.|
+| **rsid_list** | `array[string]` |A list of report suite IDs.|
 | **event** | [event_array](../../data_types/r_event_array.md#) - An array of [event](../../data_types/r_event.md#)|A list of success events.|
 
 ## ReportSuite.SaveEvents response

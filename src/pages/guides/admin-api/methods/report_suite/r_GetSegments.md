@@ -6,7 +6,7 @@ Retrieves the segments that are available in one or more report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array(xsd:string)` | (Required) The list of report suite IDs for which you want to retrieve segments.
+| **rsid_list** | `array[string]` | (Required) The list of report suite IDs for which you want to retrieve segments.
 
  |
 

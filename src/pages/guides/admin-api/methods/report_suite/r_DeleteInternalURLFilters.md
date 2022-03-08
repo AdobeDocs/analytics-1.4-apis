@@ -6,8 +6,8 @@ Deletes the internal URL filters for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
-|**internal_url_filters** |`array(xsd:string)` |A list of URLs to delete from the internal URL filters list.|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
+|**internal_url_filters** |`array[string]` |A list of URLs to delete from the internal URL filters list.|
 
 ## ReportSuite.DeleteInternalURLFilters response
 

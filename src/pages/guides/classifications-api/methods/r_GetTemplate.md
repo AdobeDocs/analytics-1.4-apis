@@ -6,10 +6,10 @@ Similar to the Template tab in the Classifications tool in the Admin Console UI,
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `xsd:string` | The report suite where you want to import data. |
-| **element** | `xsd:string` |  `relation_id` for which you want to get a template (e.g. 101=evar1, 51=product, etc) |
+| **rsid_list** | `string` | The report suite where you want to import data. |
+| **element** | `string` |  `relation_id` for which you want to get a template (e.g. 101=evar1, 51=product, etc) |
 | **classification_names** | `xsd:string_array` | (Optional) an array of text classification names to include as columns in the template. |
-| **encoding** | `xsd:string` | The encoding to use for the template |
+| **encoding** | `string` | The encoding to use for the template |
 
 ## Classifications.GetTemplate Response
 

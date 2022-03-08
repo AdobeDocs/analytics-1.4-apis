@@ -4,8 +4,8 @@ Data structure that contains information about a report suite's commerce setting
 
 |Element|Type|Description|
 |-------|----|-----------|
-|**rsid** |`xsd:string` | The report suite ID. |
-|**site_title** |`xsd:string` | The report suite friendly name. |
+|**rsid** |`string` | The report suite ID. |
+|**site_title** |`string` | The report suite friendly name. |
 |**geo_segmentation** |`xsd:boolean` | True if geography segmentation is enabled. |
 |**vista_enabled** |`xsd:boolean` | True of geography segmentation VISTA rules are enabled. |
 

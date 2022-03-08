@@ -6,7 +6,7 @@ Retrieves the scheduled traffic increase settings for the specified report suite
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array(xsd:string)` |A list of report suite IDs.|
+|**rsid_list** |`array[string]` |A list of report suite IDs.|
 
 ## ReportSuite.GetScheduledSpike response
 

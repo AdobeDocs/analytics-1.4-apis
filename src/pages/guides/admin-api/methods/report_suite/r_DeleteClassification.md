@@ -6,9 +6,9 @@ Deletes a classification from one or more report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array(xsd:string)` | A list of report suite IDs.|
-| **element** | `xsd:string` | The element from which you want to delete the classification. |
-| **name** | `xsd:string` | The name of the classification to delete. |
+| **rsid_list** | `array[string]` | A list of report suite IDs.|
+| **element** | `string` | The element from which you want to delete the classification. |
+| **name** | `string` | The name of the classification to delete. |
 
 ## ReportSuite.DeleteClassification Response
 

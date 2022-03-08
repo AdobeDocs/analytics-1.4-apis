@@ -2,7 +2,7 @@
 
 An enumerated list of supported values for setting the marketing channel type.
 
-The enumerated type includes the following elements of type `xsd:string`.
+The enumerated type includes the following elements of type `string`.
 
 |Name|Description|
 |----|-----------|

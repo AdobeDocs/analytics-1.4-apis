@@ -6,7 +6,7 @@ Submits a one-time report request to be delivered through e-mail or FTP.
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|**Request_Id** |`xsd:int` | The Data Warehouse Request ID for which a status should be returned. You can only check the status of a request that you submitted. |
+|**Request_Id** |`int` | The Data Warehouse Request ID for which a status should be returned. You can only check the status of a request that you submitted. |
 
 ## DataWarehouse.CheckRequest Response
 

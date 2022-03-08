@@ -12,7 +12,7 @@ Queue a report to run.
 
 |Name|Type|Description|
 |----|----|-----------|
-| ` reportID ` | `xsd:int` | The ID of the report. Pass this ID to [Report.Get](r_Get.md#) to retrieve the report. |
+| ` reportID ` | `int` | The ID of the report. Pass this ID to [Report.Get](r_Get.md#) to retrieve the report. |
 
 ## Report Type
 

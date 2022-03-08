@@ -6,7 +6,7 @@
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array(xsd:string)` | A list of the virtual report suite IDs. |
+| **rsid_list** | `array[string]` | A list of the virtual report suite IDs. |
 
 Example:
 ```
@@ -34,7 +34,7 @@ Example:
 
 |Element|Type|Description|
 |-------|----|-----------|
-| **rsid** | `xsd:string` | Virtual report suite ID. |
+| **rsid** | `string` | Virtual report suite ID. |
 |**parent_rsid** | `xsd:string parent` | Report suite ID for virtual report suite. |
 | **segment_list** | `segment_list_array` | List of segments applied to virtual report suite. |
 

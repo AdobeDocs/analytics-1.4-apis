@@ -6,8 +6,8 @@ Retrieves a list of a company's permission groups.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **group_search_field** | `xsd:string` |The field in the user account that you want to search. Options include: `name`, and `description`.|
-| **group_search_value** | `xsd:string` |The value to search for in the specified field.|
+| **group_search_field** | `string` |The field in the user account that you want to search. Options include: `name`, and `description`.|
+| **group_search_value** | `string` |The value to search for in the specified field.|
 
 ## Permissions.GetGroups response
 
