@@ -85,6 +85,8 @@ Create, edit, or delete calculated metrics.
 
 Does not require a JSON request body. Response is an array of calculated metric functions.
 
+`POST https://api.omniture.com/admin/1.4/rest/?method=CalculatedMetrics.GetFunctions`
+
 <CodeBlock slots="heading, code" repeat="1" languages="JSON"/>
 
 ```json

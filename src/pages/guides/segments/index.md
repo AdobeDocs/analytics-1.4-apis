@@ -2,7 +2,7 @@
 
 Lets you create, get, and delete segments that are defined using the 1.4 Segments API or the [Analytics Segmentation](https://experienceleague.adobe.com/docs/analytics/components/segmentation/seg-home.html) interface.
 
-## Get
+## Segments.Get
 
 Gets segments defined for the company of the current user.
 
@@ -97,7 +97,7 @@ optional, one of: "id", "name", "description", "reportSuiteID", "owner", "modifi
 
 "tags" and "reportSuiteID" are comma delimited lists that perform exact matching. For example, if you have a segment with tag "a" and another with tag "b", setting the "tags" filter to "A" will find no matches, setting it to "a" will match the first, and setting it to "a,b" will find both.
 
-## Delete
+## Segments.Delete
 
 Deletes a segment.
 
@@ -111,7 +111,7 @@ Deletes a segment.
 
 The response returns `true` if the operation is successful.
 
-## Save
+## Segments.Save
 
 Save a new segment or update an existing segment using the segment ID.
 
