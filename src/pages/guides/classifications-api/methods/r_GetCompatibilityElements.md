@@ -6,7 +6,7 @@ Returns the available `elements` for a given report suite, and compatibility acr
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **rsid_list** | `array[string]` | A list of report suites where you want to get valid element values. |
+| **rsid_list** | `string[]` | A list of report suites where you want to get valid element values. |
 
 ## Classifications.GetCompatibilityElements Response
 

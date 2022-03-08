@@ -10,7 +10,7 @@ Data structure that contains basic information about a user account.
 |**title** |`string` | The user's business title. |
 |**email** |`string` | The email address. |
 |**last_login** |`string` | |
-|**is_admin** |`xsd:boolean` | Identifies if this is an admin user account. |
+|**is_admin** |`boolean` | Identifies if this is an admin user account. |
 |**ims_user_id** |`int` | |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)

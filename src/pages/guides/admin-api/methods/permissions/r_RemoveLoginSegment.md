@@ -12,7 +12,7 @@ Removes a segment restriction from a user login.
 
 |Type|Description|
 |----|-----------|
-|`xsd:boolean` |Returns true if the operation was successful.|
+|`boolean` |Returns true if the operation was successful.|
 
 **Parent topic:** [Permissions](../../methods/permissions/r_methods_permissions.md)
 

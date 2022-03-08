@@ -6,16 +6,16 @@ Updates the marketing channel cost for the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array[string]` |A list of report suite IDs.|
-|**amount** |`xsd:double` | |
+|**rsid_list** |`string[]` |A list of report suite IDs.|
+|**amount** |`double` | |
 |**channel_id** |`int` | |
 |**channel_type** |`string` | |
 |**cost_group** |`string` | |
 |**cost_id** |`int` | |
 |**name** |`string` | |
-|**end_date** |`xsd:dateTime` | |
+|**end_date** |`dateTime` | |
 |**metric** |`string` | |
-|**start_date** |`xsd:dateTime` | |
+|**start_date** |`dateTime` | |
 |**type** |`string` | |
 
 ## ReportSuite.SaveMarketingChannelCost response

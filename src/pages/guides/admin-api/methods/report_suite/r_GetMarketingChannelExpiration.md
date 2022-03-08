@@ -6,7 +6,7 @@ Returns the currently defined Marketing Channel expiration dates for the specifi
 
 |Name|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array[string]` |A list of report suites.|
+|**rsid_list** |`string[]` |A list of report suites.|
 
 ## ReportSuite.GetMarketingChannelExpiration response
 

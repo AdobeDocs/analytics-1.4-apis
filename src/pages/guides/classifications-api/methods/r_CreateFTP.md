@@ -10,8 +10,8 @@ Creates a classifications Import FTP account.
 | **rsid_list** | `tns:string_array` | report suites to which data is imported. |
 | **description** | `string` | a textual description for the FTP account. |
 | **email_address** | `string` | the email account to notify when imports are finished. |
-| **overwrite** | `xsd:boolean` | if true, keys that already exists will always be overwritten by new keys. |
-| **export** | `xsd:boolean` | if true, the import will be automatically exported after import. |
+| **overwrite** | `boolean` | if true, keys that already exists will always be overwritten by new keys. |
+| **export** | `boolean` | if true, the import will be automatically exported after import. |
 
 ## Classifications.CreateFTP Response
 

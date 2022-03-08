@@ -6,8 +6,8 @@ Saves a classification for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array[string]` |A list of report suite IDs.|
-| **date_enabled** | `xsd:boolean` |Determines whether to treat this classification like a campaign.|
+| **rsid_list** | `string[]` |A list of report suite IDs.|
+| **date_enabled** | `boolean` |Determines whether to treat this classification like a campaign.|
 | **element** | `string` |The name of the element whose classifications are being retrieved.|
 | **name** | `string` |Visible name of the classification.|
 | **new_name** | `string` | |
@@ -18,7 +18,7 @@ Saves a classification for each of the specified report suites.
 
 |Type|Description|
 |----|-----------|
-| `xsd:boolean` |Returns `true` if the update operation is successful.|
+| `boolean` |Returns `true` if the update operation is successful.|
 
 **Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
 

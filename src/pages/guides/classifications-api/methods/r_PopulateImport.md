@@ -18,7 +18,7 @@ You can separate data into pages, but the pages must be sent sequentially (eithe
 
 |Type|Description|
 |----|-----------|
-|`xsd:boolean` | Indicates if the job processed successfully. |
+|`boolean` | Indicates if the job processed successfully. |
 
 **Parent topic:** [Methods](../methods/classifications_methods.md)
 

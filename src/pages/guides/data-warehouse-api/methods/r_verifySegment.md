@@ -14,7 +14,7 @@ This is useful for checking segment syntax before creating the new segment in Da
 
 |Type|Description|
 |----|-----------|
-| `xsd:boolean` | Returns `True` if the segment filter is syntactically valid. Otherwise, returns an environment fault at the first syntax error in the segment definition. |
+| `boolean` | Returns `True` if the segment filter is syntactically valid. Otherwise, returns an environment fault at the first syntax error in the segment definition. |
 
 **Parent topic:** [Methods](../methods/c_data_warehouse_methods.md)
 

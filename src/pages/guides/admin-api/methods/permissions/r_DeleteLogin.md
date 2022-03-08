@@ -12,7 +12,7 @@ Deletes the specified user account.
 
 |Type|Description|
 |----|-----------|
-|`xsd:boolean` |Returns `true` if the delete operation is successful.|
+|`boolean` |Returns `true` if the delete operation is successful.|
 
 **Parent topic:** [Permissions](../../methods/permissions/r_methods_permissions.md)
 

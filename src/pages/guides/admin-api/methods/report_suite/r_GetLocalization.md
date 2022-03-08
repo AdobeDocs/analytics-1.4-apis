@@ -6,7 +6,7 @@ Retrieves the localization (multi-byte character) settings for each of the speci
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array[string]` |A list of report suite IDs.|
+| **rsid_list** | `string[]` |A list of report suite IDs.|
 
 ## ReportSuite.GetLocalization response
 

@@ -33,8 +33,8 @@ Complete details for a classifications FTP account.
 |**`description`** |`string` | a textual description for the FTP account. |
 |**`email`** |`string` | the email account to notify when imports are finished. |
 |**`element`** |`enum` | element that you want to import or export. |
-|**`overwrite`** |`xsd:boolean` | if true, keys that already exists will always be overwritten by new keys. |
-|**`export`** |`xsd:boolean` | if true, the import will be automatically exported after import. |
+|**`overwrite`** |`boolean` | if true, keys that already exists will always be overwritten by new keys. |
+|**`export`** |`boolean` | if true, the import will be automatically exported after import. |
 |**`host`** |`string` | the name of the FTP host. |
 |**`username`** |`string` | the username on the FTP account that was created. |
 |**`password`** |`string` | the password "" "" |
@@ -116,8 +116,8 @@ Data structure that contains information from a single data page of a classifica
 
 |Element|Type|Description|
 |-------|----|-----------|
-|**`warnings`** |`array[string]` | An array that includes all warnings associated with the specified export file. |
-|**`header`** |`array[string]` | The column headings for the exported data. |
+|**`warnings`** |`string[]` | An array that includes all warnings associated with the specified export file. |
+|**`header`** |`string[]` | The column headings for the exported data. |
 |**`data`** |`rows` | The data rows from the specified export file segment. |
 
 ## pagedetails

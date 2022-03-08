@@ -14,7 +14,7 @@ Method parameters are required unless noted otherwise.
 
 |Type|Description|
 |----|-----------|
-| `xsd:boolean` |Returns `true` if the operation is successful.|
+| `boolean` |Returns `true` if the operation is successful.|
 
 **Parent topic:** [Methods](../methods/methods.md)
 

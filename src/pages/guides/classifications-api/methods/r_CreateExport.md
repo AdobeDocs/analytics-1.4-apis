@@ -17,13 +17,13 @@ After creating an export job, use [GetStatus](r_GetStatus.md#) to determine when
 | **email_address** | `string` | The email address to receive job notifications. |
 | **encoding** | `string` | The language encoding to use with the export file. For example, UTF-8. |
 | **element** | `string` | You get this ID as a return value from [GetCompatibilityElements](r_GetCompatibilityElements.md#). |
-| **rsid_list** | `array[string]` | (Optional) The list of report suites on which classifications exports data. |
+| **rsid_list** | `string[]` | (Optional) The list of report suites on which classifications exports data. |
 | **row_filter_column_name** | `string` | This field accepts the column name except when the `row_filter_column_value` is set to `::none::`. |
 | **row_filter_column_value** | `string` | This field is always required if `row_filter_column_name` is included. |
 | **row_filter_empty_column** |`string` | Can be set to: `::all::` - Returns rows that have all columns empty. `::any::` - Returns rows that have 1 or more empty column. Any column name - Returns rows where the given column is empty. |
 |**all_rows** |`string` | Set to `true` to have all matching rows returned. |
 | **row_count** | `int` | (Optional) Limits the number of data rows in the export file to the specified value. The default is 1000. |
-| **quote_output** | `xsd:boolean` | Whether to quote the output.  In some cases, turning this on helps with duplicate keys containing whitespace. |
+| **quote_output** | `boolean` | Whether to quote the output.  In some cases, turning this on helps with duplicate keys containing whitespace. |
 
 ## Classifications.CreateExport Response
 

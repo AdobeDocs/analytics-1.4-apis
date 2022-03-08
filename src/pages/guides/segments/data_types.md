@@ -13,9 +13,9 @@ Details about a segment.
 |`description` |`string` | Description provided for the segment. Displayed in the UI. |
 |`reportSuiteID` |`string` | Identifies the report suite that was used to create the segment request. |
 |`modified` |`string` | Date when the segment was last updated. |
-|`compatibility` |`array[string]` | List of Analytics interfaces that are compatible with this segment. |
-|`favorite` |`xsd:boolean` | Indicates if the current user has flagged this segment as a favorite. |
-|`tags` |`array[string]` | Tags defined for the segment. |
+|`compatibility` |`string[]` | List of Analytics interfaces that are compatible with this segment. |
+|`favorite` |`boolean` | Indicates if the current user has flagged this segment as a favorite. |
+|`tags` |`string[]` | Tags defined for the segment. |
 |`shares` |`segment_share_array` - an array of `segment_share` | Groups and users with which this segment is shared. |
 |`owner` |`string` | Segment owner. |
 
@@ -29,7 +29,7 @@ Defines a segment container.
 |`type` |`string` | (Required) Container type, one of the following values: "`hits`", "`visits`", "`visitors`" Sequential Segments place additional restrictions on container type. If the definition has a container that defines a sequential segment (using the `"then"` operator), the options for "`type`" are limited to "`visits`" or "`visitors`". Sub-containers within a sequential segment container that also use a "`then`" operator can specify a "`type`" of "`hits`", "`visits`", or "`logicgroup`" |
 |`operator` |`string` | (Optional) Specifies the operator used to evaluate the container rules. One of the following: "`and`", "`or`", "`then`". Defaults to "`and`" if not included, or if the container has only one rule. |
 |`rules` |`segment_rule_array` - an array of `segment_rule` | (Required) Defines the data that is matched by this container. Each container must include at least one rule. |
-|`exclude` |`xsd:boolean` | (Optional) Exclude rather than include data that matches the segment rule. Defaults to false. |
+|`exclude` |`boolean` | (Optional) Exclude rather than include data that matches the segment rule. Defaults to false. |
 
 ## segment_definition
 
@@ -59,7 +59,7 @@ Defines the data that is matched by a segment container.
 |`value` |`string` | Required except when using one of the exists operators, options depend on the accompanying "metric" or "element". |
 |`after` |`segment_rule_restriction` | (Optional) The After operator is used to specify a minimum limit between two checkpoints in a sequential segment. Allowed on rules that are in a container that uses the "then" operator. Restrictions on the last rule in that container are ignored. Each rule can have at most one "after" and one "within" restriction. |
 |`within` |`segment_rule_restriction` | (Optional) The Within operator specifies a maximum limit on the amount of time between two checkpoints in a sequential segment. Allowed on rules that are in a container that uses the "then" operator. Restrictions on the last rule in that container are ignored. Each rule can have at most one "after" and one "within" restriction. |
-|`exclude` |`xsd:boolean` | (Optional) Exclude rather than include data that matches the segment rule. Defaults to false. |
+|`exclude` |`boolean` | (Optional) Exclude rather than include data that matches the segment rule. Defaults to false. |
 |`name` |`string` | (Optional) Not used, can be provided will not be saved. |
 
 ### segment_rule Operators

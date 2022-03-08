@@ -12,7 +12,7 @@ Check if a given report suite has data warehouse enabled.
 
 |Type|Description|
 |----|-----------|
-|`xsd:boolean` | true if enabled, false if not enabled. |
+|`boolean` | true if enabled, false if not enabled. |
 
 **Parent topic:** [Methods](../methods/c_data_warehouse_methods.md)
 

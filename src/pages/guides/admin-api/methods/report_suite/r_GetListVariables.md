@@ -8,7 +8,7 @@ See [List Variable](https://microsite.omniture.com/t2/help/en_US/sc/implement/in
 
 |Name|Type|Description|
 |----|----|-----------|
-| `rsid_list` | `array[string]` | A list of report suite IDs.|
+| `rsid_list` | `string[]` | A list of report suite IDs.|
 
 ## ReportSuite.GetListVariables Response
 

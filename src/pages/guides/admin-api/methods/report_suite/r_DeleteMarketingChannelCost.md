@@ -15,7 +15,7 @@ Deletes a cost item for the selected report suites.
 
 |Type|Description|
 |----|-----------|
-|`xsd:boolean` |Returns `true` if the operation was successful.|
+|`boolean` |Returns `true` if the operation was successful.|
 
 **Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
 

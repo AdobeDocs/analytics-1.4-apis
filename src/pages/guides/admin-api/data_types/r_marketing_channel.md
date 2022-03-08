@@ -4,9 +4,9 @@
 |----|----|-----------|
 |**channel_id** |`int` | The marketing channel ID. |
 |**name** |`string` | The marketing channel name. |
-|**enabled** |`xsd:boolean` |  |
+|**enabled** |`boolean` |  |
 |**channel_breakdown** |`int` |   |
-|**override_last_touch_channel** |`xsd:boolean` |   |
+|**override_last_touch_channel** |`boolean` |   |
 |**type** |[channel_type](r_channel_type.md#) | Identifies the marketing channel as online or offline. |
 |**color** |[channel_colors](r_channel_colors.md#) | The color used to identify the marketing channel in reports. |
 

@@ -7,10 +7,10 @@
 |**channel_type** |`string` | |
 |**name** |`string` | |
 |**channel_id** |`int` | |
-|**start_date** |`xsd:dateTime` | |
-|**end_date** |`xsd:dateTime` | |
+|**start_date** |`dateTime` | |
+|**end_date** |`dateTime` | |
 |**type** |`string` | |
-|**amount** |`xsd:double` | |
+|**amount** |`double` | |
 |**metric** |`string` | |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)

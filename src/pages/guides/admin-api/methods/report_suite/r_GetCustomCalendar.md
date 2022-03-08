@@ -6,7 +6,7 @@ Retrieves the custom calendar for each of the specified report suites.
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array[string]` |A list of report suite IDs.|
+| **rsid_list** | `string[]` |A list of report suite IDs.|
 
 ## ReportSuite.GetCustomCalendar response
 

@@ -6,7 +6,7 @@ Returns the currently defined Marketing Channels for the specified report suites
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array[string]` |A list of report suites.|
+| **rsid_list** | `string[]` |A list of report suites.|
 
 ## ReportSuite.GetMarketingChannels response
 

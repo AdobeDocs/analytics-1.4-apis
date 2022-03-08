@@ -12,7 +12,7 @@ Submits a classifications import file for processing.
 
 |Type|Description|
 |----|-----------|
-|`xsd:boolean` | Indicates if the job processed successfully. |
+|`boolean` | Indicates if the job processed successfully. |
 
 **Parent topic:** [Methods](../methods/classifications_methods.md)
 

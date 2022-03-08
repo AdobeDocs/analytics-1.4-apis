@@ -9,7 +9,7 @@ Data structure that contains basic information about a single metric.
 |**type** |`string` | |
 |**decimals** |`int` | |
 |**latency** |`int` | |
-|**current** |`xsd:boolean` | |
+|**current** |`boolean` | |
 
 **Parent topic:** [Data Types](../data_types/c_datatypes.md)
 

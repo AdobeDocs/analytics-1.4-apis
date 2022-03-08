@@ -12,7 +12,7 @@ Determines if a report description is valid without running the report. If the r
 
 |Type|Description|
 |----|-----------|
-| `xsd:boolean` |Returns `true` if the operation is successful.|
+| `boolean` |Returns `true` if the operation is successful.|
 
 **Parent topic:** [Methods](../methods/methods.md)
 

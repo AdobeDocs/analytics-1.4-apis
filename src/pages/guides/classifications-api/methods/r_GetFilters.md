@@ -8,7 +8,7 @@ The returned data consists of values that can be passed in as parameters of [Cre
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **rsid_list** | `array[string]` | A list of report suites that contains the specified data source. |
+| **rsid_list** | `string[]` | A list of report suites that contains the specified data source. |
 | **element** | `string` | The element for which you want to get file information. |
 
 ## Classifications.GetFilters Response

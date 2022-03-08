@@ -26,7 +26,7 @@ Returns the api key when called with the correct username and password.
 
 |Type|Description|
 |----|-----------|
-|``string`` |API key.|
+|`string` |API key.|
 
 ## Company.GetReportSuites
 
@@ -34,7 +34,7 @@ Retrieves all report suites associated with the requesting company.
 
 |Name|Type|Description|
 |----|----|-----------|
-|**`types`** |`array[string]` |A list of report suite types that you want to include in the report suite list. Supported types include: `standard`, `rollup`, `virtual`.|
+|**`types`** |`string[]` |A list of report suite types that you want to include in the report suite list. Supported types include: `standard`, `rollup`, `virtual`.|
 |**`search`** |`string` |A search filter to apply in retrieving report suites.|
 
 Example:
@@ -88,4 +88,4 @@ Retrieves version access for the company of the authenticated user. Does not hav
 
 |Response|Description|
 |----|-----------|
-|``array[string]`` |A list of Analytics interfaces to which the company has access.|
+|`string[]` |A list of Analytics interfaces to which the company has access.|

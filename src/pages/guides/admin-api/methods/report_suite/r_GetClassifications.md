@@ -6,8 +6,8 @@ Retrieves a list of classifications (associated with the specified element) for 
 
 |Name|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `array[string]` | (Required) The list of report suite IDs for which you want to retrieve classifications. |
-| **element_list** |`array[string]` | (Required) The list of elements for which you want to retrieve classifications. See [values for element_list](r_GetClassifications.md#). |
+| **rsid_list** | `string[]` | (Required) The list of report suite IDs for which you want to retrieve classifications. |
+| **element_list** |`string[]` | (Required) The list of elements for which you want to retrieve classifications. See [values for element_list](r_GetClassifications.md#). |
 
 ## ReportSuite.GetClassifications response
 

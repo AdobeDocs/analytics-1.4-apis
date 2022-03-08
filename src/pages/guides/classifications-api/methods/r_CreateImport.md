@@ -12,13 +12,13 @@ After sending all data, call [CommitImport](r_CommitImport.md#) to finalize the 
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-| **rsid_list** | `array[string]` | The list of report suites to receive the import job. |
+| **rsid_list** | `string[]` | The list of report suites to receive the import job. |
 | **element** | `string` |The report for which you want to perform a classifications import.|
 | **check_divisions** | `int` | Specifies whether to check report suites for compatible divisions. Supported values include: `0`: Do not check report suite compatibility. `1`: (Default) Check report suite compatibility. |
 | **description** | `string` | A description of the import job. |
 | **email_address** | `string` | The email address to receive job notifications. |
 | **export_results** | `int` | Specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: (Default) Do not export. `1`: Export when the job completes. |
-| **header** | `array[string]` | An array of column values for classification. First column is required to be the `key`.|
+| **header** | `string[]` | An array of column values for classification. First column is required to be the `key`.|
 | **overwrite_conflicts** | `int` | Specifies whether to overwrite data when conflicts occur. Supported values include: `0`: (Default) Do not overwrite data on a conflict. `1`: Overwrite data on a conflict. |
 
 ## Classifications.CreateImport Response
