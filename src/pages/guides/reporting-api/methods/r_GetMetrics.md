@@ -21,7 +21,7 @@ Specific users may not have access to certain metrics. The metrics returned by `
 
 |Type|Description|
 |----|-----------|
-| [reportMetricList](../data_types/r_reportMetrics.md#) - An array of [reportMetric](../data_types/r_reportMetric.md#) | A structure that defines a metric that appears in a report. |
+| `reportMetric[]` | A structure that defines a metric that appears in a report. |
 
 **Parent topic:** [Methods](../methods/methods.md)
 

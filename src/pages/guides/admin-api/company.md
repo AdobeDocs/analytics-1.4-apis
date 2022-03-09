@@ -42,7 +42,7 @@ Example:
 
 |Response Type|Description|
 |----|-----------|
-|`company_report_suites` |A list of report suites that match the specified request parameters.|
+|`company_report_suite[]` |A list of report suites that match the specified request parameters.|
 
 Example:
 

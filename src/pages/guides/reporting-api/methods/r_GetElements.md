@@ -21,7 +21,7 @@ Specific users may not have access to certain elements. The metrics returned by 
 
 |Type|Description|
 |----|-----------|
-|  [reportElementList](../data_types/r_reportElements.md#) - An array of [reportElement](../data_types/r_reportElement.md#) | Defines an element that appears in a report. |
+|  `reportElement[]` | Defines an element that appears in a report. |
 
 **Parent topic:** [Methods](../methods/methods.md)
 
