@@ -2,7 +2,7 @@
 
 Analytics classifications lets you bulk-import additional data attributes, or dimensions, to Adobe Analytics. By augmenting the data elements collected by Analytics with these attributes, users can create deeper and more complex reports.
 
-## Classifications.CommitImport
+## CommitImport
 
 Submits a classifications import file for processing.
 
@@ -12,11 +12,9 @@ Submits a classifications import file for processing.
 |---------|----|-----------|
 |**`job_id`** |`int` | The job ID to commit for processing.|
 
-|Response|Description|
-|----|-----------|
-|`boolean` | Indicates if the job processed successfully. |
+Returns `true` if the job processes successfully.
 
-## Classifications.CreateExport
+## CreateExport
 
 Creates a classifications export job.
 
@@ -43,11 +41,9 @@ After creating an export job, use `Classifications.GetStatus` to determine when 
 | **`row_count`** | `int` | (Optional) Limits the number of data rows in the export file to the specified value. The default is 1000. |
 | **`quote_output`** | `boolean` | Whether to quote the output.  In some cases, turning this on helps with duplicate keys containing whitespace. |
 
-|Response Type |Description|
-|----|-----------|
-| `int` | The Job ID associated with your export request. |
+Returns the `int` Job ID associated with your export request.
 
-## Classifications.CreateFTP
+## CreateFTP
 
 Creates a classifications Import FTP account.
 
@@ -62,11 +58,9 @@ Creates a classifications Import FTP account.
 | **`overwrite`** | `boolean` | if `true`, keys that already exists will always be overwritten by new keys. |
 | **`export`** | `boolean` | if `true`, the import will be automatically exported after import. |
 
-| Response Type | Description |
-|--------|---------------|
-| `classifications_ftp_info` | Contains connection details for the created FTP account. |
+Returns `classifications_ftp_info`, which contains connection details for the created FTP account.
 
-## Classifications.CreateImport
+## CreateImport
 
 Creates a classifications import job.
 
@@ -89,11 +83,9 @@ After sending all data, call `Classifications.CommitImport` to finalize the Impo
 | **`header`** | `string[]` | An array of column values for classification. First column is required to be the `key`.|
 | **`overwrite_conflicts`** | `int` | Specifies whether to overwrite data when conflicts occur. Supported values include: `0`: (Default) Do not overwrite data on a conflict. `1`: Overwrite data on a conflict. |
 
-|Response|Type|Description|
-|----|----|-----------|
-| **`classifications_create_job_response`** | `int` | A unique job ID that identifies this classifications import job. If the job import is unsuccessful, an error code is returned instead of a job ID. |
+Returns `classifications_create_job_response`, a unique `int` job ID that identifies this classifications import job. If the job import is unsuccessful, an error code is returned instead of a job ID.
 
-## Classifications.GetCompatibilityElements
+## GetCompatibilityElements
 
 Returns the available `elements` for a given report suite, and compatibility across report suites.
 
@@ -103,11 +95,9 @@ Returns the available `elements` for a given report suite, and compatibility acr
 |---------|----|-----------|
 | **`rsid_list`** | `string[]` | A list of report suites where you want to get valid element values. |
 
-|Response Type|Description|
-|----|-----------|
-| `classifications_report_suite_compatibility_elements[]` |Compatible elements.|
+Returns `classifications_report_suite_compatibility_elements[]`, a list of compatible elements.
 
-## Classifications.GetExport
+## GetExport
 
 Retrieves a page of data, known as a file segment, from a completed classifications job.
 
@@ -118,11 +108,9 @@ Retrieves a page of data, known as a file segment, from a completed classificati
 | **`file_id`** | `int` | The ID of the export file you want to view. You can get this value from `Classifications.GetStatus`. |
 | **`page`** | `int` | The number of the data page you want to view from the export job. Default is 1. The `viewable_pages` value in `Classifications.GetStatus` indicates the number of data pages in the job. Valid values for `page` are between 1 and the value of `viewable_pages`. |
 
-|Response Type|Description|
-|----|-----------|
-| `pagedetails` | Information and data for the specified data segment.|
+Returns `pagedetails`, information and data for the specified data segment.
 
-## Classifications.GetFilters
+## GetFilters
 
 Gets classification export filters.
 
@@ -135,25 +123,21 @@ The returned data consists of values that can be passed in as parameters of `Cla
 | **`rsid_list`** | `string[]` | A list of report suites that contains the specified data source. |
 | **`element`** | `string` | The element for which you want to get file information. |
 
-|Response Type|Description|
-|----|-----------|
-| `classifications_filters` | Information about valid filters for the specified data segment. |
+Returns `classifications_filters`, information about valid filters for the specified data segment.
 
-## Classifications.GetFTP
+## GetFTP
 
 Returns a list of the classifications FTP accounts that are configured for a company. Does not require a JSON request body.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFTP`
 
-|Response|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
 |**rsid_list** |`string[]` | report suites for which you want to retrieve FTP information. |
 
-| Response Type | Description |
-|--------|---------------|
-| `classifications_report_suite_ftp[]` | Struct containing details with the FTP accounts for a report suite. |
+Returns `classifications_report_suite_ftp[]`, struct containing details with the FTP accounts for a report suite.
 
-## Classifications.GetStatus
+## GetStatus
 
 Returns the status of the specified classification request.
 
@@ -163,11 +147,9 @@ Returns the status of the specified classification request.
 |---------|----|-----------|
 | **`job_id`** | `int` | The classifications job ID. |
 
-|Response Type|Description|
-|----|-----------|
-| `classifications_job_status[]` | The status of the specified classifications job. Possible values include:<br/>`Waiting for user data`<br/>`In progress`<br/>`In progress - % Complete`<br/>`Completed`<br/>`Completed - With Errors : <message>`|
+Returns `classifications_job_status[]`, the status of the specified classifications job. Possible values include `Waiting for user data`, `In progress`, `In progress - % Complete`, `Completed`, `Completed - With Errors : <message>`.
 
-## Classifications.GetTemplate
+## GetTemplate
 
 Similar to the Template tab in the Classifications tool in the Admin Console UI, this retrieves a template to use for importing classifications data.
 
@@ -180,11 +162,9 @@ Similar to the Template tab in the Classifications tool in the Admin Console UI,
 | **`classification_names`** | `string[]` | (Optional) an array of text classification names to include as columns in the template. |
 | **`encoding`** | `string` | The encoding to use for the template |
 
-| Response Type | Description |
-|--------|---------------|
-| `classifications_report_suite_template[]` | The template, or headers in the classifications export file |
+Returns `classifications_report_suite_template[]`, the template, or headers in the classifications export file.
 
-## Classifications.PopulateImport
+## PopulateImport
 
 Appends row data to a previously created classifications import job. You can separate data into pages, but the pages must be sent sequentially (either ascending or descending) to avoid errors when the job processes. Individual classifications jobs cannot exceed 25,000 rows.
 
@@ -196,6 +176,4 @@ Appends row data to a previously created classifications import job. You can sep
 |**`page`** | `int` | A page number that identifies the page's sequential position in the import job. For example, if you submit a spreadsheet with 1000 values, divided into 4 pages, page 1 includes values 1 - 250, page 2 includes values 251 - 500, and so on. |
 |**`rows`** |`rows` | An array of row data that matches the column heading order of the specified import job. |
 
-|Response Type|Description|
-|----|-----------|
-|`boolean` | Indicates if the job processed successfully. |
+Returns `true` if the job processed successfully.

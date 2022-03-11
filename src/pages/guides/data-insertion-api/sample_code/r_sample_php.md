@@ -2,7 +2,7 @@
 
 This PHP sample illustrates how to connect to Adobe data collection servers and record a page view.
 
-```
+```php
 <?/
  **
  * @file

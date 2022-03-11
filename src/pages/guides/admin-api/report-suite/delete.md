@@ -1,164 +1,120 @@
-# DeleteCalculatedMetrics
+# ReportSuite.Delete methods
+
+`ReportSuite` methods that delete or reset settings.
+
+Most `ReportSuite.Delete` methods require an `rsid_list` parameter. Include this list of report suites as a JSON body in the API call.
+
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteVirtualReportSuite" \
+    -H "x-api-key: {OAUTHTOKEN}" \
+    -H "x-proxy-global-company-id: {COMPANYID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Accept: application/json" \
+    -H "Content-Type: application/json" \
+    -d "{'rsid':'vrs_dehans0_newvrs'}"
+```
+
+#### Response
+
+```json
+true
+```
+
+## DeleteCalculatedMetrics
 
 Deletes the specified set of calculated metrics for each of the specified report suites.
 
-## ReportSuite.DeleteCalculatedMetrics parameters
+`POST https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteCalculatedMetrics`
 
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
 | **`rsid_list`** | `string[]` |A list of report suite IDs.|
 | **`calculated_metrics`** | `calculated_metric[]` |List of calculated metrics to delete from the specified report suites.|
 
-## ReportSuite.DeleteCalculatedMetrics response
+Returns `true` if the operation is successful.
 
-|Type|Description|
-|----|-----------|
-| `boolean` |Returns `true` if the operation is successful.|
-
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
-
-# DeleteClassification
+## DeleteClassification
 
 Deletes a classification from one or more report suites.
 
-## ReportSuite.DeleteClassification Parameters
+`POST https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteClassification`
 
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `string[]` | A list of report suite IDs.|
-| **element** | `string` | The element from which you want to delete the classification. |
-| **name** | `string` | The name of the classification to delete. |
+| **`rsid_list`** | `string[]` | A list of report suite IDs.|
+| **`element`** | `string` | The element from which you want to delete the classification. |
+| **`name`** | `string` | The name of the classification to delete. |
 
-## ReportSuite.DeleteClassification Response
+Returns `true` if the operation is successful.
 
-| Type | Description |
-|--------|---------------|
-| `boolean` | Returns `true` if the operation is successful. |
-
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
-
-# DeleteInternalURLFilters
+## DeleteInternalURLFilters
 
 Deletes the internal URL filters for each of the specified report suites.
 
-## ReportSuite.DeleteInternalURLFilters parameters
+`POST https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteInternalURLFilters`
 
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`string[]` |A list of report suite IDs.|
-|**internal_url_filters** |`string[]` |A list of URLs to delete from the internal URL filters list.|
+|**`rsid_list`** |`string[]` |A list of report suite IDs.|
+|**`internal_url_filters`** |`string[]` |A list of URLs to delete from the internal URL filters list.|
 
-## ReportSuite.DeleteInternalURLFilters response
+Returns `true` if the operation is successful.
 
-|Type|Description|
-|----|-----------|
-|`boolean` |Returns `true` if the operation is successful.|
-
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
-
-# DeleteIPAddressExclusion
+## DeleteIPAddressExclusion
 
 Delete an IP exclusion entry for a given report suite.
 
-## ReportSuite.DeleteIPAddressExclusion parameters
+`POST https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteIPAddressExclusion`
 
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`string[]` |A list of report suite IDs.|
-|**ip_address** |`string` |The IP address to remove from the IP address exclusions list.|
+|**`rsid_list`** |`string[]` |A list of report suite IDs.|
+|**`ip_address`** |`string` |The IP address to remove from the IP address exclusions list.|
 
-## ReportSuite.DeleteIPAddressExclusion response
+Returns `true` if the operation is successful.
 
-|Type|Description|
-|----|-----------|
-|`boolean` |Returns `true` if the operation is successful.|
-
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
-
-# DeleteKeyVisitors
-
-Deletes key visitors from each of the specified report suites.
-
-## ReportSuite.DeleteKeyVisitors
-
-|Name|Type|Description|
-|----|----|-----------|
-|**rsid_list** |`string[]` |A list of report suite IDs.|
-|**key_visitors** |`string[]` |A list of key visitors to delete, identified by either domain name (`abccorp.com`) or IP address (`192.168.10.128`).|
-
-## ReportSuite.DeleteKeyVisitors response
-
-|Type|Description|
-|----|-----------|
-|`boolean` |Returns `TRUE` if the operation is successful. Otherwise, returns `FALSE`.|
-
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
-
-# DeleteMarketingChannelCost
+## DeleteMarketingChannelCost
 
 Deletes a cost item for the selected report suites.
 
-## ReportSuite.DeleteMarketingChannelCost parameters
+`POST https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteMarketingChannelCost`
 
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
-|**rsid_list** |`array (xsd:string)` |A list of report suite IDs.|
-|**channel_type** |`string` | |
-|**cost_group** |`string` | |
-|**cost_id** |`string` | |
+|**`rsid_list`** |`array (xsd:string)` |A list of report suite IDs.|
+|**`channel_type`** |`string` | |
+|**`cost_group`** |`string` | |
+|**`cost_id`** |`string` | |
 
-## ReportSuite.DeleteMarketingChannelCost response
+Returns `true` if the operation was successful.
 
-|Type|Description|
-|----|-----------|
-|`boolean` |Returns `true` if the operation was successful.|
-
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
-
-# DeletePaidSearchDetection
+## DeletePaidSearchDetection
 
 Removes the specified paid search rule.
 
-## ReportSuite.DeletePaidSearchDetection parameters
+`POST https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeletePaidSearchDetection`
 
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
-| **rsid_list** | `string[]` |A list of report suite IDs.|
-|**search_engine** |[`search_engine_enum`](../data_types.md#searchengineenum) | The name of the search engine. |
-|**operator** | `string` | Specifies the type of paid search rule. Valid values include `contains` or `not_contains`. |
-|**query_string** |`string` |The string value to use when matching a search engine referring URL.|
+| **`rsid_list`** | `string[]` |A list of report suite IDs.|
+|**`search_engine`** |[`search_engine_enum`](../data_types.md#searchengineenum) | The name of the search engine. |
+|**`operator`** | `string` | Specifies the type of paid search rule. Valid values include `contains` or `not_contains`. |
+|**`query_string`** |`string` |The string value to use when matching a search engine referring URL.|
 
-## ReportSuite.DeletePaidSearchDetection response
+Returns `true` if the operation was successful.
 
-|Type|Description|
-|----|-----------|
-|`boolean` |Returns `true` if the operation was successful.|
+## DeleteVirtualReportSuite
 
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
+Removes the specified virtual report suite.
 
-# DeleteVirtualReportSuite
+`POST https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteVirtualReportSuite`
 
- 
-
-## ReportSuite.DeleteVirtualReportSuite parameters
-
-|Name|Type|Description|
+|Parameter|Type|Description|
 |----|----|-----------|
 | **rsid** | `string` | Report suite ID of virtual report suite. |
 
- Example:
-
- ```
-{
-    "rsid":"vrs_dehans0_newvrs"
-}
-```
-
-## ReportSuite.DeleteVirtualReportSuite response
-
-|Type|Description|
-|----|-----------|
-| `boolean` | Returns true if operation was successful. |
-
-**Parent topic:** [Report Suite](../../methods/report_suite/r_methods_reportsuite.md)
-
+Returns true if operation is successful.

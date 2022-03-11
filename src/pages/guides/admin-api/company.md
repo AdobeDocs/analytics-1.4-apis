@@ -2,7 +2,7 @@
 
 Allows you to change company settings.
 
-## Company.GetEndpoint
+## GetEndpoint
 
 Retrieves the endpoint for the specified company where API calls should be made. The domain `api.omniture.com` works for all organizations and routes your call to the correct data center. However, you can improve performance by submitting API calls directly to the correct data center without any rerouting.
 
@@ -12,22 +12,17 @@ Retrieves the endpoint for the specified company where API calls should be made.
 |----|----|-----------|
 |**`company`** |`string` |The company name, can also be passed in query string.|
 
-|Response Type|Description|
-|----|-----------|
-| `string` | The company endpoint. Possible values include:<br/>`api2.omniture.com` - Dallas<br/>`api3.omniture.com` - London<br/>`api4.omniture.com` - Singapore<br/>`api5.omniture.com` - Pacific Northwest |
+Returns the company endpoint. Possible values include: `api2.omniture.com` (Dallas), `api3.omniture.com` (London), `api4.omniture.com` (Singapore), `api5.omniture.com` (Pacific Northwest).
 
-## Company.GetReportSuites
+## GetReportSuites
 
 Retrieves all report suites associated with the requesting company.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Company.GetReportSuites`
 
-|Parameter|Type|Description|
-|----|----|-----------|
-|**`types`** |`string[]` |A list of report suite types that you want to include in the report suite list. Supported types include: `standard`, `rollup`, `virtual`.|
-|**`search`** |`string` |A search filter to apply in retrieving report suites.|
+<CodeBlock slots="heading, code" repeat="2" languages="JSON,JSON"/>
 
-Example:
+#### Request body
 
 ```json
 {
@@ -40,11 +35,7 @@ Example:
 }
 ```
 
-|Response Type|Description|
-|----|-----------|
-|`company_report_suite[]` |A list of report suites that match the specified request parameters.|
-
-Example:
+#### Response
 
 ```json
 {
@@ -60,7 +51,14 @@ Example:
 }
 ```
 
-## Company.GetTrackingServer
+|Parameter|Type|Description|
+|----|----|-----------|
+|**`types`** |`string[]` |A list of report suite types that you want to include in the report suite list. Supported types include: `standard`, `rollup`, `virtual`.|
+|**`search`** |`string` |A search filter to apply in retrieving report suites.|
+
+Returns `company_report_suite[]`, a list of report suites that match the specified request parameters.
+
+## GetTrackingServer
 
 Returns the tracking server and namespace for the specified report suite.
 
@@ -70,16 +68,12 @@ Returns the tracking server and namespace for the specified report suite.
 |----|----|-----------|
 |**`rsid`** |`string` |A report suite ID.|
 
-|Response Type|Description|
-|----|-----------|
-|`tracking_server_data` |The tracking server information for the specified report suite.|
+Returns `tracking_server_data` the tracking server information for the specified report suite.
 
-## Company.GetVersionAccess
+## GetVersionAccess
 
 Retrieves version access for the company of the authenticated user. Does not have any parameters.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=GetVersionAccess`
 
-|Response Type|Description|
-|----|-----------|
-|`string[]` |A list of Analytics interfaces to which the company has access.|
+Returns a `string[]` list of Analytics interfaces to which the company has access.

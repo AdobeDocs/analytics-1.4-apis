@@ -2,7 +2,7 @@
 
 Create, edit, or delete calculated metrics.
 
-## CalculatedMetrics.Get
+## Get
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=CalculatedMetrics.Get`
 
@@ -59,7 +59,7 @@ Create, edit, or delete calculated metrics.
 },
 ```
 
-## CalculatedMetrics.Delete
+## Delete
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=CalculatedMetrics.Delete`
 
@@ -81,7 +81,7 @@ Create, edit, or delete calculated metrics.
 }
 ```
 
-## CalculatedMetrics.GetFunctions
+## GetFunctions
 
 Does not require a JSON request body. Response is an array of calculated metric functions.
 
@@ -117,7 +117,7 @@ Does not require a JSON request body. Response is an array of calculated metric 
 * `"required"`: The parameters that are required to use the function in a calc metric definition and the order they must be in
 * `"optional"`: Additional parameters that can be left out, but must still be included in the order shown
 
-## CalculatedMetrics.Save
+## Save
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=CalculatedMetrics.Save`
 

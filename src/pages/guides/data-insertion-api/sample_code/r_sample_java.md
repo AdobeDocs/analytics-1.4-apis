@@ -73,7 +73,7 @@ public class DataInsertion
 
 ## DataSubmission.java
 
-```
+```java
 package com.omniture;
 
 import java.io.BufferedReader;

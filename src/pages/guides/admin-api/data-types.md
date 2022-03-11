@@ -415,8 +415,8 @@ Data structure that contains information a company's Pending queue.
 |Element|Type|Description|
 |-------|----|-----------|
 |**`min_granularity`** |`string` | Granularity of the report. Set to 1 for the most efficient report. |
-|**`metric`** |`string` | Provide the single metric for which you want to retrieve realtime data. The following metrics can be selected: revenue, orders, units, custom events, instances |
-|**`elements`** |`string[]` | Provide up to three elements (dimensions) to correlate with the provided metric. You must specify at least one element if the 'ui_report' parameter is set to 'false', at three elements if 'ui_report' is omitted or set to true. Note that you must specify elements during configuration, but you can run a real time report that includes only the metric or only some of the configured elements. |
+|**`metric`** |`string` | Provide the single metric for which you want to retrieve realtime data. Valid values include `pageviews`, `revenue`, `orders`, `units`, `carts`, `cartviews`, `instances`, `checkouts`, `cartadditions`, `cartremovals`, `event1` - `event1000`, `videotime`, `videostart`, `videocomplete`, `videosegmentviews`, `videoadstart`, `videoadcomplete`, `mobileinstalls`, `mobileupgrades`, `mobiledailyengagedusers`, `mobilemonthlyengagedusers`, `mobilelaunches`, `mobilecrashes`, `mobileprevsessionlength`. |
+|**`elements`** |`string[]` | Provide up to three elements (dimensions) to correlate with the provided metric. You must specify at least one element if the `ui_report` parameter is set to `false`, at three elements if `ui_report` is omitted or set to `true`. Note that you must specify elements during configuration, but you can run a real time report that includes only the metric or only some of the configured elements. Valid values include `page`, `sitesection`, `server`, `linkdownload`, `linkexit`, `linkcustom`, `topleveldomain`, `referringdomain`, `searchengine`, `searchenginekeyword`, `searchenginenatural`, `searchenginepaid`, `geocountry`, `georegion`, `geocity`, `geodma`, `prop1` - `prop75`, `evar1` - `evar250`, `listvar1` - `listvar3`, `video`, `videoad`, `videosegment`, `videocontenttype`, `mobileinstalldate`, `mobileappid`, `mobilelaunchnumber`, `mobiledayssincefirstuse`, `mobiledayssincelastuse`, `mobilehourofday`, `mobiledayofweek`, `mobileosenvironment`, `mobiledayssincelastupgrade`, `mobilelaunchessincelastupgrade`, `mobiledevice`, `mobileosversion`, `mobilegooglecampaignsource`, `mobilegooglecampaignmedium`, `mobilegooglecampaignterm`, `mobilegooglecampaigncontent`, `mobilegooglecampaignname`. |
 | **`name`** |`string` | Configuration name. If 'ui_report' is set to 'true', this name is also displayed in the reports & analytics UI. |
 |**`ui_report`** |`boolean` | Indicates whether or not this report is also visible in the reports & analytics UI. |
 
@@ -613,16 +613,6 @@ Data structure that contains information about a report suite's IP obfuscation s
 |**`rsid`** |`string` | The report suite ID. |
 |**`site_title`** |`string` | The report suite friendly name. |
 |**`ip_obfuscation`** |`string` | The IP obfuscation setting. Valid values include `obfuscated`, `none`, `ip_removed`. |
-
-## report_suite_key_visitors
-
-Data structure that contains information about a report suite's key visitor settings.
-
-|Element|Type|Description|
-|-------|----|-----------|
-|**`rsid`** |`string` | The report suite ID. |
-|**`site_title`** |`string` | The report suite friendly name. |
-|**`key_visitors`** |`string[]` | The key visitors, identified by either a domain or IP address. |
 
 ## report_suite_list_variable
 
@@ -822,10 +812,6 @@ Data structure that contains information about report suite's video settings.
 |**`site_title`** |`string` | The report suite friendly name. |
 |**`video_settings`** |[video_settings](#video_settings) | A list of video settings associated with this report suite. |
 
-## reportDefinitionLocale
-
-Data structure that contains information about a report suite's localization settings. Valid values include `en_US`, `de_DE`, `es_ES`, `fr_FR`, `jp_JP`, `ko_KR`, `zh_CN`, `zh_TW`.
-
 ## reportElement
 
 Data structure that contains information about a single element in a report suite.
@@ -926,3 +912,13 @@ Data structure that contains details about report suite's video settings.
 |**`video_time_event`** |`string` |Counts the time, in seconds, spent watching a video or ad.|
 |**`video_views_event`** |`string` |Indicates that a visitor has viewed some portion of a video or ad. However, it does not provide any information about how much, or what part, of a video the visitor viewed.|
 |**`video_completes_event`** |`string` |Indicates that a user has viewed a complete video or ad.|
+
+## virtual_report_settings
+
+Data structure that contains details about a virtual report suite's settings.
+
+|Element|Type|Description|
+|-------|----|-----------|
+| **`rsid`** | `string` | Virtual report suite ID. |
+| **`parent_rsid`** | `string` | Report suite ID for virtual report suite. |
+| **`segment_list`** | `segment_list[]` | List of segments applied to virtual report suite. |

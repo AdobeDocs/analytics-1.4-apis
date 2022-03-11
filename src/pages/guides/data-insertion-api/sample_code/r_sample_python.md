@@ -2,12 +2,12 @@
 
 This Python sample illustrates how to access the Data Insertion API.
 
-```
+```py
 import httplib
 
-xml='<?xml version="1.0" encoding="UTF-8"?>
-<request> <scXmlVer>1.0</scXmlVer>
-<reportSuiteID>Corp1_rs</reportSuiteID>
+xml='<?xml version="1.0" encoding="UTF-8"?> \
+<request> <scXmlVer>1.0</scXmlVer> \
+<reportSuiteID>Corp1_rs</reportSuiteID> \
 <timestamp>YYYY-03-20T10:33:22-07</timestamp> <visitorID>169</visitorID> <ipAddress>10.0.0.1</ipAddress> <pageName>Test Page</pageName></request>'
 
 conn = httplib.HTTPConnection("namespace.sc.omtrdc.net:80")

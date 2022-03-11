@@ -11,10 +11,6 @@ Data structure that contains information about valid data filters for a classifi
 |**`id`**|`string` |Element id.|
 |**`name`**|`string` |Element name.|
 
-## classifications_compatibility_element_array
-
-An array of `classifications_compatibility_element`.
-
 ## classifications_filters
 
 Data structure that contains information about valid data filters for a classifications export job.
@@ -39,10 +35,6 @@ Complete details for a classifications FTP account.
 |**`username`** |`string` | the username on the FTP account that was created. |
 |**`password`** |`string` | the password "" "" |
 
-## classifications_ftp_array
-
-An array of `classifications_ftp`.
-
 ## classifications_ftp_info
 
 Contains connection details for an FTP account.
@@ -64,10 +56,6 @@ Data structure that contains status information about a classifications job.
 |**`viewable_pages`** |`int` | The number of pages in the request. |
 |**`status`** |`string` | The job or file status. Supported values include:  `Waiting For User Data`  `In Progress`  `Completed`  `Completed--With Errors` |
 
-## classifications_job_status_array
-
-An array of `classifications_job_status`.
-
 ## classifications_report_suite_compatibility_elements
 
 Data structure that contains information about valid data filters for a classifications export job.
@@ -76,11 +64,7 @@ Data structure that contains information about valid data filters for a classifi
 |-------|----|-----------|
 |**`id`**|`string` |Element id.|
 |**`name`**|`string` |Element name.|
-|**`compatibility_elements`**|`classifications_compatibility_element_array` |Valid data filters.|
-
-## classifications_report_suite_compatibility_elements_array
-
-An array of `classifications_report_suite_compatibility_elements`.
+|**`compatibility_elements`**|`classifications_compatibility_element[]` |Valid data filters.|
 
 ## classifications_report_suite_ftp
 
@@ -90,11 +74,7 @@ Data structure that contains the template file for a classifications import.
 |-------|----|-----------|
 |**`rsid`**| `string` | Report suite ID. |
 |**`site_title`**| `string` | Site title. |
-|**`ftp`**| `classifications_ftp_array` | FTP account details. |
-
-## classifications_report_suite_ftp_array
-
-An array of `classifications_report_suite_ftp`.
+|**`ftp`**| `classifications_ftp[]` | FTP account details. |
 
 ## classifications_report_suite_template
 
@@ -106,10 +86,6 @@ Data structure that contains the template file for a classifications import.
 |**`site_title`**|`string` | Site title. |
 |**`template`**|`string` | Contents of the template file. |
 
-## classifications_report_suite_template_array
-
-An array of `classifications_report_suite_template`.
-
 ## pagedetail
 
 Data structure that contains information from a single data page of a classifications export job.
@@ -119,15 +95,3 @@ Data structure that contains information from a single data page of a classifica
 |**`warnings`** |`string[]` | An array that includes all warnings associated with the specified export file. |
 |**`header`** |`string[]` | The column headings for the exported data. |
 |**`data`** |`rows` | The data rows from the specified export file segment. |
-
-## pagedetails
-
-An array of `pagedetail`.
-
-## row
-
-An array of `string`.
-
-## rows
-
-An array of `row`.

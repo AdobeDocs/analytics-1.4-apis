@@ -12,8 +12,6 @@ In addition to providing an automated mechanism for submitting data to Analytics
 
 Contrast this with an FTP data submission, where data validation doesn't occur until Analytics attempts to process the data. This difference in validation points results in a delay of at least 30 minutes before you know about a data formatting error.
 
-![Displays the flow of data using both the Data Sources API and traditional Data Sources upload (FTP).](graphics/data_sources_overview.png)
-
 The general process for creating a Data Source with the Data Sources API is as follows:
 
 1.  Call one of the Data Source setup methods (`DataSource.SetupTraffic`, `DataSource.SetupWebLog`, `DataSource.SetupGeneric`) to create the type of data source you need.
