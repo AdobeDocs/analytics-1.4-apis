@@ -10,8 +10,6 @@ Use an HTTP POST to submit properly-formatted Data Insertion XML to the Data Ins
 
 `http://namespace.sc.omtrdc.net/b/ss//6` 
 
-`http://namespace.sc.omtrdc.net/b/ss//6` 
-
 **Note:** The "6" code at the end of the URL indicates that the data submission requires XML processing.
 
 Upon receipt, Adobe servers perform basic tag validation of the data insertion. If it encounters an error, Adobe returns a `Failure` response. If the data insertion is successful, Adobe queues the data insertion request for processing by the standard Analytics Data Processing Engine. The engine processes these requests in the same way it processes data collected via JavaScript.
