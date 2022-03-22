@@ -9,14 +9,15 @@ When sending `HTTP POST` data, Adobe data collection servers only process values
 Every Data Insertion API call must include the following components:
 
 * At least one of:
-  * `<marketingCloudVisitorID>`
-  * `<visitorID>`
+  * `<marketingCloudVisitorId>`
+  * `<fallbackVisitorId>`
+  * `<visitorId>`
   * `<ipAdress>` and `<userAgent>`
 * At least one of:
-  * `<pageURL>`
+  * `<pageUrl>`
   * `<pageName>`
-  * `<linkType>` with `<linkName>` or `<linkURL>`
-* Report suite ID (in the request URL for `GET` or `<reportSuiteID>` for `POST`)
+  * `<linkType>` with `<linkName>` or `<linkUrl>`
+* Report suite ID (in the request URL for `GET` or `<reportSuiteId>` for `POST`)
 
 API calls that do not meet the above requirements are omitted from reporting. XML tags are not case-sensitive; capitalization is used only to assist readability.
 
@@ -42,10 +43,10 @@ XML tag (`POST`) | Query string parameter (`GET`) | Description
 `<language>` | `Accept-Language` HTTP header | The [Language](https://experienceleague.adobe.com/docs/analytics/components/dimensions/language.html) dimension.
 `<linkName>` | `pev2` | The [Download link](https://experienceleague.adobe.com/docs/analytics/components/dimensions/download-link.html), [Exit link](https://experienceleague.adobe.com/docs/analytics/components/dimensions/exit-link.html), or [Custom link](https://experienceleague.adobe.com/docs/analytics/components/dimensions/custom-link.html) dimension, depending on the value in the `<linkType>` tag. If this tag contains a value, `<pageName>` is ignored.
 `<linkType>` | `pe` | The type of link. Defaults to `o` if this tag is empty or omitted and `<linkName>` contains a value. Valid values include:<br/> **`d`**: Download link<br/>**`e`**: Exit link<br/>**`o`**: Custom link
-`<linkURL>` | `pev1` | The link URL.
+`<linkUrl>` | `pev1` | The link URL.
 `<list1>` - `<list3>` | `l1` - `l3` | [List variables](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html).
-`<marketingCloudOrgID>` | `mcorgid` | The Experience Cloud Organization ID; it identifies the organization within the Adobe Experience Cloud.
-`<marketingCloudVisitorID>` | `mid` | The unique identifier used with the [Adobe Experience Cloud Identity Servce](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+`<marketingCloudOrgId>` | `mcorgid` | The Experience Cloud Organization ID; it identifies the organization within the Adobe Experience Cloud.
+`<marketingCloudVisitorId>` | `mid` | The unique identifier used with the [Adobe Experience Cloud Identity Servce](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 `<pageName>` | `pageName` | The [Page](https://experienceleague.adobe.com/docs/analytics/components/dimensions/page.html) dimension.
 `<pageType>` | `pageType` | The [`pageType`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagetype.html) implementation variable. Set to the string value `"errorPage"` on any error pages, such as a 404 or 503 error.
 `<pageUrl>` | `g` | The [Page URL](https://experienceleague.adobe.com/docs/analytics/components/dimensions/page-url.html) dimension.
@@ -53,7 +54,7 @@ XML tag (`POST`) | Query string parameter (`GET`) | Description
 `<prop1>` - `<prop75>` | `c1` - `c75` | [Prop](https://experienceleague.adobe.com/docs/analytics/components/dimensions/prop.html) dimensions.
 `<purchaseId>` | `purchaseID` | The [`purchaseID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/purchaseid.html) implementation variable.
 `<referrer>` | `r` | The [`referrer`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/referrer.html) implementation variable.
-`<reportSuiteID>` | Include in `GET` URL | Specifies the report suite(s) where you want to submit data. Separate multiple report suite IDs with a comma.
+`<reportSuiteId>` | Include in `GET` URL | Specifies the report suite(s) where you want to submit data. Separate multiple report suite IDs with a comma.
 `<resolution>` | `s` | The [Monitor resolution](https://experienceleague.adobe.com/docs/analytics/components/dimensions/monitor-resolution.html) dimension.
 `<scXmlVer>` | N/A | Analytics XML request version number. For example, `1.0`.
 `<server>` | `server` | The [Server](https://experienceleague.adobe.com/docs/analytics/components/dimensions/server.html) dimension.
