@@ -1,6 +1,6 @@
-# Adobe I/O Documentation Template
+# Adobe Developer Documentation Template
 
-This is a site template built with the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
+This is a site template built with the [Adobe Developer Theme](https://github.com/adobe/aio-theme).
 
 View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) running on Github Pages.  
 
