@@ -33,3 +33,4 @@
     -   [row](data_types/r_row.md)
     -   [rows](data_types/r_rows.md)
 
+To delete, rename or create classifications, see https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/admin-api/methods/report_suite/r_methods_reportsuite.md
