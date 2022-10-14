@@ -38,3 +38,8 @@ A: The likelihood of receiving duplicate records increases during reconnect or w
 Q: What should I do with empty records?
 
 A: Empty records are sometimes returned in the stream. These can be ignored.
+
+Q: I haven't connected to Livestream for a while and recently tried to reconnect and received a HTTP 404, what happened?
+
+A: Unused streams are disabled after 90 days of client inactivity. Please reach out to Customer Care to have your stream reenabled.
+
