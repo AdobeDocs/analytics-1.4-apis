@@ -41,7 +41,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataFeed.GetFeeds"
 }
 ```
 
-|Parameter|Type|Description|
+|JSON Request Element|Type|Description|
 |----|----|-----------|
 |**`rsid_list`** |`string[]` | List of report suites for which you want to view feed information. |
 |**`start_time`** |`string` | (Optional) UTC time. Specify the start time of the feed activity to include with each feed. A maximum of 48 hours may be requested. Default when no `start_time` is present will return only the latest job. |
@@ -50,7 +50,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataFeed.GetFeeds"
 
 Returns an array of data feeds. Each array element can contain the following information:
 
-|Element|Type|Description|
+|JSON Response Element|Type|Description|
 |-------|----|-----------|
 |**`rsid`** |`string` | The report suite ID corresponding to the data feed. |
 |**`feed_id`** |``int`` | Unique id for this data feed. |
@@ -92,16 +92,16 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataFeed.GetFeed" 
 }
 ```
 
-|Parameter|Type|Description|
+|JSON Request Parameter|Type|Description|
 |----|----|-----------|
 |**`feed_id`** |`int` | ID of the feed. Retrieve the ID using `DataFeed.GetFeeds`. |
 
 Returns details for the specified feed.
 
-|Return Element|Type|Description|
+|JSON Response Element|Type|Description|
 |-------|----|-----------|
 |**`rsid`** |`string` | The report suite corresponding to the data feed. |
-|**`feed_id`** |``int`` | Unique id for this data feed. |
+|**`feed_id`** |`int` | Unique id for this data feed. |
 |**`interval`** |`string` | Delivery interval for the data feed. Either `Daily` or `Hourly`.<br/>`Daily`: Data for each day is delivered after it is processed in a single zipped file, or in multiple zipped files each containing approximately 2 GB of uncompressed data. You receive a single delivery for each day.<br/>`Hourly`: Data for each hour is delivered in a single zipped file that contains all data received during that hour. You receive 24 separate deliveries for each day, with each file delivered after the data for that hour is processed. |
 |**`timezone`** |`string` | Time zone for which the feed is configured. For example, `"America/Denver"`. |
 |**`status`** | `string` | Feed status, one of the following:<br/>`active`: Feed is being generated according to schedule.<br/>`hold`: Feed is paused, usually for administrative reasons. This usually indicates that the feed requires require corrective action before it can be resumed, for example, new FTP information.<br/>`completed`: If a feed was created with a stop date, this indicates that the feed has reached the stop date and will no longer run.<br/>`cancelled`: The feed is no longer needed, and can be deleted. |
