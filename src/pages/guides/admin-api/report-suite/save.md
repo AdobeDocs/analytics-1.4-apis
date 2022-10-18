@@ -10,13 +10,12 @@ Most `ReportSuite.Save` methods require an `rsid_list` parameter as well as the 
 
 ```sh
 curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.SaveVirtualReportSuiteSettings" \
-    -H "x-api-key: {OAUTHTOKEN}" \
-    -H "x-proxy-global-company-id: {COMPANYID}" \
+    -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Accept: application/json" \
     -H "Content-Type: application/json" \
     -d "{
-            'rsid':'vrs_dehans0_newvrs',
+            'rsid':'examplersid',
             'parent_rsid':'sistr2',
             'name':'new vrs',
             'segment_list': [
@@ -30,7 +29,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.SaveVi
 
 ```json
 {
-    "rsid": "vrs_dehans0_newvrs"
+    "rsid": "examplersid"
 }
 ```
 

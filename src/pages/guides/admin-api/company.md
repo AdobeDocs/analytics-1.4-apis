@@ -44,7 +44,7 @@ Retrieves all report suites associated with the requesting company.
         "site_title": "test VRS",
         "virtual": true
     }, {
-        "rsid": "vrs_dehans0_newvrs_1",
+        "rsid": "examplersid_1",
         "site_title": "new vrs",
         "virtual": true
     }]

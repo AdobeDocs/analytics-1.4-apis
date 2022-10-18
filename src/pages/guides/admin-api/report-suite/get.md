@@ -10,19 +10,17 @@ Most `ReportSuite.Get` methods require an `rsid_list` parameter. Include this li
 
 ```sh
 curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.GetVirtualReportSuiteSettings" \
-    -H "x-api-key: {OAUTHTOKEN}" \
-    -H "x-proxy-global-company-id: {COMPANYID}" \
+    -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
-    -H "Accept: application/json" \
     -H "Content-Type: application/json" \
-    -d "{'rsid_list':['vrs_dehans0_newvrs']}"
+    -d "{'rsid_list':['examplersid']}"
 ```
 
 #### Response
 
 ```json
 [{
-    "rsid": "vrs_dehans0_newvrs",
+    "rsid": "examplersid",
     "parent_rsid": "sistr2",
     "segment_list": ["536bfa98e4b06d874b0c927a", "536bfa99e4b06d874b0c927f"]
 }]

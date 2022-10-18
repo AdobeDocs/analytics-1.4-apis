@@ -14,12 +14,10 @@ Returns a list of data feeds for the specified report suites, including delivery
 
 ```sh
 curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataFeed.GetFeeds" \
-    -H "x-api-key: {OAUTHTOKEN}" \
-    -H "x-proxy-global-company-id: {COMPANYID}" \
+    -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
-    -H "Accept: application/json" \
     -H "Content-Type: application/json" \
-    -d "{'rsid_list':['myrsid']}"
+    -d "{'rsid_list':['examplersid']}"
 ```
 
 #### Response
@@ -28,7 +26,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataFeed.GetFeeds"
 {
   "data_feeds": [
     {
-      "rsid": "myrsid",
+      "rsid": "examplersid",
       "feed_id": 1006552,
       "interval": "hourly",
       "date": "YYYY-02-06",
@@ -69,10 +67,8 @@ Gets configuration details for a specific feed, including feed status, FTP deliv
 
 ```sh
 curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataFeed.GetFeed" \
-    -H "x-api-key: {OAUTHTOKEN}" \
-    -H "x-proxy-global-company-id: {COMPANYID}" \
+    -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
-    -H "Accept: application/json" \
     -H "Content-Type: application/json" \
     -d "{'feed_id':1006552}"
 ```
@@ -81,7 +77,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataFeed.GetFeed" 
 
 ```json
 {
-  "rsid": "myrsid",
+  "rsid": "examplersid",
   "feed_id": 1006552,
   "interval": "hourly",
   "timezone": "America/Denver",

@@ -10,12 +10,10 @@ Most `ReportSuite.Delete` methods require an `rsid_list` parameter. Include this
 
 ```sh
 curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.DeleteVirtualReportSuite" \
-    -H "x-api-key: {OAUTHTOKEN}" \
-    -H "x-proxy-global-company-id: {COMPANYID}" \
+    -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
-    -H "Accept: application/json" \
     -H "Content-Type: application/json" \
-    -d "{'rsid':'vrs_dehans0_newvrs'}"
+    -d "{'rsid':'examplersid'}"
 ```
 
 #### Response
@@ -32,8 +30,8 @@ Deletes the specified set of calculated metrics for each of the specified report
 
 |Parameter|Type|Description|
 |----|----|-----------|
-| **`rsid_list`** | `string[]` |A list of report suite IDs.|
-| **`calculated_metrics`** | `calculated_metric[]` |List of calculated metrics to delete from the specified report suites.|
+| **`rsid_list`** | `string[]` | A list of report suite IDs. |
+| **`calculated_metrics`** | `calculated_metric[]` | List of calculated metrics to delete from the specified report suites.|
 
 Returns `true` if the operation is successful.
 
