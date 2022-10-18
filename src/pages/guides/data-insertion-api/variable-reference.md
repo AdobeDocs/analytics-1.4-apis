@@ -46,7 +46,7 @@ XML tag (`POST`) | Query string parameter (`GET`) | Description
 `<linkUrl>` | `pev1` | The link URL.
 `<list1>` - `<list3>` | `l1` - `l3` | [List variables](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html).
 `<marketingCloudOrgId>` | `mcorgid` | The Experience Cloud Organization ID; it identifies the organization within the Adobe Experience Cloud.
-`<marketingCloudVisitorId>` | `mid` | The unique identifier used with the [Adobe Experience Cloud Identity Servce](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+`<marketingCloudVisitorId>` | `mid` | The unique identifier used with the [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/library.html).
 `<pageName>` | `pageName` | The [Page](https://experienceleague.adobe.com/docs/analytics/components/dimensions/page.html) dimension.
 `<pageType>` | `pageType` | The [`pageType`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagetype.html) implementation variable. Set to the string value `"errorPage"` on any error pages, such as a 404 or 503 error.
 `<pageUrl>` | `g` | The [Page URL](https://experienceleague.adobe.com/docs/analytics/components/dimensions/page-url.html) dimension.
@@ -58,7 +58,7 @@ XML tag (`POST`) | Query string parameter (`GET`) | Description
 `<resolution>` | `s` | The [Monitor resolution](https://experienceleague.adobe.com/docs/analytics/components/dimensions/monitor-resolution.html) dimension.
 `<scXmlVer>` | N/A | Analytics XML request version number. For example, `1.0`.
 `<server>` | `server` | The [Server](https://experienceleague.adobe.com/docs/analytics/components/dimensions/server.html) dimension.
-`<timestamp>` | `ts` | The date and time that the data was collected. [Unix Time](https://en.wikipedia.org/wiki/Unix_time) and [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) are supported. Milliseconds are not allowed.
+`<timestamp>` | `ts` | The date and time that the data was collected. [Unix Time](https://en.wikipedia.org/wiki/Unix_time) and [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) are supported. Milliseconds are not allowed. See [Timestamps Optional](https://experienceleague.adobe.com/docs/analytics/technotes/timestamps-optional.html) for more information.
 `<transactionId>` | `xact` | The [`transactionID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/transactionid.html) variable.
 `<userAgent>` | `User-Agent` HTTP header | The device's user agent string.
 `<visitorId>` | `vid` | The [`visitorID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html) implementation variable.

@@ -1,56 +1,16 @@
-# Data Sources Api
+# Adobe Analytics Data Sources API
 
-- [Data Sources API](c_data_sources_api.md)
-    - [Data Sources Version 1.3](c_data_sources_api_1_3.md)
-        - [Overview](overview.md)
-        - [Methods](methods/c_data_sources_methods.md)
-            - [SetupTraffic](methods/r_setupTraffic.md)
-            - [SetupWebLog](methods/r_setupWebLog.md)
-            - [SetupGeneric](methods/r_setupGeneric.md)
-            - [GetIDs](methods/r_getIDs.md)
-            - [GetInfo](methods/r_getInfo.md)
-            - [BeginDataBlock](methods/r_beginDataBlock.md)
-            - [AppendDataBlock](methods/r_appendDataBlock.md)
-            - [ProcessIncompleteVisits](methods/r_processIncompleteVisits.md)
-            - [GetFileIDs](methods/r_getFileIDs.md)
-            - [GetFileInfo](methods/r_getFileInfo.md)
-            - [GetFileStatus](methods/r_getFileStatus.md)
-            - [Restart](methods/r_restart.md)
-            - [Deactivate](methods/r_deactivate.md)
-        - [Data Types](data_types/c_data_types.md)
-            - [colArray](data_types/r_col_array.md)
-            - [dataSourceFileInfo](data_types/r_data_source_file_info.md)
-            - [dataSourceFileStatus](data_types/r_data_source_file_status.md)
-            - [dataSourceInfo](data_types/r_data_source_info.md)
-            - [dsFileStruct](data_types/r_ds_file_struct.md)
-            - [ds_generic_settings](data_types/r_ds_generic_settings.md)
-            - [ds_setup_result](data_types/r_ds_setup_result.md)
-            - [ds_traffic_data_scope](data_types/r_ds_traffic_data_scope.md)
-            - [ds_traffic_settings](data_types/r_ds_traffic_settings.md)
-            - [ds_weblog_formats](data_types/r_ds_weblog_formats.md)
-            - [ds_weblog_settings](data_types/r_ds_weblog_settings.md)
-            - [errorList](data_types/r_error_list.md)
-            - [fileIDResult](data_types/r_file_id_result.md)
-            - [fileInfoResult](data_types/r_file_info_result.md)
-            - [fileStatusResult](data_types/r_file_status_result.md)
-            - [infoResult](data_types/r_info_result.md)
-            - [intArray](data_types/r_int_array.md)
-            - [rowArray](data_types/r_row_array.md)
-            - [simpleDataSource](data_types/r_simple_data_source.md)
-            - [simpleDataSourceArray](data_types/r_simple_data_source_array.md)
-            - [status](data_types/r_status.md)
-            - [warningList](data_types/r_warning_list.md)
-        - [Reference](r_Data_Sources_API_Reference.md)
-            - [Data Sources ID](c_data_sources_id.md)
-            - [Status Codes](c_status_codes.md)
-        - [Sample Code](c_sample_code.md)
-    - [Data Sources Version 1.4](c_data_sources_api_1_4.md)
-        - [Methods](methods/c_data_sources_methods_1.4.md)
-            - [DataSources.Get](methods/r_getDataSources.md)
-            - [DataSources.Delete](methods/r_deleteDataSources.md)
-            - [DataSources.GetJobs](methods/r_getjobsDataSources.md)
-            - [DataSources.ProcessIncompleteVisits](methods/r_processIncompleteVisits_1.4.md)
-            - [DataSources.Restart](methods/r_restart_1.4.md)
-            - [DataSources.UploadData](methods/r_uploadDataDataSources.md)
-            - [DataSources.Save](methods/r_save_datasources.md)
+Data Sources allow you to import additional online or offline data for reporting. If you use the [`transactionID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/transactionid.html) variable, you can tie online and offline data together.
 
+The Data Sources API allows you to create, edit and upload [Data sources](https://experienceleague.adobe.com/docs/analytics/import/data-sources/datasrc-home.html) to Adobe Analytics. If you use the Adobe Analytics UI to complete the Data Sources workflow, that normally involves using the UI to create a Data source, then manually uploading a file via FTP to the configured location. With the Data Sources API, you can create a Data source and upload data using just the API.
+
+One advantage to using the Data Sources API over a traditional FTP method is that you can get basic data validation immediately. FTP data validation doesn't happen until Adobe's servers attempt to process the data. This method of validation can take up to 30 minutes longer than by directly using the API.
+
+The overall workflow to use this API involves the following steps:
+
+1. Call one of the Data Source setup methods (`DataSource.SetupTraffic`, `DataSource.SetupWebLog`, `DataSource.SetupGeneric`) to create the type of data source that you want.
+2. Call `DataSource.GetIDs` or `DataSource.GetInfo` to get the Data Source ID of the new Data Source.
+3. Call `DataSource.BeginDataBlock` and, if necessary, `DataSource.AppendDataBlock` to add data to the new data source and submit the data source to the processing queue.
+4. Call `DataSource.GetFileIDs` or `DataSource.GetFileInfo` to get the file ID of the Data Source file in the processing queue.
+5. Call `DataSource.GetFileStatus` to monitor the status of the data source file. When data source processing completes, the data sent through the data source is available in Analytics.
+6. Call `DataSource.Deactivate` to manage the data source as needed.
