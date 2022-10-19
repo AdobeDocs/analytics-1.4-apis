@@ -167,10 +167,10 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataSources.Save" 
             "settings": {
                 "allowOutOfOrderHits": true,
                 "stopOnWarning": false,
-                "metricNames": ["event1"],
-                "metricEvents": ["event1"],
-                "dimensionNames": ["evar1"],
-                "dimensionVariables": ["evar1"]
+                "metricNames": ["Searches"],
+                "metricEvents": ["Event 1"],
+                "dimensionNames": ["Internal search"],
+                "dimensionVariables": ["Evar 1"]
             }
         }'
 ```
@@ -197,7 +197,7 @@ The settings object contains the following elements:
 
 | Settings object Element | Type | Description |
 | --- | --- | --- |
-| **`injectionType`** | `string` | . |
+| **`injectionType`** | `string` | |
 | **`allowOutOfOrderHits`** | `bool` | Determines if the data source allows hits to be processed out of order. |
 | **`stopOnWarning`** | `bool` | Determines if the data source stops processing data when it encounters a warning. |
 | **`metricNames`** | `string[]` | An array containing the desired metric names. Required when `processing_type` is `generic`. The array length must match `metricEvents`. |
@@ -206,100 +206,172 @@ The settings object contains the following elements:
 | **`dimensionVariables`** | `string[]` | An array containing the desired dimension variables. Required when `processing_type` is `generic`. The array length must match `dimensionNames`. |
 | **`dataScope`** | `string` | Valid values include `site_level` and `breakdown`. Required when `processing_type` is `traffic`. |
 | **`standardBreakdowns`** | `string[]` | An array containing the desired standard breakdowns. Required when `processing_type` is `traffic`. |
-| **`metricList`** | `string[]` |  Required when `processing_type` is `traffic`. |
-| **`customBreakdownNames`** | `string[]` |  Required when `processing_type` is `traffic`. |
-| **`customBreakdownValues`** | `string[]` |  Required when `processing_type` is `traffic`. |
+| **`metricList`** | `string[]` | Required when `processing_type` is `traffic`. |
+| **`customBreakdownNames`** | `string[]` | An array containing the desired custom breakdown names. Required when `processing_type` is `traffic`. |
+| **`customBreakdownValues`** | `string[]` | An array containing the desired custom breakdown values. Required when `processing_type` is `traffic`. |
 | **`logFormat`** | `string` | Required when `processing_type` is `weblog`. Valid values include `ncsa_common`, `ncsa_combined`, `w3c_extended`, and `microsoft_iis`. |
 
 The response returns the `dataSourceID` created or edited.
 
-# **DataSources.UploadData**
+## UploadData
 
 Uploads data to a data source.
 
-## **Request**
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
+#### Request
+
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataSources.UploadData" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{
+            "reportSuiteID":"examplersid",
+            "dataSourceID": 4,
+            "jobName": "Example data source upload",
+            "finished": true,
+            "columns":[
+                "Date",
+                "Evar 1",
+                "Event 1"
+            ],
+            "rows":[
+                [
+                    "10/19/YYYY",
+                    "Example eVar1 value",
+                    "1"
+                ],
+                [
+                    "10/20/YYYY",
+                    "Another eVar1 value",
+                    "0"
+                ]
+            ]
+        }'
 ```
-{
-    "columns":[
-        "(string)"
-    ],
-    "dataSourceID":(int),
-    "finished":(boolean),
-    "jobName":"(string)",
-    "reportSuiteID":"(string)",
-    "rows":[
-        [
-            "(string)"
-        ]
-    ]
-}
+
+#### Response
+
+```json
+true
 ```
 
-|Parameter|Description|
-|-----|----------|
-| `"columns"`  | Must match valid events and evars that the report suite has enabled. It also requires a date. The format for the columns is `"Date"`, `"Evar X"`, `"Event X"`. |
-| `"dataSourceId"`  | The ID of the data source (ftp) accepting the request. To determine this value, use [DataSources.Get](../../data-sources-api/methods/r_getDataSources.md) Method |
-| `"jobName"`  | This value must be the same for different parts of the same job. Note: `jobName` cannot include slashes (`/`) or special characters. Invalid job names may return a Bad Request response with the error description: "invalid columns, at least one is required and columns must match for each upload" |
-| `"finished"`  | This value tells the processing server to process the data instead of waiting for additional parts of the job. It should be left out unless the last part is being uploaded. If the job is just one upload, then it must be included for the data to be processed. |
-| `"rows"` | This value is an array of arrays of strings. The number of strings in each array must match the number of columns. The number of rows of data per upload should not exceed 10,000 rows but should come as close as possible. If an upload has fewer than 10,000 rows, upload it in one job with the "finished" flag set to "true." If a job has more than 10,000 rows, the rows should be uploaded in as few uploads as possible. For example, a job with 25,000 rows of data to upload should call `DataSources.UploadData` only three times, with the third call including the "finished" flag as true. The maximum number of uploads to a job is 100. If `DataSources.UploadData` is called more than 100 times for the same job, the call will fail. The call will also fail on the 100th call unless the "finished" flag is included and set to "true." The maximum allowed job size including all uploads is 50 MB of data. `DataSources.UploadData` may succeed when the combined size of all the uploads has exceeded this limit, but the job will not be able to be processed once the upload is finished. The date should be in the format `mm/dd/yyyy` |
-| `"reportSuiteID"` | The id of report suite the event names, evar names correspond to. |
+This request requires the following within the JSON body:
 
-## Response
+| JSON Request Element | Type | Description |
+| --- | --- | --- |
+| **`reportSuiteID`** | `string` | The report suite ID that contains the desired data source. |
+| **`dataSourceID`** | `int` | The numeric ID representing the data source. |
+| **`jobName`** | `string` | The name for the upload job. If a job is large enough to necessitate multiple calls, make sure that you use the same name between API calls. Use alpha-numeric characters only - do not use special characters or symbols, such as a forward slash (`/`). |
+| **`finished`** | `bool` | A flag that indicates that the job has all parts uploaded. A job does not start processing until this flag is set. If a job includes only one API call, set this value to `true`. If a job includes multiple API calls, set all values to `false` except the last call, which you can set to `true`. |
+| **`columns`** | `string[]` | An array of strings that indicate the column names for the data source upload. It must match the columns that were included when creating the data source. It also requires a `Date` column in `mm/dd/yyyy` format. The text format for columns is `"Date"`, `"Evar X"`, `"Event X"`. |
+| **`rows`** | `string[][]` | An array of array of strings. The number of strings within each row correspond to each column in order. Each array of strings corresponds to a row of data.
 
-`Boolean`
+<InlineAlert variant="note" slots="text"/>
 
-true on success which in turn creates a File on FTP for processing later on.
-false if it is not able to write on FTP Internally.
+Limit a single API call to 10,000 rows. If a data sources job requires more than 10,000 rows, split the job into multiple API calls with the same `jobName`. Set the `finished` boolean to `false` for each API call until the last one, which you can set to `true`. A single job supports up to 100 API calls or 50 MB of data. If more than 100 API calls are submitted for a single job, or if the combined data of a job results in a size larger than 50 MB, the entire job fails.
 
-# **DataSources.ProcessIncompleteVisits**
+The response returns `true` if the upload was successful. A file is created on the data source's FTP site, which is subsequently processed. The response returns `false` if the upload was unsuccessful.
+
+## ProcessIncompleteVisits
 
 Finishes incomplete jobs.
 
-## **Request**
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
+#### Request
+
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataSources.ProcessIncompleteVisits" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{
+            "reportSuiteID":"examplersid",
+            "dataSourceID": 4
+        }'
 ```
-{
-    "dataSourceID":"(int)",
-    "reportSuiteID":"(string)"
-}
+
+#### Response
+
+```json
+true
 ```
 
-## Response
+This request requires the following within the JSON body:
 
-Boolean, true on success, otherwise false if no error occurs.
+| JSON Request Element | Type | Description |
+| --- | --- | --- |
+| **`reportSuiteID`** | `string` | The report suite ID that contains the desired data source. |
+| **`dataSourceID`** | `int` | The numeric ID representing the data source. |
 
-# DataSources.Restart
+The response returns `true` if the process succeeds.
+
+## Restart
 
 Restarts processing for a data source.
 
-## **Request**
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
+#### Request
+
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataSources.Restart" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{
+            "reportSuiteID":"examplersid",
+            "dataSourceID": 4
+        }'
 ```
-{
-    "dataSourceID":"(int)",
-    "reportSuiteID":"(string)"
-}
+
+#### Response
+
+```json
+true
 ```
 
-## Response
+This request requires the following within the JSON body:
 
-Boolean, true on success, otherwise false if no error occurs.
+| JSON Request Element | Type | Description |
+| --- | --- | --- |
+| **`reportSuiteID`** | `string` | The report suite ID that contains the desired data source. |
+| **`dataSourceID`** | `int` | The numeric ID representing the data source. |
 
-# **DataSources.Delete**
+The response returns `true` if the process succeeds.
+
+## Delete
 
 Deletes a data source.
 
-## **Request**
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
+#### Request
+
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataSources.Delete" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{
+            "reportSuiteID":"examplersid",
+            "dataSourceID": 4
+        }'
 ```
-{
-    "dataSourceID":"(int)",
-    "reportSuiteID":"(string)"
-}
+
+#### Response
+
+```json
+true
 ```
 
-## Response
+This request requires the following within the JSON body:
 
-Boolean, true on success, otherwise false if no error occurs.
+| JSON Request Element | Type | Description |
+| --- | --- | --- |
+| **`reportSuiteID`** | `string` | The report suite ID that contains the desired data source. |
+| **`dataSourceID`** | `int` | The numeric ID representing the data source that you want to delete. |
 
+The response returns `true` if the deletion succeeds.
