@@ -143,12 +143,12 @@ The response returns an array of data source jobs containing the following eleme
 | **`rows`** | `int` | The number of rows in the file. |
 | **`errors`** | `string[]` | An array of any errors encountered while processing the file. |
 | **`warnings`** | `string[]` | An array of any warnings encountered while processing the file. |
-| **`receivedDate`** | `string` | The date/time that the file was received.
+| **`receivedDate`** | `string` | The date/time that the file was received. |
 | **`status`** | `string` | The status of the job. Valid values include `success` and `failure`. |
 
 ## Save
 
-Creates or updates a data source. Omit `id` to create a new data source. Include the desired `id` to overwrite that data source's settings. If you include an `id` in your API request that doesn't exist, the response returns an error.
+Creates or updates a data source. Omit `id` to create a new data source. Include the desired `id` to overwrite that data source's settings. If you include an `id` that doesn't exist, the response returns an error.
 
 <CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
@@ -266,7 +266,7 @@ This request requires the following within the JSON body:
 | **`jobName`** | `string` | The name for the upload job. If a job is large enough to necessitate multiple calls, make sure that you use the same name between API calls. Use alpha-numeric characters only - do not use special characters or symbols, such as a forward slash (`/`). |
 | **`finished`** | `bool` | A flag that indicates that the job has all parts uploaded. A job does not start processing until this flag is set. If a job includes only one API call, set this value to `true`. If a job includes multiple API calls, set all values to `false` except the last call, which you can set to `true`. |
 | **`columns`** | `string[]` | An array of strings that indicate the column names for the data source upload. It must match the columns that were included when creating the data source. It also requires a `Date` column in `mm/dd/yyyy` format. The text format for columns is `"Date"`, `"Evar X"`, `"Event X"`. |
-| **`rows`** | `string[][]` | An array of array of strings. The number of strings within each row correspond to each column in order. Each array of strings corresponds to a row of data.
+| **`rows`** | `string[][]` | An array of array of strings representing the data itself. The number of strings within each row correspond to each column in order. Each array of strings corresponds to a row of data.
 
 <InlineAlert variant="note" slots="text"/>
 
