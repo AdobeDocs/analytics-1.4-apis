@@ -1,6 +1,6 @@
 # Livestream API variable reference
 
-Lists the metrics and dimensions that can be retrieved using Analytics Livestream.
+Lists the dimensions and metrics that are available in the Livestream API.
 
 <InlineAlert variant="note" slots="text"/>
 
