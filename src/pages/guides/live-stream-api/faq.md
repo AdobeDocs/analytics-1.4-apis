@@ -1,40 +1,41 @@
 # Frequently Asked Questions (FAQ)
-Q: When initially connecting to a Livestream endpoint, how old will the data be that starts streaming?
 
-A: Livestream will start streaming data collected at the time of the client's connection. In the case of a client disconnect/reconnect, data will be streamed from the point of disconnection. This only happens if the reconnection occurs within a few minutes of the disconnection.
+## When initially connecting to a Livestream endpoint, how old is the data that starts streaming?
 
-Q: Is there a way to get older/newer data during an initial connection or reconnection?
+Livestream starts streaming data collected at the time of the client's connection. In the case of a client disconnect/reconnect, data is streamed from the point of disconnection. This brief backfill period only occurs if the disconnection is shorter than several minutes.
 
-A: The `reset` GET string parameter can be used to request old or new data. For example, `?reset=largest` will request only the newest data from the stream and will ignore data missed during reconnection. The `?reset=smallest` setting will start streaming the oldest data available and attempt to catch up to the present. 
+## How do I customize the reconnection backfill logic?
 
-Q: Is there latency between when an impression is collected by Adobe and when it appears in the Livestream.
+You can use the `reset` query string to request old or new data. For example, `?reset=largest` requests only the newest data from the stream and ignores data missed during reconnection. The `?reset=smallest` query string starts streaming the oldest data available and attempts to catch up to the present.
 
-A: Yes. This latency can range between 20 seconds and 5 minutes.
+## What is the latency between when a hit is collected by Adobe and when it appears in Livestream?
 
-Q: Is there a way to compress the data coming from Livestream?
+Latency can range between 20 seconds and 5 minutes.
 
-A: Yes. Livestream actually requires clients to support compression by default. By extension, its not possible to request uncompressed data from Livestream.
+## Can I request uncompressed Livestream data?
 
-Q: What transfer encoding is used?
+No. Livestream requires clients to support compression by default.
 
-A: [Chunked Transfer Encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding) There can be more than one record per chunk, each record is separated by a CRLF. Many http client libraries handle chunked transfer encoding transparently, including: Apache-httpclient java.net.URLConnection Python and ruby HTTP clients libcurl
+## What transfer encoding is used?
 
-Q: Can I create multiple connections to the same stream?
+Livestream uses [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding). There can be more than one record per chunk, and each record is separated by a CRLF. Many http client libraries handle chunked transfer encoding transparently.
 
-A: Yes. Use the `maxConnections` GET string parameter. If multiple connections are created, data is multiplexed across each connection. Data is grouped by visitor IDs, but will be out of order. The `timestamp` field can be used to sort the hits. There is a maximum of 8 connections allowed.
+## Can I create multiple connections to the same stream?
 
-Q: What happens if multiple/different clients connect to the same stream?
+Yes. Use the `maxConnections` GET string parameter. If multiple connections are created, data is distributed across each connection. Data is grouped by visitor IDs, but is out of order. The `timestamp` field can be used to sort the hits. A best effort is made to evenly distribute hits. Because data is grouped by visitor ID, a visitor that produces a large volume of data can create differences in volumes for each client. A maximum of 8 connections is allowed.
 
-A: This is not recommended as multiplexing will cause each client to only receive part of the stream. If two instances of the same stream are required, its recommended that infrastructure on the client side be put in place to replicate data for other consumers.
+If multiple instances of the same stream are required, Adobe recommends that you create infrastructure to replicate that data.
 
-Q: Are hits evenly distributed across multiple connections?
+## How do I avoid receiving duplicate records?
 
-A: A best effort is made to evenly distribute hits. Because data is grouped by visitor ID, a visitor that produces a large volume of data can create differences in volumes for each client.
+The likelihood of receiving duplicate records increases during reconnect or when new clients connect to an existing stream. The `hitIdHigh` and `hitIdLow` columns can be used to deduplicate hits.
 
-Q: How do I avoid receiving duplicate records?
+## What do I do with empty records?
 
-A: The likelihood of receiving duplicate records increases during reconnect or when new clients connect to an existing stream. The `hit_id` column can be used to de-dup hits.
+Empty records are sometimes returned in the stream. These can be ignored.
 
-Q: What should I do with empty records?
+## Where does Livestream occur in the data processing order?
 
-A: Empty records are sometimes returned in the stream. These can be ignored.
+Livestream data is only partially processed to mitigate latency. See [Processing order](https://experienceleague.adobe.com/docs/analytics/technotes/processing-order.html) in the Analytics technotes guide for full details on processing order.
+
+Livestream includes basic processing, such as [Processing rules](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html), VISTA rules, and geolocation lookups. It does **not** include persistence, such as eVars persisting data across hits within a visit. It also does not include visit-based or visitor-based data like visits, visit number, unique visitors, or customer loyalty.
