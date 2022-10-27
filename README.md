@@ -4,7 +4,7 @@ Documentation and helpful resources for calling the Analytics 1.4 Apis
 
 Swagger Documentation
 ----
-* [Swagger](https://adobedocs.github.io/analytics-1.4-apis/swagger-docs.html)
+* [Swagger](https://adobedocs.github.io/analytics-1.4-apis/)
 
 Getting Started
 ----
