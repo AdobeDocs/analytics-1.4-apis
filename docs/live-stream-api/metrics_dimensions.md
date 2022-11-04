@@ -130,7 +130,7 @@ The metrics and dimensions in Livestream are partially processed according to th
   “evars”: {
     "evars": {
       "campaign": "DFA:172612:21725632:182361",
-      "evar1": "Summer Shoe Promo"
+      "eVar1": "Summer Shoe Promo"
     }
   },
   "events": {
