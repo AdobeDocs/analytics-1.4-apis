@@ -18,8 +18,8 @@ The elements in the element column can be requested only with the metrics in the
 
 The elements in the element column can be requested with any metric except for those that appear in the right column.
 
-|Element|Metric Denylist|
-|-------|----------------|
+| Dimension | Invalid metrics |
+|---|---|
 |browserheight|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
 |browsertype|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
 |browserwidth|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|

@@ -20,8 +20,8 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.GetVir
 
 ```json
 [{
-    "rsid": "examplersid",
-    "parent_rsid": "sistr2",
+    "rsid": "examplevirtualrs",
+    "parent_rsid": "examplersid",
     "segment_list": ["536bfa98e4b06d874b0c927a", "536bfa99e4b06d874b0c927f"]
 }]
 ```

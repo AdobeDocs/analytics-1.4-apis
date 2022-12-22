@@ -15,8 +15,8 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=ReportSuite.SaveVi
     -H "Accept: application/json" \
     -H "Content-Type: application/json" \
     -d "{
-            'rsid':'examplersid',
-            'parent_rsid':'sistr2',
+            'rsid':'examplevirtualrs',
+            'parent_rsid':'examplersid',
             'name':'new vrs',
             'segment_list': [
                 '536bfa98e4b06d874b0c927a',
