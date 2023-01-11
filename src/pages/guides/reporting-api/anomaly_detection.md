@@ -6,7 +6,7 @@ To retrieve anomaly detection data, set `anomalyDetection` to true in [reportDes
 
 Data is returned in the following format for trended reports:
 
-```
+```json
 {
   "name": "Tue. 31 Jul. YYYY",
   "year": YYYY,
@@ -32,7 +32,7 @@ Data is returned in the following format for trended reports:
 
 data is returned in the following format for overtime reports:
 
-```
+```json
 {
   "name": "Mon. 30 Jul. YYYY",
   "year": YYYY,

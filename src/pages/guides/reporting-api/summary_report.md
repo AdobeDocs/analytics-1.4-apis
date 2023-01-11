@@ -4,7 +4,7 @@ Summary reports provide high-level metrics for several report suites in a single
 
 Summary reports do not contain the `"reportSuiteID"` parameter, instead the report suite is specified as the `"reportsuite"` report element, and the `"selected"` parameter contains a list of report suite IDs. The `"metrics"` parameter contains the metrics you want to report for the specified report suites.
 
-```
+```json
 // Summary Report
 // Note that the "reportSuiteID" parameter is not included
 // and the elements list contains "reportsuite"

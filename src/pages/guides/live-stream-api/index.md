@@ -7,48 +7,46 @@ This feature can be useful to those building:
 * A visitor-level integration that sends information to personalization or marketing platforms in real-time.
 * A forecasting or anomaly detection service that updates a model and produces forecasts/anomaly reports in real-time.
 
-The following table outlines the tasks required to get started using Adobe Analytics Livestream.
-
 ## Create a Client
-An [Adobe.io Service Account](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md) needs to be created. This will be used by the client to authenticate and connect to the stream. After creating this account, make a note of the _technical account email address_. This will be used later to link the the service account to a Livestream endpoint.
+
+Create an [Adobe.io Service Account](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md). This account is used by the client to authenticate and connect to the stream. After creating this account, make a note of the _technical account email address_. This email is used later to link the the service account to a Livestream endpoint.
 
 ## Identify What Should Be in the Stream
-Review the list of [Metrics and Dimensions](metrics_dimensions.md#) and identify what should appear in your stream. For report suites with very high volume, it is important to only include metrics and dimensions that are going to be used.
+
+Review the list of [dimensions and metrics](variable-reference.md) to identify what you want to appear in your stream. For report suites with very high volume, it is important to only include dimensions and metrics that you intend to use.
 
 ## Contact Customer Care to Provision the Stream
-Customer Care will need the following information to provision the stream:
+
+Customer Care requires all of the following information to provision the stream:
 * Data Center Location (London, Pacific North West, Singapore)
-* Login Company
-* A Report Suite ID for each stream being requested
+* Login Company or IMS organization
+* A Report Suite ID for each stream requested
 * Daily and Monthly Traffic Volume Averages
 * The Adobe.io technical account email address
 
 ## Connect to the Stream
-A connection request will look something like the following:
-```curl --location-trusted --compressed -H "Authorization: Bearer [JWT_TOKEN]" "[STREAM_URL]"```
 
-* `--location-trusted` tells CURL to follow redirects and send the authorization header again when a redirect happens
-* `--compressed` tells CURL to send the request header `Accept-Encoding: deflate, gzip`. Livestream only supports compressed responses in order to reduce bandwidth and avoid overwhelming clients.
-* `-H "Authorization: Bearer [JWT_TOKEN]` is where the JWT token [that was generated](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md#step-4-try-it) using your service account should go. This authenticates the client with Livestream.
+A connection request looks similar to the following:
 
-> NOTE: The Adobe.io JWT tool isn't required to generate a JWT token. This can be done from within the client. [Example code can be found here for multiple platforms](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/samples/samples.md).
+<CodeBlock slots="code" repeat="1" languages="CURL"/>
 
-Here is an example of a request (with the JWT token removed):
-```curl --location-trusted --compressed -H "Authorization: Bearer eyJ4NXUiO...e1OvbElA" https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name```
+```sh
+curl -X GET "https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    --location-trusted \
+    --compressed
+```
 
-Once connected to the stream, impression data will be streamed in a line-delimited JSON format and reflects data currently being collected by a report suite. For an example of a record returned in from Livestream, see the 'Livestream Sample JSON output' section of the [Metrics and Dimensions](../live-stream-api/metrics_dimensions.md) page.
+Once connected to the stream, impression data is streamed in a line-delimited JSON format and reflects data currently collected by a report suite. See [Livestream sample JSON output](example-output.md) to see what a typical row of data might look like.
 
-If no data is currently being collected yet, the client will connect but no data will appear in the stream.
+If there is no data actively flowing into the report suite, the client connects but no data appears in the stream.
 
-## Optional Parameters
-|GET Parameter      |Description|Allowed Values|
-|-------------------|-----------|-------|
-|maxConnections     |Indicates how many clients will connect to the same stream.|An integer between 1 and 8|
-|reset              |Indicates age of data to return during initial connection/reconnection|`smallest` will stream the oldest possible data. `largest` will stream the newest possible data.|
-|smoothing          |Smooths the rate of records returned by Livestream by using a server-side buffer.|`1` to enable smoothing. Remove the parameter to disable it.|
-|smoothingBucketSize|The size of the time window to use to determine the average traffic rate that is used in smoothing data returned by Livestream.|An integer between 1 and 7200. The default is 270 seconds.|
+## Optional query parameters
 
-## Additional Links
-* [Metrics and Dimensions](metrics_dimensions.md#)
-* [FAQ](faq.md#)
-* [Troubleshooting](troubleshooting.md)
+Query parameter | Description
+---|---
+**`maxConnections`** | Allows the distribution of hits across multiple clients. This number determines the maximum number of clients that can connect to the same stream. Valid values include `1` through `8`.
+**`reset`** | The age of data to return during the initial connection/reconnection. Valid values include `smallest` (streams the oldest possible data) and `largest` (streams the newest possible data).
+**`smoothing`** | Smooths the rate of records returned by Livestream using a server-side buffer. Disabled by default; set to `1` to enable smoothing.
+**`smoothingBucketSize`** | The size of the time window, in seconds, that determines the average traffic rate used in smoothing. Supported values include integers between `1` and `7200`. The default is `270` seconds. If `smoothing` is omitted, this parameter does nothing.
