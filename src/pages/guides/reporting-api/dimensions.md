@@ -14,7 +14,21 @@ In some cases, elements that are returned by `GetElements` may not work with a c
 
 The reporting API has two groups of elements: Traffic and Commerce. Elements may only be broken down by elements in the same group, as listed in the "Breakdown Type" column in the table below. Breakdowns are not supported on fallout and pathing reports.
 
-You can pass any of these elements to [GetElements](methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element. 
+You can pass any of these elements to [GetElements](methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element.
+
+## Element object reference
+
+|Name|Type|Description|
+|----|----|-----------|
+| **id** | `string` |Specifies the name of the element to apply to the metrics report.|
+| **classification** | `string` |(Optional) Restricts the element results to only those that fall in the specified classification. For example you could set `id = "trackingCode"` and `classification = "Campaigns"` to get a report of all tracking codes for the Campaigns classification.|
+| **top** | `int` | (Optional) Specifies the number of rows in the report to return. Use with startingWith to generate paged reports. For example, `top=5` returns five rows. The maximum number of top elements that can be requested is 50,000. Setting the "top" parameter to a number greater than 50000 will result in an `element_top_invalid` error. |
+| **startingWith** | `int` | (Optional) Specifies the first row in the report to return. Use with top to generate paged reports. For example, `startingWith=20` returns report rows starting at row 20. |
+| **search** | [reportDescriptionSearch](r_reportDescriptionSearch.md#) |(Optional) Applies a search to the element.|
+| **selected** | `string[]` |(Optional) Defines a specific list of items to request instead of using search, top, and startingWith to set the element parameters.|
+| **parentID** | `string` | (Optional) Hierarchy report. To specify a specific level to report, add a add a level and parentID parameter. The parentID is returned in report data, making it available to request the next level of the hierarchy. |
+| **checkpoints** |`string[]` | Generates a pathing report. See [Pathing Reports](../pathing.md#) |
+| **pattern** |`string[]` | Generate a fallout pathing report. See [Pathing Reports](../pathing.md#) | A list of elements that breaks down (organizes) the metrics data in the report. For example, you can generate a report that breaks down page views (metric) by browser (element). For example: `elements = [ {id = "trackingCode", classification = "campaigns", top = 2, startingWith = 10} ]` A report may have a maximum number of three elements. Elements have restrictions on which other elements they can be combined with in a report. You can pass element to [GetElements](../methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element. |
 
 ## Element Descriptions
 

@@ -1,72 +1,24 @@
-# Getting Started
+# 1.4 Reporting API
 
-## Report Queue Workflow
+The Adobe Analytics 1.4 API provides a way for you to obtain reports without using Reports & Analytics or Analysis Workspace. It allows you to submit a request for a report, then you can submit a request to retrieve the report once it is done processing. 
 
-![](graphics/reporting_api_gs.png)
+<InlineAlert variant="note" slots="text"/>
+
+Adobe recommends using the [Adobe Analytics 2.0 Reporting API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/reports/) to retrieve reports.
+
+The overarching workflow to retrieve a report is as follows:
+
+![Reporting API workflow](graphics/reporting_api_gs.png)
 
 1.  Open the API Explorer in Developer Connection.
-2.  Send a request using Report API and the method Report.Queue. The Report API will return a report ID.
-3.  Change the method to Report.Get using the report ID. There will be one of 2 responses:
-    - A "report not ready" response:
-
-        ```
-        {
-        
-            "error":"report_not_ready",
-        
-            "error_description":"Report not ready",
-        
-            "error_uri":null
-        
-        }
-        
-        ```
-
-    - Or a return of the whole report.
-
-Here are some best practices:
-
-- Check for a report every few seconds. Do not check more than once a second.
-- You can queue up multiple reports to be run concurrently.
-- The response from Report.Queue is exactly the same as the request for Report.Get.
-
-## Endpoint
-
-API requests should be sent to the 1.4 endpoint:
-
-```
-https://api.omniture.com/admin/1.4/
-```
-
-You might need to replace api.omniture.com with the URL that corresponds to your data center, as listed in the following table. In your production apps, we recommend calling Company.GetEndpoint to periodically refresh the endpoint programmatically, in case the URL changes.
-
-- `api.omniture.com` - San Jose
-- `api2.omniture.com` - Dallas
-- `api3.omniture.com` - London
-- `api4.omniture.com` - Singapore
-- `api5.omniture.com` - Pacific Northwest
-
-## Removal of separate methods to generate different report types
-
-If you are migrating from a previous version of the API, report types are now determined by the parameters of the `reportDescription` according to the following table:
-
-|Report Type|Parameters|
-|-----------|----------|
-|Overtime Report|No elements with a dateGranularity specified.|
-|Ranked Report|1 or more elements with no dateGranularity specified.|
-|Trended Report|1 or more elements with a dateGranularity specified.|
-|Pathing Report|Element in the pattern parameter.|
-|Fallout Report|Element in the checkpoint parameter.|
-|Summary Report|No "reportSuiteID" parameter, instead "reportsuite" is specified as the report element and the "selected" parameter contains a list of report suite IDs.|
-|Real-Time Report|'source' parameter present and set to 'realtime'. Note that Real-Time Reports do not have to be queued, they can run immediately using [Report.Run](methods/r_Run.md#).|
-
-The type derived is then returned in the result data as: ranked, trended, overtime, pathing, fallout, summary, or realtime.
+2.  Use the method `Report.Queue` with a JSON body that includes the desired report. The Reporting API returns a report ID.
+3.  Change the method to `Report.Get` using the report ID. If the report is ready, you receive a JSON object with the report. Otherwise, the API responds that the report is not yet ready.
 
 ## Examples
 
 In the following examples, replace "rsid" with your report suite id, and update the URL to use the correct endpoint.
 
-```
+```json
 //Simplest Request
 https://api.omniture.com/admin/1.4/rest/?method=Report.Queue
 {

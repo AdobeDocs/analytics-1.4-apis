@@ -1,4 +1,4 @@
-# Calculated Metrics
+# 1.4 Calculated Metrics API
 
 Create, edit, or delete calculated metrics.
 
