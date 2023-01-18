@@ -1,6 +1,6 @@
-# Analytics Elements
+# Analytics Elements (Dimensions)
 
-Provides a list of elements available in Analytics.
+Provides a list of dimensions available in Analytics.
 
 An *element* is a structure that further breaks down (organizes) the a report's metrics data. For example, you can generate a report that breaks down a page view (metric) report by the Web browsers (element) used to access the page. The resulting report lists page views by Web browser type. As part of the report definition, you can specify the elements to include in the report in a [reportDescriptionElement](data_types/r_reportDescriptionElement.md#).
 
@@ -136,3 +136,24 @@ You can pass any of these elements to [GetElements](methods/r_GetElements.md#) t
 | `videoplayers` |commerce|Video player used to view videos.|
 | `visitnumber` |traffic+commerce| Number of visits to site. Not supported by inline segments. |
 | `zip` |commerce|Client zip code.|
+
+
+## Using search filters
+
+A structure that defines a keyword search to use in the report definition.
+
+|Name|Type|Description|
+|----|----|-----------|
+| **type** | [reportDescriptionSearchType](r_reportDescriptionSearchType.md#) | The type of search to use, one of the following values: and or not |
+| **keywords** | `string[]` | A list of keywords to include or exclude from the search, based on the type. Keyword values can also leverage the following special characters to define advanced search criteria: * Wild Card (e.g. "page*.html") ^ Starts With (e.g. "^http://") $ Ends With (e.g. ".html$") |
+| **searches** | [reportDescriptionSearch](r_reportDescriptionSearch.md#)[] |A list of subsearches. This allows you to build complex report searches.|
+
+# reportDescriptionSearchType
+
+An enumerated list of boolean values used to link multiple search terms in a report search.
+
+|Value|Description|
+|-----|-----------|
+|**AND** |Combines multiple search terms using a boolean AND operation.|
+|**OR** |Combines multiple search terms using a boolean OR operation.|
+|**NOT** |Combines multiple search terms using a boolean NOT operation (effectively excluding a term from the search).|
