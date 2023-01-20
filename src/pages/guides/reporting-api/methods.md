@@ -1,6 +1,12 @@
-# Queue
+# 1.4 Reporting API methods
+
+Methods that you can call within the 1.4 Reporting API.
+
+## Queue
 
 Queue a report to run.
+
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Queue`**
 
 <CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
@@ -18,208 +24,422 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Queue" \
 
 ```json
 {
-    "reportID": 1925044836
+    "reportID": 1234567890
 }
 ```
 
-## Report.Queue Parameters
+This method requires a `reportDescription` JSON object, which contains the desired reporting parameters. See [reportDescription JSON object reference](report-description/index.md) for details.
 
-|Name|Type|Description|
-|----|----|-----------|
-| ` reportDescription ` | [reportDescription](../data_types/r_reportDescription.md#) | A report description that specifies the desired report contents. This data structure is validated automatically before the report is generated. |
+The response contains a report ID - use this report ID in the `Report.Get` method to retrieve the report.
 
-## Report.Queue Response
+## Get
 
-|Name|Type|Description|
-|----|----|-----------|
-| ` reportID ` | `int` | The ID of the report. Pass this ID to [Report.Get](r_Get.md#) to retrieve the report. |
+Retrieves a report queued using `Report.Queue`.
 
-## Report Type
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Get`**
 
-Report types are determined by the parameters of the `reportDescription` according to the following table:
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
-|Report Type|Parameters|
-|-----------|----------|
-|Data Warehouse|The "source" parameter must be present and set to "warehouse". Once these Data Warehouse reports have been created via the Reporting API, they will also be visible in the Data Warehouse Request Manager interface, named "API Report".|
-|Overtime Report|No elements with a dateGranularity specified.|
-|Ranked Report|1 or more elements with no dateGranularity specified.|
-|Trended Report|1 or more elements with a dateGranularity specified.|
-|Pathing Report|Element in the pattern parameter.|
-|Fallout Report|Element in the checkpoint parameter.|
-|Summary Report|No "reportSuiteID" parameter, instead "reportsuite" is specified as the report element and the "selected" parameter contains a list of report suite IDs.|
-|Real-Time Report|'source' parameter present and set to 'realtime'. Note that Real-Time reports do not have to be queued, they can run immediately using [Report.Run](r_Run.md#).|
+#### Request
 
-The type derived is then returned in the result data as: ranked, trended, overtime, pathing, fallout, summary, or realtime.
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Get" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{"reportID: 1234567890}}'
+```
 
-**metrics** 
+#### Response
 
-If the list of metrics is left empty, the default metric of "pageviews" is used.
+```json
+{
+    "report": {
+        "type": "overtime",
+        "elements": [
+            {
+                "id": "datetime",
+                "name": "Date"
+            }
+        ],
+        "reportSuite": {
+            "id": "examplersid",
+            "name": "Example report suite"
+        },
+        "period": "Thu. 19 Jan. YYYY",
+        "metrics": [
+            {
+                "id": "pageviews",
+                "name": "Page Views",
+                "type": "number",
+                "decimals": 0,
+                "latency": 1427,
+                "current": false
+            }
+        ],
+        "data": [
+            {
+                "name": "Thu. 19 Jan. YYYY",
+                "month": 1,
+                "day": 19,
+                "counts": [
+                    "291745"
+                ]
+            }
+        ],
+        "totals": [
+            "291745"
+        ],
+        "version": "1.4.18.10"
+    },
+    "waitSeconds": 0,
+    "runSeconds": 0
+}
+```
 
-**elements** 
+This method requires a JSON body, which includes the report ID to retrieve. You can obtain a report ID using `Report.Queue`.
 
-If the list of elements is left empty, the default element of "page" is used.
+Request element | Type | Description
+--- | --- | --- 
+**`reportID`** | `int` | Report ID returned by `Report.Queue`.
+**`page`** | `int` | (Optional) Desired page number (out of `totalPages`) for larger [Data Warehouse](data_warehouse.md) requests.
 
-**date/dateFrom/dateTo** 
+Returns a JSON object containing the desired report data. See [Report data object reference](report-data.md) for details.
 
-If the date parameter(s) are omitted, the current day is used.
+If the report is not ready, a `HTTP 400` error is returned.
 
-# Get
+## Cancel
 
-Retrieves a report queued using Report.Queue
+Cancels a previously submitted report request, removing it from the processing queue.
 
- 
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Cancel`**
 
-## Report.Get Parameters
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
-|Name|Type|Description|
-|----|----|-----------|
-| ` reportID ` | `int` | Report ID returned by [Report.Queue](r_Queue.md#). |
-| ` page ` | `int` | (Optional) Desired page number (out of `totalPages`) for larger [Data Warehouse](../data_warehouse.md#) requests. |
+#### Request
 
-## Report.Get response
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Cancel" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{"reportID: 1234567890}}'
+```
 
-|Type|Description|
-|----|-----------|
-| [reportResponse](../data_types/r_reportResponse.md#) | Contains the requested report data. If the report is not ready, a `HTTP 400` error is returned. ```{"error":"report_not_ready","error_description":"Report not ready","error_uri":null}``` |
+#### Response
 
-# Cancel
+```json
+true
+```
 
-Cancels a previously submitted report request, and removes it from the processing queue.
+This method requires a JSON body, which includes the report ID to retrieve. You can obtain a report ID using `Report.Queue`.
 
-Method parameters are required unless noted otherwise.
+Returns `true` is the operation is successful.
 
-## Report.Cancel parameters
+## GetElements
 
-|Name|Type|Description|
-|----|----|-----------|
-| **reportID** | `int` | Report ID returned by [Report.Queue](r_Queue.md#). |
+Retrieves a list of valid [dimensions](report-description/dimensions.md) for the user. Some users might not have access to certain dimensions, so you can use this method to retrieve the dimensions that you can access.
 
-## Report.Cancel response
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.GetElements`**
 
-|Type|Description|
-|----|-----------|
-| `boolean` |Returns `true` if the operation is successful.|
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
-# GetElements
+#### Request
 
-Retrieves a list of possible valid elements for a report.
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.GetElements" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{"reportSuiteID: "examplersid"}}'
+```
 
-See [Analytics Elements](../elements.md#).
+#### Response
 
-## Permissions
+```json
+[
+    {
+        "id": "accountsummary",
+        "name": "Report Suite Totals",
+        "correlation": true,
+        "subrelation": false
+    },
+    {
+        "id": "activity",
+        "name": "Activity",
+        "correlation": false,
+        "subrelation": true
+    },
+    {
+        "id": "browser",
+        "name": "Browser",
+        "correlation": true,
+        "subrelation": true
+    },
+    {
+        "id": "browserheight",
+        "name": "Browser Height",
+        "correlation": true,
+        "subrelation": true
+    }
+]
+```
 
-Specific users may not have access to certain elements. The metrics returned by `GetElements` reflect those restrictions. Requesting an element that one doesn't have permission to access will result in a `element_inaccessible` error.
+This request requires a JSON body, which includes the report suite ID to obtain accessible dimensions.
 
-## Report.GetElements Parameters
+Request element | Type | Description
+--- | --- | ---
+**`reportSuiteID`** | `string` | The report suite ID that you want to list accessible dimensions for.
+**`existingElements`** | `string[]` | (Optional) Include a list of elements already present in the reportDescription to get compatible metrics.|
+**`existingMetrics`** | `string[]` | (Optional) Include a list of metrics already present in the reportDescription to get compatible metrics.|
+**`reportType`** | `string` | (Optional) Include the report type to get compatible metrics. Valid values include `any`, `ranked`, `trended`, `pathing`, `fallout`, and `realtime`.
 
-|Name|Type|Description|
-|----|----|-----------|
-| `reportSuiteID` | `string` |The Analytics report suite you want to use to generate the report. For example: `reportSuiteID = "corp1"` |
-| `existingElements` | `string[]` |(Optional) Include a list of elements already present in the reportDescription to get compatible metrics.|
-| `existingMetrics` | `string[]` |(Optional) Include a list of metrics already present in the reportDescription to get compatible metrics.|
-| `reportType` | `string` |(Optional) Include the report type (any, ranked, trended, pathing, fallout, realtime) to get compatible metrics.|
+Returns a list of dimensions that the user can access. Each dimension contains the following elements:
 
-## Report.GetElements response
+Response element | Type | Description
+--- | --- | ---
+**`id`** | `string` | The dimension ID.
+**`name`** | `string` | The dimension name.
+**`correlation`** | `boolean` | Determines if the dimension supports correlations. Used in previous versions of Adobe Analytics.
+**`subrelation`** | `boolean` | Determines if the dimension supports subrelations. Used in previous versions of Adobe Analytics.
 
-|Type|Description|
-|----|-----------|
-|  `reportElement[]` | Defines an element that appears in a report. |
+## GetMetrics
 
-# GetMetrics
+Retrieves a list of valid [metrics](report-description/metrics.md) for the user. Some users might not have access to certain metrics, so you can use this method to retrieve the dimensions that you can access.
 
-Retrieves a list of possible valid elements for a report.
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.GetMetrics`**
 
-See [Analytics Metrics](../metrics.md#).
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
-## Permissions
+#### Request
 
-Specific users may not have access to certain metrics. The metrics returned by `GetMetrics` reflect those restrictions. Requesting a metric that one doesn't have permission to access results in a `metric_inaccessible` error.
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.GetMetrics" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{"reportSuiteID: examplersid}}'
+```
 
-## Report.GetMetrics Parameters
+#### Response
 
-|Name|Type|Description|
-|----|----|-----------|
-| `reportSuiteID` | `string` |The Analytics report suite you want to use to generate the report. For example: `reportSuiteID = "corp1"` |
-| `existingElements` | `string[]` |(Optional) Include a list of elements already present in the reportDescription to get compatible metrics.|
-| `existingMetrics` | `string[]` |(Optional) Include a list of metrics already present in the reportDescription to get compatible metrics.|
-| `reportType` | `string` |(Optional) Include the report type (any, ranked, trended, pathing, fallout, realtime) to get compatible metrics.|
+```json
+[
+    {
+        "id": "activityimpressions",
+        "name": "Activity Impressions",
+        "type": "number",
+        "decimals": 0,
+        "formula": null
+    },
+    {
+        "id": "averagevisitdepth",
+        "name": "Average Visit Depth",
+        "type": "number",
+        "decimals": 0,
+        "formula": null
+    },
+    {
+        "id": "bouncerate",
+        "name": "Bounce Rate",
+        "type": "percent",
+        "decimals": 10,
+        "formula": null
+    }
+]
+```
 
-## Report.GetMetrics response
+This request requires a JSON body, which includes the report suite ID to obtain accessible metrics.
 
-|Type|Description|
-|----|-----------|
-| `reportMetric[]` | A structure that defines a metric that appears in a report. |
+Name|Type|Description|
+----|----|-----------|
+**`reportSuiteID`** | `string` | The report suite ID that you want to list accessible metrics for.
+**`existingElements`** | `string[]` | (Optional) Include a list of elements already present in the reportDescription to get compatible metrics.
+**`existingMetrics`** | `string[]` | (Optional) Include a list of metrics already present in the reportDescription to get compatible metrics.
+**`reportType`** | `string` | (Optional) Include the report type to get compatible metrics. Valid values include `any`, `ranked`, `trended`, `pathing`, `fallout`, and `realtime`.
 
-# GetQueue
+Returns a list of metrics that the user can access. Each metric contains the following elements:
+
+Response element | Type | Description
+--- | --- | ---
+**`id`** | `string` | The metric ID.
+**`name`** | `string` | The metric name.
+**`type`** | `string` | The metric type.
+**`decimals`** | `int` | The number of decimal places that the metric uses.
+**`formula`** | `null` | The formula if the metric is a calculated metric.
+
+## GetQueue
 
 Returns a list of reports in a company's report queue.
 
-## Report.GetQueue parameters
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.GetQueue`**
 
-None.
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
-## Report.GetQueue response
+#### Request
 
-|Type|Description|
-|----|-----------|
-| [report_queue_item[]](../data_types/r_report_queue_item_array.md#)- An array of [report_queue_item](../data_types/r_report_queue_item.md#) | A list of the company's currently queued report requests. The company is determined by the authentication credentials provided with the request.|
+```sh
+curl -X GET "https://api.omniture.com/admin/1.4/rest/?method=Report.GetQueue" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+```
 
-# Run
+#### Response
+
+```json
+[
+    {
+        "reportID": 1234567890,
+        "type": "tr",
+        "queueTime": "YYYY-06-29T16:41:53-0800",
+        "status": "running",
+        "priority": 0,
+        "estimate": 899.8214212508286,
+        "reportSuiteID": "examplersid",
+        "user": "exampleuser"
+    },
+    {
+        "reportID": 1234567890,
+        "type": "tr",
+        "queueTime": "YYYY-06-29T16:42:09-0800",
+        "status": "running",
+        "priority": 0,
+        "estimate": 256.4867531674,
+        "reportSuiteID": "examplersid",
+        "user": "exampleuser2"
+    }
+]
+```
+
+Does not require a JSON body. Returns a list of reports currently running for the company. Company is determined by the authentication credentials used in the `x-api-key` and `Authentication` headers.
+
+Response element | Type | Description
+--- | --- | ---
+**`reportID`** | `int` | The report ID running.
+**`type`** | `string` | The type of report.
+**`queueTime`** | `date` | The date/time that the report was queued.
+**`status`** | `string` | The status of the report.
+**`priority`** | `int` | The report priority.
+**`estimate`** | `double` | The estimated time remaining before the report is complete.
+**`reportSuiteID`** | `string` | The report suite ID of the report.
+**`user`** | `string` | The user that requested the report.
+
+## Run
 
 Run a real-time report immediately without using the queue.
 
-## Report.Run Parameters
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Run`**
 
-|Name|Type|Description|
-|----|----|-----------|
-| ` reportDescription ` | [reportDescription](../data_types/r_reportDescription.md#) | A report description that specifies the desired report contents. This data structure is validated automatically before the report is generated. |
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
-## Report.Run response
+#### Request
 
-|Type|Description|
-|----|-----------|
-| [reportResponse](../data_types/r_reportResponse.md#) | Contains the requested report data. |
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Run" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{"reportDescription":{"reportSuiteID":"examplersid","source": "realtime"}}'
+```
 
-## Report Type
+#### Response
 
-Report types are determined by the parameters of the `reportDescription` according to the following table:
+```json
+{
+    "report": {
+        "type": "realtime",
+        "reportSuite": {
+            "id": "examplersid",
+            "name": "Example report suite"
+        },
+        "period": "YYYY-03-30T16:30:04-0800/YYYY-03-30T17:30:04-0800",
+        "elements": [
+            {
+                "id": "datetime",
+                "name": "Date"
+            }
+        ],
+        "metrics": [
+            {
+                "id": "instances",
+                "name": "Instances",
+                "type": "number",
+                "decimals": 0
+            }
+        ],
+        "data": [
+            {
+                "name": "YYYY-01-19T16:30:04-0800",
+                "month": 3,
+                "day": 30,
+                "hour": 16,
+                "minute": 30,
+                "counts": [
+                    "1415718"
+                ]
+            },
+            {
+                "name": "YYYY-01-19T16:35:04-0800",
+                "month": 3,
+                "day": 30,
+                "hour": 16,
+                "minute": 35,
+                "counts": [
+                    "1394239"
+                ]
+            },
+            {
+                "name": "YYYY-01-19T16:40:04-0800",
+                "month": 3,
+                "day": 30,
+                "hour": 16,
+                "minute": 40,
+                "counts": [
+                    "1394988"
+                ]
+            }
+        ],
+        "totals": [
+            "16356302"
+        ],
+        "version": "1.4.18.10",
+        "__run_time_frag": 0.26024293899536133
+    }
+}
+```
 
-|Report Type|Parameters|
-|-----------|----------|
-|Overtime Report|No elements with a dateGranularity specified. Not supported by Run, use [Report.Queue](r_Queue.md#) instead.|
-|Ranked Report|1 or more elements with no dateGranularity specified. Not supported by Run, use [Report.Queue](r_Queue.md#) instead.|
-|Trended Report|1 or more elements with a dateGranularity specified. Not supported by Run, use [Report.Queue](r_Queue.md#) instead.|
-|Pathing Report|Element in the pattern parameter. Not supported by Run, use [Report.Queue](r_Queue.md#) instead.|
-|Fallout Report|Element in the checkpoint parameter. Not supported by Run, use [Report.Queue](r_Queue.md#) instead.|
-|Summary Report|No "reportSuiteID" parameter, instead "reportsuite" is specified as the report element and the "selected" parameter contains a list of report suite IDs. Not supported by Run, use [Report.Queue](r_Queue.md#) instead.|
-|Real-Time Report|"source" parameter present and set to "realtime".|
+This method requires a `reportDescription` JSON object, which contains the desired reporting parameters. See [reportDescription JSON object reference](report-description/index.md) for details. The `source` element must be set to `realtime` for this API call to work.
 
-The type derived is then returned in the result data as: ranked, trended, overtime, pathing, fallout, summary, or realtime.
+Returns a JSON object containing the desired report data. See [Report data object reference](report-data.md) for details.
 
-**metrics** 
+## Validate
 
-If the list of metrics is left empty, the default metric of "pageviews" is used.
+Determines if a `reportDescription` object is valid without running the report. If the report is not valid, an error is returned detailing the problem.
 
-**elements** 
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Validate`**
 
-If the list of elements is left empty, the default element of "page" is used.
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
 
-**date/dateFrom/dateTo** 
+#### Request
 
-If the date parameter(s) are omitted, the current day is used.
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Validate" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{"reportDescription":{"reportSuiteID":"examplersid"}}'
+```
 
-# Validate
+#### Response
 
-Determines if a report description is valid without running the report. If the report is not valid, an error will be returned detailing the problem.
+```json
+{
+    "valid": true
+}
+```
 
-## Report.Validate Parameters
+This method requires a `reportDescription` JSON object, which contains the desired reporting parameters. See [reportDescription JSON object reference](report-description/index.md) for details.
 
-|Name|Type|Description|
-|----|----|-----------|
-| ` reportDescription ` | [reportDescription](../data_types/r_reportDescription.md#) | The report structure that you want to validate. |
-
-## Report.Validate Response
-
-|Type|Description|
-|----|-----------|
-| `boolean` |Returns `true` if the operation is successful.|
+* If the `reportDescription` JSON object is valid, the response contains `"valid": true`.
+* If the `reportDescription` JSON object is invalid, the API returns an error outlining the issue. See [Troubleshooting](troubleshooting.md) for details.

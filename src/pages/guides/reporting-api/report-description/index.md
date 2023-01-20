@@ -53,3 +53,19 @@ Element | Type | Description
 **anomalyDetection** | `boolean` | Includes `upper_bounds`, `lower_bounds`, and `forecast` data in the response object. Not supported by ranked reports.
 **currentData** | `boolean` | Include [current data](https://experienceleague.adobe.com/docs/analytics/analyze/reports-analytics/current-data.html) in the report.
 **elementDataEncoding** | `string` | Supported values include `utf8` or `base64`.<br/>`utf8`: Filters out invalid UTF-8 characters in the request and response.<br/>`base64`: Treats the entire request, including element names, search/pathing filters, special keywords, and dates, as if they are base64 encoded.
+
+## Report type
+
+Report types are determined by the parameters of the `reportDescription` object according to the following table:
+
+Report Type | Parameters
+--- | ---
+**Overtime Report** | No elements with a `dateGranularity` specified. Not supported by `Report.Run`, use `Report.Queue` instead.
+**Ranked Report** | One or more elements with no `dateGranularity` specified. Not supported by `Report.Run`, use `Report.Queue` instead.
+**Trended Report** | One or more elements with a `dateGranularity` specified. Not supported by `Report.Run`, use `Report.Queue` instead.
+**Pathing Report** | Element in the `pattern` parameter. Not supported by `Report.Run`, use `Report.Queue` instead.
+**Fallout Report** | Element in the `checkpoint` parameter. Not supported by `Report.Run`, use `Report.Queue` instead.
+**Summary Report** | No `reportSuiteID` parameter, instead `reportsuite` is specified as a dimension and the `selected` parameter contains a list of report suite IDs. Not supported by `Report.Run`, use `Report.Queue` instead.
+**Real-Time Report** | `source` parameter set to `realtime`. Use `Report.Run`.
+
+The type derived is then returned in the result data as: `ranked`, `trended`, `overtime`, `pathing`, `fallout`, `summary`, or `realtime`.

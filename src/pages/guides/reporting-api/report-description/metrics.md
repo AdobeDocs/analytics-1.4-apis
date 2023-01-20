@@ -52,7 +52,7 @@ A structure that defines a metric that appears in a report.
 |`name` |`string` | The metric name. |
 |`type` |`string` | The metric type, either "number", or "currency". |
 |`decimals` |`int` | The number of decimal places in the metric values. |
-|`forumula` |`string` | The formula if the metric is a calculated metric. |
+|`formula` |`string` | The formula if the metric is a calculated metric. |
 |`latency` |`int` | Number of seconds the metric data is latent. |
 |`current` |`boolean` | True indicates that the metric contains the most recent data available as a result of the currentData flag being set to true in the reportDescription. |
 
