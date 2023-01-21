@@ -1,36 +1,36 @@
-# Analytics Elements (Dimensions)
+# Elements (Dimensions) reference
 
-Provides a list of dimensions available in Analytics.
-
-An *element* is a structure that further breaks down (organizes) the a report's metrics data. For example, you can generate a report that breaks down a page view (metric) report by the Web browsers (element) used to access the page. The resulting report lists page views by Web browser type. As part of the report definition, you can specify the elements to include in the report in a [reportDescriptionElement](data_types/r_reportDescriptionElement.md#).
+An element, more commonly known as a **dimension** in current versions of Adobe Analytics, is a structure that organizes a report's metric data. See [Dimensions overview](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) in the Adobe Analytics components user guide for more information.
 
 ## Permissions
 
-Specific users may not have access to certain elements. The metrics returned by `GetElements` reflect those restrictions. Requesting an element that one doesn't have permission to access will result in a `element_inaccessible` error. 
+Specific users might not have access to certain elements. The metrics returned by `Report.GetElements` reflect those restrictions. Requesting an element that one doesn't have permission to access results in a `element_inaccessible` error. 
 
-In some cases, elements that are returned by `GetElements` may not work with a certain engine, even if access is enabled. For example, the `timevisit` element is not supported in a Data Warehouse request, even if it is returned by `GetElements`. In such a case, you should see an error message when using the element indicating that the element is not supported in that engine.
+In some cases, elements that are returned by `Report.GetElements` might not work with a certain engine, even if access is enabled. For example, the `timevisit` element is not supported in a Data Warehouse request, even if it is returned by `Report.GetElements`. In such a case, an error message is shown when using the element indicating that the element is not supported in that engine.
 
 ## Element Breakdowns
 
-The reporting API has two groups of elements: Traffic and Commerce. Elements may only be broken down by elements in the same group, as listed in the "Breakdown Type" column in the table below. Breakdowns are not supported on fallout and pathing reports.
+The reporting API has two groups of elements: Traffic and Commerce. Elements can only be broken down by elements in the same group, as listed in the "Breakdown Type" column in the table below. Breakdowns are not supported on fallout and pathing reports.
 
 You can pass any of these elements to [GetElements](methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element.
 
+These restrictions only apply to the 1.4 Reporting API; if you want apply breakdowns to any dimension, use the [Adobe Analytics 2.0 Reporting API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/reports/) instead.
+
 ## Element object reference
 
-|Name|Type|Description|
-|----|----|-----------|
-| **id** | `string` |Specifies the name of the element to apply to the metrics report.|
-| **classification** | `string` |(Optional) Restricts the element results to only those that fall in the specified classification. For example you could set `id = "trackingCode"` and `classification = "Campaigns"` to get a report of all tracking codes for the Campaigns classification.|
-| **top** | `int` | (Optional) Specifies the number of rows in the report to return. Use with startingWith to generate paged reports. For example, `top=5` returns five rows. The maximum number of top elements that can be requested is 50,000. Setting the "top" parameter to a number greater than 50000 will result in an `element_top_invalid` error. |
-| **startingWith** | `int` | (Optional) Specifies the first row in the report to return. Use with top to generate paged reports. For example, `startingWith=20` returns report rows starting at row 20. |
-| **search** | [reportDescriptionSearch](r_reportDescriptionSearch.md#) |(Optional) Applies a search to the element.|
-| **selected** | `string[]` |(Optional) Defines a specific list of items to request instead of using search, top, and startingWith to set the element parameters.|
-| **parentID** | `string` | (Optional) Hierarchy report. To specify a specific level to report, add a add a level and parentID parameter. The parentID is returned in report data, making it available to request the next level of the hierarchy. |
-| **checkpoints** |`string[]` | Generates a pathing report. See [Pathing Reports](../pathing.md#) |
-| **pattern** |`string[]` | Generate a fallout pathing report. See [Pathing Reports](../pathing.md#) | A list of elements that breaks down (organizes) the metrics data in the report. For example, you can generate a report that breaks down page views (metric) by browser (element). For example: `elements = [ {id = "trackingCode", classification = "campaigns", top = 2, startingWith = 10} ]` A report may have a maximum number of three elements. Elements have restrictions on which other elements they can be combined with in a report. You can pass element to [GetElements](../methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element. |
+Name | Type | Description
+--- | --- | ---
+**`id`** | `string` |Specifies the name of the element to apply to the metrics report.
+**`classification`** | `string` |(Optional) Restricts the element results to only those that fall in the specified classification. For example you could set `id = "trackingCode"` and `classification = "Campaigns"` to get a report of all tracking codes for the Campaigns classification.
+**`top`** | `int` | (Optional) Specifies the number of rows in the report to return. Use with startingWith to generate paged reports. For example, `top=5` returns five rows. The maximum number of top elements that can be requested is 50,000. Setting the "top" parameter to a number greater than 50000 will result in an `element_top_invalid` error.
+**`startingWith`** | `int` | (Optional) Specifies the first row in the report to return. Use with top to generate paged reports. For example, `startingWith=20` returns report rows starting at row 20.
+**`search`** | `object[]` |(Optional) Applies a search to the element. This object includes the following values:<br/>`type`: A string that indicates the type of search to use. Valid values include `and`, `or`, and `not`.<br/>`keywords`: A list of keywords to include or exclude from the search, based on the type. Keyword values can also leverage the following special characters to define advanced search criteria: `*` Wild Card (e.g. "page*.html"), `^` Starts With (e.g. "^http://"), and `$` Ends With (e.g. ".html$").<br/>`searches`: An object list of subsearches. This property allows you to build complex report searches.
+**`selected`** | `string[]` |(Optional) Defines a specific list of items to request instead of using search, top, and startingWith to set the element parameters.
+**`parentID`** | `string` | (Optional) Hierarchy report. To specify a specific level to report, add a add a level and parentID parameter. The parentID is returned in report data, making it available to request the next level of the hierarchy.
+**`checkpoints`** |`string[]` | Generates a pathing report. See [Pathing Reports](pathing.md).
+**`pattern`** |`string[]` | Generate a fallout pathing report. See [Pathing Reports](pathing.md). | A list of elements that breaks down (organizes) the metrics data in the report. For example, you can generate a report that breaks down page views (metric) by browser (element). For example: `elements = [ {id = "trackingCode", classification = "campaigns", top = 2, startingWith = 10} ]` A report may have a maximum number of three elements. Elements have restrictions on which other elements they can be combined with in a report. You can pass element to [GetElements](../methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element.
 
-## Element Descriptions
+## Element ID reference
 
 |Element|Breakdown Type|Description|
 |-------|--------------|-----------|
@@ -101,7 +101,7 @@ You can pass any of these elements to [GetElements](methods/r_GetElements.md#) t
 | `referrertype` |traffic|Type of referrer. Options include Hard drive, Other Web site, Search engine, Social, andTyped/Bookmarked.|
 | `referringdomain` |traffic+commerce|Domains that referred client to the site.|
 | `referringdomainoriginal` |commerce|Domains that referred client to the site on their first visit.|
-|`reportsuite` |n/a (reportSuite is the only element on summary reports)|Used to generate report suite [summary reports](summary_report.md#).|
+|`reportsuite` |n/a (reportSuite is the only element on summary reports)|Used to generate report suite summary reports.|
 | `returnfrequency` |traffic|Number of clients that return, and how soon they return.|
 | `searchengine` |traffic+commerce|Search engine used to locate site.|
 | `searchenginekeyword` |traffic+commerce|Search engine keyword used to locate the site.|
@@ -136,24 +136,3 @@ You can pass any of these elements to [GetElements](methods/r_GetElements.md#) t
 | `videoplayers` |commerce|Video player used to view videos.|
 | `visitnumber` |traffic+commerce| Number of visits to site. Not supported by inline segments. |
 | `zip` |commerce|Client zip code.|
-
-
-## Using search filters
-
-A structure that defines a keyword search to use in the report definition.
-
-|Name|Type|Description|
-|----|----|-----------|
-| **type** | [reportDescriptionSearchType](r_reportDescriptionSearchType.md#) | The type of search to use, one of the following values: and or not |
-| **keywords** | `string[]` | A list of keywords to include or exclude from the search, based on the type. Keyword values can also leverage the following special characters to define advanced search criteria: * Wild Card (e.g. "page*.html") ^ Starts With (e.g. "^http://") $ Ends With (e.g. ".html$") |
-| **searches** | [reportDescriptionSearch](r_reportDescriptionSearch.md#)[] |A list of subsearches. This allows you to build complex report searches.|
-
-# reportDescriptionSearchType
-
-An enumerated list of boolean values used to link multiple search terms in a report search.
-
-|Value|Description|
-|-----|-----------|
-|**AND** |Combines multiple search terms using a boolean AND operation.|
-|**OR** |Combines multiple search terms using a boolean OR operation.|
-|**NOT** |Combines multiple search terms using a boolean NOT operation (effectively excluding a term from the search).|

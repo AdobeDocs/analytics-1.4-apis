@@ -1,51 +1,50 @@
-# Valid Element and Metric Combinations
+# Valid Dimension and Metric Combinations
 
-Certain metrics may only be requested along with certain elements.
+Since the 1.4 API runs on a previous version of the Adobe Analytics reporting engine, certain dimensions and metrics are not compatible with each other. If you need a dimension/metric combination that is invalid here, use the [Adobe Analytics 2.0 Reporting API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/reports/).
 
-You can pass any element to [GetMetrics](methods/r_GetMetrics.md#) to get a list of valid metrics for a specific element. Every element has either a metric allowlist or a metric denylist, whichever is shorter, that determines these restrictions. If you request an invalid combination, a `metric_not_supported_for_element` error occurs.
+You can pass any element to [Report.GetMetrics](methods.md#getmetrics) to get a list of valid metrics for a specific element. Every element has list of valid or invalid metrics, whichever is shorter, that determines these restrictions. If you request an invalid combination, a `metric_not_supported_for_element` error occurs.
 
-## Elements with Metric Allowlists
+## Dimensions with only valid metrics
 
-The elements in the element column can be requested only with the metrics in the right column.
+These dimensions can be requested only with the metrics in the right column. All other metrics requested with the dimension are invalid.
 
-|Element|Metric Allowlist|
-|-------|----------------|
-|fallout|pageviews|
-|paths|pageviews|
-|videos|cartadditions, cartremovals, carts, cartviews, checkouts, orders, revenue, units, event|
+Dimension | Allowed metric(s)
+--- | ---
+**`fallout`** | `pageviews`
+**`paths`** | `pageviews`
+**`videos`** | `cartadditions`, `cartremovals`, `carts`, `cartviews`, `checkouts`, `orders`, `revenue`, `units`, `event1`-`event1000`
 
-## Elements with Metric Denylists
+## Dimensions with invalid metrics
 
-The elements in the element column can be requested with any metric except for those that appear in the right column.
+These dimensions can be requested with any metric _except_ what is listed in the right column.
 
-| Dimension | Invalid metrics |
-|---|---|
-|browserheight|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|browsertype|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|browserwidth|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|connectiontype|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|cookiesenabled|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|geocity|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|geocountry|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|geodma|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|georegion|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|hier|uniquevisitors, visitors|
-|javaenabled|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|javascriptenabled|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|javascriptversion|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|listvar|instances|
-|mobilecarrier|videocomplete, videosegmentviews, videostart, videotime|
-|monitorcolordepth|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|pagedepth|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|pagesnotfound|averagepagedepth, averagetimespentonpage, cartadditions, cartremovals, carts, cartviews, checkouts, orders, participationrevenue, participationunits, reloads, revenue, units, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|prop|averagetimespentonsite, averagevisitdepth, bots, totalcartadditions, totalcartremovals, totalcarts, totalcartviews, totalcheckouts, totalorders, totalpageviews, totalrevenue, totalunits, totalvisitorsdaily, totalvisitorshourly, totalvisitorsmonthly, totalvisitorsquarterly, totalvisitorsweekly, totalvisitorsyearly, totalvisits, videosegmentviews, visitorsnew, totalevent|
-|referrer|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|referrertype|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|returnfrequency|averagepagedepth, averagetimespentonpage, videocomplete, videosegmentviews, videostart, videotime, event, participationevent|
-|searchenginepaid|instances|
-|searchenginepaidkeyword|instances|
-|server|averagetimespentonsite, averagevisitdepth, bots, totalcartadditions, totalcartremovals, totalcarts, totalcartviews, totalcheckouts, totalorders, totalpageviews, totalrevenue, totalunits, totalvisitorsdaily, totalvisitorshourly, totalvisitorsmonthly, totalvisitorsquarterly, totalvisitorsweekly, totalvisitorsyearly, totalvisits, videosegmentviews, visitorsnew, totalevent|
-|sitesection|singleaccess|
-|surveybase|instances|
-|tntbase|instances|
-
+Dimension | Invalid metrics
+--- | ---
+**`browserheight`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`browsertype`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`browserwidth`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`connectiontype`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`cookiesenabled`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`geocity`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event100`, `participationevent`
+**`geocountry`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`geodma`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`georegion`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`hier`** | `uniquevisitors`, `visitors`
+**`javaenabled`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`javascriptenabled`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`javascriptversion`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`listvar`** | `instances`
+**`mobilecarrier`** | `videocomplete`, `videosegmentviews`, `videostart`, `videotime`
+**`monitorcolordepth`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`pagedepth`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`pagesnotfound`** | `averagepagedepth`, `averagetimespentonpage`, `cartadditions`, `cartremovals`, `carts`, `cartviews`, `checkouts`, `orders`, `participationrevenue`, `participationunits`, `reloads`, `revenue`, `units`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`prop`** | `averagetimespentonsite`, `averagevisitdepth`, `bots`, `totalcartadditions`, `totalcartremovals`, `totalcarts`, `totalcartviews`, `totalcheckouts`, `totalorders`, `totalpageviews`, `totalrevenue`, `totalunits`, `totalvisitorsdaily`, `totalvisitorshourly`, `totalvisitorsmonthly`, `totalvisitorsquarterly`, `totalvisitorsweekly`, `totalvisitorsyearly`, `totalvisits`, `videosegmentviews`, `visitorsnew`, `totalevent`
+**`referrer`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`referrertype`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`returnfrequency`** | `averagepagedepth`, `averagetimespentonpage`, `videocomplete`, `videosegmentviews`, `videostart`, `videotime`, `event1`-`event1000`, `participationevent`
+**`searchenginepaid`** | `instances`
+**`searchenginepaidkeyword`** | `instances`
+**`server`** | `averagetimespentonsite`, `averagevisitdepth`, `bots`, `totalcartadditions`, `totalcartremovals`, `totalcarts`, `totalcartviews`, `totalcheckouts`, `totalorders`, `totalpageviews`, `totalrevenue`, `totalunits`, `totalvisitorsdaily`, `totalvisitorshourly`, `totalvisitorsmonthly`, `totalvisitorsquarterly`, `totalvisitorsweekly`, `totalvisitorsyearly`, `totalvisits`, `videosegmentviews`, `visitorsnew`, `totalevent`
+**`sitesection`** | `singleaccess`
+**`surveybase`** | `instances`
+**`tntbase`** | `instances`

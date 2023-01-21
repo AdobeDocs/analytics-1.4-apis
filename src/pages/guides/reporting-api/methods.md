@@ -4,7 +4,7 @@ Methods that you can call within the 1.4 Reporting API.
 
 ## Queue
 
-Queue a report to run.
+Queue a report to run. You can queue up multiple reports to run concurrently.
 
 **`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Queue`**
 
@@ -17,7 +17,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Queue" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportDescription":{"reportSuiteID":"examplersid"}}'
+    -d '{"reportDescription":{"reportSuiteID": "examplersid"}}'
 ```
 
 #### Response
@@ -34,7 +34,7 @@ The response contains a report ID - use this report ID in the `Report.Get` metho
 
 ## Get
 
-Retrieves a report queued using `Report.Queue`.
+Retrieves a report queued using `Report.Queue`. As a best practice, Do not call this method more than once a second.
 
 **`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Get`**
 
@@ -47,7 +47,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Get" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportID: 1234567890}}'
+    -d '{"reportID": 1234567890}'
 ```
 
 #### Response
@@ -110,7 +110,7 @@ If the report is not ready, a `HTTP 400` error is returned.
 
 ## Cancel
 
-Cancels a previously submitted report request, removing it from the processing queue.
+Cancels a previously submitted report request, removing it from the processing queue. You can only cancel reports that are queued or running; if you send a request to cancel a completed report, the API returns an error.
 
 **`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Cancel`**
 
@@ -123,7 +123,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Cancel" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportID: 1234567890}}'
+    -d '{"reportID": 1234567890}'
 ```
 
 #### Response
@@ -151,7 +151,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.GetElements
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportSuiteID: "examplersid"}}'
+    -d '{"reportSuiteID": "examplersid"}'
 ```
 
 #### Response
@@ -218,7 +218,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.GetMetrics"
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportSuiteID: examplersid}}'
+    -d '{"reportSuiteID": "examplersid"}'
 ```
 
 #### Response
@@ -264,7 +264,7 @@ Response element | Type | Description
 --- | --- | ---
 **`id`** | `string` | The metric ID.
 **`name`** | `string` | The metric name.
-**`type`** | `string` | The metric type.
+**`type`** | `string` | The metric type. Valid values include `number`, `percent`, `currency`, and `time`.
 **`decimals`** | `int` | The number of decimal places that the metric uses.
 **`formula`** | `null` | The formula if the metric is a calculated metric.
 
@@ -282,7 +282,6 @@ Returns a list of reports in a company's report queue.
 curl -X GET "https://api.omniture.com/admin/1.4/rest/?method=Report.GetQueue" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
-    -H "Content-Type: application/json" \
 ```
 
 #### Response
@@ -300,7 +299,7 @@ curl -X GET "https://api.omniture.com/admin/1.4/rest/?method=Report.GetQueue" \
         "user": "exampleuser"
     },
     {
-        "reportID": 1234567890,
+        "reportID": 1234567891,
         "type": "tr",
         "queueTime": "YYYY-06-29T16:42:09-0800",
         "status": "running",
@@ -312,16 +311,16 @@ curl -X GET "https://api.omniture.com/admin/1.4/rest/?method=Report.GetQueue" \
 ]
 ```
 
-Does not require a JSON body. Returns a list of reports currently running for the company. Company is determined by the authentication credentials used in the `x-api-key` and `Authentication` headers.
+Does not require a JSON body. Returns a list of reports currently running for the company. Company is determined by the credentials used in the `x-api-key` and `Authorization` headers.
 
 Response element | Type | Description
 --- | --- | ---
 **`reportID`** | `int` | The report ID running.
-**`type`** | `string` | The type of report.
-**`queueTime`** | `date` | The date/time that the report was queued.
-**`status`** | `string` | The status of the report.
+**`type`** | `string` | The type of report. Valid values include `overtime`, `trended`, `trendedplus`, `ranked`, or `universal`.
+**`queueTime`** | `date` | The date/time that the report was queued (Pacific time).
+**`status`** | `string` | The status of the report. Valid values include `waiting` or `running`.
 **`priority`** | `int` | The report priority.
-**`estimate`** | `double` | The estimated time remaining before the report is complete.
+**`estimate`** | `double` | The estimated time remaining (in seconds) before the report is complete.
 **`reportSuiteID`** | `string` | The report suite ID of the report.
 **`user`** | `string` | The user that requested the report.
 
@@ -340,7 +339,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Run" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportDescription":{"reportSuiteID":"examplersid","source": "realtime"}}'
+    -d '{"reportDescription":{"reportSuiteID": "examplersid","source": "realtime"}}'
 ```
 
 #### Response
@@ -428,7 +427,7 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Validate" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportDescription":{"reportSuiteID":"examplersid"}}'
+    -d '{"reportDescription":{"reportSuiteID": "examplersid"}}'
 ```
 
 #### Response
