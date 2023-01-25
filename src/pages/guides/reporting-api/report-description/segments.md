@@ -1,9 +1,9 @@
-# 1.4 Reporting API segmentation reference
+# Segmentation reference
 
-Inline segmentation allows you to segment report data using segment definitions that are include as part of the [reportDescription](data_types/r_reportDescription.md#) :
+Inline segmentation allows you to segment report data using segment definitions that are include as part of the [reportDescription](index.md) :
 
 - Segment by specific line items (only include data where page = "Home Page")
-- Segment classified values by search criteria (only include data where a classification of evar1 matches a search)
+- Segment classified values by search criteria (only include data where a classification of eVar1 matches a search)
 
 Note the following limitations:
 
@@ -12,11 +12,23 @@ Note the following limitations:
 - Some reports are not supported by inline segments. A complete list is at the bottom of this article.
 - Prop values cannot be used to define inline segments.
 
-## Segmenting by Line Items
+# JSON object reference
+
+The following properties are supported within the `segments` object:
+
+
+|Element|Type|Description|
+|-------|----|-----------|
+| **`id`** | `string` | Specifies the existing saved segment ID that you want to apply to a search. **Important:** In version 1.4, inline segments no longer use the "id" parameter to specify the element as in 1.3. If migrating code from version 1.3, move the element value that was previously in the "id" parameter to the "element" parameter. |
+| **`element`** |`string`| Specifies the element (dimension) on which you want to segment. |
+| **`search`** | `object[]` | (Optional) Applies a search to the element. This object includes the following values:<br/>`type`: A string that indicates the type of search to use. Valid values include `and`, `or`, and `not`.<br/>`keywords`: A list of keywords to include or exclude from the search, based on the type. Keyword values can also leverage the following special characters to define advanced search criteria: `*` Wild Card (e.g. "page*.html"), `^` Starts With (e.g. "^http://"), and `$` Ends With (e.g. ".html$"). |
+| **`classification`** | `string` | (Optional, provide either a selected value, or a classification and a search value). Specifies how to integrate the include and an exclude segments. |
+
+## Segment by line items
 
 Create a segment definition with an id of the reporting element you want to segment, with a selected value that contains the match criteria.
 
-```
+```json
 {
    "reportDescription": {
        "reportSuiteID": "rsid",
@@ -39,11 +51,11 @@ Create a segment definition with an id of the reporting element you want to segm
 
 This report shows the page views for every browser when the page name is either "Home Page" or "Shopping Cart".
 
-## Segmenting by Classification Value
+## Segment by classification value
 
 Create a segment definition with an id of the reporting element you want to segment, the classification you want to match, and a search string.
 
-```
+```json
 {
    "reportDescription": {
        "reportSuiteID": "rsid",
@@ -67,33 +79,22 @@ Create a segment definition with an id of the reporting element you want to segm
 
 This report shows the page views for every browser when the "Group Name" classification of eVar1 contains "Administrator, "Manager", or "Director".
 
-The following search types are supported:
-
--  `AND` 
--  `OR` 
--  `NOT` 
-
-The following special characters are supported in keywords:
-
--  `^` matches the start of a string
--  `$` matches the end of a string
-
 ## Multiple Segments
 
 You can provide multiple segments in the segments array. Segments are joined using AND. Segments cannot be nested.
 
-```
+```json
 "segments": [
-           { 
-               "element": "page",
-               "selected": ["Home Page", "Shopping Cart"]
-           },
-           { 
-               "element": "eVar1",
-               "classification": "Group Name",
-               "search": { "type": "OR", "keywords": ["Administrator", "Manager", "Director"] }
-           }
-       ]
+    { 
+        "element": "page",
+        "selected": ["Home Page", "Shopping Cart"]
+    },
+    { 
+        "element": "eVar1",
+        "classification": "Group Name",
+        "search": { "type": "OR", "keywords": ["Administrator", "Manager", "Director"] }
+    }
+]
 ```
 
 Including this segment definition in a report shows metrics where the page name is either "Home Page" or "Shopping Cart", and the "Group Name" classification of eVar1 contains "Administrator, "Manager", or "Director".
@@ -102,22 +103,22 @@ Including this segment definition in a report shows metrics where the page name 
 
 The following table contains an example of the different search types available with inline segmentation.
 
-|Classification Search Type|Search Example|
-|---------|-------------|
-|Equals|"search": { "type": "AND", "keywords": ["^key$"] }|
-|Does not contain|"search": { "type": "NOT", "keywords": ["^key$"] }|
-|Contains|"search": { "type": "AND", "keywords": ["key word"] }|
-|Contains all of|"search": { "type": "AND", "keywords": ["key", "word"] }|
-|Contains at least one of|"search": { "type": "OR", "keywords": ["key", "word"] }|
-|Does not contain|"search": { "type": "NOT", "keywords": ["key"] }|
-|Is null| N/A. Empty classifications are not matched by a search. |
-|Is not null| Run a report on the selected element and classification. |
-|Starts with|"search": { "type": "AND", "keywords": ["^key"] }|
-|Does not start with|"search": { "type": "NOT", "keywords": ["^key"] }|
-|Ends with|"search": { "type": "AND", "keywords": ["key$"] }|
-|Does not end with|"search": { "type": "NOT", "keywords": ["key$"] }|
+Classification Search Type | Search Example
+--- | ---
+Equals | `"search": { "type": "AND", "keywords": ["^key$"] }` 
+Does not contain | `"search": { "type": "NOT", "keywords": ["^key$"] }`
+Contains | `"search": { "type": "AND", "keywords": ["key word"] }`
+Contains all of | `"search": { "type": "AND", "keywords": ["key", "word"] }`
+Contains at least one of | `"search": { "type": "OR", "keywords": ["key", "word"] }`
+Does not contain | `"search": { "type": "NOT", "keywords": ["key"] }`
+Is null | N/A. Empty classifications are not matched by a search.
+Is not null | Run a report on the selected element and classification.
+Starts with | `"search": { "type": "AND", "keywords": ["^key"] }`
+Does not start with | `"search": { "type": "NOT", "keywords": ["^key"] }`
+Ends with | `"search": { "type": "AND", "keywords": ["key$"] }`
+Does not end with | `"search": { "type": "NOT", "keywords": ["key$"] }`
 
-## Unsupported Reports
+## Unsupported reports and elements
 
 Inline segments cannot be applied to the following report data:
 
@@ -134,24 +135,11 @@ Inline segments cannot be applied to the following report data:
 - Keyword URLs
 - Return visits
 
-# reportDescriptionSegment
-
-A structure that defines an inline segment to use in a [reportDescription](r_reportDescription.md#) .
-
-|Element|Type|Description|
-|-------|----|-----------|
-| ` id ` | `string` | Specifies the existing saved segment ID that you want to apply to a search. **Important:** In version 1.4, inline segments no longer use the "id" parameter to specify the element as in 1.3. If migrating code from version 1.3, move the element value that was previously in the "id" parameter to the "element" parameter. |
-| ` element ` |`string`| Specifies the element (dimension) on which you want to segment. |
-| ` search ` | [reportDescriptionSearch](r_reportDescriptionSearch.md#) | (Optional, provide either a selected value, or a classification and a search value). Search is an array that contains two values: **type**: selects the type of search to perform. The following search types are supported: `AND` `OR` `NOT` **keywords**: Array of values for which you want to search. The following special characters are supported in keywords: `^` matches the start of a string. `$` matches the end of a string. |
-| ` classification ` | `string` | (Optional, provide either a selected value, or a classification and a search value). Specifies how to integrate the include and an exclude segments. |
-
-## Unsupported Elements
-
 The following elements are not supported for inline segments.
 
-- pagedepth
-- visitnumber
-- mobilecarrier
-- hier
-- paths
-- fallout
+- `pagedepth`
+- `visitnumber`
+- `mobilecarrier`
+- `hier`
+- `paths`
+- `fallout`

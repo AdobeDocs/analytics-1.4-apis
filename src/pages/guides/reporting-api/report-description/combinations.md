@@ -2,7 +2,7 @@
 
 Since the 1.4 API runs on a previous version of the Adobe Analytics reporting engine, certain dimensions and metrics are not compatible with each other. If you need a dimension/metric combination that is invalid here, use the [Adobe Analytics 2.0 Reporting API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/reports/).
 
-You can pass any element to [Report.GetMetrics](methods.md#getmetrics) to get a list of valid metrics for a specific element. Every element has list of valid or invalid metrics, whichever is shorter, that determines these restrictions. If you request an invalid combination, a `metric_not_supported_for_element` error occurs.
+You can pass any element to [Report.GetMetrics](methods.md#getmetrics) to get a list of valid metrics for a specific element. Every element has list of valid or invalid metrics, whichever is shorter, that determines these restrictions. If you request an invalid combination, you get a `metric_not_supported_for_element` error.
 
 ## Dimensions with only valid metrics
 
