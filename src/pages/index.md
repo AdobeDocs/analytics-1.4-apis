@@ -16,8 +16,7 @@ The Adobe Analytics 1.4 APIs are the predecessor to the Analytics 2.0 APIs. They
 #### Resources
 
 * [Quick start guide](guides/index.md)
-* [Endpoint guides](guides/endpoints/index.md)
-* [API reference](apis/index.md)
+* [API reference](https://adobedocs.github.io/analytics-1.4-apis/)
 * [Github repository](https://github.com/AdobeDocs/analytics-1.4-apis)
 
 ## Overview
