@@ -8,7 +8,7 @@ This API runs on a reporting engine used in previous versions of Adobe Analytics
 
 The overarching workflow to retrieve a report is as follows:
 
-![Reporting API workflow](graphics/reporting_api_gs.png)
+![Reporting API workflow](../../images/reporting_api_gs.png)
 
 1. Call the method `Report.Queue` with a [`reportDescription`](report-description/index.md) JSON body that includes the desired report. The Reporting API returns a report ID.
 1. Call the method to `Report.Get` using the report ID. If the report is ready, you receive a JSON object with the report. Otherwise, the API responds that the report is not yet ready.

@@ -28,12 +28,8 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Overview',
-        path: 'index.md'
-      },
-      {
         title: 'Guides',
-        path: 'guides'
+        path: 'guides/index.md'
       },
       {
         title: 'API Reference',
@@ -43,75 +39,171 @@ module.exports = {
     subPages: [
       {
         title: 'Getting Started',
-        path: 'guides/getting-started/index.md'
-      },
-      {
-        title: 'Reporting API',
-        path: 'guides/reporting-api/index.md'
+        path: 'guides/index.md'
       },
       {
         title: 'Admin API',
-        path: 'guides/admin-api/index.md'
+        path: 'guides/admin/index.md',
+        pages: [
+          {
+            title: 'Bookmarks',
+            path: 'guides/admin/bookmark.md'
+          },
+          {
+            title: 'Company settings',
+            path: 'guides/admin/company.md'
+          },
+          {
+            title: 'Report suites',
+            path: 'guides/admin/report-suite/index.md',
+            pages: [
+              {
+                title: 'Get methods',
+                path: 'guides/admin/report-suite/get.md'
+              },
+              {
+                title: 'Save methods',
+                path: 'guides/admin/report-suite/save.md'
+              },
+              {
+                title: 'Delete methods',
+                path: 'guides/admin/report-suite/delete.md'
+              }
+            ]
+          },
+          {
+            title: 'Data types',
+            path: 'guides/admin/data-types.md'
+          }
+        ]
       },
       {
-        title: 'Live Stream',
-        path: 'guides/live-stream-api/index.md'
+        title: 'Calculated metrics API',
+        path: 'guides/calculated-metrics.md'
       },
       {
-        title: 'Data Feeds',
-        path: 'guides/data-feeds-api/index.md'
+        title: 'Classifications API',
+        path: 'guides/classifications/index.md',
+        pages: [
+          {
+            title: 'Data types',
+            path: 'guides/classifications/data-types.md'
+          }
+        ]
       },
       {
-        title: 'Data Sources',
-        path: 'guides/data-sources-api/index.md'
+        title: 'Data feeds API',
+        path: 'guides/data-feeds.md'
       },
       {
-        title: 'Data Insertion',
-        path: 'guides/data-insertion-api/index.md'
+        title: 'Data insertion API',
+        path: 'guides/data-insertion/index.md',
+        pages: [
+          {
+            title: 'Variable reference',
+            path: 'guides/data-insertion/variable-reference.md'
+          },
+          {
+            title: 'Troubleshooting',
+            path: 'guides/data-insertion/troubleshooting.md'
+          }
+        ]
       },
       {
-        title: 'Data Warehouse',
-        path: 'guides/data-warehouse-api/index.md'
+        title: 'Data Sources API',
+        path: 'guides/data-sources.md'
       },
       {
-        title: 'Classifications',
-        path: 'guides/classifications-api/index.md'
+        title: 'Livestream API',
+        path: 'guides/livestream/index.md',
+        pages: [
+          {
+            title: 'Variable reference',
+            path: 'guides/livestream/variable-reference.md'
+          },
+          {
+            title: 'Example output',
+            path: 'guides/livestream/example-output.md'
+          },
+          {
+            title: 'Troubleshooting',
+            path: 'guides/livestream/troubleshooting.md'
+          },
+          {
+            title: 'FAQ',
+            path: 'guides/livestream/faq.md'
+          }
+        ]
       },
       {
-        title: 'Calculated Metrics',
-        path: 'guides/calc-metrics-api/index.md'
+        title: 'Reporting API',
+        path: 'guides/reporting/index.md',
+        pages: [
+          {
+            title: 'Methods',
+            path: 'guides/reporting/methods.md'
+          },
+          {
+            title: 'Report description',
+            path: 'guides/reporting/report-description/index.md',
+            pages: [
+              {
+                title: 'Dimensions',
+                path: 'guides/reporting/report-description/dimensions.md'
+              },
+              {
+                title: 'Metrics',
+                path: 'guides/reporting/report-description/metrics.md'
+              },
+              {
+                title: 'Segments',
+                path: 'guides/reporting/report-description/segments.md'
+              },
+              {
+                title: 'Combinations',
+                path: 'guides/reporting/report-description/combinations.md'
+              },
+              {
+                title: 'Examples',
+                path: 'guides/reporting/report-description/examples.md'
+              }
+            ]
+          },
+          {
+            title: 'Report data',
+            path: 'guides/reporting/report-data.md'
+          },
+          {
+            title: 'Data Warehouse',
+            path: 'guides/reporting/data-warehouse.md'
+          },
+          {
+            title: 'Pathing',
+            path: 'guides/reporting/pathing.md'
+          },
+          {
+            title: 'Real-time',
+            path: 'guides/reporting/real-time.md'
+          },
+          {
+            title: 'Summary',
+            path: 'guides/reporting/summary.md'
+          },
+          {
+            title: 'Troubleshooting',
+            path: 'guides/reporting/troubleshooting.md'
+          }
+        ]
       },
       {
-        title: 'Segments',
-        path: 'guides/segments-api/index.md'
-      },
-      {
-        title: 'Legacy Recommendations API',
-        path: 'guides/recommendations-api/index.md'
-      },
-      {
-        title: 'Legacy Target API',
-        path: 'guides/target-api/index.md'
-      },
-      {
-        title: 'Legacy Saint API',
-        path: 'guides/saint-api/index.md'
-      },
-      {
-        title: 'Legacy Reporting API',
-        path: 'guides/reporting-api-1.3/index.md'
-      },
-      {
-        title: 'Legacy Admin API',
-        path: 'guides/admin-api-1.3/index.md'
-      },
-      {
-        title: 'Legacy Authentication',
-        path: 'guides/authentication/index.md'
-      },
-      {
-        title: 'Legacy 1.3 APIs',
-        path: 'guides/APIEOL.md'
+        title: 'Segments API',
+        path: 'guides/segments/index.md',
+        pages: [
+          {
+            title: 'Data types',
+            path: 'guides/segments/data-types.md'
+          }
+        ]
       }
     ]
   },
