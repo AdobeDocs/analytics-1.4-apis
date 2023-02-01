@@ -654,7 +654,7 @@ Data structure that contains information about a report suite's localization set
 |Name|Type|Description|
 |----|----|-----------|
 | **`rsid`** | `string` |A report suite ID.|
-| **`marketing_channels`** | [marketing_channel[]](#marketing_channel) |A list of marketing channels in the specified report suite.|
+| **`marketing_channels`** | [`marketing_channel[]`](#marketing_channel) |A list of marketing channels in the specified report suite.|
 
 ## report_suite_paid_search_detection
 
@@ -664,7 +664,7 @@ Data structure that contains information about a report suite's paid search sett
 |-------|----|-----------|
 | **`rsid`** | `string` | The report suite ID. |
 | **`site_title`** | `string` | The report suite friendly name. |
-| **`paid_search_detection`** | [paid_search_detection[]](#paid_search_detection) | A list of `paid_search` objects associated with this report suite. |
+| **`paid_search_detection`** | [`paid_search_detection[]`](#paid_search_detection) | A list of `paid_search` objects associated with this report suite. |
 
 ## report_suite_permanent_traffic
 
@@ -674,7 +674,7 @@ Data structure that contains information about a report suite's base URL setting
 |-------|----|-----------|
 |**`rsid`** |`string` | Report suite ID. |
 |**`site_title`** |`string` | The report suite friendly name. |
-|**`permanent_traffic`** | [permanent_traffic[]](#permanent_traffic) | The report suite's base URL setting. |
+|**`permanent_traffic`** | [`permanent_traffic[]`](#permanent_traffic) | The report suite's base URL setting. |
 
 ## report_suite_processing_status
 
@@ -684,7 +684,7 @@ Data structure that contains information about a report suite's data processing 
 |-------|----|-----------|
 |**`rsid`** |`string` | The report suite ID. |
 |**`site_title`** |`string` | The report suite friendly name. |
-|**`processing_status`** |[processing_status](#processing_status) | The data processing status of this report suite. |
+|**`processing_status`** |[`processing_status`](#processing_status) | The data processing status of this report suite. |
 
 ## report_suite_props
 
@@ -694,7 +694,7 @@ Data structure that contains information about a report suite's Traffic variable
 |-------|----|-----------|
 | **`rsid`** | `string` | The report suite ID. |
 | **`site_title`** | `string` | The report suite friendly name. |
-| **`props`** | [prop[]](#prop) | An array of `prop` objects associated with this report suite. |
+| **`props`** | [`prop[]`](#prop) | An array of `prop` objects associated with this report suite. |
 
 ## report_suite_real_time_settings
 
@@ -704,7 +704,7 @@ Data structure that contains information about a report suite's real time report
 |-------|----|-----------|
 | **`rsid`** | `string` | The report suite ID. |
 | **`site_title`** | `string` | The report suite friendly name. |
-| **`real_time_settings`** |  [real_time_settings[]](#real_time_settings) | Details about real time reports that are enabled for the specified report suite. |
+| **`real_time_settings`** |  [`real_time_settings[]`](#real_time_settings) | Details about real time reports that are enabled for the specified report suite. |
 
 ## report_suite_scheduled_spike
 
@@ -714,7 +714,7 @@ Data structure that contains information about a scheduled traffic spike.
 |-------|----|-----------|
 | **`rsid`** | `string` | The report suite ID. |
 | **`site_title`** | `string` | The report suite friendly name. |
-| **`scheduled_spike`** | [schedule_spike[]](#schedule_spike) | A list of `schedule_spike` objects associated with this report suite. |
+| **`scheduled_spike`** | [`schedule_spike[]`](#schedule_spike) | A list of `schedule_spike` objects associated with this report suite. |
 
 ## report_suite_segments
 
@@ -723,7 +723,7 @@ Data structure that contains information about a report suite's segments.
 |Element|Type|Description|
 |-------|----|-----------|
 | **`rsid`** | `string` | The report suite ID. |
-| **`segments`** |  [segment_item[]](#segment_item) | A list of `segment` objects associated with this report suite. |
+| **`segments`** |  [`segment_item[]`](#segment_item) | A list of `segment` objects associated with this report suite. |
 
 ## report_suite_settings
 
@@ -753,7 +753,7 @@ Data structure that contains information about a report suite's common settings.
 | **`template`** | `string` | Template used to define report suite. |
 | **`time_zone`** | `time_zone_enum` | The report suite time zone. |
 | **`unique_visitor_variable`** | `string` | |
-| **`video_settings`** | [video_settings](#video_settings) | Data structure that contains information about video tracking settings. |
+| **`video_settings`** | [`video_settings`](#video_settings) | Data structure that contains information about video tracking settings. |
 
 ## report_suite_site_title
 
@@ -780,7 +780,7 @@ Data structure that contains information about a report suite's templates.
 |-------|----|-----------|
 |**`rsid`** |`string` | The report suite ID. |
 |**`site_title`** |`string` | The report suite friendly name. |
-|**`time_zone`** |[time_zone_enum](#time_zone_enum) | A list of time zones associated with this report suite. |
+|**`time_zone`** |[`time_zone_enum`](#time_zone_enum) | A list of time zones associated with this report suite. |
 
 ## report_suite_transaction_enabled
 
@@ -810,7 +810,7 @@ Data structure that contains information about report suite's video settings.
 |-------|----|-----------|
 |**`rsid`** |`string` | The report suite ID. |
 |**`site_title`** |`string` | The report suite friendly name. |
-|**`video_settings`** |[video_settings](#video_settings) | A list of video settings associated with this report suite. |
+|**`video_settings`** |[`video_settings`](#video_settings) | A list of video settings associated with this report suite. |
 
 ## reportElement
 
@@ -840,7 +840,7 @@ Data structure that contains basic information about a single metric.
 |Name|Type|Description|
 |----|----|-----------|
 | **`rsid`** | `string` |A report suite ID.|
-| **`marketing_channel_rules`** | [marketing_channel_ruleset[]](#marketing_channel_ruleset) | |
+| **`marketing_channel_rules`** | [`marketing_channel_ruleset[]`](#marketing_channel_ruleset) | |
 
 ## schedule_spike
 

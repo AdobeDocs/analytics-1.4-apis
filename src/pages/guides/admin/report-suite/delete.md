@@ -115,4 +115,4 @@ Removes the specified virtual report suite.
 |----|----|-----------|
 | **rsid** | `string` | Report suite ID of virtual report suite. |
 
-Returns true if operation is successful.
+Returns `true` if operation is successful.

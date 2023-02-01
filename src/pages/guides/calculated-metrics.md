@@ -89,6 +89,8 @@ Does not require a JSON request body. Response is an array of calculated metric 
 
 <CodeBlock slots="heading, code" repeat="1" languages="JSON"/>
 
+#### Response
+
 ```json
 {
   "id":"pow",
