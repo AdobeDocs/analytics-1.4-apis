@@ -3,7 +3,7 @@ title: Adobe Analytics 1.4 APIs
 description: The Analytics 1.4 API overview page.
 ---
 
-<Hero slots="image, heading, text" background="rgb(88, 34, 138)"/>
+<Hero slots="image, heading, text" background="rgb(14, 59, 24)"/>
 
 ![Hero image](./images/hero-illustration.png)
 
