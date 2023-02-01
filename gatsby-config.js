@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         title: 'API Reference',
-        path: 'api.md'
+        path: 'https://adobedocs.github.io/analytics-1.4-apis/'
       }
     ],
     subPages: [
