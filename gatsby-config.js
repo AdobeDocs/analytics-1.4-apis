@@ -12,6 +12,10 @@
 
 module.exports = {
   siteMetadata: {
+    home: {
+      title: 'Adobe Analytics',
+      path: '/analytics-apis/'
+    },
     versions: [
       {
         title: 'v2.0',
@@ -24,12 +28,8 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Adobe Analytics',
-        path: 'index.md'
-      },
-      {
-        title: 'Endpoint guides',
-        path: 'guides'
+        title: 'Guides',
+        path: 'guides/index.md'
       },
       {
         title: 'API Reference',
@@ -39,11 +39,11 @@ module.exports = {
     subPages: [
       {
         title: 'Getting Started',
-        path: 'guides'
+        path: 'guides/index.md'
       },
       {
         title: 'Admin API',
-        path: 'guides/admin',
+        path: 'guides/admin/index.md',
         pages: [
           {
             title: 'Bookmarks',
@@ -55,7 +55,7 @@ module.exports = {
           },
           {
             title: 'Report suites',
-            path: 'guides/admin/report-suite',
+            path: 'guides/admin/report-suite/index.md',
             pages: [
               {
                 title: 'Get methods',
@@ -83,7 +83,7 @@ module.exports = {
       },
       {
         title: 'Classifications API',
-        path: 'guides/classifications',
+        path: 'guides/classifications/index.md',
         pages: [
           {
             title: 'Data types',
@@ -97,7 +97,7 @@ module.exports = {
       },
       {
         title: 'Data insertion API',
-        path: 'guides/data-insertion',
+        path: 'guides/data-insertion/index.md',
         pages: [
           {
             title: 'Variable reference',
@@ -115,7 +115,7 @@ module.exports = {
       },
       {
         title: 'Livestream API',
-        path: 'guides/livestream',
+        path: 'guides/livestream/index.md',
         pages: [
           {
             title: 'Variable reference',
@@ -137,7 +137,7 @@ module.exports = {
       },
       {
         title: 'Reporting API',
-        path: 'guides/reporting',
+        path: 'guides/reporting/index.md',
         pages: [
           {
             title: 'Methods',
@@ -145,7 +145,7 @@ module.exports = {
           },
           {
             title: 'Report description',
-            path: 'guides/reporting/report-description',
+            path: 'guides/reporting/report-description/index.md',
             pages: [
               {
                 title: 'Dimensions',
@@ -197,7 +197,7 @@ module.exports = {
       },
       {
         title: 'Segments API',
-        path: 'guides/segments',
+        path: 'guides/segments/index.md',
         pages: [
           {
             title: 'Data types',
