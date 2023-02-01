@@ -1,0 +1,259 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "The BDIA allows clients to send bulk hit/event data into Analytics",
+      "version": "1.0",
+      "title": "Bulk Data Insertion API (BDIA)"
+    },
+    "host": "analytics-collection.adobe.io",
+    "basePath": "/aa/collect/v1",
+    "tags": [
+      {
+        "name": "events"
+      }
+    ],
+    "schemes": [
+      "https"
+    ],
+    "paths": {
+      "/events": {
+        "post": {
+          "tags": [
+            "events"
+          ],
+          "summary": "Upload a batch file to Analytics for processing",
+          "description": "Uploaded files must:\n * Be 100 MB or less compressed (using gzip)\n* Follow the CSV formatting rules and include the required fields as specified in the documentation",
+          "operationId": "filePost",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "x-adobe-vgid",
+              "in": "header",
+              "description": "Visitor Group ID. A visitor group represents a bucketed group of visitor IDs that are disjoint  from any other visitor group set. The Group ID is a string, and can be whatever value you wish, but it  must be consistent across files. Please see the documentation for details on this important concept.",
+              "required": true,
+              "type": "string"
+            },
+            {
+              "name": "file",
+              "in": "formData",
+              "description": "Gzip compressed CSV file sent with request",
+              "required": true,
+              "type": "file"
+            },
+            {
+              "name": "debug",
+              "in": "query",
+              "description": "Store debug information for the first 10 hits of the file",
+              "required": false,
+              "type": "boolean",
+              "default": false
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/UploadedFileInfo"
+              }
+            },
+            "400": {
+              "description": "Request Error",
+              "schema": {
+                "$ref": "#/definitions/ApiError"
+              }
+            },
+            "401": {
+              "description": "Unauthorized Access",
+              "schema": {
+                "$ref": "#/definitions/ApiUnauthorizedError"
+              }
+            }
+          }
+        }
+      },
+      "/events/validate": {
+        "post": {
+          "tags": [
+            "events"
+          ],
+          "summary": "Upload a batch file to Analytics for validation",
+          "description": "This file will not be stored on the server or processed into Analytics.  Validate is used only for testing your file format.",
+          "operationId": "fileValidatePut",
+          "consumes": [
+            "multipart/form-data"
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "file",
+              "in": "formData",
+              "description": "Gzip compressed CSV file sent with request",
+              "required": true,
+              "type": "file"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "OK",
+              "schema": {
+                "$ref": "#/definitions/UploadedFileInfo"
+              }
+            },
+            "400": {
+              "description": "Request Error",
+              "schema": {
+                "$ref": "#/definitions/ApiError"
+              }
+            },
+            "401": {
+              "description": "Unauthorized Access",
+              "schema": {
+                "$ref": "#/definitions/ApiUnauthorizedError"
+              }
+            }
+          }
+        }
+      }
+    },
+    "definitions": {
+      "ApiError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Request is missing required header 'x-adobe-vgid'",
+            "description": "General request error is encountered"
+          }
+        }
+      },
+      "ApiSuccess": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string",
+            "description": "Response if result is success"
+          }
+        }
+      },
+      "ApiUnauthorizedError": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Invalid token (1)",
+            "description": "Error during authentication"
+          }
+        }
+      },
+      "FileID": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "string"
+          }
+        }
+      },
+      "UploadedFileInfo": {
+        "type": "object",
+        "properties": {
+          "file_id": {
+            "type": "string",
+            "example": "5c04f400-fca5-420c-9c36-b94aaec55e69",
+            "description": "The id of the file as a GUID"
+          },
+          "visitor_group_id": {
+            "type": "string",
+            "example": "myvisitorgroup1",
+            "description": "The visitor group of the file"
+          },
+          "size": {
+            "type": "integer",
+            "format": "int64",
+            "example": 355600,
+            "description": "The size of the compressed file in bytes"
+          },
+          "received_date": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1506553535,
+            "description": "The date the file was uploaded in unix epoch time."
+          },
+          "processing_start_date": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1506553492,
+            "description": "The date processing was started, in unix epoch time."
+          },
+          "processing_end_date": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1506553492,
+            "description": "The date all hits were submitted to analytics, in unix epoch time."
+          },
+          "file_reader_complete_date": {
+            "type": "integer",
+            "format": "int64",
+            "example": 1506553492,
+            "description": "The date the file was completely read, but the hits weren't submitted, in unix epoch time."
+          },
+          "rows": {
+            "type": "integer",
+            "format": "int64",
+            "example": 10000,
+            "description": "The number of rows in the file"
+          },
+          "invalid_rows": {
+            "type": "integer",
+            "format": "int64",
+            "example": 42,
+            "description": "The number of rows that were not submitted to analytics because they were invalid"
+          },
+          "upload_name": {
+            "type": "string",
+            "example": "myfile1.gz",
+            "description": "The name the file was uploaded as"
+          },
+          "status": {
+            "type": "string",
+            "description": "The status of the file"
+          },
+          "status_code": {
+            "type": "string",
+            "example": "UPLOADED",
+            "description": "The status of the file as a short name",
+            "enum": [
+              "REJECTED",
+              "UPLOADED",
+              "PROCESSING",
+              "COMPLETE",
+              "ERROR"
+            ]
+          },
+          "processing_log": {
+            "type": "string",
+            "description": "A log of errors produced while processing the file"
+          },
+          "error": {
+            "type": "string",
+            "example": "File not in GZIP format",
+            "description": "An error message populated on unsuccessful requests"
+          },
+          "success": {
+            "type": "string",
+            "example": "File is valid",
+            "description": "A success message populated on validation requests"
+          }
+        }
+      }
+    }
+  }
