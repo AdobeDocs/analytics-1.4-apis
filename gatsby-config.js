@@ -12,10 +12,6 @@
 
 module.exports = {
   siteMetadata: {
-    home: {
-      title: 'Adobe Analytics',
-      path: '/analytics-apis/'
-    },
     versions: [
       {
         title: 'v2.0',
@@ -28,7 +24,11 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Guides',
+        title: 'Adobe Analytics',
+        path: 'index.md'
+      },
+      {
+        title: 'Endpoint guides',
         path: 'guides/index.md'
       },
       {
