@@ -61,5 +61,6 @@ XML tag (`POST`) | Query string parameter (`GET`) | Description
 `<timestamp>` | `ts` | The date and time that the data was collected. [Unix Time](https://en.wikipedia.org/wiki/Unix_time) and [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) are supported. Milliseconds are not allowed. See [Timestamps Optional](https://experienceleague.adobe.com/docs/analytics/technotes/timestamps-optional.html) for more information.
 `<transactionId>` | `xact` | The [`transactionID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/transactionid.html) variable.
 `<userAgent>` | `User-Agent` HTTP header | The device's user agent string.
+`<userAgentClientHints>` | `h.[key]` | [`userAgentClientHints`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/useragentclienthints.html) implementation variables.
 `<visitorId>` | `vid` | The [`visitorID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html) implementation variable.
 `<zip>` | `zip` | The [Zip code](https://experienceleague.adobe.com/docs/analytics/components/dimensions/zip-code.html) dimension.
