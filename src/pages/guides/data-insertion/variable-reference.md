@@ -77,7 +77,7 @@ XML tag | Query string parameter | Data type
 --- | --- | ---
 `<architecture>` | h.architecture | String
 `<bitness>` | h.bitness |  String
-`<brands>` | h.brands | Can contain 1 or more `<brand>` records. Ex.: `<brand><name>Chromium<name><version>100</version></brand>`. Query string example: [{"brand":"Chromium", "version":"100"}]   
+`<brands>` | h.brands | Can contain 1 or more `<brand>` records. Ex.: `<brand><name>Chromium</name><version>100</version></brand>`. Query string example: [{"brand":"Chromium", "version":"100"}]   
 `<mobile>` | h.mobile | Boolean
 `<model>` | h.model | String
 `<platform>` | h.platform | String
