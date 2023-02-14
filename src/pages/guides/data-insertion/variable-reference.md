@@ -100,5 +100,5 @@ XML tag | Query string parameter | Data type
     <platform>Windows</platform>
     <platformVersion>NT 10.0</platformVersion>
     <wow64>true</wow64>
-<userAgentClientHints>
+</userAgentClientHints>
 ```
