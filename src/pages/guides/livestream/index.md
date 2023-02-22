@@ -1,48 +1,67 @@
-# Getting Started with Adobe Analytics Livestream
+# Getting started with Adobe Analytics Livestream
 
 Livestream is a reporting feature in Adobe Analytics that allows a client to receive traffic processed by Adobe Analytics in real-time. Traffic is streamed to the client on a hit or impression basis, in the same order and rate that hits are processed.
 
-This feature can be useful to those building:
+This feature is useful for those building:
+
 * A real-time dashboard that represents actions visitors are taking in a mobile app or web site.
+
 * A visitor-level integration that sends information to personalization or marketing platforms in real-time.
+
 * A forecasting or anomaly detection service that updates a model and produces forecasts/anomaly reports in real-time.
 
-## Create a Client
+## Create a client
 
-Create an [Adobe.io Service Account](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md). This account is used by the client to authenticate and connect to the stream. After creating this account, make a note of the _technical account email address_. This email is used later to link the the service account to a Livestream endpoint.
+To start, create an [Adobe Developer Console](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/ServiceAccountIntegration.md). This account is used by the client to authenticate and connect to the stream. After creating this account, make a note of the **Technical Account Email**. This email is used later to link the service account to a Livestream endpoint.
 
-## Identify What Should Be in the Stream
+## Identify and understand the data structure for the stream
 
-Review the list of [dimensions and metrics](variable-reference.md) to identify what you want to appear in your stream. For report suites with very high volume, it is important to only include dimensions and metrics that you intend to use.
+Review the list of [dimensions and metrics](variable-reference.md) to identify and understand the data structure for the stream. The stream sends a new object in response to a GET call every time a report suite receives another hit. The stream outputs all applicable dimensions and metrics for the report suite. 
 
-## Contact Customer Care to Provision the Stream
+## Contact Customer Care to provision the stream
 
-Customer Care requires all of the following information to provision the stream:
-* Data Center Location (London, Pacific North West, Singapore)
-* Login Company or IMS organization
-* A Report Suite ID for each stream requested
-* Daily and Monthly Traffic Volume Averages
-* The Adobe.io technical account email address
+[Customer Care](https://helpx.adobe.com/contact.html) requires all of the following information to provision the stream:
 
-## Connect to the Stream
+* Data center location (London, Pacific North West, Singapore)
 
-A connection request looks similar to the following:
+* Login company or IMS organization
+
+* A report suite ID for each stream requested and for which data is being generated
+
+* Estimated daily and monthly traffic volume averages
+
+* The [Adobe Developer Console](https://developer.adobe.com/console/home) technical account email address
+
+## Connect to the stream
+
+To connect to the steam, make a request that looks similar to the following:
 
 <CodeBlock slots="code" repeat="1" languages="CURL"/>
 
 ```sh
-curl -X GET "https://livestream.adobe.net/api/1/stream/adobe-livestream-endpoint-name" \
+curl -X GET "https://livestream.adobe.net/api/1/stream/adobe-livestream-{endpoint-name}" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     --location-trusted \
     --compressed
 ```
 
-Once connected to the stream, impression data is streamed in a line-delimited JSON format and reflects data currently collected by a report suite. See [Livestream sample JSON output](example-output.md) to see what a typical row of data might look like.
+When contacting Customer Care for provisioning, you will receive the complete URI to connect to the stream, including the {endpoint-name}, as shown in the example above. The URI will also include the report suite ID that you supply to Customer Care. 
+
+## Review the stream data
+
+Once connected to the stream, impression data is streamed with [Gzip compression](https://www.gnu.org/software/gzip/manual/gzip.html) (**.gz**) in JSON format and reflects data currently collected by the report suite. Data is See [Livestream sample JSON output](example-output.md) to view a sampole of a typical response.
 
 If there is no data actively flowing into the report suite, the client connects but no data appears in the stream.
 
-## Optional query parameters
+>[!IMPORTANT]
+>
+>   Your site must support redirects to receive the output.
+
+
+## Use optional query parameters
+
+You can also include query string parameters in your call, as described below:
 
 Query parameter | Description
 ---|---
