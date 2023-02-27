@@ -14,15 +14,15 @@ Latency can range between 20 seconds and 5 minutes.
 
 ## Can I request uncompressed Livestream data?
 
-No. Livestream requires clients to support compression by default.
+No. Livestream requires clients to support [Gzip compression](https://www.gnu.org/software/gzip/manual/gzip.html) by default.
 
 ## What transfer encoding is used?
 
-Livestream uses [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding). There can be more than one record per chunk, and each record is separated by a CRLF. Many http client libraries handle chunked transfer encoding transparently.
+Livestream uses [Chunked transfer encoding](https://en.wikipedia.org/wiki/Chunked_transfer_encoding). There can be more than one record per chunk, and each record is separated by a carriage return/line feed (CRLF). Many http client libraries handle chunked transfer encoding transparently.
 
 ## Can I create multiple connections to the same stream?
 
-Yes. Use the `maxConnections` GET string parameter. If multiple connections are created, data is distributed across each connection. Data is grouped by visitor IDs, but is out of order. The `timestamp` field can be used to sort the hits. A best effort is made to evenly distribute hits. Because data is grouped by visitor ID, a visitor that produces a large volume of data can create differences in volumes for each client. A maximum of 8 connections is allowed.
+Yes. Use the `maxConnections` GET query parameter. If multiple connections are created, data is distributed across each connection. Data is grouped by visitor IDs, but is out of order. The `timestamp` field can be used to sort the hits. A best effort is made to evenly distribute hits. Because data is grouped by visitor ID, a visitor that produces a large volume of data can create differences in volumes for each client. A maximum of 8 connections is allowed.
 
 If multiple instances of the same stream are required, Adobe recommends that you create infrastructure to replicate that data.
 
@@ -36,6 +36,6 @@ Empty records are sometimes returned in the stream. These can be ignored.
 
 ## Where does Livestream occur in the data processing order?
 
-Livestream data is only partially processed to mitigate latency. See [Processing order](https://experienceleague.adobe.com/docs/analytics/technotes/processing-order.html) in the Analytics technotes guide for full details on processing order.
+Livestream data is only partially processed to mitigate latency. See [Processing order](https://experienceleague.adobe.com/docs/analytics/technotes/processing-order.html) in the Analytics technotes guide for more information.
 
 Livestream includes basic processing, such as [Processing rules](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules.html), VISTA rules, and geolocation lookups. It does **not** include persistence, such as eVars persisting data across hits within a visit. It also does not include visit-based or visitor-based data like visits, visit number, unique visitors, or customer loyalty.
