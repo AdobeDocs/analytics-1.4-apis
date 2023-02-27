@@ -71,7 +71,7 @@ Sometimes, traffic volumes can overwhelm a single client. The following tips may
 
 #### Enable hit smoothing
 
-Hit smoothing can be enabled using the query parameter `smoothing=1`. When this parameter is used, Livestream uses a server-side buffer in an attempt to reduce traffic spikes and smooth the flow of records to the client. The size of this buffer is defined using the `smoothingBucketSize` query parameter. A larger buffer generally results in a smoother stream and fewer spikes. The maximum buffer size is 7200 seconds. 
+Hit smoothing can be enabled using the query parameter `smoothing=1`. When this parameter is used, Livestream uses a server-side buffer to reduce traffic spikes and smooth the flow of records to the client. The size of this buffer is defined using the `smoothingBucketSize` query parameter. A larger buffer generally results in a smoother stream and fewer spikes. The maximum buffer size is 7200 seconds. 
 
 #### Improve client processing efficiency
 
