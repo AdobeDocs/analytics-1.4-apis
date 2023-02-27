@@ -1,5 +1,7 @@
 # Frequently Asked Questions (FAQ)
 
+Find answers to frequently-asked questions below.
+
 ## When initially connecting to a Livestream endpoint, how old is the data that starts streaming?
 
 Livestream starts streaming data collected at the time of the client's connection. In the case of a client disconnect/reconnect, data is streamed from the point of disconnection. This brief backfill period only occurs if the disconnection is shorter than several minutes.
