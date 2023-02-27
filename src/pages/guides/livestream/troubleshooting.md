@@ -31,7 +31,7 @@ Keep in mind that the user accessing the Adobe Developer console may not have ac
 
 Make sure that your endpoint URI is correct. Customer Care can verify the URI if provided with the data center, login company, and report suite ID associated with the stream.
 
-##3# 405 Invalid Request Type
+### 405 Invalid Request Type
 
 Make sure that the REST GET method is used. Other methods like POST, PUT, etc are not supported.
 
