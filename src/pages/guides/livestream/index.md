@@ -5,9 +5,7 @@ Livestream is a reporting feature in Adobe Analytics that allows a client to rec
 This feature is useful for those building:
 
 * A real-time dashboard that represents actions visitors are taking in a mobile app or web site.
-
 * A visitor-level integration that sends information to personalization or marketing platforms in real-time.
-
 * A forecasting or anomaly detection service that updates a model and produces forecasts/anomaly reports in real-time.
 
 ## Create an Adobe Developer Console account
@@ -23,13 +21,9 @@ Review the list of [dimensions and metrics](variable-reference.md) to identify a
 [Customer Care](https://helpx.adobe.com/contact.html) requires all of the following information to provision the stream:
 
 * Data center location (London, Pacific North West, Singapore)
-
 * Login company or IMS organization
-
 * A report suite ID for each stream requested and for which data is being generated
-
 * Estimated daily and monthly traffic volume averages
-
 * The [Adobe Developer Console](https://developer.adobe.com/console/home) technical account email address
 
 ## Create an application to consume the API service
@@ -50,11 +44,11 @@ curl -X GET "https://livestream.adobe.net/api/1/stream/adobe-livestream-{endpoin
     --compressed
 ```
 
-When contacting Customer Care for provisioning, you will receive the complete URI to connect to the stream, including the {endpoint-name}, as shown in the example above. The URI will also include the report suite ID that you supply to Customer Care. 
+When contacting Customer Care for provisioning, you will receive the complete URI to connect to the stream, including the `{endpoint-name}`, as shown in the example above. The URI will also include the report suite ID that you supply to Customer Care. 
 
 ## Review the stream output
 
-Once connected to the stream, impression data is streamed with [Gzip compression](https://www.gnu.org/software/gzip/manual/gzip.html) (**.gz**) in JSON format and reflects data currently collected by the report suite. Data is See [Livestream sample JSON output](example-output.md) to view a sampole of a typical response.
+Once connected to the stream, impression data is streamed with [Gzip compression](https://www.gnu.org/software/gzip/manual/gzip.html) (**`.gz`**) in JSON format and reflects data currently collected by the report suite. Data is See [Livestream sample JSON output](example-output.md) to view a sample of a typical response.
 
 If there is no data actively flowing into the report suite, the client connects but no data appears in the stream.
 
@@ -72,5 +66,4 @@ Query parameter | Description
 ## Additional notes
 
 * Your site must support redirects to receive the output.
-
-* The output data in Livestream is already processed through [VISTA](https://experienceleague.adobe.com/docs/analytics/technotes/vista.html?lang=en) and processing rules.
+* The output data in Livestream is already processed through [VISTA](https://experienceleague.adobe.com/docs/analytics/technotes/vista.html) and processing rules.
