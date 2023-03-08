@@ -61,32 +61,31 @@ XML tag (`POST`) | Query string parameter (`GET`) | Description
 `<timestamp>` | `ts` | The date and time that the data was collected. [Unix Time](https://en.wikipedia.org/wiki/Unix_time) and [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) are supported. Milliseconds are not allowed. See [Timestamps Optional](https://experienceleague.adobe.com/docs/analytics/technotes/timestamps-optional.html) for more information.
 `<transactionId>` | `xact` | The [`transactionID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/transactionid.html) variable.
 `<userAgent>` | `User-Agent` HTTP header | The device's user agent string.
-`<userAgentClientHints>` | `h.[key]` | [`Client Hint`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/user-agent-client-hints.html) fundamentals. Adding [child fields](#user-agent-client-hint-fields).
+`<userAgentClientHints>` | `h.[key]` | [`Client Hint`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/user-agent-client-hints.html) fundamentals. See [child fields](#user-agent-client-hint-fields) below.
 `<visitorId>` | `vid` | The [`visitorID`](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html) implementation variable.
 `<zip>` | `zip` | The [Zip code](https://experienceleague.adobe.com/docs/analytics/components/dimensions/zip-code.html) dimension.
 
 
-### User Agent Client Hint Fields
+### User Agent Client Hint fields
 
-When using the Data Insertion API with XML, the <userAgentClientHints> element serves as the parent node to contain the client hint elements.
-There are 8 possible child nodes that can be nested under the parent node, each of which is identified below and discussed in detail 
-[here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/user-agent-client-hints.html). Alternatively, the
-fields can also be submitted as query string parameters.
+The `<userAgentClientHints>` XML element serves as the parent node to contain client hint elements. Alternatively, the fields can also be submitted as query string parameters.
 
 XML tag | Query string parameter | Data type
 --- | --- | ---
-`<architecture>` | h.architecture | String
-`<bitness>` | h.bitness |  String
-`<brands>` | h.brands | Can contain 1 or more `<brand>` records. Ex.: `<brand><name>Chromium</name><version>100</version></brand>`. Query string example: [{"brand":"Chromium", "version":"100"}]   
-`<mobile>` | h.mobile | Boolean
-`<model>` | h.model | String
-`<platform>` | h.platform | String
-`<platformVersion>` | h.platformversion | String
-`<wow64>` | w.wow64 | Boolean
+`<architecture>` | `h.architecture` | String
+`<bitness>` | `h.bitness` |  String
+`<brands>` | `h.brands` | Can contain 1 or more `<brand>` records. For example, `<brand><name>Chromium</name><version>100</version></brand>`. Query string example: `[{"brand":"Chromium", "version":"100"}]`   
+`<mobile>` | `h.mobile` | Boolean
+`<model>` | `h.model` | String
+`<platform>` | `h.platform` | String
+`<platformVersion>` | `h.platformversion` | String
+`<wow64>` | `w.wow64` | Boolean
 
-#### Example
+See [User-agent client hints](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/user-agent-client-hints.html) in the Adobe Experience Platform Web SDK user guide for more information.
 
-```
+The following is an example `<userAgentClientHints>` XML object:
+
+```xml
 <userAgentClientHints>
     <architecture>x64</architecture>
     <bitness>64</bitness>
