@@ -1,21 +1,21 @@
 {
   "private": true,
-  "name": "dev-site-documentation-template",
+  "name": "analytics-1.4-apis",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/dev-site-documentation-template"
+    "url": "https://github.com/AdobeDocs/analytics-1.4-apis"
   },
   "author": {
-    "name": "Stephan Ringel",
-    "url": "https://github.com/icaraps"
+    "name": "Russ Whitchurch",
+    "url": "https://github.com/gigazelle"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^3.24.2",
-    "gatsby": "^3.6.0",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "@adobe/gatsby-theme-aio": "4.8.3",
+    "gatsby": "4.22.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "scripts": {
     "start": "gatsby build && gatsby serve",
@@ -26,5 +26,6 @@
     "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
-  }
+  },
+  "packageManager": "yarn@3.2.2"
 }
