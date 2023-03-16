@@ -12,7 +12,7 @@
     "url": "https://github.com/gigazelle"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.8.3",
+    "@adobe/gatsby-theme-aio": "^4.8.4",
     "gatsby": "4.22.0",
     "react": "17.0.2",
     "react-dom": "17.0.2"
@@ -23,9 +23,19 @@
     "dev": "gatsby develop",
     "dev:https": "gatsby develop --https --host localhost.corp.adobe.com --port 9000",
     "build": "gatsby build",
-    "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test:links": "remark src/pages --quiet --frail",
+    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1"
   },
-  "packageManager": "yarn@3.2.2"
+  "remarkConfig": {
+    "plugins": [
+      "remark-validate-links"
+    ]
+  },
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "remark-cli": "^11.0.0",
+    "remark-validate-links": "^12.1.0"
+  }
 }
