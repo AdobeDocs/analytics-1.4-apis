@@ -33,7 +33,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:^4.8.3":
+"@adobe/gatsby-theme-aio@npm:^4.8.4":
   version: 4.8.4
   resolution: "@adobe/gatsby-theme-aio@npm:4.8.4"
   dependencies:
@@ -4851,7 +4851,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "analytics-1.4-apis@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": ^4.8.3
+    "@adobe/gatsby-theme-aio": ^4.8.4
     gatsby: ^4.22.0
     react: ^18.2.0
     react-dom: ^18.2.0
@@ -15921,7 +15921,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.1":
+"react-dom@npm:^17.0.2":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -16039,7 +16039,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.1":
+"react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
