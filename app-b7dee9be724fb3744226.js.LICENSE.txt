@@ -4,7 +4,7 @@
 	http://jedwatson.github.io/classnames
 */
 
-/*! algoliasearch.umd.js | 4.15.0 | © Algolia, inc. | https://github.com/algolia/algoliasearch-client-javascript */
+/*! algoliasearch.umd.js | 4.14.3 | © Algolia, inc. | https://github.com/algolia/algoliasearch-client-javascript */
 
 /*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */
 
