@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:^4.7.11":
-  version: 4.7.11
-  resolution: "@adobe/gatsby-theme-aio@npm:4.7.11"
+"@adobe/gatsby-theme-aio@npm:4.8.4":
+  version: 4.8.4
+  resolution: "@adobe/gatsby-theme-aio@npm:4.8.4"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
@@ -125,7 +125,7 @@ __metadata:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: ab1328e1c66a67e609b28cb0f15be255b472130d0c1c06c72383906904415730252f5139ffce24e7574003488570ce217c6090767df5f07c77f4a12307a0c782
+  checksum: 01d0f3cf34a5c005561cd8ca46da5ebec0ef0e9a1f121723a352ee1e8fff13aaecae1b5465aa1c32c37da912f15d5dbaf30dddc5c48c5aa3b0dc19d93b09b68a
   languageName: node
   linkType: hard
 
@@ -4966,6 +4966,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"analytics-1.4-apis@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "analytics-1.4-apis@workspace:."
+  dependencies:
+    "@adobe/gatsby-theme-aio": 4.8.4
+    gatsby: 4.22.0
+    react: 17.0.2
+    react-dom: 17.0.2
+    remark-cli: ^11.0.0
+    remark-validate-links: ^12.1.0
+  languageName: unknown
+  linkType: soft
+
 "anser@npm:^2.1.0":
   version: 2.1.1
   resolution: "anser@npm:2.1.1"
@@ -7727,19 +7740,6 @@ __metadata:
   checksum: b48da9340481742547263d5d985e65d078592557863402ecf538511735e83575867e94f91fe74405ea19b61351feb99efccae7e55de9a151d5654e3417cea05b
   languageName: node
   linkType: hard
-
-"dev-site-documentation-template@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "dev-site-documentation-template@workspace:."
-  dependencies:
-    "@adobe/gatsby-theme-aio": ^4.7.11
-    gatsby: 4.22.0
-    react: ^17.0.2
-    react-dom: ^17.0.2
-    remark-cli: ^11.0.0
-    remark-validate-links: ^12.1.0
-  languageName: unknown
-  linkType: soft
 
 "devcert@npm:^1.2.0":
   version: 1.2.2
@@ -16600,7 +16600,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.1, react-dom@npm:^17.0.2":
+"react-dom@npm:17.0.2, react-dom@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -16699,7 +16699,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.1, react@npm:^17.0.2":
+"react@npm:17.0.2, react@npm:^17.0.1":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
   dependencies:
