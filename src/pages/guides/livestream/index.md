@@ -34,9 +34,8 @@ Depending on the use case for your stream, create an application for the service
 
 To connect to the steam, make a request that looks similar to the following:
 
-<CodeBlock slots="code" repeat="1" languages="CURL"/>
 
-```sh
+```
 curl -X GET "https://livestream.adobe.net/api/1/stream/adobe-livestream-{endpoint-name}" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
