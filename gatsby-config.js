@@ -114,28 +114,6 @@ module.exports = {
         path: 'guides/data-sources.md'
       },
       {
-        title: 'Livestream API',
-        path: 'guides/livestream/index.md',
-        pages: [
-          {
-            title: 'Variable reference',
-            path: 'guides/livestream/variable-reference.md'
-          },
-          {
-            title: 'Example output',
-            path: 'guides/livestream/example-output.md'
-          },
-          {
-            title: 'Troubleshooting',
-            path: 'guides/livestream/troubleshooting.md'
-          },
-          {
-            title: 'FAQ',
-            path: 'guides/livestream/faq.md'
-          }
-        ]
-      },
-      {
         title: 'Reporting API',
         path: 'guides/reporting/index.md',
         pages: [
