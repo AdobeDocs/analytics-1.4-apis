@@ -14,9 +14,9 @@ We recommend using an API Client like [POSTMAN](https://www.getpostman.com/) to 
 
 Authentication
 -----
-The 1.4 APIs support [JWT](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/jwt.md) and OAuth authentication. You can follow the authentication documentation from the [2.0 Analytics APIs](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/README.md#authentication) and use the access tokens to call either the 1.4 or 2.0 versions of the APIs.
+The 1.4 APIs support OAuth Server to Server and OAuth User authentication. You can follow the authentication documentation from the [2.0 Analytics APIs](https://github.com/AdobeDocs/analytics-2.0-apis/blob/master/README.md#authentication) and use the access tokens to call either the 1.4 or 2.0 versions of the APIs.
 
-> Note: WSSE Authentication has been deprecated
+> Note: JWT and WSSE Authentication are deprecated.  Adobe IO will stop supporting JWT authentication on January 1, 2025.
 
 Specific information about web grant OAuth is available [here](docs/partner_integrations.md).
 
