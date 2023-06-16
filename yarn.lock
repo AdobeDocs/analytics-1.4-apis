@@ -33,9 +33,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:4.9.12":
-  version: 4.9.12
-  resolution: "@adobe/gatsby-theme-aio@npm:4.9.12"
+"@adobe/gatsby-theme-aio@npm:4.9.13":
+  version: 4.9.13
+  resolution: "@adobe/gatsby-theme-aio@npm:4.9.13"
   dependencies:
     "@adobe/focus-ring-polyfill": ^0.1.5
     "@adobe/gatsby-source-github-file-contributors": ^0.3.1
@@ -113,6 +113,7 @@ __metadata:
     redoc-cli: ^0.13.20
     rehype-slug-custom-id: ^1.1.0
     request: ^2.88.2
+    resize-observer-polyfill: ^1.5.1
     sharp: ^0.31.0
     stream-http: ^3.2.0
     styled-components: ^5.3.5
@@ -120,12 +121,13 @@ __metadata:
     to-arraybuffer: ^1.0.1
     tty-browserify: ^0.0.1
     unist-util-select: 3.0.4
+    use-debounce: ^9.0.4
     uuid: ^9.0.0
   peerDependencies:
     gatsby: ^4.22.0
     react: ^17.0.2
     react-dom: ^17.0.2
-  checksum: 23cb2c1892960fa42bd7cc5c13870650128ed9a0c3fa2d118a3fb61d15268e1a9be06051450ff0be2b1ce689f53bc3d2ac7a1b0f28d4ed3914067e8928056bb1
+  checksum: ef771d8cfa78e37cabf3b51eacdac7b9c4777fc71a34be8fdf2f2e7c966cf149e19908a30217ae87d4e85f801cb614291d3f77c73fe64f69a0e4caa56ac54aed
   languageName: node
   linkType: hard
 
@@ -4970,7 +4972,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "analytics-1.4-apis@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": 4.9.12
+    "@adobe/gatsby-theme-aio": 4.9.13
     gatsby: 4.22.0
     react: 17.0.2
     react-dom: 17.0.2
@@ -17426,6 +17428,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"resize-observer-polyfill@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "resize-observer-polyfill@npm:1.5.1"
+  checksum: 57e7f79489867b00ba43c9c051524a5c8f162a61d5547e99333549afc23e15c44fd43f2f318ea0261ea98c0eb3158cca261e6f48d66e1ed1cd1f340a43977094
+  languageName: node
+  linkType: hard
+
 "resolve-alpn@npm:^1.0.0":
   version: 1.2.1
   resolution: "resolve-alpn@npm:1.2.1"
@@ -20063,6 +20072,15 @@ __metadata:
     punycode: 1.3.2
     querystring: 0.2.0
   checksum: 50d100d3dd2d98b9fe3ada48cadb0b08aa6be6d3ac64112b867b56b19be4bfcba03c2a9a0d7922bfd7ac17d4834e88537749fe182430dfd9b68e520175900d90
+  languageName: node
+  linkType: hard
+
+"use-debounce@npm:^9.0.4":
+  version: 9.0.4
+  resolution: "use-debounce@npm:9.0.4"
+  peerDependencies:
+    react: ">=16.8.0"
+  checksum: 37da4ecbe4e10a6230580cac03a8cae1788ea3e417dfdd92fcf654325458cf1b4567fd57bebf888edab62701a6abe47059a585008fd04228784f223f94d66ce4
   languageName: node
   linkType: hard
 
