@@ -5,7 +5,7 @@ description: Learn the first steps that you can take to start using the Analytic
 
 # Getting started with the Analytics API
 
-There are several steps to take before using the Analytics APIs.
+Before using the Analytics 1.4 APIs, follow these steps:
 
 * **Permissions**: Configure permissions for the developer in the Adobe Admin Console.
 * **API Client**: Create a client configuration in the Adobe Developer Console.
@@ -44,9 +44,14 @@ At this point, you decide how you want to authenticate with the API.
 
 Adobe offers two primary methods to authenticate:
 
-* **OAuth**: Use your own account to authenticate with the API. See [OAuth connection](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/AuthenticationOverview/OAuthIntegration.md) in the Adobe Developer Authentication user guide.
-* **JWT**: Use a service account to authenticate with the API. See [JSON web token](https://www.adobe.io/authentication/auth-methods.html#!AdobeDocs/adobeio-auth/master/JWT/JWTCertificate.md) in the Adobe Developer Authentication user guide.
+* **OAuth User**: Use your own account to authenticate with the API. See [OAuth User Authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/) in the Adobe Developer Authentication user guide.
 
-Note that WSSE and SOAP authentication methods are no longer supported with this API.
+* **OAuth Server to Server**: Use a server-to-server account to authenticate with the API. See [OAuth Server to Server Authentication](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/) in the Adobe Developer Authentication user guide.
 
-Choose your desired authentication method, and complete the remaining steps to finish the API client wizard.
+Choose your desired authentication method, and complete any remaining steps to finish the API client wizard, as described in the previous section.
+
+JWT authentication is deprecated and will only be supported until January 1, 2025. Current integrations using JWT will need to [migrate](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/) to OAuth Server to Server prior to January 1, 2025. 
+
+To refresh authentication tokens, see the [Authentication Guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/IMS/#refreshing-access-tokens).
+
+JWT authentication is deprecated and will only be supported until January 1, 2025. Current integrations using JWT will need to [migrate](https://developer.adobe.com/developer console/docs/guides/authentication/ServerToServerAuthentication/migration/) to OAuth Server to Server prior to January 1, 2025.
