@@ -4,12 +4,12 @@ The Data Insertion API can return any of the following status codes. Some failur
 
 | POST Response | Description |
 |-----------------|---------------|
-| `<?xml version="1.0" encoding="UTF-8"?>`</br>`<status>SUCCESS</status>` | Success (general) |
-| `<?xml version="1.0" encoding="UTF-8"?>`</br>`<status>FAILURE</status>` | Failure (general) |
-| `<?xml version="1.0" encoding="UTF-8"?>`</br>`<status>FAILURE</status>`</br>`<reason>NO account</reason>` | Missing required Report suite ID |
-| `<?xml version="1.0" encoding="UTF-8"?>`</br>`<status>FAILURE</status>`</br>`<reason>NO pagename OR pageurl</reason>` | Missing required page name or page URL |
-| `<?xml version="1.0" encoding="UTF-8"?>`</br>`<status>FAILURE</status>`</br>`<reason>NO visitorid OR ipaddress</reason>` | Missing required visitor identifier |
-| `<?xml version="1.0" encoding="UTF-8"?>`</br>`<status>FAILURE</status>`</br>`<reason>Syntax Error</reason>` | Syntax error: includes malformed XML or non-encoded reserved characters |
+| `<?xml version="1.0" encoding="UTF-8"?>`<br/>`<status>SUCCESS</status>` | Success (general) |
+| `<?xml version="1.0" encoding="UTF-8"?>`<br/>`<status>FAILURE</status>` | Failure (general) |
+| `<?xml version="1.0" encoding="UTF-8"?>`<br/>`<status>FAILURE</status>`<br/>`<reason>NO account</reason>` | Missing required Report suite ID |
+| `<?xml version="1.0" encoding="UTF-8"?>`<br/>`<status>FAILURE</status>`<br/>`<reason>NO pagename OR pageurl</reason>` | Missing required page name or page URL |
+| `<?xml version="1.0" encoding="UTF-8"?>`<br/>`<status>FAILURE</status>`<br/>`<reason>NO visitorid OR ipaddress</reason>` | Missing required visitor identifier |
+| `<?xml version="1.0" encoding="UTF-8"?>`<br/>`<status>FAILURE</status>`<br/>`<reason>Syntax Error</reason>` | Syntax error: includes malformed XML or non-encoded reserved characters |
 
 If API calls result in `Failure` responses, check the following:
 
