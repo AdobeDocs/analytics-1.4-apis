@@ -130,6 +130,7 @@ The request requires both of the following parameters:
 | --- | --- | --- |
 | **`reportSuiteID`** | `string` | The report suite ID. |
 | **`dataSourceID`** | `int` | The data source ID to get jobs for. |
+| **`filters`** | `string[]` | (Optional) Filters returned data by: <br/>`name`: Job filename. Needs to be in `string[]` format. <br/>`state`: Current status of the jobs, should be one of: `uploaded`, `processing`, `cache`, `success`, `failure`, `deleted`.<br/>`lookback`: Number of jobs to return. |
 
 The response returns an array of data source jobs containing the following elements:
 
