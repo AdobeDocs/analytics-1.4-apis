@@ -316,7 +316,7 @@ Does not require a JSON body. Returns a list of reports currently running for th
 Response element | Type | Description
 --- | --- | ---
 **`reportID`** | `int` | The report ID running.
-**`type`** | `string` | The type of report. Valid values include `overtime`, `trended`, `trendedplus`, `ranked`, or `universal`.
+**`type`** | `string` | The type of report. Valid values include `ot` (overtime report), `ra` (ranked report), `tr` (trended report), `pa` (pathing report), `fo` (fallout report), `rt` (realtime report), `su` (summary report).
 **`queueTime`** | `date` | The date/time that the report was queued (Pacific time).
 **`status`** | `string` | The status of the report. Valid values include `waiting` or `running`.
 **`priority`** | `int` | The report priority.
