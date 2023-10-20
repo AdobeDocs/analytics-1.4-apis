@@ -12664,11 +12664,12 @@
       "report_queue_item_type_enum": {
         "type": "string",
         "enum": [
-          "overtime",
-          "trended",
-          "trendedplus",
-          "ranked",
-          "universal"
+          "ot",
+          "tr",
+          "pa",
+          "ra",
+          "fo",
+          "su"
         ]
       },
       "report_suite_activation": {
