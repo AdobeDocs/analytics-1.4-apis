@@ -324,6 +324,35 @@ Response element | Type | Description
 **`reportSuiteID`** | `string` | The report suite ID of the report.
 **`user`** | `string` | The user that requested the report.
 
+
+## Retry
+
+Retries a report that either has failed running or you want to run again. Convenience method that saves trouble of submitting again a full request via Report.Queue().
+
+**`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Run`**
+
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Run" \
+    -H "x-api-key: {CLIENTID}" \
+    -H "Authorization: Bearer {ACCESSTOKEN}" \
+    -H "Content-Type: application/json" \
+    -d '{"reportID": 1234567890}}'
+```
+
+#### Response
+
+```json
+true
+```
+
+This method requires a JSON body, which includes the report ID to retrieve. You can obtain a report ID using `Report.Queue`.
+
+Returns `true` is the operation is successful.
+
 ## Run
 
 Run a real-time report immediately without using the queue.
