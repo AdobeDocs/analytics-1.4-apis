@@ -11134,8 +11134,11 @@
           "name": {
             "type": "string"
           },
-          "classification": {
-            "type": "string"
+          "correlation": {
+            "type": "boolean"
+          },
+          "subrelation": {
+            "type": "boolean"
           }
         }
       },
