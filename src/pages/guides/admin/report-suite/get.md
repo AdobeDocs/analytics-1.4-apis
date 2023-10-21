@@ -169,7 +169,7 @@ Retrieves the success events for each of the specified report suites.
 |----|----|-----------|
 | **`rsid_list`** | `string[]` |A list of report suite IDs.|
 
-Returns `report_suite_events[]`, a list of report suites with the success events for each.
+Returns `report_suite_events[]`, a list of report suites with the success events for each. In case `type` of the event is `builder_only`, the API incorrectly return `2` instead of the enumerated value `builder_only`.
 
 ## GetGeoSegmentation
 

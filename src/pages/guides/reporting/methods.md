@@ -327,7 +327,7 @@ Response element | Type | Description
 
 ## Retry
 
-Retries a report that either has failed running or you want to run again. Convenience method that saves trouble of submitting again a full request via Report.Queue().
+Retries a report that either has failed running or you want to run again. Convenience method that saves trouble of submitting again a full request via `Report.Queue`.
 
 **`POST https://api.omniture.com/admin/1.4/rest/?method=Report.Run`**
 

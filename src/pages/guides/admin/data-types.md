@@ -177,10 +177,13 @@ Data structure that contains information about a Success Event.
 |-------|----|-----------|
 |**`id`** |`string` | The Event ID. |
 |**`name`** |`string` | The Event name. |
+|**`description`** |`string` | The Event description. |
 |**`type`** |`string` | The Event type. Valid values include `disabled`, `counter_no_subrelations`, `counter`, `currency_no_subrelations`, `currency`, `numeric_no_subrelations`, `numeric`.|
 |**`default_metric`** |`boolean` | Indicates if this is a default metric. |
 |**`participation`** |`string` | Valid values include `unavailable`, `disabled`, `enabled`.|
 |**`serialization`** |`string` | Valid values include `unavailable`, `always_record`, `record_once_per_visit`, `record_once_per_unique_id`. |
+|**`polarity`** |`string` | Valid values include `positive`, `negative`. |
+|**`visibility`** |`string` | Valid values include `hidden`, `builder_only`, `everywhere`. |
 |**`rsid_list`** |`string[]` | Associated report suites. |
 
 ## group_report_list
