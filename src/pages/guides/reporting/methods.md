@@ -456,7 +456,22 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Validate" \
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportDescription":{"reportSuiteID": "examplersid"}}'
+    -d '{
+    "reportDescription": {
+        "reportSuiteID": "examplersid",
+        "source": "standard",
+        "dateFrom": "now",
+        "dateTo": "noon",
+        "metrics": [
+            {
+                "id": "pageviews"
+            }
+        ],
+        "locale": "en_US",
+        "dateGranularity": "minute:30",
+        "currentData": false
+    }
+}'
 ```
 
 #### Response
@@ -470,4 +485,8 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=Report.Validate" \
 This method requires a `reportDescription` JSON object, which contains the desired reporting parameters. See [reportDescription JSON object reference](report-description/index.md) for details.
 
 * If the `reportDescription` JSON object is valid, the response contains `"valid": true`.
-* If the `reportDescription` JSON object is invalid, the API returns an error outlining the issue. See [Troubleshooting](troubleshooting.md) for details.
+* If the `reportDescription` JSON object is invalid, the API returns an error outlining the issue. See [Troubleshooting](troubleshooting.md) for details. 
+* If `source` is set to `realtime`, ensure either `currentData` is set to `false` or `currentData` is not part of the request, otherwise a 500 - Internal Server Error is returned.
+
+
+
