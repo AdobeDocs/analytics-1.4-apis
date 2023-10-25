@@ -8,6 +8,24 @@ Submits a classifications import file for processing.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.CommitImport`
 
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CommitImport' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{"job_id": 436653464}'
+```
+
+#### Response
+
+```json
+true
+```
+
 |Parameter|Type|Description|
 |---------|----|-----------|
 |**`job_id`** |`int` | The job ID to commit for processing.|
@@ -19,6 +37,34 @@ Returns `true` if the job processes successfully.
 Creates a classifications export job.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateExport`
+
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateExport' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{
+    "rsid_list": [
+        "examplersid"
+    ],
+    "element": "trackingcode",
+    "email_address": "jdoe@gmail.com",
+    "date_filter_start_date": "2020-01-01",
+    "date_filter_end_date": "2022-12-31"
+}'
+```
+
+#### Response
+
+```json
+{
+    "job_id": 436650540
+}
+```
 
 This file represents classifications for a given relation. Before calling this API, use `Classifications.GetFilters` to obtain valid column numbers, names, and filter dates.
 
@@ -49,6 +95,37 @@ Creates a classifications Import FTP account.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateFTP`
 
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateFTP' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{
+    "rsid_list": [
+        "examplersid"
+    ],
+    "element": 1,
+    "description": "Sample FTP import account",
+    "email_address": "rmaur@adobe.com",
+    "overwrite": false,
+    "export": true
+}'
+```
+
+#### Response
+
+```json
+{
+    "host": "ftp.omniture.com",
+    "username": "examplersid_3904666",
+    "password": "password"
+}
+```
+
 |Parameter|Type|Description|
 |----|----|-----------|
 | **`element`** | `int` |  `relation_id` that you want to import or export (e.g. 101=evar1, 51=product, etc) |
@@ -65,6 +142,43 @@ Returns `classifications_ftp_info`, which contains connection details for the cr
 Creates a classifications import job.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateImport`
+
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateImport' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{
+    "rsid_list": [
+        "examplersid"
+    ],
+    "element": "trackingcode",
+    "check_divisions": 0,
+    "description": "Sample import job",
+    "email_address": "jdoe@gmail.com",
+    "export_results": 0,
+    "header": [
+        "Key",
+        "Program Name",
+        "Activity Name",
+        "Tag ID",
+        "Tag Name"
+    ],
+    "overwrite_conflicts": 0
+}'
+```
+
+#### Response
+
+```json
+{
+    "job_id": 436653464
+}
+```
 
 To successfully submit a classifications Import, call `Classifications.CreateImport` to specify the parameters for the Import job and the header columns to be classified.
 
@@ -91,6 +205,80 @@ Returns the available `elements` for a given report suite, and compatibility acr
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetCompatibilityElements`
 
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetCompatibilityElements' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{"rsid_list": ["examplersid"]}'
+```
+
+#### Response
+
+```json
+[
+    {
+        "rsid": "examplersid",
+        "site_title": "Example Site",
+        "compatibility_elements": [
+            {
+                "id": "tntbase",
+                "name": "Adobe Target"
+            },
+            {
+                "id": "trackingcode",
+                "name": "Campaigns"
+            },
+            {
+                "id": "evar12",
+                "name": "User Authentication System (v12)"
+            },
+            {
+                "id": "firsttouchchannel",
+                "name": "First Touch Channel"
+            },
+            {
+                "id": "lasttouchchannel",
+                "name": "Last Touch Channel"
+            },
+            {
+                "id": "page",
+                "name": "Pages"
+            },
+            {
+                "id": "listvar1",
+                "name": "Survey Responses"
+            },
+            {
+                "id": "evar2",
+                "name": "Solution (v2)"
+            },
+            {
+                "id": "evar8",
+                "name": "User Account Type (v8)"
+            },
+            {
+                "id": "evar28",
+                "name": "Page URL Clean (v28)"
+            },
+            {
+                "id": "evar116",
+                "name": "Named Role List (v116)"
+            },
+            {
+                "id": 1342,
+                "name": "Forum Screen Name"
+            }
+        ]
+    }
+]
+```
+
+
 |Parameter|Type|Description|
 |---------|----|-----------|
 | **`rsid_list`** | `string[]` | A list of report suites where you want to get valid element values. |
@@ -102,6 +290,55 @@ Returns `classifications_report_suite_compatibility_elements[]`, a list of compa
 Retrieves a page of data, known as a file segment, from a completed classifications job.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetExport`
+
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetExport' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{"file_id": 429589830, "page": 1}'
+```
+
+#### Response
+
+```json
+[
+    {
+        "warnings": null,
+        "header": [
+            "Key",
+            "Program Name",
+            "Activity Name",
+            "Tag ID",
+            "Tag Name"
+        ],
+        "data": [
+            {
+                "row": [
+                    "NC5SAQRLXC",
+                    "Retention Resources",
+                    "Retention Docs Links",
+                    "NC5FRLXC301",
+                    "Retention Docs Tag"
+                ]
+            },
+            {
+                "row": [
+                    "M7K4VSQR2T",
+                    "NA_FY20_CM_Analytics New User",
+                    "Start First Project",
+                    "M7K4SR2T888",
+                    "Start First Project video"
+                ]
+            }
+        ]
+    }
+]
+```
 
 |Parameter|Type|Description|
 |---------|----|-----------|
@@ -115,6 +352,35 @@ Returns `pagedetails`, information and data for the specified data segment.
 Gets classification export filters.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFilters`
+
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFilters' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{"rsid_list": ["examplersid"], "element": 1}'
+```
+
+#### Response
+
+```json
+{
+    "columns": [
+        "Site Section"
+    ],
+    "filter_dates": [
+        "Oct 2023",
+        "Sep 2023",
+        "Aug 2023",
+        "...",
+        "Pre"
+    ]
+}
+```
 
 The returned data consists of values that can be passed in as parameters of `Classifications.CreateExport`, including column numbers and names, and valid dates for filtering data rows in a classifications export.
 
@@ -131,6 +397,40 @@ Returns a list of the classifications FTP accounts that are configured for a com
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFTP`
 
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFTP' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{"rsid_list": ["examplersid"]}'
+```
+
+#### Response
+
+```json
+[
+    {
+        "rsid": "examplersid",
+        "site_title": "Example Site",
+        "ftp": [
+            {
+                "description": "Sample FTP import account",
+                "overwrite": false,
+                "export": true,
+                "email_address": "jdoe@gmail.com",
+                "host": "ftp.omniture.com",
+                "username": "examplersid_3904666",
+                "element": "page"
+            }
+        ]
+    }
+]
+```
+
 |Parameter|Type|Description|
 |----|----|-----------|
 |**rsid_list** |`string[]` | report suites for which you want to retrieve FTP information. |
@@ -143,11 +443,42 @@ Returns the status of the specified classification request.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetStatus`
 
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetStatus' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{"job_id": 436650540}'
+```
+
+#### Response
+
+```json
+[
+    {
+        "id": 436651124,
+        "type": "job_id",
+        "viewable_pages": 0,
+        "status": "Completed"
+    },
+    {
+        "id": 429589830,
+        "type": "file_id",
+        "viewable_pages": "1",
+        "status": "Ready"
+    }
+]
+```
+
 |Parameter|Type|Description|
 |---------|----|-----------|
 | **`job_id`** | `int` | The classifications job ID. |
 
-Returns `classifications_job_status[]`, the status of the specified classifications job. Possible values include `Waiting for user data`, `In progress`, `In progress - % Complete`, `Completed`, `Completed - With Errors : <message>`.
+Returns `classifications_job_status[]`, the status of the specified classifications job. Possible values include `Waiting for user data`, `In progress`, `In progress - % Complete`, `Completed`, `Completed - With Errors : <message>`. Use the `file_id` in `Classifications.GetExport`.
 
 ## GetTemplate
 
@@ -155,12 +486,38 @@ Similar to the Template tab in the Classifications tool in the Admin Console UI,
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetTemplate`
 
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetTemplate' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{"rsid_list": ["examplersid"], "element": 1}'
+```
+
+#### Response
+
+```json
+[
+    {
+        "rsid": "examplersid",
+        "site_title": "Example Site",
+        "template": "## SC\tSiteCatalyst SAINT Import File\tv:2.0\r\n## SC\t'## SC' indicates a SiteCatalyst pre-process header. Please do not remove these lines.\r\n## SC\tD:2023-10-24 23:17:15\tA:300162031:1\r\nKey\tSite Section\r\n\r\n"
+    }
+]
+```
+
+This method requires a JSON body, which includes one or more report IDs to get template for.
+
 |Parameter|Type|Description|
 |----|----|-----------|
 | **`rsid_list`** | `string` | The report suite where you want to import data. |
 | **`element`** | `string` |  `relation_id` for which you want to get a template (e.g. 101=evar1, 51=product, etc) |
 | **`classification_names`** | `string[]` | (Optional) an array of text classification names to include as columns in the template. |
-| **`encoding`** | `string` | The encoding to use for the template |
+| **`encoding`** | `string` | (Optional) The encoding to use for the template |
 
 Returns `classifications_report_suite_template[]`, the template, or headers in the classifications export file.
 
@@ -169,6 +526,47 @@ Returns `classifications_report_suite_template[]`, the template, or headers in t
 Appends row data to a previously created classifications import job. You can separate data into pages, but the pages must be sent sequentially (either ascending or descending) to avoid errors when the job processes. Individual classifications jobs cannot exceed 25,000 rows.
 
 `POST https://api.omniture.com/admin/1.4/rest/?method=Classifications.PopulateImport`
+
+<CodeBlock slots="heading, code" repeat="2" languages="CURL,JSON"/>
+
+#### Request
+
+```sh
+curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.PopulateImport' \
+-H "x-api-key: {CLIENTID}}" \
+-H "Authorization: Bearer {ACCESSTOKEN}" \
+-H "Content-Type: application/json" \
+-d '{
+    "job_id": 436653464,
+    "page": 1,
+    "rows": [
+            {
+                "row": [
+                    "NC5SAQRLXC",
+                    "Retention Resources",
+                    "Retention Docs Links",
+                    "NC5FRLXC301",
+                    "Retention Docs Tag"
+                ]
+            },
+            {
+                "row": [
+                    "M7K4VSQR2T",
+                    "NA_FY20_CM_Analytics New User",
+                    "Start First Project",
+                    "M7K4SR2T888",
+                    "Start First Project video"
+                ]
+            }
+        ]
+}'
+```
+
+#### Response
+
+```json
+true
+```
 
 |Parameter|Type|Description|
 |---------|----|-----------|
