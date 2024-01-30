@@ -90,7 +90,18 @@ curl -X POST "https://api.omniture.com/admin/1.4/rest/?method=DataSources.GetJob
     -H "x-api-key: {CLIENTID}" \
     -H "Authorization: Bearer {ACCESSTOKEN}" \
     -H "Content-Type: application/json" \
-    -d '{"reportSuiteID": "examplersid","dataSourceID":10}'
+    -d '{
+        "reportSuiteID": "examplersid",
+        "dataSourceID": 1,
+        "filters": {
+            "name": [
+                "name1",
+                "name2"
+            ],
+            "state": "success",
+            "lookback": 10
+            }
+        }'
 ```
 
 #### Response
@@ -130,7 +141,7 @@ The request requires both of the following parameters:
 | --- | --- | --- |
 | **`reportSuiteID`** | `string` | The report suite ID. |
 | **`dataSourceID`** | `int` | The data source ID to get jobs for. |
-| **`filters`** | `string[]` | (Optional) Filters returned data by: <br/>`name`: Job filename. Needs to be in `string[]` format. <br/>`state`: Current status of the jobs, should be one of: `uploaded`, `processing`, `cache`, `success`, `failure`, `deleted`.<br/>`lookback`: Number of jobs to return. |
+| **`filters`** | `object` | (Optional) Filters returned data. Elements include: <br/>`name`: A `string[]` array that filters by job name. <br/>`state`: Filter by the job's current status. Valid values include `uploaded`, `processing`, `cache`, `success`, `failure`, `deleted`.<br/>`lookback`: The number of days to look back from the current day. |
 
 The response returns an array of data source jobs containing the following elements:
 
