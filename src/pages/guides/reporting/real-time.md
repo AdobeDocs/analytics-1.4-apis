@@ -6,7 +6,7 @@ Real time reports operate most efficiently with frequent requests. We recommend 
 
 ## Get current real time configuration 
 
-Call [ReportSuite.GetRealTimeSettings](../admin-api/report-suite/get.md#getrealtimesettings) 
+Call [ReportSuite.GetRealTimeSettings](../admin/report-suite/get.md#getrealtimesettings) 
 
 You'll receive an object with the current configuration, similar to the following:
 
@@ -27,7 +27,7 @@ You'll receive an object with the current configuration, similar to the followin
 
 ## Save a new configuration
 
-Call [ReportSuite.SaveRealTimeSettings](../admin-api/report-suite/save.md#saverealtimesettings)
+Call [ReportSuite.SaveRealTimeSettings](../admin/report-suite/save.md#saverealtimesettings)
 
 Send in a `real_time_settings` structure with the metrics and elements from the table in the next section that you would like to enable for real time reports.
 
@@ -37,7 +37,7 @@ You can provide a single metric with up to three correlated elements. Note that 
 
 ## Run a real time report
 
-Call [Report.Run](methods/r_Run.md#) and set `"source"` to `"realtime"`.
+Call [Report.Run](methods.md#run) and set `"source"` to `"realtime"`.
 
 ```json
 {
@@ -57,7 +57,7 @@ When requesting a Real-Time report, you can provide a `"dateGranularity"` of `"m
 
 ## Relative Dates
 
-Real-Time Reports support [relative dates](http://www.php.net/manual/en/datetime.formats.relative.php) for the `Date`, `DateFrom`, and `DateTo` parameters. For example, to report revenue between noon today and the current time in 3-minute intervals, you could use the following `reportDescription`:
+Real-Time Reports support [relative dates](https://www.php.net/manual/en/datetime.formats.php#datetime.formats.relative) for the `Date`, `DateFrom`, and `DateTo` parameters. For example, to report revenue between noon today and the current time in 3-minute intervals, you could use the following `reportDescription`:
 
 ```json
 {
