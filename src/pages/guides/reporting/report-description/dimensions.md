@@ -12,7 +12,7 @@ In some cases, elements that are returned by `Report.GetElements` might not work
 
 The reporting API has two groups of elements: Traffic and Commerce. Elements can only be broken down by elements in the same group, as listed in the "Breakdown Type" column in the table below. Breakdowns are not supported on fallout and pathing reports.
 
-You can pass any of these elements to [GetElements](methods/r_GetElements.md#) to get a list of valid breakdowns for a specific element.
+You can pass any of these elements to [GetElements](../methods.md#getelements) to get a list of valid breakdowns for a specific element.
 
 These restrictions only apply to the 1.4 Reporting API; if you want apply breakdowns to any dimension, use the [Adobe Analytics 2.0 Reporting API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/reports/) instead.
 
