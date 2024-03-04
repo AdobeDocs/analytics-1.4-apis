@@ -13,7 +13,7 @@ Submits a classifications import file for processing.
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CommitImport' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CommitImport' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -43,7 +43,7 @@ Creates a classifications export job.
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateExport' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateExport' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -100,7 +100,7 @@ Creates a classifications Import FTP account.
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateFTP' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateFTP' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -148,7 +148,7 @@ Creates a classifications import job.
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateImport' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.CreateImport' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -210,7 +210,7 @@ Returns the available `elements` for a given report suite, and compatibility acr
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetCompatibilityElements' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetCompatibilityElements' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -296,7 +296,7 @@ Retrieves a page of data, known as a file segment, from a completed classificati
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetExport' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetExport' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -358,7 +358,7 @@ Gets classification export filters.
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFilters' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFilters' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -402,7 +402,7 @@ Returns a list of the classifications FTP accounts that are configured for a com
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFTP' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetFTP' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -448,7 +448,7 @@ Returns the status of the specified classification request.
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetStatus' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetStatus' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -491,7 +491,7 @@ Similar to the Template tab in the Classifications tool in the Admin Console UI,
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetTemplate' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.GetTemplate' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
@@ -532,7 +532,7 @@ Appends row data to a previously created classifications import job. You can sep
 #### Request
 
 ```sh
-curl -X 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.PopulateImport' \
+curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.PopulateImport' \
 -H "x-api-key: {CLIENTID}}" \
 -H "Authorization: Bearer {ACCESSTOKEN}" \
 -H "Content-Type: application/json" \
