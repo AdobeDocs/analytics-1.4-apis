@@ -132,8 +132,8 @@ curl -X POST 'https://api.omniture.com/admin/1.4/rest/?method=Classifications.Cr
 | **`rsid_list`** | `string[]` | report suites to which data is imported. |
 | **`description`** | `string` | a textual description for the FTP account. |
 | **`email_address`** | `string` | the email account to notify when imports are finished. |
-| **`overwrite`** | `boolean` | if `true`, keys that already exists will always be overwritten by new keys. |
-| **`export`** | `boolean` | if `true`, the import will be automatically exported after import. |
+| **`overwrite`** | `boolean` | if `true`, keys that already exist will always be overwritten by new keys. NOTE: This option is not available for report suites enabled for the [new classification architecture](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/c-classifications). |
+| **`export`** | `boolean` | if `true`, the import will be automatically exported after import. NOTE: This option is not available for report suites enabled for the [new classification architecture](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/c-classifications). |
 
 Returns `classifications_ftp_info`, which contains connection details for the created FTP account.
 
@@ -193,9 +193,9 @@ After sending all data, call `Classifications.CommitImport` to finalize the Impo
 | **`check_divisions`** | `int` | Specifies whether to check report suites for compatible divisions. Supported values include: `0`: Do not check report suite compatibility. `1`: (Default) Check report suite compatibility. |
 | **`description`** | `string` | A description of the import job. |
 | **`email_address`** | `string` | The email address to receive job notifications. |
-| **`export_results`** | `int` | Specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: (Default) Do not export. `1`: Export when the job completes. |
+| **`export_results`** | `int` | Specifies whether to automatically perform an export when the import job finishes processing. Supported values include: `0`: (Default) Do not export. `1`: Export when the job completes. NOTE: This option is not available for report suites enabled for the [new classification architecture](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/c-classifications). |
 | **`header`** | `string[]` | An array of column values for classification. First column is required to be the `key`.|
-| **`overwrite_conflicts`** | `int` | Specifies whether to overwrite data when conflicts occur. Supported values include: `0`: (Default) Do not overwrite data on a conflict. `1`: Overwrite data on a conflict. |
+| **`overwrite_conflicts`** | `int` | Specifies whether to overwrite data when conflicts occur. Supported values include: `0`: (Default) Do not overwrite data on a conflict. `1`: Overwrite data on a conflict. NOTE: This option is not available for report suites enabled for the [new classification architecture](https://experienceleague.adobe.com/en/docs/analytics/components/classifications/c-classifications). |
 
 Returns `classifications_create_job_response`, a unique `int` job ID that identifies this classifications import job. If the job import is unsuccessful, an error code is returned instead of a job ID.
 
