@@ -118,7 +118,7 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: AdobeDocs/static-website-deploy@master
         with:
           enabled-static-website: 'true'
           source: 'public'
@@ -126,7 +126,7 @@ jobs:
           connection-string: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
           remove-existing-files: 'true'
       - name: Purge Fastly Cache
-        uses: icaraps/gatsby-fastly-purge-action@master
+        uses: AdobeDocs/gatsby-fastly-purge-action@master
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url: '${{ secrets.AIO_FASTLY_DEV_URL}}${{ needs.set-state.outputs.path_prefix }}'
@@ -195,7 +195,7 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ALL_SRC: ${{ secrets.AIO_ALGOLIA_INDEX_ALL_SRC }}
           GATSBY_ALGOLIA_SEARCH_INDEX: ${{ secrets.AIO_ALGOLIA_SEARCH_INDEX }}
       - name: Deploy
-        uses: icaraps/static-website-deploy@master
+        uses: AdobeDocs/static-website-deploy@master
         with:
           enabled-static-website: 'true'
           source: 'public'
@@ -203,7 +203,7 @@ jobs:
           connection-string: ${{ secrets.AIO_AZURE_PROD_CONNECTION_STRING }}
           remove-existing-files: 'true'
       - name: Purge Fastly Cache
-        uses: icaraps/gatsby-fastly-purge-action@master
+        uses: AdobeDocs/gatsby-fastly-purge-action@master
         with:
           fastly-token: ${{ secrets.AIO_FASTLY_TOKEN }}
           fastly-url: '${{ secrets.AIO_FASTLY_PROD_URL }}${{ needs.set-state.outputs.path_prefix }}'
