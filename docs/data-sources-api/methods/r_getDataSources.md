@@ -31,6 +31,8 @@ Array of data sources, with the following structure:
 		"lockedByError":(boolean)
 	}
 ```
+A complete list of supported dimensions and metrics are included in the [Data Sources 1.4 API file format guide](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format).
+
 
 **Parent topic:** [Methods](../methods/c_data_sources_methods_1.4.md)
 
