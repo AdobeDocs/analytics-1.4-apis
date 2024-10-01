@@ -4,6 +4,8 @@ Data Sources allow you to import additional online or offline data for reporting
 
 The Data Sources API allows you to create, edit and upload [Data sources](https://experienceleague.adobe.com/docs/analytics/import/data-sources/datasrc-home.html) to Adobe Analytics. If you use the Adobe Analytics UI to complete the Data Sources workflow, that normally involves using the UI to create a Data source, then manually uploading a file via FTP to the configured location. With the Data Sources API, you can create a Data source and upload data without using the product UI.
 
+A complete list of supported dimensions and metrics are included in the [Data Sources 1.4 API file format guide](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format).
+
 One advantage to using the Data Sources API over a traditional FTP method is that you can get basic data validation immediately. FTP data validation doesn't happen until Adobe's servers attempt to process the data. This method of validation can take up to 30 minutes longer than by directly using the API.
 
 The following methods are available to use with this API:
