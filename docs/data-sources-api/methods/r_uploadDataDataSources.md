@@ -31,6 +31,8 @@ Uploads data to a data source.
 | `"rows"` | This value is an array of arrays of strings. The number of strings in each array must match the number of columns. The number of rows of data per upload should not exceed 10,000 rows but should come as close as possible. If an upload has fewer than 10,000 rows, upload it in one job with the "finished" flag set to "true." If a job has more than 10,000 rows, the rows should be uploaded in as few uploads as possible. For example, a job with 25,000 rows of data to upload should call `DataSources.UploadData` only three times, with the third call including the "finished" flag as true. The maximum number of uploads to a job is 100. If `DataSources.UploadData` is called more than 100 times for the same job, the call will fail. The call will also fail on the 100th call unless the "finished" flag is included and set to "true." The maximum allowed job size including all uploads is 50 MB of data. `DataSources.UploadData` may succeed when the combined size of all the uploads has exceeded this limit, but the job will not be able to be processed once the upload is finished. The date should be in the format `mm/dd/yyyy` |
 | `"reportSuiteID"` | The id of report suite the event names, evar names correspond to. |
 
+A complete list of supported dimensions and metrics are included in the [Data Sources 1.4 API file format guide](https://experienceleague.adobe.com/en/docs/analytics/import/data-sources/file-format).
+
 ## Response
 
 `Boolean`
