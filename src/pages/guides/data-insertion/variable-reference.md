@@ -12,7 +12,7 @@ Every Data Insertion API call must include the following components:
   * `<marketingCloudVisitorId>`
   * `<fallbackVisitorId>`
   * `<visitorId>`
-  * `<ipAdress>` and `<userAgent>`
+  * `<ipAddress>` and `<userAgent>`
 * At least one of:
   * `<pageUrl>`
   * `<pageName>`
