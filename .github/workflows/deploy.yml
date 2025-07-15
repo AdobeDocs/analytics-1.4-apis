@@ -84,7 +84,7 @@ jobs:
       - name: NPM Install
         uses: bahmutov/npm-install@v1
       - name: Gatsby Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             public
@@ -158,7 +158,7 @@ jobs:
       - name: NPM Install
         uses: bahmutov/npm-install@v1
       - name: Gatsby Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: |
             public
