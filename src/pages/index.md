@@ -19,9 +19,9 @@ The Adobe Analytics 1.4 APIs are the predecessor to the Analytics 2.0 APIs. They
 * [API reference](https://adobedocs.github.io/analytics-1.4-apis/)
 * [Github repository](https://github.com/AdobeDocs/analytics-1.4-apis)
 
-<InlineAlert variant="warning" slots="heading,text1,text2,text3" />
+<InlineAlert variant="warning" slots="title,text1,text2,text3" />
 
-### End-of-life (EOL) notice
+End-of-life (EOL) notice
 
 On August 12, 2026, the **Adobe Analytics 1.4 API** and **WSSE authentication** legacy services reach their end-of-life and will shut down. Current integrations built using these services stop working after this date.
   
