@@ -42,6 +42,10 @@ module.exports = {
         path: 'guides/index.md'
       },
       {
+        title: 'End-of-life notice',
+        path: 'guides/eol.md'
+      },
+      {
         title: 'Admin API',
         path: 'guides/admin/index.md',
         pages: [

@@ -1,42 +1,11 @@
-# Adobe Developer Documentation Template
+# Adobe Analytics 1.4 API Documentation
 
-This is a site template built with the [Adobe Developer Theme](https://github.com/adobe/aio-theme).
+This is the source repository for the [Adobe Analytics 1.4 API documentation](https://developer.adobe.com/analytics-apis/docs/1.4/). See the [Contributing](.github/CONTRIBUTING.md) page to learn how to make edits or improvements to this repository so they are reflected in the published documentation.
 
-View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) running on Github Pages.  
+Most help content is located under `src/pages/guides/`.
 
-## Where to ask for help
+This site was built with [Adobe Developer Gatsby Theme](https://github.com/adobe/gatsby-theme-aio).
 
-The slack channel #adobeio-onsite-onboarding is our main point of contact for help. Feel free to join the channel and ask any questions. 
+<!-- View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) running on Github Pages.  
 
-## How to develop
-
-For local development, simply use :
-```
-$ npm install
-$ npm run dev
-```
-
-For the documentation developer, please read these sections on how to:
-- [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)
-- [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme-aio#assets)
-- [Setting Global Navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Setting Side Navigation](https://github.com/adobe/aio-theme#side-navigation)
-- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Notes on using Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
-
-For more in-depth [instructions](https://github.com/adobe/aio-theme#getting-started).
-
-## How to deploy
-
-For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
-```
-adobe.io/{product}/docs
-adobe.io/{product}/community
-adobe.io/{product}/community/code_of_conduct
-adobe.io/{product}/community/contribute
-```
-
-### Launching a deploy
-
-You can deploy using the GitHub actions deploy workflow see [deploy instructions](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites).
+Follow the [instructions](https://github.com/adobe/gatsby-theme-aio#getting-started) to get started. -->

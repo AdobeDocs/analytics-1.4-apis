@@ -19,21 +19,18 @@ The Adobe Analytics 1.4 APIs are the predecessor to the Analytics 2.0 APIs. They
 * [API reference](https://adobedocs.github.io/analytics-1.4-apis/)
 * [Github repository](https://github.com/AdobeDocs/analytics-1.4-apis)
 
-## Adobe Analytics 1.4 API End-of-Life (EOL)
+<InlineAlert variant="warning" title="Adobe Analytics 1.4 API End-of-Life (EOL)" slots="text1,text2,text3,text4" />
 
-On August 12, 2026, the following Analytics Legacy API services will reach their end-of-life and will be shut down, and current integrations built using these services will stop working:
+On August 12, 2026, the following Analytics Legacy API services reach their end-of-life and will shut down. Current integrations built using these services after this date stop working:
 
-* Adobe Analytics API (version 1.4)
+* Adobe Analytics 1.4 API
 * Adobe Analytics WSSE Authentication
   
-Integrations that use the Adobe Analytics 1.4 API must migrate to the [Adobe Analytics 2.0 API](https://developer.adobe.com/analytics-apis/docs/2.0/), while WSSE integrations must migrate to an OAuth-based authentication protocol in the [Adobe Developer Console](https://developer.adobe.com/console).
+If you use the Adobe Analytics 1.4 API, migrate to the [Adobe Analytics 2.0 API](https://developer.adobe.com/analytics-apis/docs/2.0/). If you use WSSE authentication, migrate to an OAuth-based authentication protocol in the [Adobe Developer Console](https://developer.adobe.com/console).
 
-See the [Adobe Analytics 1.4 API EOL FAQ](https://experienceleague.adobe.com/en/docs/analytics/admin/c-admin-14-api-eol) for answers to common questions and further guidance.
-
+See the [Adobe Analytics 1.4 API EOL FAQ](guides/eol.md) for answers to common questions and further guidance.
 
 ## Overview
-
-If you are creating a new integration, Adobe strongly recommends using the [2.0 APIs](https://developer.adobe.com/analytics-apis/docs/2.0/).
 
 The Adobe Analytics 1.4 APIs allow you to directly call Adobe's servers to perform almost any action that you can perform in the user interface. You can create reports to explore, get insights, or answer important questions about your data. You can also manage components of Adobe Analytics, such as Data Warehouse requests or Report Suite settings. This documentation provides instructions on how to call Adobe's endpoints to return the desired data.
 
