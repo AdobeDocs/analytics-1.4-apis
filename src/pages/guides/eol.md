@@ -1,10 +1,10 @@
 ---
-title: Adobe Analytics 1.4 API EOL FAQ
+title: Adobe Analytics 1.4 API end-of-life FAQ
 description: Details for the Adobe Analytics 1.4 API end-of-life announcement.
 ---
-# Adobe Analytics 1.4 API EOL FAQ
+# Adobe Analytics 1.4 API end-of-life FAQ
 
-Adobe plans to retire the Adobe Analytics 1.4 API on **August 12, 2026**. All endpoints will no longer be accessible after this date. This announcement directly impacts the following:
+Adobe plans to retire the Adobe Analytics 1.4 API on **August 12, 2026**. All endpoints using this version of the API are no longer accessible after this date. This announcement directly impacts the following:
 
 * Adobe Analytics 1.4 APIs, excluding the Data Insertion API
 * Adobe Analytics WSSE Authentication
