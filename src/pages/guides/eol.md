@@ -35,7 +35,7 @@ If that product or application uses your WSSE credential and/or calls the Analyt
 
 </AccordionItem>
 
-<AccordionItem header="How can I determine which API that my project uses?"
+<AccordionItem header="How can I determine which API that my project uses?">
 
 The base URL that the API calls determines which API version your project uses. The Adobe Analytics 1.4 APIs use the following URLs:
 
