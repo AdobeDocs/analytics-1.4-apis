@@ -5260,7 +5260,7 @@ __metadata:
     "@adobe/gatsby-theme-aio": 4.14.18
     gatsby: 4.22.0
     react: 17.0.2
-    react-dom: 17.0.2
+    react-dom: 19.0.0
     remark-cli: ^12.0.1
     remark-validate-links: ^13.0.2
   languageName: unknown
@@ -16902,7 +16902,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:17.0.2, react-dom@npm:^17.0.1":
+"react-dom@npm:19.0.0":
+  version: 19.0.0
+  resolution: "react-dom@npm:19.0.0"
+  dependencies:
+    scheduler: ^0.25.0
+  peerDependencies:
+    react: ^19.0.0
+  checksum: 009cc6e575263a0d1906f9dd4aa6532d2d3d0d71e4c2b7777c8fe4de585fa06b5b77cdc2e0fbaa2f3a4a5e5d3305c189ba152153f358ee7da4d9d9ba5d3a8975
+  languageName: node
+  linkType: hard
+
+"react-dom@npm:^17.0.1":
   version: 17.0.2
   resolution: "react-dom@npm:17.0.2"
   dependencies:
@@ -17995,6 +18006,13 @@ __metadata:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
   checksum: c4b35cf967c8f0d3e65753252d0f260271f81a81e427241295c5a7b783abf4ea9e905f22f815ab66676f5313be0a25f47be582254db8f9241b259213e999b8fc
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "scheduler@npm:0.25.0"
+  checksum: b7bb9fddbf743e521e9aaa5198a03ae823f5e104ebee0cb9ec625392bb7da0baa1c28ab29cee4b1e407a94e76acc6eee91eeb749614f91f853efda2613531566
   languageName: node
   linkType: hard
 
