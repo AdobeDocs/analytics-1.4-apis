@@ -21,21 +21,24 @@ WSSE authentication is a legacy authentication protocol supported by the Analyti
 
 ## FAQ
 
-+++**Does this impact my existing Adobe IO projects for the Analytics APIs?**
+<Accordion>
+
+<AccordionItem header="Does this impact my existing Adobe IO projects for the Analytics APIs?">
 
 Any existing projects using the Analytics 1.4 APIs are impacted. Those integrations must be migrated to the [Adobe Analytics 2.0 APIs](https://developer.adobe.com/analytics-apis/docs/2.0/) before the EOL deadline.
 
-+++
+</AccordionItem>
 
-+++**I've shared my Adobe credentials with another product or application that uses the Analytics APIs. Are they impacted?**
+<AccordionItem header="I've shared my Adobe credentials with another product or application that uses the Analytics APIs. Are they impacted?">
 
 If that product or application uses your WSSE credential and/or calls the Analytics 1.4 APIs, it is impacted and must migrate before the EOL deadline. Reach out to the product or application provider for more details on their migration plans and timeline.
 
-+++
+</AccordionItem>
 
-+++**How can I determine which API that my project uses?**
+<AccordionItem header="How can I determine which API that my project uses?"
 
 The base URL that the API calls determines which API version your project uses. The Adobe Analytics 1.4 APIs use the following URLs:
+
 * `https://api.omniture.com`
 * `https://api3.omniture.com`
 * `https://api4.omniture.com`
@@ -47,14 +50,16 @@ The [Adobe Analytics 2.0 APIs](https://developer.adobe.com/analytics-apis/docs/2
 
 If any of your API projects use `api*.omniture.com`, it uses the Adobe Analytics 1.4 APIs and must migrate to the 2.0 APIs.
 
-+++
+</AccordionItem>
 
-+++**Does this end-of-life impact data collection?**
+<AccordionItem header="Does this end-of-life impact data collection?">
 
 The Adobe Analytics 1.4 EOL does not impact your tagging solutions, such as Tags (formerly Adobe Launch), Web SDK, or AppMeasurement. However, if you use the 1.4 Data Sources or Classifications APIs to enhance your data, you must migrate those workflows to the Adobe Analytics 2.0 APIs.
 
 The Data Insertion API is not impacted by this end-of-life announcement. While Adobe plans to continue support for the Data Insertion API, Adobe recommends using the [Bulk Data Insertion API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/bulk-data-insertion/) instead.
 
-+++
+</AccordionItem>
+
+</Accordion>
 
 If you have further questions about this end-of-life announcement that are not answered on this page, reach out to your Adobe Account Team.
