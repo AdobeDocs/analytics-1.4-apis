@@ -5262,7 +5262,7 @@ __metadata:
     react: 19.0.0
     react-dom: 17.0.2
     remark-cli: ^12.0.1
-    remark-validate-links: ^13.0.2
+    remark-validate-links: ^13.1.0
   languageName: unknown
   linkType: soft
 
@@ -17556,9 +17556,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-validate-links@npm:^13.0.2":
-  version: 13.0.2
-  resolution: "remark-validate-links@npm:13.0.2"
+"remark-validate-links@npm:^13.1.0":
+  version: 13.1.0
+  resolution: "remark-validate-links@npm:13.1.0"
   dependencies:
     "@types/hosted-git-info": ^3.0.0
     "@types/mdast": ^4.0.0
@@ -17571,7 +17571,7 @@ __metadata:
     unified-engine: ^11.0.0
     unist-util-visit: ^5.0.0
     vfile: ^6.0.0
-  checksum: 9d9f8a139b994aceb2c481748a6225f425ecc7e3e9e307681fec2936fcf4ab479c02d79cfc9803e63711cb3f6b2dc9e7ebbdd556424fc9928026dfdbf98bcbc1
+  checksum: 08f5ff5c42c863d31d19a186c0fe136bbff5d0c2098b5840d5de4571b451b2f07618f560a84e28ce75052f241ed54769808db635649b759a180668e103cd8106
   languageName: node
   linkType: hard
 
