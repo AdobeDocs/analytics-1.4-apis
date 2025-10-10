@@ -12,7 +12,7 @@
     "url": "https://github.com/gigazelle"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "4.14.18",
+    "@adobe/gatsby-theme-aio": "4.15.3",
     "gatsby": "4.22.0",
     "react": "19.0.0",
     "react-dom": "17.0.2"
