@@ -5259,7 +5259,7 @@ __metadata:
   dependencies:
     "@adobe/gatsby-theme-aio": 4.14.18
     gatsby: 4.22.0
-    react: 19.0.0
+    react: 19.2.1
     react-dom: 17.0.2
     remark-cli: ^12.0.1
     remark-validate-links: ^13.0.2
@@ -17001,10 +17001,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.0.0":
-  version: 19.0.0
-  resolution: "react@npm:19.0.0"
-  checksum: 86de15d85b2465feb40297a90319c325cb07cf27191a361d47bcfe8c6126c973d660125aa67b8f4cbbe39f15a2f32efd0c814e98196d8e5b68c567ba40a399c6
+"react@npm:19.2.1":
+  version: 19.2.1
+  resolution: "react@npm:19.2.1"
+  checksum: 9b32ace5c532ed78bc5a907bfec77d966c8f117049d9bf06b627c4cebe5ef2c899f18ed283f8ed5b85346176b5ccc5328ab6fae0b389f2936a87575ce0e47670
   languageName: node
   linkType: hard
 
