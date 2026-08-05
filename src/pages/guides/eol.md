@@ -9,6 +9,8 @@ Adobe plans to retire the Adobe Analytics 1.4 API on **August 12, 2026**. All en
 * Adobe Analytics 1.4 APIs, excluding the Data Insertion API
 * Adobe Analytics WSSE Authentication
 
+For the latest information on the Adobe Analytics 1.4 APIs end-of-life, including current limitations, see the guide for [Migrating to Adobe Analytics 2.0 APIs](https://developer.adobe.com/analytics-apis/docs/2.0/guides/migration).
+
 ## 1.4 APIs
 
 The Adobe Analytics 1.4 APIs provide a wide range of actions, such as reporting, classifications, data feeds, and report suite configurations. They are being sunset in favor of the [Adobe Analytics 2.0 APIs](https://developer.adobe.com/analytics-apis/docs/2.0). The 2.0 APIs allow you to perform almost any action that you can perform in the Analytics user interface, such as reporting or managing components like segments and calculated metrics.
