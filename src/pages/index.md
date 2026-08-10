@@ -23,9 +23,9 @@ The Adobe Analytics 1.4 APIs are the predecessor to the Analytics 2.0 APIs. They
 
 ### End-of-life (EOL) notice
 
-On August 12, 2026, the **Adobe Analytics 1.4 API** and **WSSE authentication** legacy services reach their end-of-life and will shut down. Current integrations built using these services stop working after this date.
+On August 31, 2026, the **Adobe Analytics 1.4 API** and **WSSE authentication** legacy services reach their end-of-life and will shut down. Current integrations built using these services stop working after this date.
   
-If you use the Adobe Analytics 1.4 API, migrate to the [Adobe Analytics 2.0 API](https://developer.adobe.com/analytics-apis/docs/2.0/). If you use WSSE authentication, migrate to an OAuth-based authentication protocol in the [Adobe Developer Console](https://developer.adobe.com/console).
+If you use the Adobe Analytics 1.4 API, migrate to the [Adobe Analytics 2.0 API](https://developer.adobe.com/analytics-apis/docs/2.0/migration). If you use WSSE authentication, migrate to an OAuth-based authentication protocol in the [Adobe Developer Console](https://developer.adobe.com/console).
 
 See the [Adobe Analytics 1.4 API end-of-life FAQ](guides/eol.md) for answers to common questions and further guidance.
 
