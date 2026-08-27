@@ -4,9 +4,17 @@ The Data Insertion API provides a mechanism for server-side data collection and 
 
 <InlineAlert variant="note" slots="text"/>
 
-Data Insertion API and [Bulk Data Insertion API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/bulk-data-insertion/) are both methods to submit server-side collection data to Adobe Analytics. Data Insertion API calls are made one event at a time. Bulk Data Insertion API accepts CSV formatted files containing event data, one event per row. If you are working on a new implementation of server-side collection, Adobe recommends using the Bulk Data Insertion API.
+Data Insertion API and [Bulk Data Insertion API](https://developer.adobe.com/analytics-apis/docs/2.0/guides/endpoints/bulk-data-insertion/) are both methods to submit server-side collection data to Adobe Analytics. Data Insertion API calls are made one event at a time. Bulk Data Insertion API accepts CSV formatted files containing event data, one event per row. The Data Insertion API supports `GET` and `POST` API calls, while the Bulk Data Insertion API supports only `POST` calls.
 
-The Data Insertion API supports `GET` and `POST` API calls.
+
+### DIA vs BDIA
+
+| | Data Insertion API (DIA)] | [Bulk Data Insertion API (BDIA)](../bulk-data-insertion/index.md)                                                                                       |
+|---|---|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Data submission | One event per API call | CSV file containing multiple events (dozens to tens of thousands), one event per row                                                                    |
+| Throughput | No upper bound on request rate | Optimized for larger files sent less frequently; not intended for more than 1 file per second, nor should files regularly be sent with just a few rows. |
+| Best fit | High-frequency, near real-time event submission | Bulk/batch loads, historical data backfills, or sources with intermittent connectivity                                                                  |
+
 
 ## HTTP POST
 
