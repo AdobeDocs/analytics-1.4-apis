@@ -24,7 +24,8 @@
   "resolutions": {
     "axios": "0.30.0",
     "gatsby-sharp": "1.12.0",
-    "sharp": "0.33.0"
+    "sharp": "0.33.0",
+    "cipher-base": "1.0.5"
   },
   "scripts": {
     "start": "gatsby build && gatsby serve",
