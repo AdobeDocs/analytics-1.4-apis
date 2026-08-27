@@ -9,12 +9,11 @@ Data Insertion API and [Bulk Data Insertion API](https://developer.adobe.com/ana
 
 ### DIA vs BDIA
 
-| | Data Insertion API (DIA)] | [Bulk Data Insertion API (BDIA)](../bulk-data-insertion/index.md)                                                                                       |
-|---|---|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data submission | One event per API call | CSV file containing multiple events (dozens to tens of thousands), one event per row                                                                    |
+| | Data Insertion API (DIA)] | [Bulk Data Insertion API (BDIA)](../bulk-data-insertion/index.md) |
+|---|---|---|
+| Data submission | One event per API call | CSV file containing multiple events (dozens to tens of thousands), one event per row |
 | Throughput | No upper bound on request rate | Optimized for larger files sent less frequently; not intended for more than 1 file per second, nor should files regularly be sent with just a few rows. |
-| Best fit | High-frequency, near real-time event submission | Bulk/batch loads, historical data backfills, or sources with intermittent connectivity                                                                  |
-
+| Best fit | High-frequency, near real-time event submission | Bulk/batch loads, historical data backfills, or sources with intermittent connectivity |
 
 ## HTTP POST
 
